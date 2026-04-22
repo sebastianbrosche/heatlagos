@@ -44,7 +44,7 @@ const CATEGORIES: Category[] = [
         name: "Heat Power",
         duration: "60 min",
         description:
-          "A strong, flowing practice with real depth to it. Breath and movement working together, building strength, opening the body, and leaving you both spent and somehow lifted.",
+          "Not a complicated class. But a challenging one. Physically demanding in the best way — and it meets you exactly where you are. Show up, move, breathe. Let the class take you somewhere in yourself you didn't know existed.",
         image: "/Power.jpg",
       },
       {
