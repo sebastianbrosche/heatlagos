@@ -49,6 +49,7 @@ const PLANS: Plan[] = [
     name: "10 Class Package",
     price: "180€",
     description: "Flexible 10-pack for regulars who want variety.",
+    note: "Valid for 3 months",
   },
   {
     name: "Vacation Week",
