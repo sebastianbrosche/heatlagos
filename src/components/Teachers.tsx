@@ -100,16 +100,26 @@ const TEACHERS: Teacher[] = [
     tagline: "Meet Sebastian",
     bio: [
       {
+        type: "quote",
+        text: "If the idea of a yoga or Pilates class has ever made you quietly nervous, Sebastian is probably exactly the teacher you have been waiting for.",
+      },
+      {
         type: "paragraph",
         text: "Sebastian has been teaching yoga for nearly fifteen years, and in that time he has become one of the most recognised voices in the world when it comes to yoga, mobility and recovery for martial artists. As co-founder of Yoga for BJJ, the first platform of its kind, he has introduced yoga to hundreds of thousands of grapplers around the world who never thought it was for them, and changed the way an entire community trains, recovers and takes care of their bodies.",
       },
+      { type: "heading", text: "From judo mat to yoga mat" },
       {
         type: "paragraph",
-        text: "His own story started not on a yoga mat but on the judo mat, where he began training at the age of seven. He went on to become a two-time world champion and four-time European champion in Brazilian jiu-jitsu, competing at the highest levels for years. It was injuries that brought him to yoga, and yoga that gave him his career back. He knows firsthand what it feels like to be a serious athlete who wants nothing to do with a yoga class, and that is exactly what makes him so good at teaching one.",
+        text: "His own story started not on a yoga mat but on the judo mat, where he began training at the age of seven. He went on to become a two-time world champion and four-time European champion in Brazilian jiu-jitsu, competing at the highest levels for years. It was injuries that brought him to yoga, and yoga that gave him his career back.",
       },
       {
+        type: "quote",
+        text: "He knows firsthand what it feels like to be a serious athlete who wants nothing to do with a yoga class, and that is exactly what makes him so good at teaching one.",
+      },
+      { type: "heading", text: "How he teaches" },
+      {
         type: "paragraph",
-        text: "That belief lives in the way he teaches. At Heat, Sebastian teaches yoga and Pilates, and he brings a rare combination of deep knowledge and genuine humour to every class. He is the kind of teacher who makes the room feel lighter, who takes the practice seriously without taking himself too seriously, and who has a particular gift for making movement feel completely undaunting to people who have spent their whole lives avoiding it. If the idea of a yoga or Pilates class has ever made you quietly nervous, Sebastian is probably exactly the teacher you have been waiting for.",
+        text: "That belief lives in the way he teaches. At Heat, Sebastian teaches yoga and Pilates, and he brings a rare combination of deep knowledge and genuine humour to every class. He is the kind of teacher who makes the room feel lighter, who takes the practice seriously without taking himself too seriously, and who has a particular gift for making movement feel completely undaunting to people who have spent their whole lives avoiding it.",
       },
     ],
   },

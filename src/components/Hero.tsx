@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import DiscoverMenu from "./DiscoverMenu";
 
 const HERO_IMAGE =
@@ -8,20 +5,12 @@ const HERO_IMAGE =
 const HERO_VIDEO_EMBED =
   "https://iframe.mediadelivery.net/embed/640745/34dda126-4f25-4173-97c4-5c9316136deb?autoplay=true&loop=true&muted=true&preload=true&responsive=true";
 
-function useDeferredVideo() {
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    const t = setTimeout(() => setShow(true), 400);
-    return () => clearTimeout(t);
-  }, []);
-  return show;
-}
-
 export default function Hero() {
-  const showVideo = useDeferredVideo();
-
   return (
     <section id="top" className="relative w-full">
+      <link rel="preconnect" href="https://iframe.mediadelivery.net" />
+      <link rel="preconnect" href="https://vz-d5241280-494.b-cdn.net" />
+      <link rel="dns-prefetch" href="https://iframe.mediadelivery.net" />
       {/* Mobile: video pinned to top, text stacked below */}
       <div className="relative sm:hidden">
         <div className="h-[86px]" aria-hidden />
@@ -33,16 +22,14 @@ export default function Hero() {
               fetchPriority="high"
               className="absolute inset-0 h-full w-full object-cover"
             />
-            {showVideo && (
-              <iframe
-                src={HERO_VIDEO_EMBED}
-                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-                allowFullScreen
-                loading="lazy"
-                title="Heat Lagos intro"
-                className="absolute inset-0 h-full w-full border-0"
-              />
-            )}
+            <iframe
+              src={HERO_VIDEO_EMBED}
+              allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+              allowFullScreen
+              loading="eager"
+              title="Heat Lagos intro"
+              className="absolute inset-0 h-full w-full border-0"
+            />
           </div>
         </div>
         <div className="flex flex-col items-start px-5 pt-8 pb-16">
@@ -77,18 +64,16 @@ export default function Hero() {
           fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        {showVideo && (
-          <div className="pointer-events-none absolute inset-0 overflow-hidden">
-            <iframe
-              src={HERO_VIDEO_EMBED}
-              allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-              allowFullScreen
-              loading="lazy"
-              title="Heat Lagos intro"
-              className="absolute left-1/2 top-1/2 h-[max(100vh,56.25vw)] w-[max(100vw,177.78vh)] -translate-x-1/2 -translate-y-1/2 border-0"
-            />
-          </div>
-        )}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <iframe
+            src={HERO_VIDEO_EMBED}
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+            allowFullScreen
+            loading="eager"
+            title="Heat Lagos intro"
+            className="absolute left-1/2 top-1/2 h-[max(100vh,56.25vw)] w-[max(100vw,177.78vh)] -translate-x-1/2 -translate-y-1/2 border-0"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-stone-dark/60 via-stone-dark/30 to-stone-dark/90" />
         <div
           className="absolute inset-0 mix-blend-overlay opacity-20"

@@ -152,7 +152,7 @@ export default function Classes() {
   return (
     <section id="classes" className="relative px-5 py-20 sm:px-6 sm:py-24 lg:px-20 lg:py-32">
       <div className="mx-auto max-w-[1400px]">
-        <div className="mb-12 flex flex-col items-start gap-4 sm:mb-16 lg:mb-20">
+        <div className="mb-4 flex flex-col items-start gap-4 sm:mb-6 lg:mb-8">
           <p className="text-[11px] uppercase tracking-[0.3em] text-brand">
             Heat Classes
           </p>
