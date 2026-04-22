@@ -1,7 +1,11 @@
-const ADDRESS =
-  "Edificio da Fabrica da Ribeira, Av. dos Descobrimentos Loja G, 8600-854 Lagos, Portugal";
-const MAPS_QUERY = encodeURIComponent(ADDRESS);
-const MAPS_EMBED = `https://www.google.com/maps?q=${MAPS_QUERY}&output=embed`;
+const LAT = 37.1032;
+const LNG = -8.6738;
+const BBOX_DELTA = 0.004;
+const MAPS_EMBED = `https://www.openstreetmap.org/export/embed.html?bbox=${
+  LNG - BBOX_DELTA
+},${LAT - BBOX_DELTA * 0.7},${LNG + BBOX_DELTA},${
+  LAT + BBOX_DELTA * 0.7
+}&layer=mapnik&marker=${LAT},${LNG}`;
 const MAPS_DIRECTIONS = "https://maps.app.goo.gl/XshkRJWAZpEs5gWw8";
 
 export default function Location() {
