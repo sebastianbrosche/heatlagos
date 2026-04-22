@@ -138,7 +138,7 @@ export default function Memberships() {
                     : "text-brand hover:text-brand-soft"
                 }`}
               >
-                Buy / Book
+                Join now
               </a>
             </article>
           ))}
