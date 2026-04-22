@@ -1,0 +1,113 @@
+export default function Footer() {
+  return (
+    <footer className="border-t border-white/5 bg-stone-dark/40 px-6 py-16 lg:px-20">
+      <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-4">
+        <div>
+          <div className="flex items-center leading-none">
+            <img src="/logo%20heat.png" alt="Heat" className="h-20 w-auto" />
+          </div>
+          <p className="mt-6 max-w-xs text-sm text-foreground/70">
+            Infrared heated Pilates, Yoga & Sculpt · Mobility, Recovery & Yin —
+            in Lagos, Portugal.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-stone">
+            Studio
+          </p>
+          <ul className="mt-4 flex flex-col gap-2 text-sm">
+            <li>
+              <a href="#classes" className="hover:text-brand">
+                Classes
+              </a>
+            </li>
+            <li>
+              <a href="#teachers" className="hover:text-brand">
+                Teachers
+              </a>
+            </li>
+            <li>
+              <a href="#schedule" className="hover:text-brand">
+                Schedule
+              </a>
+            </li>
+            <li>
+              <a href="#memberships" className="hover:text-brand">
+                Memberships
+              </a>
+            </li>
+            <li id="training" className="text-foreground/50">
+              Teacher Trainings — coming soon
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-stone">
+            Contact
+          </p>
+          <ul className="mt-4 flex flex-col gap-2 text-sm">
+            <li>
+              <a href="mailto:hello@heatlagos.com" className="hover:text-brand">
+                hello@heatlagos.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+351927290812" className="hover:text-brand">
+                +351 927 290 812
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/XshkRJWAZpEs5gWw8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground/70 hover:text-brand"
+              >
+                Edificio da Fabrica da Ribeira,
+                <br />
+                Av. dos Descobrimentos, Loja G,
+                <br />
+                8600-854 Lagos, Portugal
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-stone">
+            Follow
+          </p>
+          <ul className="mt-4 flex flex-col gap-2 text-sm">
+            <li>
+              <a
+                href="https://www.instagram.com/heat_lagos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-brand"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=61588436283019"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-brand"
+              >
+                Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-16 flex max-w-[1400px] flex-col items-start justify-between gap-4 border-t border-white/5 pt-8 text-[11px] uppercase tracking-[0.2em] text-stone sm:flex-row">
+        <span>© Heat Lagos</span>
+        <span>Movement is life.</span>
+      </div>
+    </footer>
+  );
+}
