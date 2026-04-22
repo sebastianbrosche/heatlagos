@@ -374,7 +374,7 @@ export default function Teachers() {
             <div className="absolute inset-0 bg-gradient-to-r from-stone-dark/80 via-stone-dark/20 to-stone-dark/80" />
             <div className="absolute inset-0 flex items-center justify-center">
               <p className="font-serif text-4xl italic text-foreground drop-shadow-lg lg:text-6xl">
-                In studio, together.
+                In class, together.
               </p>
             </div>
           </div>
