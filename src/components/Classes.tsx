@@ -31,7 +31,7 @@ const CATEGORIES: Category[] = [
   },
   {
     label: "Yoga & Sculpt",
-    tagline: "Move · sweat · shape",
+    tagline: "Move · sweat · breathe",
     items: [
       {
         name: "Heat Sculpt",
@@ -90,7 +90,7 @@ const ALL_ITEMS: ClassItem[] = CATEGORIES.flatMap((c) => c.items);
 const DESKTOP_CATEGORIES: Category[] = [
   {
     label: "Pilates, Yoga & Sculpt",
-    tagline: "Move · sweat · shape",
+    tagline: "Move · sweat · breathe",
     items: [
       ...CATEGORIES[0].items,
       ...CATEGORIES[1].items,
