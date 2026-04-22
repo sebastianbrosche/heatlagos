@@ -106,6 +106,7 @@ export default function About() {
               "Infrared heated",
               "Certified teachers",
               "All levels welcome",
+              "Beachside location",
             ].map((chip) => (
               <span
                 key={chip}
