@@ -1,79 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import DiscoverMenu from "./DiscoverMenu";
 
-const BUNNY_HLS =
-  "https://vz-d5241280-494.b-cdn.net/34dda126-4f25-4173-97c4-5c9316136deb/playlist.m3u8";
-const BUNNY_MP4_FALLBACK =
-  "https://vz-d5241280-494.b-cdn.net/34dda126-4f25-4173-97c4-5c9316136deb/play_480p.mp4";
-const HLS_JS_CDN = "https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js";
 const POSTER = "/hero-poster.jpg";
-
-type HlsLevel = { height?: number; width?: number; bitrate?: number };
-type HlsInstance = {
-  loadSource: (src: string) => void;
-  attachMedia: (media: HTMLMediaElement) => void;
-  destroy: () => void;
-  on: (event: string, cb: (e: unknown, data: unknown) => void) => void;
-  readonly levels: HlsLevel[];
-  nextLevel: number;
-  startLevel: number;
-  currentLevel: number;
-};
-type HlsClass = new (config?: Record<string, unknown>) => HlsInstance;
-
-declare global {
-  interface Window {
-    Hls?: HlsClass & {
-      isSupported: () => boolean;
-      Events: { ERROR: string; MANIFEST_PARSED: string };
-    };
-  }
-}
-
-/**
- * Pick the HLS level index whose height matches `target` exactly.
- * If none match, return the highest level ≤ target (so we avoid
- * upgrading past what the viewport needs). Returns -1 if no suitable
- * level is found.
- */
-function pickLevelIndex(levels: HlsLevel[], target: number): number {
-  const exact = levels.findIndex((l) => l.height === target);
-  if (exact !== -1) return exact;
-  let bestIdx = -1;
-  let bestHeight = -1;
-  for (let i = 0; i < levels.length; i++) {
-    const h = levels[i].height;
-    if (typeof h !== "number") continue;
-    if (h <= target && h > bestHeight) {
-      bestHeight = h;
-      bestIdx = i;
-    }
-  }
-  return bestIdx;
-}
-
-function loadHlsJs(): Promise<HlsClass | null> {
-  if (typeof window === "undefined") return Promise.resolve(null);
-  if (window.Hls) return Promise.resolve(window.Hls);
-  return new Promise((resolve) => {
-    const existing = document.querySelector<HTMLScriptElement>(
-      `script[src="${HLS_JS_CDN}"]`,
-    );
-    if (existing) {
-      existing.addEventListener("load", () => resolve(window.Hls ?? null));
-      existing.addEventListener("error", () => resolve(null));
-      return;
-    }
-    const s = document.createElement("script");
-    s.src = HLS_JS_CDN;
-    s.async = true;
-    s.onload = () => resolve(window.Hls ?? null);
-    s.onerror = () => resolve(null);
-    document.head.appendChild(s);
-  });
-}
+const VIDEO_DESKTOP = "/hero-desktop.mp4";
+const VIDEO_MOBILE = "/hero-mobile.mp4";
 
 function shouldSkipVideo(): boolean {
   if (typeof window === "undefined") return true;
@@ -94,111 +26,15 @@ function shouldSkipVideo(): boolean {
   return false;
 }
 
-function HeroVideo({ className }: { className: string }) {
-  const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [activate, setActivate] = useState(false);
+function HeroMedia({ className }: { className: string }) {
+  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
-    if (shouldSkipVideo()) return;
-    const el = wrapperRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          setActivate(true);
-          io.disconnect();
-        }
-      },
-      { rootMargin: "200px" },
-    );
-    io.observe(el);
-    return () => io.disconnect();
+    if (!shouldSkipVideo()) setShowVideo(true);
   }, []);
 
-  useEffect(() => {
-    if (!activate) return;
-    const video = videoRef.current;
-    if (!video) return;
-
-    let destroyed = false;
-    let hlsInstance: { destroy: () => void } | null = null;
-
-    const attachFallbackMp4 = () => {
-      if (destroyed || !video) return;
-      video.src = BUNNY_MP4_FALLBACK;
-      void video.play().catch(() => {});
-    };
-
-    const canNativeHls = video.canPlayType("application/vnd.apple.mpegurl");
-
-    if (canNativeHls) {
-      video.src = BUNNY_HLS;
-      void video.play().catch(() => {});
-    } else {
-      loadHlsJs().then((Hls) => {
-        if (destroyed) return;
-        if (!Hls || !window.Hls?.isSupported()) {
-          attachFallbackMp4();
-          return;
-        }
-        const isDesktop =
-          typeof window !== "undefined" && window.innerWidth >= 768;
-        const targetHeight = isDesktop ? 720 : 480;
-
-        const hls = new Hls({
-          capLevelToPlayerSize: true,
-          // Start in auto; we lock to the target level once the manifest is
-          // parsed (so the level lookup matches whatever Bunny re-encodes to).
-          startLevel: -1,
-          abrEwmaDefaultEstimate: isDesktop ? 5_000_000 : 2_000_000,
-          maxBufferLength: 20,
-          maxMaxBufferLength: 30,
-        });
-
-        hls.on(
-          window.Hls.Events.MANIFEST_PARSED,
-          (_e: unknown, _data: unknown) => {
-            const idx = pickLevelIndex(hls.levels, targetHeight);
-            if (idx !== -1) {
-              // nextLevel forces the first fragment at our chosen quality;
-              // ABR takes over after that, so a slow network can still
-              // down-shift.
-              hls.nextLevel = idx;
-            }
-          },
-        );
-
-        hls.loadSource(BUNNY_HLS);
-        hls.attachMedia(video);
-        hls.on(window.Hls.Events.ERROR, (_e: unknown, data: unknown) => {
-          const d = data as { fatal?: boolean };
-          if (d.fatal) {
-            try {
-              hls.destroy();
-            } catch {
-              /* ignore */
-            }
-            attachFallbackMp4();
-          }
-        });
-        hlsInstance = hls;
-        void video.play().catch(() => {});
-      });
-    }
-
-    return () => {
-      destroyed = true;
-      try {
-        hlsInstance?.destroy();
-      } catch {
-        /* ignore */
-      }
-    };
-  }, [activate]);
-
   return (
-    <div ref={wrapperRef} className={className}>
+    <div className={className}>
       <img
         src={POSTER}
         alt=""
@@ -206,16 +42,25 @@ function HeroVideo({ className }: { className: string }) {
         fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <video
-        ref={videoRef}
-        poster={POSTER}
-        muted
-        loop
-        playsInline
-        preload="none"
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      {showVideo && (
+        <video
+          poster={POSTER}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source
+            src={VIDEO_MOBILE}
+            type="video/mp4"
+            media="(max-width: 767px)"
+          />
+          <source src={VIDEO_DESKTOP} type="video/mp4" />
+        </video>
+      )}
     </div>
   );
 }
@@ -223,16 +68,12 @@ function HeroVideo({ className }: { className: string }) {
 export default function Hero() {
   return (
     <section id="top" className="relative w-full">
-      <link rel="preconnect" href="https://vz-d5241280-494.b-cdn.net" />
-      <link rel="dns-prefetch" href="https://vz-d5241280-494.b-cdn.net" />
-      <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-
       {/* Mobile: video pinned to top, text stacked below */}
       <div className="relative sm:hidden">
         <div className="h-[86px]" aria-hidden />
         <div className="relative w-full overflow-hidden bg-stone-dark">
           <div className="relative w-full pt-[56.25%]">
-            <HeroVideo className="absolute inset-0" />
+            <HeroMedia className="absolute inset-0" />
           </div>
         </div>
         <div className="flex flex-col items-start px-5 pt-8 pb-16">
@@ -261,7 +102,7 @@ export default function Hero() {
 
       {/* Desktop / tablet: full-screen video background with overlaid text */}
       <div className="relative hidden h-screen min-h-[700px] w-full overflow-hidden bg-stone-dark sm:block">
-        <HeroVideo className="pointer-events-none absolute inset-0 overflow-hidden" />
+        <HeroMedia className="pointer-events-none absolute inset-0 overflow-hidden" />
         <div className="absolute inset-0 bg-gradient-to-b from-stone-dark/60 via-stone-dark/30 to-stone-dark/90" />
         <div
           className="absolute inset-0 mix-blend-overlay opacity-20"
