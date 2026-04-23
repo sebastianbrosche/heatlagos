@@ -37,6 +37,9 @@ export default function Footer() {
                 Memberships
               </a>
             </li>
+            <li id="workshops" className="text-foreground/50">
+              Workshops — coming soon
+            </li>
             <li id="training" className="text-foreground/50">
               Teacher Trainings — coming soon
             </li>
