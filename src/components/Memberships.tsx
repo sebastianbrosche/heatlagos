@@ -7,6 +7,7 @@ type Plan = {
   highlight?: boolean;
   glow?: boolean;
   note?: string;
+  href?: string;
 };
 
 const PLANS: Plan[] = [
@@ -131,7 +132,9 @@ export default function Memberships() {
                 </p>
               )}
               <a
-                href="#schedule"
+                href={plan.href ?? "#schedule"}
+                target={plan.href ? "_blank" : undefined}
+                rel={plan.href ? "noopener noreferrer" : undefined}
                 className={`mt-auto inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.25em] ${
                   plan.highlight
                     ? "text-stone-dark hover:opacity-70"
