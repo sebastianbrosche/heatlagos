@@ -92,7 +92,9 @@ export default function Header() {
 
           <div className="mt-8 border-t border-white/10 pt-6 sm:mt-10 sm:pt-8">
             <a
-              href="#memberships"
+              href="https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="inline-flex w-fit items-center justify-center gap-2 rounded-full bg-brand px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-dark hover:bg-brand-soft transition-colors sm:gap-3 sm:px-10 lg:py-4 lg:text-[12px] lg:tracking-[0.25em]"
             >
