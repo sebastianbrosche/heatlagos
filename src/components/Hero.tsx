@@ -10,17 +10,48 @@ const BUNNY_MP4_FALLBACK =
 const HLS_JS_CDN = "https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js";
 const POSTER = "/hero-poster.jpg";
 
-type HlsClass = new (config?: Record<string, unknown>) => {
+type HlsLevel = { height?: number; width?: number; bitrate?: number };
+type HlsInstance = {
   loadSource: (src: string) => void;
   attachMedia: (media: HTMLMediaElement) => void;
   destroy: () => void;
   on: (event: string, cb: (e: unknown, data: unknown) => void) => void;
+  readonly levels: HlsLevel[];
+  nextLevel: number;
+  startLevel: number;
+  currentLevel: number;
 };
+type HlsClass = new (config?: Record<string, unknown>) => HlsInstance;
 
 declare global {
   interface Window {
-    Hls?: HlsClass & { isSupported: () => boolean; Events: { ERROR: string } };
+    Hls?: HlsClass & {
+      isSupported: () => boolean;
+      Events: { ERROR: string; MANIFEST_PARSED: string };
+    };
   }
+}
+
+/**
+ * Pick the HLS level index whose height matches `target` exactly.
+ * If none match, return the highest level ≤ target (so we avoid
+ * upgrading past what the viewport needs). Returns -1 if no suitable
+ * level is found.
+ */
+function pickLevelIndex(levels: HlsLevel[], target: number): number {
+  const exact = levels.findIndex((l) => l.height === target);
+  if (exact !== -1) return exact;
+  let bestIdx = -1;
+  let bestHeight = -1;
+  for (let i = 0; i < levels.length; i++) {
+    const h = levels[i].height;
+    if (typeof h !== "number") continue;
+    if (h <= target && h > bestHeight) {
+      bestHeight = h;
+      bestIdx = i;
+    }
+  }
+  return bestIdx;
 }
 
 function loadHlsJs(): Promise<HlsClass | null> {
@@ -111,12 +142,33 @@ function HeroVideo({ className }: { className: string }) {
           attachFallbackMp4();
           return;
         }
+        const isDesktop =
+          typeof window !== "undefined" && window.innerWidth >= 768;
+        const targetHeight = isDesktop ? 720 : 480;
+
         const hls = new Hls({
           capLevelToPlayerSize: true,
+          // Start in auto; we lock to the target level once the manifest is
+          // parsed (so the level lookup matches whatever Bunny re-encodes to).
           startLevel: -1,
+          abrEwmaDefaultEstimate: isDesktop ? 5_000_000 : 2_000_000,
           maxBufferLength: 20,
           maxMaxBufferLength: 30,
         });
+
+        hls.on(
+          window.Hls.Events.MANIFEST_PARSED,
+          (_e: unknown, _data: unknown) => {
+            const idx = pickLevelIndex(hls.levels, targetHeight);
+            if (idx !== -1) {
+              // nextLevel forces the first fragment at our chosen quality;
+              // ABR takes over after that, so a slow network can still
+              // down-shift.
+              hls.nextLevel = idx;
+            }
+          },
+        );
+
         hls.loadSource(BUNNY_HLS);
         hls.attachMedia(video);
         hls.on(window.Hls.Events.ERROR, (_e: unknown, data: unknown) => {
