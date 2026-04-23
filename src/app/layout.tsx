@@ -32,12 +32,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${serif.variable} antialiased`}>
       <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/hero-poster.jpg"
-          fetchPriority="high"
-        />
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

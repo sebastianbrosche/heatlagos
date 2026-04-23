@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import DiscoverMenu from "./DiscoverMenu";
 
-const POSTER = "/hero-poster.jpg";
 const VIDEO_DESKTOP = "/hero-desktop.mp4";
 const VIDEO_MOBILE = "/hero-mobile.mp4";
 
@@ -34,17 +33,9 @@ function HeroMedia({ className }: { className: string }) {
   }, []);
 
   return (
-    <div className={className}>
-      <img
-        src={POSTER}
-        alt=""
-        aria-hidden="true"
-        fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+    <div className={`${className} bg-stone-dark`}>
       {showVideo && (
         <video
-          poster={POSTER}
           autoPlay
           muted
           loop
