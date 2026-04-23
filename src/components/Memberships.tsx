@@ -34,6 +34,7 @@ const PLANS: Plan[] = [
     description: "Our lowest monthly rate. Rolling subscription, unlimited classes.",
     badge: "Best value",
     highlight: true,
+    href: "https://backoffice.bsport.io/customer/payment/pass/751520/?membership=5821&force=true",
   },
   {
     name: "1 Month",
