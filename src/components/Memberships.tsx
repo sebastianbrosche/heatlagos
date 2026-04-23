@@ -18,6 +18,7 @@ const PLANS: Plan[] = [
       "2 weeks unlimited for new students. The best way to meet the studio and every class on the schedule.",
     badge: "Start here",
     highlight: true,
+    href: "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true",
   },
   {
     name: "Summer Membership",
@@ -26,6 +27,7 @@ const PLANS: Plan[] = [
     badge: "Most popular",
     glow: true,
     note: "Available until 31 May",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751501/?membership=5821&force=true",
   },
   {
     name: "12 Month Membership",
@@ -40,28 +42,33 @@ const PLANS: Plan[] = [
     name: "1 Month",
     price: "160€",
     description: "One-off monthly unlimited, no subscription commitment.",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751517/?membership=5821&force=true",
   },
   {
     name: "Yearly",
     price: "1 200€",
     description: "Pay up front and save 300€ compared to the 12-month plan.",
     note: "Save 300€",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751518/?membership=5821&force=true",
   },
   {
     name: "10 Class Package",
     price: "180€",
     description: "Flexible 10-pack for regulars who want variety.",
     note: "Valid for 3 months",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751509/?membership=5821&force=true",
   },
   {
     name: "Vacation Week",
     price: "59€",
     description: "7 days unlimited — designed for travelers staying in Lagos.",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751519/?membership=5821&force=true",
   },
   {
     name: "Single Drop-in",
     price: "22€",
     description: "One class, no commitment.",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
   },
 ];
 

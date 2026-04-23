@@ -8,7 +8,9 @@ const MESSAGES = [
 export default function Marquee() {
   return (
     <a
-      href="#memberships"
+      href="https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true"
+      target="_blank"
+      rel="noopener noreferrer"
       className="group fixed top-14 sm:top-16 lg:top-20 left-0 right-0 z-40 overflow-hidden bg-brand text-stone-dark"
     >
       <div className="flex animate-marquee whitespace-nowrap py-2 sm:py-2.5">
