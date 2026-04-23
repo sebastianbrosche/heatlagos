@@ -143,14 +143,21 @@ export default function Memberships() {
                 href={plan.href ?? "#schedule"}
                 target={plan.href ? "_blank" : undefined}
                 rel={plan.href ? "noopener noreferrer" : undefined}
+                aria-label={`Join now — ${plan.name}`}
+                className="absolute inset-0 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              >
+                <span className="sr-only">Join now</span>
+              </a>
+              <span
+                aria-hidden
                 className={`mt-auto inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.25em] ${
                   plan.highlight
-                    ? "text-stone-dark hover:opacity-70"
-                    : "text-brand hover:text-brand-soft"
+                    ? "text-stone-dark"
+                    : "text-brand"
                 }`}
               >
                 Join now
-              </a>
+              </span>
             </article>
           ))}
         </div>
