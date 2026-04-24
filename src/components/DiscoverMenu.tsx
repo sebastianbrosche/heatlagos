@@ -75,8 +75,10 @@ export default function DiscoverMenu() {
           role="dialog"
           aria-modal="true"
           aria-label="Discover"
-          className={`absolute bottom-0 left-0 right-0 mx-auto max-h-[85vh] overflow-y-auto rounded-t-3xl border-t border-white/10 bg-stone-dark shadow-2xl transition-transform duration-300 ease-out sm:bottom-auto sm:left-1/2 sm:top-1/2 sm:max-w-lg sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-3xl sm:border ${
-            open ? "translate-y-0" : "translate-y-full sm:translate-y-[calc(-50%+40px)]"
+          className={`absolute bottom-0 left-0 right-0 mx-auto max-h-[90vh] overflow-y-auto rounded-t-3xl border-t border-white/10 bg-stone-dark shadow-2xl transition-transform duration-300 ease-out sm:bottom-auto sm:left-1/2 sm:top-1/2 sm:max-h-[min(640px,90vh)] sm:max-w-lg sm:-translate-x-1/2 sm:rounded-3xl sm:border ${
+            open
+              ? "translate-y-0 sm:-translate-y-1/2"
+              : "translate-y-full sm:-translate-y-[calc(50%-40px)]"
           }`}
         >
           <div className="mx-auto mb-2 mt-3 h-1.5 w-10 rounded-full bg-white/20 sm:hidden" />
