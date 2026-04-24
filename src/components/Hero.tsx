@@ -76,8 +76,16 @@ export default function Hero() {
             Mobility <span className="text-brand-soft">& more.</span>
           </h1>
           <p className="mt-6 text-sm text-foreground/80">
-            A studio where warmth meets intention, in the heart of Lagos,
-            Portugal. This is your time. We&apos;ll make it count.
+            Grand opening, all classes are free,{" "}
+            <a
+              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-brand/50 underline-offset-4 text-brand hover:text-brand-soft hover:decoration-brand transition-colors"
+            >
+              book here
+            </a>
+            .
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <DiscoverMenu />
@@ -116,8 +124,16 @@ export default function Hero() {
             <span className="text-brand-soft">& more.</span>
           </h1>
           <p className="mt-6 max-w-xl text-base text-foreground/80 lg:text-lg">
-            A studio where warmth meets intention, in the heart of Lagos,
-            Portugal. This is your time. We&apos;ll make it count.
+            Grand opening, all classes are free,{" "}
+            <a
+              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-brand/50 underline-offset-4 text-brand hover:text-brand-soft hover:decoration-brand transition-colors"
+            >
+              book here
+            </a>
+            .
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <DiscoverMenu />
