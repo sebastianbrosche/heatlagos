@@ -83,7 +83,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="underline decoration-brand/50 underline-offset-4 text-brand hover:text-brand-soft hover:decoration-brand transition-colors"
             >
-              Book Now!
+              Book here!
             </a>
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -132,7 +132,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="underline decoration-brand/50 underline-offset-4 text-brand hover:text-brand-soft hover:decoration-brand transition-colors"
             >
-              Book Now!
+              Book here!
             </a>
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
