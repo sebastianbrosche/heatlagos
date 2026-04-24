@@ -41,7 +41,7 @@ export default function Workshops() {
   return (
     <section
       id="workshops"
-      className="relative scroll-mt-[96px] px-5 py-20 sm:px-6 sm:py-24 lg:px-20 lg:py-32"
+      className="relative scroll-mt-[120px] px-5 py-20 sm:px-6 sm:py-24 lg:px-20 lg:py-32"
     >
       <Script
         id="bsport-widget-cdn-workshops"

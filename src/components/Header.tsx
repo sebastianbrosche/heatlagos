@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { href: "#classes", label: "Classes" },
   { href: "#teachers", label: "Teachers" },
   { href: "#memberships", label: "Memberships" },
-  { href: "#workshops", label: "Workshops", note: "coming" },
+  { href: "#workshops", label: "Workshops" },
   { href: "#training", label: "Teacher Trainings", note: "coming" },
   { href: "#find-us", label: "Where to find us" },
 ];
