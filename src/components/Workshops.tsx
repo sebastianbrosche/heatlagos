@@ -53,11 +53,15 @@ export default function Workshops() {
           <p className="text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
             Heat Workshops
           </p>
-          <p className="max-w-2xl font-serif text-2xl leading-snug sm:text-3xl lg:text-4xl">
+          <h2 className="font-serif text-[2rem] leading-[1.1] sm:text-5xl lg:text-6xl">
+            One Topic,
+            <br />
+            <em className="text-brand">More Time.</em>
+          </h2>
+          <p className="mt-2 max-w-2xl text-foreground/70">
             Our workshops are dedicated sessions for when you want to slow down
-            and really explore something. Think of them as a{" "}
-            <em className="text-brand">masterclass</em> on one topic, in good
-            company.
+            and really explore something. Think of them as a masterclass on one
+            topic, in good company.
           </p>
         </div>
 
