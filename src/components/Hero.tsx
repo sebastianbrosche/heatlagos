@@ -76,21 +76,14 @@ export default function Hero() {
             Mobility <span className="text-brand-soft">& more.</span>
           </h1>
           <p className="mt-6 text-sm text-foreground/80">
-            Grand opening, all classes are free,{" "}
-            <a
-              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-brand/50 underline-offset-4 text-brand hover:text-brand-soft hover:decoration-brand transition-colors"
-            >
-              book here
-            </a>
-            .
+            Grand Opening May 1–3! All Classes Free. Book Now!
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <DiscoverMenu />
             <a
-              href="#book"
+              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-w-[150px] items-center justify-center gap-2 rounded-full border border-foreground/30 bg-foreground/5 px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground backdrop-blur-sm hover:bg-foreground/10 hover:border-foreground/50 transition-colors"
             >
               Book
@@ -124,21 +117,14 @@ export default function Hero() {
             <span className="text-brand-soft">& more.</span>
           </h1>
           <p className="mt-6 max-w-xl text-base text-foreground/80 lg:text-lg">
-            Grand opening, all classes are free,{" "}
-            <a
-              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-brand/50 underline-offset-4 text-brand hover:text-brand-soft hover:decoration-brand transition-colors"
-            >
-              book here
-            </a>
-            .
+            Grand Opening May 1–3! All Classes Free. Book Now!
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <DiscoverMenu />
             <a
-              href="#book"
+              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-w-[170px] items-center justify-center gap-3 rounded-full border border-foreground/30 bg-foreground/5 px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.25em] text-foreground backdrop-blur-sm hover:bg-foreground/10 hover:border-foreground/50 transition-colors"
             >
               Book
