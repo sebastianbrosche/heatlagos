@@ -37,8 +37,10 @@ export default function Footer() {
                 Memberships
               </a>
             </li>
-            <li id="workshops" className="text-foreground/50">
-              Workshops — coming soon
+            <li className="text-foreground/50">
+              <a href="#workshops" className="hover:text-brand">
+                Workshops
+              </a>
             </li>
             <li id="training" className="text-foreground/50">
               Teacher Trainings — coming soon

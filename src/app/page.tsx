@@ -9,6 +9,7 @@ import Marquee from "@/components/Marquee";
 import Memberships from "@/components/Memberships";
 import Schedule from "@/components/Schedule";
 import Teachers from "@/components/Teachers";
+import Workshops from "@/components/Workshops";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Schedule />
         <Memberships />
         <BeforeYouCome />
+        <Workshops />
         <Location />
       </main>
       <Footer />
