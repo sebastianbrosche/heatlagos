@@ -28,7 +28,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#schedule" className="hover:text-brand">
+              <a href="#book" className="hover:text-brand">
                 Schedule
               </a>
             </li>

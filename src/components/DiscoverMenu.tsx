@@ -14,7 +14,7 @@ const ITEMS = [
     description: "The instructors who guide every session.",
   },
   {
-    href: "#schedule",
+    href: "#book",
     label: "Schedule",
     description: "See what's on and book your spot.",
   },
