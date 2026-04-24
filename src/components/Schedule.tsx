@@ -11,7 +11,7 @@ declare global {
   }
 }
 
-const WIDGET_ID = "bsport-widget-209705";
+const WIDGET_ID = "bsport-widget-687495";
 
 const WIDGET_CONFIG = {
   parentElement: WIDGET_ID,
@@ -19,6 +19,7 @@ const WIDGET_CONFIG = {
   franchiseId: null,
   dialogMode: 1,
   widgetType: "calendar",
+  language: "en-GB",
   showFab: false,
   fullScreenPopup: false,
   styles: undefined,
@@ -30,8 +31,6 @@ const WIDGET_CONFIG = {
       levels: [],
       variant: null,
       groupSessionByPeriod: true,
-      todayOnly: false,
-      cardMode: false,
     },
   },
 };
