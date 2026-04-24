@@ -23,6 +23,11 @@ const ITEMS = [
     label: "Memberships",
     description: "Drop-ins, packs & unlimited plans.",
   },
+  {
+    href: "#workshops",
+    label: "Workshops",
+    description: "Masterclasses — one topic, more time.",
+  },
 ];
 
 export default function DiscoverMenu() {
