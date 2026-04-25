@@ -11,7 +11,7 @@ declare global {
   }
 }
 
-const WIDGET_ID = "bsport-widget-687495";
+const WIDGET_ID = "bsport-widget-177399";
 
 const WIDGET_CONFIG = {
   parentElement: WIDGET_ID,
@@ -25,12 +25,9 @@ const WIDGET_CONFIG = {
   styles: undefined,
   config: {
     calendar: {
-      coaches: [],
-      establishments: [],
-      metaActivities: [],
-      levels: [],
-      variant: null,
-      groupSessionByPeriod: true,
+      todayOnly: false,
+      cardMode: null,
+      groupSessionByPeriod: false,
     },
   },
 };
