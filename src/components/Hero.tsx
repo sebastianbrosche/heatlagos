@@ -75,11 +75,25 @@ export default function Hero() {
             Infrared <em className="text-brand">Pilates</em>, Yoga, Sculpt,
             Mobility <span className="text-brand-soft">& more.</span>
           </h1>
-          <p className="mt-6 text-sm text-foreground/90">
-            Grand Opening May 1–3 🎉 All classes FREE!
-            <br />
-            Claim your free pass, then book any class.
-          </p>
+          <div className="mt-6 text-sm text-foreground/90">
+            <p className="font-semibold">
+              Grand Opening May 1–3 🎉 All classes FREE!
+            </p>
+            <ol className="mt-3 flex flex-col gap-1 text-foreground/80">
+              <li>
+                <span className="font-semibold text-brand">1.</span> Claim your
+                free pass
+              </li>
+              <li>
+                <span className="font-semibold text-brand">2.</span> Check your
+                inbox &amp; log in
+              </li>
+              <li>
+                <span className="font-semibold text-brand">3.</span> Book any
+                class
+              </li>
+            </ol>
+          </div>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
@@ -118,11 +132,25 @@ export default function Hero() {
             <br />
             <span className="text-brand-soft">& more.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base text-foreground/90 lg:text-lg">
-            Grand Opening May 1–3 🎉 All classes FREE!
-            <br />
-            Claim your free pass, then book any class.
-          </p>
+          <div className="mt-6 max-w-xl text-base text-foreground/90 lg:text-lg">
+            <p className="font-semibold">
+              Grand Opening May 1–3 🎉 All classes FREE!
+            </p>
+            <ol className="mt-3 flex flex-col gap-1 text-foreground/80">
+              <li>
+                <span className="font-semibold text-brand">1.</span> Claim your
+                free pass
+              </li>
+              <li>
+                <span className="font-semibold text-brand">2.</span> Check your
+                inbox &amp; log in
+              </li>
+              <li>
+                <span className="font-semibold text-brand">3.</span> Book any
+                class
+              </li>
+            </ol>
+          </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
