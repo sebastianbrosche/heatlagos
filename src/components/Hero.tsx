@@ -69,33 +69,27 @@ export default function Hero() {
         </div>
         <div className="flex flex-col items-start px-5 pt-8 pb-16">
           <p className="mb-5 text-[10px] uppercase tracking-[0.3em] text-brand">
-            Welcome to Heat Lagos
+            Welcome to HEAT Lagos
           </p>
           <h1 className="font-serif text-[1.9rem] leading-[1.05]">
             Infrared <em className="text-brand">Pilates</em>, Yoga, Sculpt,
             Mobility <span className="text-brand-soft">& more.</span>
           </h1>
-          <p className="mt-6 text-sm text-foreground/80">
-            Grand Opening May 1–3! All Classes are FREE.{" "}
-            <a
-              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-brand/50 underline-offset-4 text-brand hover:text-brand-soft hover:decoration-brand transition-colors"
-            >
-              Book here!
-            </a>
+          <p className="mt-6 text-sm text-foreground/90">
+            Grand Opening May 1–3 🎉 All classes FREE!
+            <br />
+            Claim your free pass, then book any class.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <DiscoverMenu />
             <a
               href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-w-[150px] items-center justify-center gap-2 rounded-full border border-foreground/30 bg-foreground/5 px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground backdrop-blur-sm hover:bg-foreground/10 hover:border-foreground/50 transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-dark hover:bg-brand-soft transition-colors"
             >
-              Book
+              Claim your free pass →
             </a>
+            <DiscoverMenu />
           </div>
         </div>
       </div>
@@ -115,7 +109,7 @@ export default function Hero() {
 
         <div className="relative z-10 flex h-full w-full flex-col items-start justify-end px-6 pb-20 lg:px-20 lg:pb-32">
           <p className="mb-6 text-[11px] uppercase tracking-[0.3em] text-brand">
-            Welcome to Heat Lagos
+            Welcome to HEAT Lagos
           </p>
           <h1 className="max-w-5xl font-serif text-6xl leading-[1.05] lg:text-[6.5rem]">
             Infrared <em className="text-brand">Pilates</em>, Yoga,
@@ -124,27 +118,21 @@ export default function Hero() {
             <br />
             <span className="text-brand-soft">& more.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base text-foreground/80 lg:text-lg">
-            Grand Opening May 1–3! All Classes are FREE.{" "}
-            <a
-              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-brand/50 underline-offset-4 text-brand hover:text-brand-soft hover:decoration-brand transition-colors"
-            >
-              Book here!
-            </a>
+          <p className="mt-6 max-w-xl text-base text-foreground/90 lg:text-lg">
+            Grand Opening May 1–3 🎉 All classes FREE!
+            <br />
+            Claim your free pass, then book any class.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <DiscoverMenu />
             <a
               href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-w-[170px] items-center justify-center gap-3 rounded-full border border-foreground/30 bg-foreground/5 px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.25em] text-foreground backdrop-blur-sm hover:bg-foreground/10 hover:border-foreground/50 transition-colors"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-brand px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.25em] text-stone-dark hover:bg-brand-soft transition-colors"
             >
-              Book
+              Claim your free pass →
             </a>
+            <DiscoverMenu />
           </div>
         </div>
       </div>
