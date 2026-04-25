@@ -121,11 +121,11 @@ export default function Hero() {
           aria-hidden
         />
 
-        <div className="relative z-10 flex h-full w-full flex-col items-start justify-end px-6 pb-20 lg:px-20 lg:pb-32">
+        <div className="relative z-10 flex h-full w-full flex-col items-start justify-end px-6 pb-12 pt-32 lg:px-20 lg:pb-16 lg:pt-44">
           <p className="mb-6 text-[11px] uppercase tracking-[0.3em] text-brand">
             Welcome to HEAT Lagos
           </p>
-          <h1 className="max-w-5xl font-serif text-6xl leading-[1.05] lg:text-[6.5rem]">
+          <h1 className="max-w-5xl font-serif text-5xl leading-[1.05] lg:text-[5.5rem]">
             Infrared <em className="text-brand">Pilates</em>, Yoga,
             <br />
             Sculpt, Mobility
