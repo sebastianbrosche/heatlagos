@@ -11,6 +11,7 @@ const EXPLORE_LINKS: Array<{ href: string; label: string }> = [
     href: "/things-to-do-lagos-wellness",
     label: "Wellness things to do in Lagos",
   },
+  { href: "/why-infrared", label: "Why infrared? The science" },
 ];
 
 export default function Footer() {
