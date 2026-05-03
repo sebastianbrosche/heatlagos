@@ -54,7 +54,7 @@ export default function Page() {
         eyebrow="Wellness in Lagos"
         title="Wellness Things to Do in Lagos, Portugal"
         lede="If you are visiting Lagos for a week, a month or a season — or you have just moved here — this is a short, honest guide to building a wellness routine that actually fits the place. Centred on Heat Lagos, our infrared studio in the centre of town, with classes for every kind of active body."
-        heroImage="/DSC07963.JPG"
+        heroImage="/detail.JPG"
         heroImageAlt="Heat Lagos studio detail"
         extras={
           <>
