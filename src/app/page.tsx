@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import BeforeYouCome from "@/components/BeforeYouCome";
 import Classes from "@/components/Classes";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -25,6 +26,7 @@ export default function Home() {
         <Memberships />
         <BeforeYouCome />
         <Workshops />
+        <FAQ />
         <Location />
       </main>
       <Footer />

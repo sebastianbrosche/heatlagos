@@ -1,3 +1,18 @@
+const EXPLORE_LINKS: Array<{ href: string; label: string }> = [
+  { href: "/infrared-classes-lagos", label: "Infrared classes in Lagos" },
+  { href: "/pilates-lagos-portugal", label: "Pilates in Lagos" },
+  { href: "/yoga-lagos-portugal", label: "Yoga in Lagos" },
+  { href: "/mobility-class-lagos", label: "Mobility class in Lagos" },
+  {
+    href: "/muscle-recovery-surfing-lagos",
+    label: "Muscle recovery for surfers",
+  },
+  {
+    href: "/things-to-do-lagos-wellness",
+    label: "Wellness things to do in Lagos",
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-white/5 bg-stone-dark/40 px-6 py-16 lg:px-20">
@@ -109,7 +124,22 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-16 flex max-w-[1400px] flex-col items-start justify-between gap-4 border-t border-white/5 pt-8 text-[11px] uppercase tracking-[0.2em] text-stone sm:flex-row">
+      <div className="mx-auto mt-16 max-w-[1400px] border-t border-white/5 pt-10">
+        <p className="text-[11px] uppercase tracking-[0.25em] text-stone">
+          Explore
+        </p>
+        <ul className="mt-4 grid gap-x-8 gap-y-2 text-sm text-foreground/65 sm:grid-cols-2 lg:grid-cols-3">
+          {EXPLORE_LINKS.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} className="hover:text-brand">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mx-auto mt-12 flex max-w-[1400px] flex-col items-start justify-between gap-4 border-t border-white/5 pt-8 text-[11px] uppercase tracking-[0.2em] text-stone sm:flex-row">
         <span>© Heat Lagos</span>
         <span>Movement is life.</span>
       </div>
