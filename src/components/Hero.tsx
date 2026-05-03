@@ -77,31 +77,19 @@ export default function Hero() {
           </h1>
           <div className="mt-6 text-sm text-foreground/90">
             <p className="font-semibold">
-              Grand Opening May 1–3 🎉 All classes FREE!
+              🎉 Our opening offer is live today only: unlimited summer
+              membership for €390, and everyone who buys before 11:59pm tonight
+              gets one month FREE!
             </p>
-            <ol className="mt-3 flex flex-col gap-1 text-foreground/80">
-              <li>
-                <span className="font-semibold text-brand">1.</span> Claim your
-                free pass
-              </li>
-              <li>
-                <span className="font-semibold text-brand">2.</span> Check your
-                inbox &amp; log in
-              </li>
-              <li>
-                <span className="font-semibold text-brand">3.</span> Book any
-                class
-              </li>
-            </ol>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
-              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
+              href="https://backoffice.bsport.io/customer/payment/pass/751501/?membership=5821&force=true"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-dark hover:bg-brand-soft transition-colors"
             >
-              Claim your free pass →
+              Summer membership special deal ☀️ →
             </a>
             <DiscoverMenu />
           </div>
@@ -134,31 +122,19 @@ export default function Hero() {
           </h1>
           <div className="mt-6 max-w-xl text-base text-foreground/90 lg:text-lg">
             <p className="font-semibold">
-              Grand Opening May 1–3 🎉 All classes FREE!
+              🎉 Our opening offer is live today only: unlimited summer
+              membership for €390, and everyone who buys before 11:59pm tonight
+              gets one month FREE!
             </p>
-            <ol className="mt-3 flex flex-col gap-1 text-foreground/80">
-              <li>
-                <span className="font-semibold text-brand">1.</span> Claim your
-                free pass
-              </li>
-              <li>
-                <span className="font-semibold text-brand">2.</span> Check your
-                inbox &amp; log in
-              </li>
-              <li>
-                <span className="font-semibold text-brand">3.</span> Book any
-                class
-              </li>
-            </ol>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="https://backoffice.bsport.io/customer/payment/pass/751506/?membership=5821&force=true"
+              href="https://backoffice.bsport.io/customer/payment/pass/751501/?membership=5821&force=true"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 rounded-full bg-brand px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.25em] text-stone-dark hover:bg-brand-soft transition-colors"
             >
-              Claim your free pass →
+              Summer membership special deal ☀️ →
             </a>
             <DiscoverMenu />
           </div>
