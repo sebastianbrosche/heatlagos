@@ -77,9 +77,8 @@ export default function Hero() {
           </h1>
           <div className="mt-6 text-sm text-foreground/90">
             <p className="font-semibold">
-              🎉 Our opening offer is live today only: unlimited summer
-              membership for €390, and everyone who buys before 11:59pm tonight
-              gets one month FREE!
+              🎉 Today only — unlimited summer membership for €390. Sign up
+              before 11:59pm tonight and get one month FREE.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -89,7 +88,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-dark hover:bg-brand-soft transition-colors"
             >
-              Summer membership special deal ☀️ →
+              Summer membership deal →
             </a>
             <DiscoverMenu />
           </div>
@@ -122,9 +121,8 @@ export default function Hero() {
           </h1>
           <div className="mt-6 max-w-xl text-base text-foreground/90 lg:text-lg">
             <p className="font-semibold">
-              🎉 Our opening offer is live today only: unlimited summer
-              membership for €390, and everyone who buys before 11:59pm tonight
-              gets one month FREE!
+              🎉 Today only — unlimited summer membership for €390. Sign up
+              before 11:59pm tonight and get one month FREE.
             </p>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -134,7 +132,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 rounded-full bg-brand px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.25em] text-stone-dark hover:bg-brand-soft transition-colors"
             >
-              Summer membership special deal ☀️ →
+              Summer membership deal →
             </a>
             <DiscoverMenu />
           </div>
