@@ -6,7 +6,7 @@ const URL = "https://www.heatlagos.com/why-infrared";
 export const metadata: Metadata = {
   title: "Why Infrared? Five Evidence-Backed Reasons",
   description:
-    "Five evidence-backed reasons to practice yoga and pilates in an infrared heated studio. The science of heat, joint relief, recovery and nervous-system effects — without the wellness hype.",
+    "What an infrared room actually does to a body that's about to move for an hour. Five reasons it matters — flexibility, joints, cardiovascular load, recovery, nervous system — with the evidence behind each one.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     url: URL,
-    title: "Why Infrared? Five Evidence-Backed Reasons | Heat Lagos",
+    title: "Why Infrared? | Heat Lagos",
     description:
-      "Why infrared yoga and pilates work — flexibility, joints, cardiovascular load, recovery and mood, with the studies that actually support each one.",
+      "What infrared yoga and pilates actually do to the body — flexibility, joints, cardio, recovery, nervous system. With the evidence behind each one, and what we don't claim.",
   },
 };
 
@@ -25,10 +25,9 @@ const STUDIO_ID = "https://www.heatlagos.com/#studio";
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline:
-    "Why Infrared? Five Evidence-Backed Reasons to Practice Yoga and Pilates in a Heated Studio",
+  headline: "Why Infrared? Five Reasons to Practice in a Heated Studio",
   description:
-    "An evidence-backed look at why infrared yoga and pilates work: flexibility, joint relief, cardiovascular conditioning, recovery and nervous-system effects.",
+    "What an infrared room does to a body that's about to move for an hour — flexibility, joints, cardiovascular conditioning, recovery and nervous-system effects, with the evidence behind each one.",
   url: URL,
   mainEntityOfPage: URL,
   inLanguage: "en",
@@ -52,347 +51,309 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       <SeoPageShell
-        eyebrow="The science behind the heat"
+        eyebrow="Heat, honestly"
         title="Why Infrared?"
-        lede="Five evidence-backed reasons to practice yoga and pilates in an infrared heated studio — flexibility, joints, cardiovascular conditioning, recovery and nervous-system effects, with the studies that support each one."
+        lede="What an infrared room actually does to a body that's about to move for an hour. Five reasons it matters — and the evidence behind each one."
         heroImage="/DSC07970.JPG"
         heroImageAlt="Heat Lagos infrared studio"
       >
         <section>
           <p>
-            Infrared isn&apos;t a wellness fad. It&apos;s the same band of
-            energy you feel when sunlight warms your skin on a cold morning,
-            and it&apos;s been used in serious medical settings for decades.
-            Hospitals use radiant infrared warmers to keep premature newborns
-            alive in delivery rooms. Cardiologists in Japan developed a
-            protocol called Waon therapy — a far-infrared sauna treatment — to
-            improve heart function in patients too sick to exercise. Olympic
-            recovery centres use far-infrared panels alongside ice baths. Even
-            commercial chicken farmers rely on infrared brooding lamps because
-            the radiant heat penetrates feathers and warms the body directly
-            without overheating the air.
+            We get this question often. Most people walking into the studio
+            for the first time have done yoga before — usually in a cold
+            room, sometimes in a hot one. The infrared part is what makes
+            them curious, and sometimes a little skeptical. Fair enough.
           </p>
           <p>
-            So when a yoga or pilates studio installs ceiling-mounted infrared
-            panels instead of a forced-air heater, it isn&apos;t gimmickry.
-            It&apos;s borrowing a heat-delivery method that has a much longer
-            track record than most people realise — and pairing it with
-            movement that already does measurable work for your body.
+            Infrared isn&apos;t a wellness trend. It&apos;s the same band of
+            energy you feel when sun warms your skin on a cool morning.
+            Hospitals use radiant infrared warmers in delivery rooms to keep
+            premature babies alive. Cardiologists in Japan use far-infrared
+            therapy on heart-failure patients. Olympic recovery rooms run
+            far-infrared panels next to ice baths. The physics are genuinely
+            useful, and they&apos;ve been used in serious medical settings
+            for decades.
           </p>
           <p>
-            Here are the five strongest, most defensible reasons to choose an
-            infrared studio over an unheated room (or, for that matter, over a
-            conventional hot yoga setup).
+            The reason a yoga and pilates studio installs infrared panels in
+            the ceiling instead of a fan-forced heater isn&apos;t aesthetic.
+            It&apos;s that the heat reaches you in a different way — and
+            that difference does specific things to a body that&apos;s about
+            to move for an hour. These are the five we think matter.
           </p>
         </section>
 
         <section>
-          <h2>
-            1. Your muscles and connective tissue actually warm up — so
-            flexibility gains are real, not imagined
-          </h2>
+          <h2>Your tissue actually warms up</h2>
           <p>
-            When you walk into a cold studio and start a flow, the first ten
-            minutes are mostly your body trying to bring tissue temperature up
-            to a useful working range. In an infrared studio, that work is
-            largely done for you before you&apos;ve finished your first sun
-            salutation.
+            Walk into a cold studio, start a flow, and the first ten minutes
+            are mostly your body trying to bring its tissue temperature into
+            a useful range. In a heated room, that work is done before your
+            second breath.
           </p>
           <p>
-            This matters because of basic physiology. Type I collagen — the
-            main passive resistive component in muscle and tendon — becomes
-            more extensible as temperature rises. Heated tissue also has lower
-            viscosity, which means greater length changes occur at lower
-            mechanical loads. A systematic review in Physiotherapy concluded
-            that combining heat with stretch produces better range-of-motion
-            outcomes than stretching alone, with researchers attributing the
-            effect to improved collagen flexibility, altered viscoelastic
-            properties, and reduced muscle-spindle sensitivity.
+            This isn&apos;t vague. Collagen — the main passive resistive
+            material in muscle and tendon — becomes more extensible as it
+            warms. Heated tissue has lower viscosity. You move further at
+            lower load. Heat combined with stretch produces better
+            range-of-motion outcomes than stretching alone, and the better
+            systematic reviews put this down to a mix of collagen
+            extensibility, viscoelastic shifts and reduced muscle-spindle
+            reactivity.
           </p>
           <p>
-            Far-infrared specifically penetrates skin into the tissue beneath
-            rather than just heating the air around you. Estimates of
-            penetration depth vary by source, but published reviews
-            consistently put far-infrared in the range of several centimetres
-            into soft tissue — meaningfully deeper than what convection
-            (air-blown) heat achieves, which mostly warms the skin surface and
-            works inward from there.
+            Far-infrared specifically reaches several centimetres into soft
+            tissue rather than just warming the skin. Convection heat — the
+            air-blown kind — works the other way around: it warms the air
+            around you, then your skin, and the heat propagates inward from
+            there. Slower, less consistent, harder to breathe in.
           </p>
           <p>
-            The practical translation: you get into your hips, your hamstrings,
-            your thoracic spine more quickly and more safely. For pilates,
-            where small precise movements depend on a warm and pliable
-            lumbo-pelvic system, this is the difference between a session that
-            earns mobility and one that just rehearses your existing limits.
+            The practical version: you find your hips, your hamstrings, your
+            thoracic spine quickly. For pilates, where small precise
+            movements depend on a warm and pliable lumbo-pelvic system, this
+            is the difference between a session that earns mobility and one
+            that just rehearses your existing limits.
           </p>
         </section>
 
         <section>
-          <h2>
-            2. Joints feel better — and the rheumatology data backs that up
-          </h2>
+          <h2>Joints feel better</h2>
           <p>
-            The claim that &quot;infrared helps joint pain&quot; is one of the
-            few wellness claims with peer-reviewed clinical evidence behind
-            it.
+            This is one of the few claims about infrared that sits on solid
+            clinical ground.
           </p>
           <p>
-            The most cited study is Oosterveld and colleagues, published in
-            Clinical Rheumatology in 2009. They put 17 patients with
-            rheumatoid arthritis and 17 with ankylosing spondylitis through a
+            A 2009 study in Clinical Rheumatology followed patients with
+            rheumatoid arthritis and ankylosing spondylitis through a
             four-week course of infrared sauna sessions. Pain and stiffness
-            dropped significantly during sessions (p &lt; 0.05 for RA, p &lt;
-            0.001 for AS), fatigue decreased, and there were no adverse
-            effects or disease flare-ups. A 2006 randomised controlled trial
-            in Pain Research and Management by Gale and colleagues showed
-            similar results for chronic low back pain.
+            dropped during sessions, fatigue decreased, and there were no
+            flare-ups or adverse effects. A randomised trial on chronic low
+            back pain found similar results.
           </p>
           <p>
-            The mechanism isn&apos;t mysterious. Heat triggers vasodilation,
-            which increases local blood flow to joints, helps clear
-            inflammatory metabolites, raises pain threshold via effects on
-            A-delta and C fibres, and reduces protective muscle guarding
-            around painful joints. This is why heat has been part of physical
-            therapy for chronic musculoskeletal pain for decades — the
-            difference with an infrared studio is that you&apos;re getting
-            the heat delivery and the movement at the same time, rather than
-            sequencing them.
+            The mechanism is unspectacular: heat triggers vasodilation, which
+            means more blood reaches the joint, inflammatory metabolites are
+            cleared faster, pain thresholds rise, and the protective muscle
+            guarding around a painful joint relaxes. Heat has been part of
+            physiotherapy for chronic musculoskeletal pain for decades. The
+            thing that&apos;s different about an infrared studio is that you
+            get the heat and the movement in the same hour, instead of
+            stacking them in sequence.
           </p>
           <p>
-            For practitioners over 40, anyone with a history of
-            training-related joint wear, or martial artists and runners
-            managing chronic stiffness, this combination is genuinely useful.
+            For anyone over 40, anyone managing wear from years of training,
+            runners with cranky knees, climbers with cranky shoulders — this
+            is one of the more useful things the room does for you.
           </p>
         </section>
 
         <section>
-          <h2>
-            3. You get a mild cardiovascular conditioning effect on top of
-            the workout
-          </h2>
+          <h2>Your cardiovascular system gets a lift</h2>
+          <p>This one tends to surprise people.</p>
           <p>
-            This is where the medical literature gets surprisingly strong.
-            Cardiologist Chuwa Tei at Kagoshima University in Japan developed
-            Waon therapy in the 1990s — a protocol involving 15 minutes in a
-            60°C far-infrared sauna followed by 30 minutes of warm rest. A
-            2002 study in the Journal of the American College of Cardiology
-            showed that two weeks of this treatment improved vascular
-            endothelial function and cardiac function in patients with chronic
-            heart failure. A follow-up in the same journal demonstrated
-            improvements in vascular endothelial function in patients with
-            coronary risk factors.
+            A Japanese cardiologist named Tei developed something called Waon
+            therapy in the 1990s — a structured far-infrared treatment for
+            heart-failure patients who were too sick to do regular cardio.
+            The first studies, published in the Journal of the American
+            College of Cardiology, showed measurable improvements in
+            vascular function and cardiac output after two weeks. The
+            proposed mechanism is upregulation of nitric oxide synthase,
+            which is the same family of effects you get from moderate aerobic
+            training. The whole point of Waon was to give people who
+            couldn&apos;t tolerate cardio a way in.
           </p>
           <p>
-            The proposed mechanism is upregulation of endothelial nitric
-            oxide synthase (eNOS), which increases nitric oxide production,
-            relaxes blood vessels, and reduces vascular resistance. This is
-            the same family of effects you get from moderate aerobic exercise
-            — which is the point. Heat therapy was developed as a tool for
-            patients who couldn&apos;t tolerate normal cardio.
-          </p>
-          <p>
-            For a healthy person doing yoga or pilates in an infrared studio,
-            this means your cardiovascular system is being asked to do extra
-            work managing thermoregulation on top of the movement itself.
-            Heart rate runs higher, peripheral circulation increases, and
-            over time you accumulate the same kind of vascular adaptations
-            associated with regular aerobic training. It doesn&apos;t replace
-            cardio — but it stacks something measurable on top of a practice
-            that, in an unheated room, isn&apos;t strongly cardiovascular.
+            For a healthy person doing yoga or pilates in an infrared room,
+            this means your cardiovascular system is working a layer harder
+            than it would in a cold studio. Heart rate runs higher.
+            Peripheral circulation increases. Over weeks, the vascular
+            adaptations look like the ones you accumulate from regular
+            cardio. It doesn&apos;t replace cardio. It stacks something
+            measurable on top of a practice that, in a cold room, isn&apos;t
+            strongly cardiovascular at all.
           </p>
         </section>
 
         <section>
-          <h2>
-            4. Recovery is faster — which is why elite athletes use
-            far-infrared between sessions
-          </h2>
+          <h2>Recovery is faster</h2>
           <p>
-            A 2022 study of elite female soccer players published in the
-            sports medicine literature found that far-infrared therapy applied
-            every 24 hours after match-related exercise reduced peak
-            delayed-onset muscle soreness (DOMS) by approximately 60% and
-            brought athletes back to baseline one to three days faster than
-            the control group. A 2024 randomised crossover trial in Retos
-            compared infrared sauna, traditional sauna, warm water immersion,
-            and passive recovery in male athletes and found that far-infrared
-            produced superior recovery of fatigue and muscle damage markers
-            — suggesting the wavelength itself, not just the heat, contributes
-            to the effect.
+            The recovery side is where the data has gotten strongest in the
+            last few years.
           </p>
           <p>
-            The proposed mechanism is twofold. Heat exposure induces heat
-            shock proteins, particularly HSP70, which act as molecular
-            chaperones helping cells repair damaged proteins and recover from
-            physical stress. A study in the International Journal of Yoga
-            showed that practitioners doing the same yoga sequence in heated
-            versus room-temperature conditions had significantly higher HSP70
-            expression in the heated group after four weeks. Increased blood
-            flow also clears metabolic waste from worked muscles faster, which
-            is the more immediate reason your legs feel less wrecked the day
-            after class.
+            A 2022 study on elite female footballers found that far-infrared
+            applied every 24 hours after match exercise cut peak DOMS by
+            around 60% and brought athletes back to baseline one to three
+            days faster than the control group. A 2024 trial comparing
+            infrared sauna, traditional sauna, warm water immersion and
+            passive recovery found infrared came out best on fatigue and
+            muscle damage markers — which suggests the wavelength itself is
+            doing some of the work, not just the heat.
           </p>
           <p>
-            For people who train hard outside of yoga — BJJ, climbing,
-            running, lifting — adding infrared yoga or pilates sessions
-            functions as active recovery with a measurable physiological
-            signature, not just a vague sense of &quot;feeling better.&quot;
+            The mechanism is partly heat shock proteins, particularly HSP70.
+            These act as molecular chaperones and help cells repair damaged
+            proteins after physical stress. A study in the International
+            Journal of Yoga compared the same sequence done in heated and
+            unheated rooms, and the heated group expressed significantly
+            more HSP70 after four weeks. The other half of the mechanism is
+            simpler: better blood flow clears metabolic waste from worked
+            muscles faster.
+          </p>
+          <p>
+            If you train hard outside of yoga — surf, gym, BJJ, running,
+            cycling — two infrared sessions a week work as active recovery
+            with a real physiological signature. Not the vague kind. The
+            measurable kind.
           </p>
         </section>
 
         <section>
-          <h2>
-            5. The nervous system actually shifts — and the depression data
-            is striking
-          </h2>
+          <h2>The nervous system shifts</h2>
           <p>
-            This is the reason most people don&apos;t expect, and it&apos;s
-            probably the most clinically interesting.
+            This is the effect most people don&apos;t expect, and it&apos;s
+            probably the most clinically interesting one in the literature.
           </p>
           <p>
-            A 2016 randomised controlled trial published in JAMA Psychiatry by
-            Janssen and colleagues showed that a single whole-body
-            hyperthermia session produced a statistically significant
-            reduction in depressive symptoms, with effects measurable up to
-            six weeks later. The proposed mechanism involves activation of
-            the raphe nuclei — the brain&apos;s primary serotonin-producing
-            region, which is also the target of SSRI antidepressants. Heat
-            exposure also raises BDNF (brain-derived neurotrophic factor),
-            supports neuroplasticity, and reliably lowers cortisol.
+            A 2016 randomised trial in JAMA Psychiatry showed that a single
+            whole-body hyperthermia session produced a real reduction in
+            depressive symptoms — measurable up to six weeks afterwards. The
+            proposed mechanism involves the raphe nuclei, the brain&apos;s
+            main serotonin-producing region, which is also what SSRI
+            antidepressants target. Heat exposure also raises BDNF, supports
+            neuroplasticity, and lowers cortisol.
           </p>
           <p>
-            You don&apos;t need to be clinically depressed to feel this. Most
-            people leaving an infrared yoga class describe a particular kind
-            of post-session calm that doesn&apos;t quite match what they get
-            from unheated yoga or from a regular sauna alone. The likely
-            explanation is that you&apos;re stacking three nervous-system
-            regulators at once: parasympathetic activation from the breath
-            and slow movement of yoga, the endorphin-and-serotonin response
-            from hyperthermia, and the cortisol reduction that follows
-            controlled heat stress.
+            You don&apos;t need to be clinically depressed to feel a version
+            of this. Most people leaving an infrared yoga class describe a
+            kind of post-session calm that doesn&apos;t quite match what they
+            get from cold yoga or a regular sauna alone. The likely reason
+            is that you&apos;re stacking three nervous-system regulators in
+            the same hour: parasympathetic activation from the breath and
+            slow movement of yoga, the endorphin and serotonin response to
+            controlled hyperthermia, and the cortisol drop that follows.
           </p>
           <p>
-            For students dealing with chronic stress, sleep problems, or
-            low-grade anxiety, this stack is more therapeutically useful than
-            any single one of those interventions on its own.
+            If you&apos;re managing chronic stress, sleep that has stopped
+            working, or low-grade anxiety, this stack is probably more
+            useful than any one of those interventions alone.
           </p>
         </section>
 
         <section>
-          <h2>What the science doesn&apos;t quite support</h2>
+          <h2>What we don&apos;t claim</h2>
           <p>
-            A grounded blog post should also be honest about what&apos;s
-            overhyped. The most common claim about infrared studios is
-            &quot;detoxification through sweat.&quot; This one doesn&apos;t
-            really hold up. Your liver and kidneys handle the vast majority of
-            metabolic waste clearance, and sweat&apos;s primary purpose is
-            thermoregulation, not toxin elimination. Some studies have
-            measured trace amounts of heavy metals in sweat, but the
-            quantities are small relative to what your kidneys excrete. If a
-            studio is selling you infrared yoga as a detox, ignore that part —
-            and pay attention to everything above instead.
+            We should be straightforward about what&apos;s overhyped. The
+            most common claim around infrared studios is &quot;detox through
+            sweat.&quot; This one doesn&apos;t really hold up. Your liver
+            and kidneys do almost all of your metabolic waste clearance, and
+            sweat is mostly about thermoregulation, not toxin elimination.
+            There are studies showing trace amounts of heavy metals in sweat,
+            but the quantities are small relative to what your kidneys handle
+            anyway.
+          </p>
+          <p>
+            If anyone is selling you infrared yoga as a detox, ignore that
+            part. Pay attention to everything above instead.
           </p>
         </section>
 
         <section>
-          <h2>Why infrared specifically, not just any heated studio</h2>
+          <h2>Why infrared, specifically</h2>
           <p>
-            It&apos;s worth being precise about why an infrared studio is
-            different from a conventional hot yoga room with forced-air
-            heating. A few things matter in practice:
+            It&apos;s worth being honest about why an infrared studio works
+            differently from a fan-heated hot yoga room.
           </p>
           <p>
-            <strong>The air stays cleaner and more breathable.</strong>{" "}
-            Infrared panels heat your body directly through radiant energy
-            rather than blowing hot air at you, which means lower humidity,
-            less dust circulation, and a much easier breathing experience for
-            pranayama, breath-led pilates, and anyone with mild respiratory
-            sensitivity. This is genuinely the biggest practical difference
-            for students.
+            <strong>The air stays cleaner.</strong> Infrared panels heat the
+            body directly through radiant energy rather than blowing hot air
+            at you. Lower humidity. Less dust and circulating particles.
+            Much easier to breathe through pranayama, breath-led pilates, or
+            any kind of respiratory sensitivity. In day-to-day terms, this
+            is the biggest practical difference.
           </p>
           <p>
-            <strong>The heat penetrates deeper.</strong> Convection heat warms
-            your skin and works inward; infrared warms tissue more directly.
-            The subjective experience is that you feel warm rather than hot —
-            the air can sit at 30-32°C while your muscles feel like
-            they&apos;ve been in a 40°C room.
+            <strong>The heat reaches deeper.</strong> Convection warms your
+            skin and works inward; infrared warms tissue more directly. The
+            subjective version is that you feel warm rather than hot — the
+            room sits at 30-32°C while your muscles feel like they&apos;re
+            in a 40°C room.
           </p>
           <p>
-            <strong>It&apos;s silent.</strong> No fans, no hum. For a
-            meditative practice, this matters more than people realise.
+            <strong>It&apos;s silent.</strong> No fans. No hum. For a
+            meditative practice this matters more than people realise.
           </p>
           <p>
-            <strong>
-              The temperature sweet spot sits lower — and that&apos;s a
-              feature, not a compromise.
-            </strong>{" "}
-            Most infrared studios run around 30-32°C, well below the 40-42°C
-            of conventional Bikram-style rooms. There&apos;s a clear
-            physiological reason this works for more people: heat causes
-            vasodilation, which lowers blood pressure on its own. A 2019 pilot
-            study on Bikram practitioners explicitly identified vasodilation
-            and plasma volume shifts from the hot environment as factors that
-            can contribute to blood pressure drops during practice — which is
-            why students with naturally low blood pressure, or anyone new to
-            heated work, tolerate 30-32°C far better than 40°C+. The other
-            consequence is workout quality. Above 40°C, sustaining strong
-            inversions, holding pilates-style strength positions, or moving
-            with precision becomes genuinely harder because thermoregulation
-            is competing for resources with everything else you&apos;re asking
-            the body to do. At 30-32°C, you still get the deep tissue
-            warming, the sweat, and the cardiovascular and recovery benefits
-            — but you can also actually train hard.
+            <strong>The temperature is lower, on purpose.</strong> Most
+            infrared studios run around 30-32°C, well below the 40-42°C of
+            conventional Bikram-style rooms. There&apos;s a clear
+            physiological reason this works for more people. Heat causes
+            vasodilation, which lowers blood pressure on its own. A 2019
+            pilot study on Bikram practitioners identified vasodilation and
+            plasma volume shifts as factors that can pull blood pressure
+            down during practice — which is why students with naturally low
+            blood pressure, or anyone new to heated work, tolerate 30-32°C
+            far better than 40°C+. The other consequence is workout quality.
+            Above 40°C, holding a strong plank, an inversion, or a precise
+            pilates position becomes harder because thermoregulation is
+            competing for resources with everything else you&apos;re asking
+            your body to do. At 30-32°C you still get the deep tissue
+            warming, the sweat, the cardiovascular load and the recovery
+            benefits. You can also actually train hard.
           </p>
         </section>
 
         <section>
-          <h2>A note on what&apos;s across the street</h2>
+          <h2>And about the ocean across the street</h2>
           <p>
-            If your infrared studio happens to sit a few minutes from the
-            Atlantic, that&apos;s not just a marketing detail — it&apos;s a
-            meaningful extension of the practice. Heat-then-cold contrast is
-            one of the better-evidenced recovery protocols in the literature.
-            The rapid temperature shift creates a vascular pump effect
-            (vessels dilate, constrict, then dilate again), drives
-            circulation, and triggers a strong parasympathetic rebound after
-            the initial cold-shock response. Research suggests that ending a
-            session with cold exposure produces stronger vagal tone
-            improvements and longer-lasting parasympathetic activation than
-            the reverse order. In practical terms: you finish a 90-minute
-            infrared class warm and mobile, you cross the street, you spend
-            two or three minutes in the ocean, and you walk back to your day
-            with your nervous system properly reset. It&apos;s not the reason
-            to take the class. But when the geography allows it, the combined
-            effect is greater than either piece alone.
+            When the studio happens to sit a few minutes from the Atlantic,
+            that&apos;s not a marketing line — it&apos;s an extension of the
+            practice if you want it. Heat-then-cold contrast is one of the
+            better-evidenced recovery protocols out there. The rapid
+            temperature swing creates a vascular pump (vessels dilate,
+            constrict, dilate again), drives circulation, and triggers a
+            strong parasympathetic rebound after the initial cold-shock
+            response. Research suggests that ending a session with cold
+            exposure produces stronger and longer-lasting parasympathetic
+            activation than the reverse.
+          </p>
+          <p>
+            In practice: you finish a class warm and mobile, you walk five
+            minutes, you spend two or three minutes in the ocean, and you go
+            back to your day with your nervous system properly reset.
+            It&apos;s not the reason to take the class. But when the
+            geography allows it, the combined effect is bigger than either
+            piece alone.
           </p>
         </section>
 
         <section>
-          <h2>The bottom line</h2>
+          <h2>The short version</h2>
           <p>
             Infrared yoga and pilates work because they combine two things
-            that already have independent evidence behind them — movement-based
-            practice and controlled heat exposure — and deliver the heat in a
-            way that&apos;s deeper, cleaner, and more efficient than a
-            fan-forced hot studio. The benefits aren&apos;t mystical.
-            They&apos;re flexibility gains driven by collagen physics, joint
-            relief from documented vasodilation effects, cardiovascular
-            conditioning that mirrors what cardiologists prescribe to
-            heart-failure patients, faster training recovery via heat-shock
-            proteins and improved circulation, and a real shift in
-            nervous-system state with measurable mood effects.
+            that already have independent evidence behind them — movement
+            and controlled heat exposure — and deliver the heat in a way
+            that&apos;s deeper, cleaner and more efficient than a fan-forced
+            hot studio. Flexibility gains driven by collagen physics. Joint
+            relief from documented vasodilation. A mild cardiovascular load
+            that mirrors what cardiologists prescribe to heart-failure
+            patients. Faster recovery via heat shock proteins and improved
+            circulation. A real shift in nervous-system state with measurable
+            effects on mood.
           </p>
           <p>
-            If you&apos;re choosing between a regular yoga studio and an
-            infrared one, the question isn&apos;t whether infrared adds
-            something. It&apos;s whether the specific things it adds — deeper
-            warming, joint comfort, mild cardiovascular load, faster recovery,
-            and a calmer nervous system on the way out the door — are worth
-            it for the kind of body you&apos;re trying to build and maintain.
+            If you&apos;re choosing between a cold studio and an infrared
+            one, the question isn&apos;t whether infrared adds something.
+            It&apos;s whether the specific things it adds — deeper warming,
+            joint comfort, mild cardiovascular load, faster recovery and a
+            calmer nervous system on the way out the door — are worth it for
+            the kind of body you&apos;re trying to build and maintain.
           </p>
           <p>
-            For most people who train, work at desks, get older, or simply
-            want their practice to do more in less time, the answer is yes.
+            For most people who train, who work at desks, who get older, or
+            who simply want their practice to do more in less time, the
+            answer is yes.
           </p>
         </section>
       </SeoPageShell>
