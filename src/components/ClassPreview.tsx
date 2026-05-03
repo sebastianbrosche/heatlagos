@@ -58,18 +58,10 @@ const ALL_CLASSES: Record<string, ClassItem> = {
 };
 
 type Props = {
-  eyebrow?: string;
-  heading: string;
-  subheading?: string;
   classes: string[];
 };
 
-export default function ClassPreview({
-  eyebrow = "Classes",
-  heading,
-  subheading,
-  classes,
-}: Props) {
+export default function ClassPreview({ classes }: Props) {
   const items = classes
     .map((name) => ALL_CLASSES[name])
     .filter((c): c is ClassItem => Boolean(c));
@@ -88,18 +80,19 @@ export default function ClassPreview({
   return (
     <section className="px-5 py-20 sm:px-6 sm:py-24 lg:px-20 lg:py-28">
       <div className="mx-auto max-w-[1400px]">
-        <div className="mb-10 flex flex-col items-start gap-3 sm:mb-14">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
-            {eyebrow}
+        <div className="mb-10 flex flex-col items-start gap-4 sm:mb-14">
+          <p className="text-[11px] uppercase tracking-[0.3em] text-brand">
+            Heat Schedule
           </p>
-          <h2 className="font-serif text-[2rem] leading-[1.1] sm:text-4xl lg:text-5xl">
-            {heading}
+          <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:text-7xl">
+            Find your class,
+            <br />
+            <em className="text-brand">book your mat.</em>
           </h2>
-          {subheading && (
-            <p className="mt-1 max-w-2xl text-foreground/70 sm:text-lg">
-              {subheading}
-            </p>
-          )}
+          <p className="mt-2 max-w-2xl text-foreground/70">
+            Every class, every teacher — updated daily and bookable straight
+            from this page.
+          </p>
         </div>
 
         <div className={`grid gap-5 ${gridCols}`}>
@@ -117,14 +110,9 @@ export default function ClassPreview({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-dark/90 via-stone-dark/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5 sm:p-6">
-                  <div>
-                    <span className="font-serif text-2xl text-foreground drop-shadow-lg sm:text-3xl">
-                      {item.name}
-                    </span>
-                    <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-brand">
-                      {item.duration}
-                    </p>
-                  </div>
+                  <span className="font-serif text-2xl text-foreground drop-shadow-lg sm:text-3xl">
+                    {item.name}
+                  </span>
                   <span className="text-xl text-foreground/80 transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>

@@ -52,7 +52,7 @@ export default function Footer() {
                 Memberships
               </a>
             </li>
-            <li className="text-foreground/50">
+            <li>
               <a href="/#workshops" className="hover:text-brand">
                 Workshops
               </a>

@@ -59,9 +59,6 @@ export default function Page() {
         extras={
           <>
             <ClassPreview
-              eyebrow="The full schedule"
-              heading="Seven classes, one studio."
-              subheading="From precise core work to long, still holds — every format is heated and taught in English."
               classes={[
                 "Heat Pilates",
                 "Heat Sculpt",
@@ -76,7 +73,7 @@ export default function Page() {
               heading="The teachers behind the schedule."
               teachers={["Stine", "Sebastian", "Anastasiia"]}
             />
-            <Schedule />
+            <Schedule hideHeading />
             <LocationPreview />
           </>
         }

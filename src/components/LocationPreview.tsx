@@ -17,7 +17,7 @@ export default function LocationPreview() {
             Where to find us
           </p>
           <h2 className="font-serif text-[2rem] leading-[1.1] sm:text-4xl lg:text-5xl">
-            Heat Lagos, on the avenida.
+            Heat Lagos, by the beach.
           </h2>
         </div>
 

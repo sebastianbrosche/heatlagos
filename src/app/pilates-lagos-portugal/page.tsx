@@ -56,12 +56,7 @@ export default function Page() {
         heroImageAlt="Heat Pilates class in Lagos"
         extras={
           <>
-            <ClassPreview
-              eyebrow="Pilates and strength"
-              heading="The strength side of the schedule."
-              subheading="Heat Pilates is the anchor. Pair it with Sculpt or Power for a full week of strength."
-              classes={["Heat Pilates", "Heat Sculpt", "Heat Power"]}
-            />
+            <ClassPreview classes={["Heat Pilates", "Heat Sculpt", "Heat Power"]} />
             <LocationPreview />
           </>
         }

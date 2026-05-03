@@ -32,7 +32,9 @@ const WIDGET_CONFIG = {
   },
 };
 
-export default function Schedule() {
+type Props = { hideHeading?: boolean };
+
+export default function Schedule({ hideHeading = false }: Props = {}) {
   useEffect(() => {
     let attempts = 0;
     const mount = () => {
@@ -53,20 +55,22 @@ export default function Schedule() {
         src="https://cdn.bsport.io/scripts/widget.js"
         strategy="afterInteractive"
       />
-      <div className="mx-auto mb-12 flex max-w-[1400px] flex-col items-start gap-4 px-6 lg:px-20">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-brand">
-          Heat Schedule
-        </p>
-        <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:text-7xl">
-          Find your class,
-          <br />
-          <em className="text-brand">book your mat.</em>
-        </h2>
-        <p className="mt-2 max-w-2xl text-foreground/70">
-          Every class, every teacher — updated daily and bookable straight from
-          this page.
-        </p>
-      </div>
+      {!hideHeading && (
+        <div className="mx-auto mb-12 flex max-w-[1400px] flex-col items-start gap-4 px-6 lg:px-20">
+          <p className="text-[11px] uppercase tracking-[0.3em] text-brand">
+            Heat Schedule
+          </p>
+          <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:text-7xl">
+            Find your class,
+            <br />
+            <em className="text-brand">book your mat.</em>
+          </h2>
+          <p className="mt-2 max-w-2xl text-foreground/70">
+            Every class, every teacher — updated daily and bookable straight from
+            this page.
+          </p>
+        </div>
+      )}
 
       <div
         id="book"

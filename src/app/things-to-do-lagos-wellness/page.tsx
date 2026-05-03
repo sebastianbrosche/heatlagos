@@ -59,9 +59,6 @@ export default function Page() {
         extras={
           <>
             <ClassPreview
-              eyebrow="What to take while you are here"
-              heading="A studio for every kind of day."
-              subheading="Strong day, slow day, recovery day. Pick what your body needs."
               classes={[
                 "Heat Pilates",
                 "Heat Flow",
@@ -69,7 +66,7 @@ export default function Page() {
                 "Heat Recovery",
               ]}
             />
-            <Schedule />
+            <Schedule hideHeading />
             <LocationPreview />
           </>
         }

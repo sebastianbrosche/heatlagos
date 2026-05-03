@@ -56,12 +56,7 @@ export default function Page() {
         heroImageAlt="Heat Mobility class in Lagos"
         extras={
           <>
-            <ClassPreview
-              eyebrow="Move and recover"
-              heading="The classes that make everything else feel better."
-              subheading="Mobility is the anchor. Pair it with Recovery or Yin once a week and feel the difference in your sport, your gym work, your sleep."
-              classes={["Heat Mobility", "Heat Recovery", "Heat Yin"]}
-            />
+            <ClassPreview classes={["Heat Mobility", "Heat Recovery", "Heat Yin"]} />
             <LocationPreview />
           </>
         }

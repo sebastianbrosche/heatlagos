@@ -56,12 +56,7 @@ export default function Page() {
         heroImageAlt="Heat Recovery class in Lagos"
         extras={
           <>
-            <ClassPreview
-              eyebrow="Three classes for active bodies"
-              heading="Reset between sessions."
-              subheading="The recovery side of the schedule, designed to undo what surf, gym and miles do to the body."
-              classes={["Heat Mobility", "Heat Recovery", "Heat Yin"]}
-            />
+            <ClassPreview classes={["Heat Mobility", "Heat Recovery", "Heat Yin"]} />
             <LocationPreview />
           </>
         }

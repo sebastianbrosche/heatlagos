@@ -57,13 +57,8 @@ export default function Page() {
         heroImageAlt="Heated yoga flow class in Lagos"
         extras={
           <>
-            <ClassPreview
-              eyebrow="The yoga schedule"
-              heading="From flow to stillness."
-              subheading="Four heated yoga classes covering the whole spectrum — choose by how your body feels that day."
-              classes={["Heat Flow", "Heat Power", "Heat Yin", "Heat Recovery"]}
-            />
-            <Schedule />
+            <ClassPreview classes={["Heat Flow", "Heat Power", "Heat Yin", "Heat Recovery"]} />
+            <Schedule hideHeading />
             <LocationPreview />
           </>
         }
