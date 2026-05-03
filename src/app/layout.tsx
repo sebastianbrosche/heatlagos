@@ -22,11 +22,11 @@ const serif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.heatlagos.com"),
   title: {
-    default: "Heat Lagos — Infrared Pilates, Yoga & Recovery in Lagos, Portugal",
+    default: "Heat Lagos · Infrared Pilates, Yoga & Recovery in Lagos, Portugal",
     template: "%s | Heat Lagos",
   },
   description:
-    "Infrared-heated Pilates, Yoga, Sculpt, Mobility & Recovery in Lagos, Portugal. English-speaking studio for active expats and residents across the Algarve — Luz, Burgau, Portimão.",
+    "Infrared-heated Pilates, Yoga, Sculpt, Mobility & Recovery in Lagos, Portugal. English-speaking studio for active expats and residents across the Algarve, from Luz and Burgau to Portimão.",
   keywords: [
     "infrared yoga Lagos",
     "infrared pilates Lagos",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     locale: "en_PT",
     url: "https://www.heatlagos.com/",
     siteName: "Heat Lagos",
-    title: "Heat Lagos — Infrared Pilates, Yoga & Recovery in Lagos, Portugal",
+    title: "Heat Lagos · Infrared Pilates, Yoga & Recovery in Lagos, Portugal",
     description:
       "Infrared-heated Pilates, Yoga, Sculpt, Mobility & Recovery in Lagos. English-speaking classes for active expats and residents across the Algarve.",
     images: [
@@ -69,13 +69,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Heat Lagos — Infrared Pilates, Yoga & Recovery in Lagos, Portugal",
+        alt: "Heat Lagos · Infrared Pilates, Yoga & Recovery in Lagos, Portugal",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Heat Lagos — Infrared Pilates, Yoga & Recovery",
+    title: "Heat Lagos · Infrared Pilates, Yoga & Recovery",
     description:
       "Infrared-heated Pilates, Yoga, Sculpt, Mobility & Recovery in Lagos, Portugal. English-speaking studio.",
     images: ["/opengraph-image"],

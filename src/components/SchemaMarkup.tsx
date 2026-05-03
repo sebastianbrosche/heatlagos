@@ -5,7 +5,7 @@ const STUDIO = {
   "@type": ["HealthClub", "LocalBusiness"],
   "@id": STUDIO_ID,
   name: "Heat Lagos",
-  alternateName: "Heat Lagos — Infrared Heated Studio",
+  alternateName: "Heat Lagos · Infrared Heated Studio",
   url: BASE,
   image: `${BASE}/og-image.png`,
   logo: `${BASE}/logo%20heat.png`,
@@ -168,7 +168,7 @@ const FAQS = [
   {
     question: "How hot is the studio?",
     answer:
-      "Around 30°C — warm enough to feel the heat working through the muscles, but not as intense as traditional hot yoga rooms.",
+      "Around 30°C, warm enough to feel the heat working through the muscles, but not as intense as traditional hot yoga rooms.",
   },
   {
     question: "Do I need experience to join a class?",
@@ -183,7 +183,7 @@ const FAQS = [
   {
     question: "Which class should I choose if I need recovery?",
     answer:
-      "Heat Mobility, Heat Recovery and Heat Yin are the best place to start. They are slower, gentler, and built around joint work, breath and stillness — ideal after surfing, running, gym training, or a stressful week.",
+      "Heat Mobility, Heat Recovery and Heat Yin are the best place to start. They are slower, gentler, and built around joint work, breath and stillness. Ideal after surfing, running, gym training, or a stressful week.",
   },
   {
     question: "Are all classes taught in English?",

@@ -53,9 +53,9 @@ export default function LocationPreview() {
                 From the area
               </p>
               <ul className="mt-3 flex flex-col gap-1 text-foreground/85">
-                <li>Praia da Luz — about 12-13 min</li>
-                <li>Burgau — about 15-16 min</li>
-                <li>Portimão — about 19-23 min</li>
+                <li>Praia da Luz, around 12-13 min</li>
+                <li>Burgau, around 15-16 min</li>
+                <li>Portimão, around 19-23 min</li>
               </ul>
             </div>
             <a

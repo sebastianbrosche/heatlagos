@@ -31,7 +31,7 @@ const ALL_CLASSES: Record<string, ClassItem> = {
     name: "Heat Flow",
     duration: "60 min",
     description:
-      "Creative, breath-led sequences. Warm, fluid, grounding — with space to actually feel the practice.",
+      "Creative, breath-led sequences. Warm, fluid, grounding, with space to actually feel the practice.",
     image: "/Flow.jpg",
   },
   "Heat Mobility": {
@@ -90,7 +90,7 @@ export default function ClassPreview({ classes }: Props) {
             <em className="text-brand">book your mat.</em>
           </h2>
           <p className="mt-2 max-w-2xl text-foreground/70">
-            Every class, every teacher — updated daily and bookable straight
+            Every class, every teacher. Updated daily and bookable straight
             from this page.
           </p>
         </div>

@@ -6,7 +6,7 @@ const URL = "https://www.heatlagos.com/why-infrared";
 export const metadata: Metadata = {
   title: "Why Infrared?",
   description:
-    "What an infrared room actually does to a body — five real effects, with the evidence behind each. Flexibility, joints, cardio, recovery, nervous system. No detox myths.",
+    "What an infrared room actually does to a body. Five real effects, with the evidence behind each. Flexibility, joints, cardio, recovery, nervous system. No detox myths.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: URL,
     title: "Why Infrared? | Heat Lagos",
     description:
-      "Five real effects of infrared yoga and pilates — with the evidence. Flexibility, joints, cardio, recovery, nervous system.",
+      "Five real effects of infrared yoga and pilates, with the evidence. Flexibility, joints, cardio, recovery, nervous system.",
   },
 };
 
@@ -27,7 +27,7 @@ const articleJsonLd = {
   "@type": "Article",
   headline: "Why Infrared? Five Real Effects",
   description:
-    "What an infrared room actually does to a body — flexibility, joints, cardiovascular load, recovery, nervous system. With the evidence behind each.",
+    "What an infrared room actually does to a body. Flexibility, joints, cardiovascular load, recovery and the nervous system, with the evidence behind each.",
   url: URL,
   mainEntityOfPage: URL,
   inLanguage: "en",
@@ -46,7 +46,7 @@ export default function Page() {
       <SeoPageShell
         eyebrow="Heat, honestly"
         title="Why Infrared?"
-        lede="What an infrared room actually does to a body — five real effects, with the evidence behind each. No mysticism, no detox myths."
+        lede="What an infrared room actually does to a body. Five real effects, with the evidence behind each. No mysticism, no detox myths."
         heroImage="/DSC07970.JPG"
         heroImageAlt="Heat Lagos infrared studio"
       >
@@ -54,8 +54,9 @@ export default function Page() {
           <h2>Your body warms up faster</h2>
           <ul>
             <li>
-              Collagen and connective tissue get more pliable with heat —
-              heated stretch produces more range of motion than stretch alone.
+              Collagen and connective tissue get more pliable with heat.
+              Heated stretch produces more range of motion than stretch
+              alone.
             </li>
             <li>
               Far-infrared reaches several centimetres into soft tissue.
@@ -72,8 +73,8 @@ export default function Page() {
           <h2>Joints feel better</h2>
           <ul>
             <li>
-              Heat triggers vasodilation — more blood reaches the joint,
-              inflammatory metabolites clear faster, protective muscle
+              Heat triggers vasodilation, so more blood reaches the joint,
+              inflammatory metabolites clear faster, and protective muscle
               guarding relaxes.
             </li>
             <li>
@@ -96,7 +97,7 @@ export default function Page() {
               start moving.
             </li>
             <li>
-              Same family of effects as moderate aerobic exercise — which is
+              Same family of effects as moderate aerobic exercise, which is
               why Japanese cardiologists prescribe far-infrared (Waon
               therapy) to heart-failure patients.
             </li>
@@ -120,8 +121,9 @@ export default function Page() {
               faster.
             </li>
             <li>
-              Two sessions a week works as active recovery for harder training
-              outside the studio — surf, gym, running, BJJ, climbing.
+              Two sessions a week works as active recovery for harder
+              training outside the studio: surf, gym, running, BJJ,
+              climbing.
             </li>
           </ul>
         </section>
@@ -130,8 +132,8 @@ export default function Page() {
           <h2>The nervous system shifts</h2>
           <ul>
             <li>
-              Heat exposure influences serotonin, BDNF and cortisol — the
-              same systems SSRIs target, plus the stress hormone.
+              Heat exposure influences serotonin, BDNF and cortisol. Those
+              are the same systems SSRIs target, plus the stress hormone.
             </li>
             <li>
               A 2016 JAMA Psychiatry trial showed a single hyperthermia
@@ -146,16 +148,6 @@ export default function Page() {
         </section>
 
         <section>
-          <h2>What we don&apos;t claim</h2>
-          <p>
-            Sweat is mostly about thermoregulation, not detox. Your liver and
-            kidneys handle waste clearance. If anyone is selling you infrared
-            yoga as a detox, ignore that part — and pay attention to the
-            five things above instead.
-          </p>
-        </section>
-
-        <section>
           <h2>Why infrared, not regular hot yoga</h2>
           <ul>
             <li>
@@ -167,7 +159,7 @@ export default function Page() {
               skin.
             </li>
             <li>
-              <strong>Silent.</strong> No fans, no hum — meditative work
+              <strong>Silent.</strong> No fans, no hum. Meditative work
               actually feels meditative.
             </li>
             <li>
@@ -182,16 +174,17 @@ export default function Page() {
           <h2>And about the ocean across the street</h2>
           <p>
             Heat then cold is one of the better-evidenced recovery protocols
-            out there. Finish class warm and mobile, walk five minutes, spend
-            two or three minutes in the Atlantic, and your nervous system is
-            properly reset before the rest of the day.
+            out there. The beach sits right outside our door. Finish class
+            warm and mobile, step across the road, spend two or three minutes
+            in the Atlantic, and your nervous system is properly reset before
+            the rest of the day.
           </p>
         </section>
 
         <section>
           <h2>In short</h2>
           <p>
-            Five real things — more range of motion, happier joints, a
+            Five real things: more range of motion, happier joints, a
             measurable cardio load, faster recovery, a calmer nervous system.
             Movement and controlled heat, delivered deeper and cleaner than
             a fan-forced room.

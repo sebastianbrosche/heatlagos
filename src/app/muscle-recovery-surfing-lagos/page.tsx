@@ -51,7 +51,7 @@ export default function Page() {
       <SeoPageShell
         eyebrow="Recovery for athletes"
         title="Muscle Recovery for Surfers in Lagos"
-        lede="An infrared studio in central Lagos built for the way active people in the Algarve actually live — between surf sessions, training rides, long runs and gym days. Heat Mobility, Heat Recovery and Heat Yin are the three classes you will keep coming back to."
+        lede="An infrared studio in central Lagos built for the way active people in the Algarve actually live, between surf sessions, training rides, long runs and gym days. Heat Mobility, Heat Recovery and Heat Yin are the three classes you will keep coming back to."
         heroImage="/Recovery.jpg"
         heroImageAlt="Heat Recovery class in Lagos"
         extras={
@@ -68,7 +68,7 @@ export default function Page() {
             surf town. There are runners on the cliff path every morning,
             cyclists on the back roads, BJJ rooms in town and a serious
             gym scene. Most of the people we meet are right on the edge of
-            doing too much. Recovery is the missing piece — not another
+            doing too much. Recovery is the missing piece, not another
             workout.
           </p>
           <p>
@@ -118,7 +118,7 @@ export default function Page() {
           <ul>
             <li>
               <strong>Surfers.</strong> Tight thoracic spine, locked-up
-              hips, chronic shoulder restriction — all classic patterns
+              hips, chronic shoulder restriction. All classic patterns
               from too much paddling. Mobility and recovery undo them.
             </li>
             <li>

@@ -51,7 +51,7 @@ export default function Page() {
       <SeoPageShell
         eyebrow="Pilates in Lagos"
         title="Pilates in Lagos, Portugal"
-        lede="Heated Pilates in a boutique infrared studio in the centre of Lagos. Slow, precise, quietly powerful work that builds deep core strength, control and mobility — taught in English to a community of active locals, expats and travellers across the western Algarve."
+        lede="Heated Pilates in a boutique infrared studio in the centre of Lagos. Slow, precise, quietly powerful work that builds deep core strength, control and mobility, taught in English to a community of active locals, expats and travellers across the western Algarve."
         heroImage="/Pilates.jpg"
         heroImageAlt="Heat Pilates class in Lagos"
         extras={
@@ -73,7 +73,7 @@ export default function Page() {
           </p>
           <p>
             Classes run for around 50 minutes. You leave feeling longer,
-            stronger and more connected — not exhausted.
+            stronger and more connected. Not exhausted.
           </p>
         </section>
 
@@ -112,7 +112,7 @@ export default function Page() {
             means classes are accessible at a very wide range of fitness
             levels, the room can hold a real community, and the heat works
             on every part of the body at once. The mat format also travels
-            with you — what you learn on the mat in Lagos is what you can
+            with you, so what you learn on the mat in Lagos is what you can
             practise back home.
           </p>
         </section>
@@ -165,8 +165,8 @@ export default function Page() {
         <section>
           <h2>How to start with Pilates at Heat</h2>
           <p>
-            New to the studio? The 2-week Intro Offer is the easiest way in —
-            it covers every class on the schedule, so you can take three or
+            New to the studio? The 2-week Intro Offer is the easiest way in.
+            It covers every class on the schedule, so you can take three or
             four Pilates classes plus a recovery session in the same
             fortnight and decide what fits. Visiting Lagos? The Vacation
             Week pass gives you 7 days unlimited. Or take a single drop-in

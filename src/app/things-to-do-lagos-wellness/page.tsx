@@ -53,7 +53,7 @@ export default function Page() {
       <SeoPageShell
         eyebrow="Wellness in Lagos"
         title="Wellness Things to Do in Lagos, Portugal"
-        lede="If you are visiting Lagos for a week, a month or a season — or you have just moved here — this is a short, honest guide to building a wellness routine that actually fits the place. Centred on Heat Lagos, our infrared studio in the centre of town, with classes for every kind of active body."
+        lede="If you are visiting Lagos for a week, a month or a season, or you have just moved here, this is a short, honest guide to building a wellness routine that actually fits the place. Centred on Heat Lagos, our infrared studio in the centre of town, with classes for every kind of active body."
         heroImage="/detail.JPG"
         heroImageAlt="Heat Lagos studio detail"
         extras={
@@ -78,7 +78,7 @@ export default function Page() {
             at Ponta da Piedade, swim before breakfast, surf at Praia do
             Canavial, run along the coast or rent a bike and head west to
             Sagres. None of that needs an introduction. What is harder to
-            find is the indoor side of a healthy stay — somewhere to
+            find is the indoor side of a healthy stay. Somewhere to
             recover, build strength, sleep better and reset the nervous
             system in between all the outdoor things.
           </p>
@@ -94,31 +94,31 @@ export default function Page() {
           <h2>A simple wellness routine for a week in Lagos</h2>
           <ul>
             <li>
-              <strong>Day 1 — settle in.</strong> Heat Flow (60 min) to
-              undo the travel, wake up the body, find the breath again.
+              <strong>Day 1, settle in.</strong> Heat Flow (60 min) to undo
+              the travel, wake up the body, find the breath again.
             </li>
             <li>
-              <strong>Day 2 — get strong.</strong> Heat Pilates or Heat
+              <strong>Day 2, get strong.</strong> Heat Pilates or Heat
               Sculpt to load the body in a controlled, productive way.
             </li>
             <li>
-              <strong>Day 3 — outside.</strong> Surf, run or hike Ponta da
+              <strong>Day 3, outside.</strong> Surf, run or hike Ponta da
               Piedade. No studio.
             </li>
             <li>
-              <strong>Day 4 — undo it.</strong> Heat Mobility (45 min) to
+              <strong>Day 4, undo it.</strong> Heat Mobility (45 min) to
               give the joints a proper reset.
             </li>
             <li>
-              <strong>Day 5 — challenge.</strong> Heat Power, then a slow
+              <strong>Day 5, challenge.</strong> Heat Power, then a slow
               afternoon and a long dinner.
             </li>
             <li>
-              <strong>Day 6 — outside again.</strong> A second surf, a
-              bike ride or a beach day.
+              <strong>Day 6, outside again.</strong> A second surf, a bike
+              ride or a beach day.
             </li>
             <li>
-              <strong>Day 7 — reset.</strong> Heat Yin or Heat Recovery to
+              <strong>Day 7, reset.</strong> Heat Yin or Heat Recovery to
               leave Lagos lighter than you arrived.
             </li>
           </ul>
@@ -155,7 +155,7 @@ export default function Page() {
             If you are staying in the Algarve for the season, or you have
             just moved here, the Summer Membership and the monthly options
             are built for that. Most members combine two or three classes
-            a week with their other activities — surf in the morning,
+            a week with their other activities, surf in the morning,
             recovery in the evening, mobility on the day off. The point is
             to build something sustainable, not to chase a programme.
           </p>
@@ -170,7 +170,7 @@ export default function Page() {
           <h2>Where to find us</h2>
           <p>
             The studio is at Edificio da Fabrica da Ribeira, Av. dos
-            Descobrimentos, Loja G, 8600-854 Lagos — a short walk from the
+            Descobrimentos, Loja G, 8600-854 Lagos. A short walk from the
             marina and the historic centre. Easy parking on the avenida.
             From the surrounding area: Luz 12-13 min, Burgau 15-16 min,
             Portimão 19-23 min by car.

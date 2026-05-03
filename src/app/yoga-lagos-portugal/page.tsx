@@ -52,7 +52,7 @@ export default function Page() {
       <SeoPageShell
         eyebrow="Yoga in Lagos"
         title="Yoga in Lagos, Portugal"
-        lede="Heated Flow, Power and Yin yoga in a boutique infrared studio in the centre of Lagos. English-speaking classes from breath-led flow to long, still yin holds — for locals, expats and active travellers across the western Algarve."
+        lede="Heated Flow, Power and Yin yoga in a boutique infrared studio in the centre of Lagos. English-speaking classes from breath-led flow to long, still yin holds, for locals, expats and active travellers across the western Algarve."
         heroImage="/Power.jpg"
         heroImageAlt="Heated power yoga class in Lagos"
         extras={
@@ -75,7 +75,7 @@ export default function Page() {
             <li>
               <strong>Heat Power (60 min).</strong> Physically demanding
               heated yoga that meets you where you are. Strong, simple,
-              breath-led — the kind of class that takes you somewhere in
+              breath-led. The kind of class that takes you somewhere in
               yourself you did not expect.
             </li>
             <li>
@@ -98,7 +98,7 @@ export default function Page() {
             settle and adds a quiet layer of intensity that turns even a
             slow class into something you feel. Infrared heat at around
             30°C is gentler than traditional hot yoga at 40°C+, with lower
-            humidity. You sweat, you get warm, you find depth — but you do
+            humidity. You sweat, you get warm, you find depth, but you do
             not gasp or feel cooked.
           </p>
           <p>
@@ -125,7 +125,7 @@ export default function Page() {
             </li>
             <li>
               <strong>Busy minds.</strong> Heat Power and Heat Yin both
-              cut through stress in different ways — one through hard work
+              cut through stress in different ways: one through hard work
               and breath, the other through stillness.
             </li>
             <li>
@@ -166,9 +166,9 @@ export default function Page() {
             an easy drive of most of the western Algarve:
           </p>
           <ul>
-            <li>Praia da Luz — about 12-13 minutes</li>
-            <li>Burgau — about 15-16 minutes</li>
-            <li>Portimão — about 19-23 minutes depending on route</li>
+            <li>Praia da Luz, around 12-13 minutes</li>
+            <li>Burgau, around 15-16 minutes</li>
+            <li>Portimão, around 19-23 minutes depending on route</li>
           </ul>
         </section>
 

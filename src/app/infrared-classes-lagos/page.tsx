@@ -83,7 +83,7 @@ export default function Page() {
           <p>
             The studio is heated to around 30°C using radiant infrared panels.
             Instead of pushing hot, dry air around the room, the panels warm
-            the body directly — your skin and muscles get warm before the air
+            the body directly, so your skin and muscles get warm before the air
             does. The result is a focused, slightly humid environment that
             feels strong without feeling overwhelming, and that makes the body
             ready to move from the very first stretch.
@@ -115,7 +115,7 @@ export default function Page() {
               <strong>Long-term wellbeing seekers.</strong> Residents in their
               50s and 60s who want a sustainable routine, real instruction and
               measurable progress over months and years. The goal is
-              independence — the more you train with us, the better you should
+              independence. The more you train with us, the better you should
               know your own body.
             </li>
             <li>
@@ -149,7 +149,7 @@ export default function Page() {
             </li>
           </ul>
           <p>
-            Most members combine two or three formats across the week — one
+            Most members combine two or three formats across the week: one
             harder session, one mobility class, one recovery or yin. That mix
             is exactly what active people in Lagos tend to need.
           </p>
@@ -160,7 +160,7 @@ export default function Page() {
           <p>
             Every class at Heat Lagos is taught in English by experienced
             international instructors. Our community already includes Swedish,
-            British, German, Dutch and Portuguese members — locals, long-term
+            British, German, Dutch and Portuguese members, including locals, long-term
             expats and travellers staying for a week or a season. You will
             never have to translate cues, ask twice or feel out of place.
           </p>
@@ -174,9 +174,9 @@ export default function Page() {
             surrounding area are all comfortable:
           </p>
           <ul>
-            <li>Praia da Luz — about 12-13 minutes</li>
-            <li>Burgau — about 15-16 minutes</li>
-            <li>Portimão — about 19-23 minutes depending on route</li>
+            <li>Praia da Luz, around 12-13 minutes</li>
+            <li>Burgau, around 15-16 minutes</li>
+            <li>Portimão, around 19-23 minutes depending on route</li>
           </ul>
           <p>
             That makes Heat a sensible weekly choice whether you live in Lagos
@@ -209,7 +209,7 @@ export default function Page() {
           <h2>How to start</h2>
           <p>
             If you have never been to a heated class, the easiest place to
-            begin is the 2-week Intro Offer — it gives you unlimited access to
+            begin is the 2-week Intro Offer. It gives you unlimited access to
             every class on the schedule, so you can find which formats fit
             your body and your week. From there, most people settle into a
             monthly or yearly membership and use Heat as their year-round

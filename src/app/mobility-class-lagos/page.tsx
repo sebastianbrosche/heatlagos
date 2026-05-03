@@ -66,7 +66,7 @@ export default function Page() {
           <p>
             Heat Mobility is a structured 45-minute class that works
             systematically through joints and the tissue around them. Hips,
-            shoulders, thoracic spine, ankles, wrists — we treat them as
+            shoulders, thoracic spine, ankles, wrists. We treat them as
             real working joints, not afterthoughts. The work is slow,
             deliberate and properly cued, which is what separates real
             mobility training from a few stretches at the end of a strength
@@ -118,7 +118,7 @@ export default function Page() {
             dependent on us. Mobility is the clearest place this shows up.
             You leave class with a better understanding of your own
             shoulders, hips and spine, and you can use that understanding
-            anywhere — at home, on the road, on the beach. The goal is for
+            anywhere: at home, on the road, on the beach. The goal is for
             you to know your body, not need us to fix it.
           </p>
         </section>
@@ -151,7 +151,7 @@ export default function Page() {
               body per class.
             </li>
             <li>
-              Breath-led pacing — no rushing, no chasing reps.
+              Breath-led pacing, with no rushing and no chasing reps.
             </li>
             <li>
               Clear English instruction with options for different levels.
