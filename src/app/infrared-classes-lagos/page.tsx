@@ -54,7 +54,7 @@ export default function Page() {
         eyebrow="Infrared in Lagos"
         title="Infrared Classes in Lagos, Portugal"
         lede="A boutique infrared-heated studio in the heart of Lagos, with Pilates, yoga, sculpt, mobility, recovery and yin classes designed for active people who want to move better, get stronger and recover well."
-        heroImage="/DSC07910.JPG"
+        heroImage="/DSC08008.JPG"
         heroImageAlt="Heat Lagos infrared studio interior"
         extras={
           <>
