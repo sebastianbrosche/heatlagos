@@ -130,11 +130,6 @@ export default function ClassPreview({
                   </span>
                 </div>
               </div>
-              <div className="px-5 py-5 sm:px-6 sm:py-6">
-                <p className="text-sm leading-relaxed text-foreground/75">
-                  {item.description}
-                </p>
-              </div>
             </a>
           ))}
         </div>
