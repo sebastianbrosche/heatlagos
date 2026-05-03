@@ -53,8 +53,8 @@ export default function Page() {
         eyebrow="Yoga in Lagos"
         title="Yoga in Lagos, Portugal"
         lede="Heated Flow, Power and Yin yoga in a boutique infrared studio in the centre of Lagos. English-speaking classes from breath-led flow to long, still yin holds — for locals, expats and active travellers across the western Algarve."
-        heroImage="/Flow.jpg"
-        heroImageAlt="Heated yoga flow class in Lagos"
+        heroImage="/Power.jpg"
+        heroImageAlt="Heated power yoga class in Lagos"
         extras={
           <>
             <ClassPreview classes={["Heat Flow", "Heat Power", "Heat Yin", "Heat Recovery"]} />
