@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
-  { href: "#book", label: "Book" },
-  { href: "#about", label: "About us" },
-  { href: "#classes", label: "Classes" },
-  { href: "#teachers", label: "Teachers" },
-  { href: "#memberships", label: "Memberships" },
-  { href: "#workshops", label: "Workshops" },
-  { href: "#training", label: "Teacher Trainings", note: "coming" },
-  { href: "#find-us", label: "Where to find us" },
+  { href: "/#book", label: "Book" },
+  { href: "/#about", label: "About us" },
+  { href: "/#classes", label: "Classes" },
+  { href: "/#teachers", label: "Teachers" },
+  { href: "/#memberships", label: "Memberships" },
+  { href: "/#workshops", label: "Workshops" },
+  { href: "/#training", label: "Teacher Trainings", note: "coming" },
+  { href: "/#find-us", label: "Where to find us" },
 ];
 
 export default function Header() {
@@ -28,7 +28,7 @@ export default function Header() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-md border-b border-white/5">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-10 h-14 sm:h-16 lg:h-20 flex items-center justify-between">
           <a
-            href="#top"
+            href="/"
             className="flex items-center leading-none"
             onClick={() => setOpen(false)}
           >

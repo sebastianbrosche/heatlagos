@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import ClassPreview from "@/components/ClassPreview";
+import LocationPreview from "@/components/LocationPreview";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/mobility-class-lagos";
@@ -50,6 +52,19 @@ export default function Page() {
         eyebrow="Mobility in Lagos"
         title="Mobility Class in Lagos"
         lede="A focused 45-minute class in a warm infrared studio for active people who want to move with more ease, feel less held back, and build genuine freedom in their body. Designed for surfers, runners, cyclists, gym-goers and 50+ practitioners across the western Algarve."
+        heroImage="/Mobility.jpg"
+        heroImageAlt="Heat Mobility class in Lagos"
+        extras={
+          <>
+            <ClassPreview
+              eyebrow="Move and recover"
+              heading="The classes that make everything else feel better."
+              subheading="Mobility is the anchor. Pair it with Recovery or Yin once a week and feel the difference in your sport, your gym work, your sleep."
+              classes={["Heat Mobility", "Heat Recovery", "Heat Yin"]}
+            />
+            <LocationPreview />
+          </>
+        }
       >
         <section>
           <h2>What Heat Mobility actually is</h2>

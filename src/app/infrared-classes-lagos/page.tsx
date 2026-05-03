@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+import ClassPreview from "@/components/ClassPreview";
+import LocationPreview from "@/components/LocationPreview";
+import Schedule from "@/components/Schedule";
 import SeoPageShell from "@/components/SeoPageShell";
+import TeachersStrip from "@/components/TeachersStrip";
 
 const URL = "https://www.heatlagos.com/infrared-classes-lagos";
 
@@ -50,6 +54,32 @@ export default function Page() {
         eyebrow="Infrared in Lagos"
         title="Infrared Classes in Lagos, Portugal"
         lede="A boutique infrared-heated studio in the heart of Lagos, with Pilates, yoga, sculpt, mobility, recovery and yin classes designed for active people who want to move better, get stronger and recover well."
+        heroImage="/DSC07910.JPG"
+        heroImageAlt="Heat Lagos infrared studio interior"
+        extras={
+          <>
+            <ClassPreview
+              eyebrow="The full schedule"
+              heading="Seven classes, one studio."
+              subheading="From precise core work to long, still holds — every format is heated and taught in English."
+              classes={[
+                "Heat Pilates",
+                "Heat Sculpt",
+                "Heat Power",
+                "Heat Flow",
+                "Heat Mobility",
+                "Heat Recovery",
+                "Heat Yin",
+              ]}
+            />
+            <TeachersStrip
+              heading="The teachers behind the schedule."
+              teachers={["Stine", "Sebastian", "Anastasiia"]}
+            />
+            <Schedule />
+            <LocationPreview />
+          </>
+        }
       >
         <section>
           <h2>What infrared training feels like at Heat</h2>

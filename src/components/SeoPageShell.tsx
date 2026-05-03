@@ -8,6 +8,9 @@ type Props = {
   lede: string;
   children: React.ReactNode;
   bookingHref?: string;
+  heroImage?: string;
+  heroImageAlt?: string;
+  extras?: React.ReactNode;
 };
 
 export default function SeoPageShell({
@@ -16,13 +19,35 @@ export default function SeoPageShell({
   lede,
   children,
   bookingHref = "/#book",
+  heroImage,
+  heroImageAlt,
+  extras,
 }: Props) {
   return (
     <>
       <Header />
       <Marquee />
       <main>
-        <article className="px-5 pt-32 pb-20 sm:px-6 sm:pt-40 sm:pb-24 lg:px-20 lg:pt-48 lg:pb-32">
+        {heroImage && (
+          <div className="relative mx-auto mt-24 max-w-[1400px] px-5 sm:mt-28 sm:px-6 lg:mt-32 lg:px-20">
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl ring-1 ring-white/10 sm:aspect-[21/9]">
+              <img
+                src={heroImage}
+                alt={heroImageAlt ?? title}
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-dark/70 via-transparent to-transparent" />
+            </div>
+          </div>
+        )}
+
+        <article
+          className={`px-5 sm:px-6 lg:px-20 ${
+            heroImage
+              ? "pt-12 pb-20 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28"
+              : "pt-32 pb-20 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-28"
+          }`}
+        >
           <div className="mx-auto max-w-3xl">
             <p className="mb-5 text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
               {eyebrow}
@@ -54,6 +79,8 @@ export default function SeoPageShell({
             </div>
           </div>
         </article>
+
+        {extras}
       </main>
       <Footer />
     </>

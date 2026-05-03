@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import ClassPreview from "@/components/ClassPreview";
+import LocationPreview from "@/components/LocationPreview";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/pilates-lagos-portugal";
@@ -50,6 +52,19 @@ export default function Page() {
         eyebrow="Pilates in Lagos"
         title="Pilates in Lagos, Portugal"
         lede="Heated Pilates in a boutique infrared studio in the centre of Lagos. Slow, precise, quietly powerful work that builds deep core strength, control and mobility — taught in English to a community of active locals, expats and travellers across the western Algarve."
+        heroImage="/Pilates.jpg"
+        heroImageAlt="Heat Pilates class in Lagos"
+        extras={
+          <>
+            <ClassPreview
+              eyebrow="Pilates and strength"
+              heading="The strength side of the schedule."
+              subheading="Heat Pilates is the anchor. Pair it with Sculpt or Power for a full week of strength."
+              classes={["Heat Pilates", "Heat Sculpt", "Heat Power"]}
+            />
+            <LocationPreview />
+          </>
+        }
       >
         <section>
           <h2>What our Pilates classes are actually like</h2>

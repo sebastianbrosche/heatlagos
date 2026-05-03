@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import ClassPreview from "@/components/ClassPreview";
+import LocationPreview from "@/components/LocationPreview";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/muscle-recovery-surfing-lagos";
@@ -50,6 +52,19 @@ export default function Page() {
         eyebrow="Recovery for athletes"
         title="Muscle Recovery for Surfers in Lagos"
         lede="An infrared studio in central Lagos built for the way active people in the Algarve actually live — between surf sessions, training rides, long runs and gym days. Heat Mobility, Heat Recovery and Heat Yin are the three classes you will keep coming back to."
+        heroImage="/Recovery.jpg"
+        heroImageAlt="Heat Recovery class in Lagos"
+        extras={
+          <>
+            <ClassPreview
+              eyebrow="Three classes for active bodies"
+              heading="Reset between sessions."
+              subheading="The recovery side of the schedule, designed to undo what surf, gym and miles do to the body."
+              classes={["Heat Mobility", "Heat Recovery", "Heat Yin"]}
+            />
+            <LocationPreview />
+          </>
+        }
       >
         <section>
           <h2>The recovery problem most surfers and athletes have</h2>

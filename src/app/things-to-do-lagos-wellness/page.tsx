@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import ClassPreview from "@/components/ClassPreview";
+import LocationPreview from "@/components/LocationPreview";
+import Schedule from "@/components/Schedule";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/things-to-do-lagos-wellness";
@@ -51,6 +54,25 @@ export default function Page() {
         eyebrow="Wellness in Lagos"
         title="Wellness Things to Do in Lagos, Portugal"
         lede="If you are visiting Lagos for a week, a month or a season — or you have just moved here — this is a short, honest guide to building a wellness routine that actually fits the place. Centred on Heat Lagos, our infrared studio in the centre of town, with classes for every kind of active body."
+        heroImage="/DSC07963.JPG"
+        heroImageAlt="Heat Lagos studio detail"
+        extras={
+          <>
+            <ClassPreview
+              eyebrow="What to take while you are here"
+              heading="A studio for every kind of day."
+              subheading="Strong day, slow day, recovery day. Pick what your body needs."
+              classes={[
+                "Heat Pilates",
+                "Heat Flow",
+                "Heat Mobility",
+                "Heat Recovery",
+              ]}
+            />
+            <Schedule />
+            <LocationPreview />
+          </>
+        }
       >
         <section>
           <h2>What wellness in Lagos actually looks like</h2>

@@ -33,27 +33,27 @@ export default function Footer() {
           </p>
           <ul className="mt-4 flex flex-col gap-2 text-sm">
             <li>
-              <a href="#classes" className="hover:text-brand">
+              <a href="/#classes" className="hover:text-brand">
                 Classes
               </a>
             </li>
             <li>
-              <a href="#teachers" className="hover:text-brand">
+              <a href="/#teachers" className="hover:text-brand">
                 Teachers
               </a>
             </li>
             <li>
-              <a href="#book" className="hover:text-brand">
+              <a href="/#book" className="hover:text-brand">
                 Schedule
               </a>
             </li>
             <li>
-              <a href="#memberships" className="hover:text-brand">
+              <a href="/#memberships" className="hover:text-brand">
                 Memberships
               </a>
             </li>
             <li className="text-foreground/50">
-              <a href="#workshops" className="hover:text-brand">
+              <a href="/#workshops" className="hover:text-brand">
                 Workshops
               </a>
             </li>

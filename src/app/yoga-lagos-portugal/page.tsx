@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import ClassPreview from "@/components/ClassPreview";
+import LocationPreview from "@/components/LocationPreview";
+import Schedule from "@/components/Schedule";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/yoga-lagos-portugal";
@@ -50,6 +53,20 @@ export default function Page() {
         eyebrow="Yoga in Lagos"
         title="Yoga in Lagos, Portugal"
         lede="Heated Flow, Power and Yin yoga in a boutique infrared studio in the centre of Lagos. English-speaking classes from breath-led flow to long, still yin holds — for locals, expats and active travellers across the western Algarve."
+        heroImage="/Flow.jpg"
+        heroImageAlt="Heated yoga flow class in Lagos"
+        extras={
+          <>
+            <ClassPreview
+              eyebrow="The yoga schedule"
+              heading="From flow to stillness."
+              subheading="Four heated yoga classes covering the whole spectrum — choose by how your body feels that day."
+              classes={["Heat Flow", "Heat Power", "Heat Yin", "Heat Recovery"]}
+            />
+            <Schedule />
+            <LocationPreview />
+          </>
+        }
       >
         <section>
           <h2>The four yoga classes on our schedule</h2>
