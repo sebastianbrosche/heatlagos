@@ -103,6 +103,7 @@ export default function Hero() {
             >
               Claim your free pass →
             </a>
+            <DiscoverMenu />
           </div>
         </div>
       </div>
