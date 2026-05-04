@@ -77,18 +77,17 @@ export default function Hero() {
           </h1>
           <div className="mt-6 text-sm text-foreground/90">
             <p className="font-semibold">
-              🎉 Today only — unlimited summer membership for €390. Sign up
-              before 11:59pm tonight and get one month FREE.
+              If you are curious about our classes, start with our intro
+              offer. Two weeks unlimited access to every class on the
+              schedule.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
-              href="https://backoffice.bsport.io/customer/payment/pass/751501/?membership=5821&force=true"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#book"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-dark hover:bg-brand-soft transition-colors"
             >
-              Summer membership deal →
+              Book →
             </a>
             <DiscoverMenu />
           </div>
@@ -121,18 +120,17 @@ export default function Hero() {
           </h1>
           <div className="mt-6 max-w-xl text-base text-foreground/90 lg:text-lg">
             <p className="font-semibold">
-              🎉 Today only — unlimited summer membership for €390. Sign up
-              before 11:59pm tonight and get one month FREE.
+              If you are curious about our classes, start with our intro
+              offer. Two weeks unlimited access to every class on the
+              schedule.
             </p>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="https://backoffice.bsport.io/customer/payment/pass/751501/?membership=5821&force=true"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#book"
               className="inline-flex items-center justify-center gap-3 rounded-full bg-brand px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.25em] text-stone-dark hover:bg-brand-soft transition-colors"
             >
-              Summer membership deal →
+              Book →
             </a>
             <DiscoverMenu />
           </div>
