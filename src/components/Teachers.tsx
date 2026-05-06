@@ -166,39 +166,6 @@ const TEACHERS: Teacher[] = [
     ],
   },
   {
-    name: "Liana",
-    role: "Flow",
-    image: "/Liana%20profilbilde.jpg",
-    position: "center 30%",
-    zoom: 1,
-    tagline: "Meet Liana",
-    bio: [
-      {
-        type: "quote",
-        text: "My flows are guided less by fixed sequences and more by feeling.",
-      },
-      {
-        type: "paragraph",
-        text: "I am Liana, founder of Nambin Yoga. My journey began with my training at the Gayatri School of Yoga in Tenerife, where I later returned as a lead teacher for 200h Teacher Trainings.",
-      },
-      { type: "heading", text: "Training" },
-      {
-        type: "paragraph",
-        text: "With over 590 hours of training, including an advanced 300h in Vinyasa and Yoga Anatomy in Goa, my work is rooted in both tradition and exploration.",
-      },
-      { type: "heading", text: "In my classes" },
-      {
-        type: "paragraph",
-        text: "My classes invite a deeper connection to the body, blending Hatha Yoga with creative, intuitive movement. My flows are guided less by fixed sequences and more by feeling — sometimes fluid and dynamic, sometimes slow and grounding, often weaving in unexpected transitions that invite curiosity and personal expression.",
-      },
-      { type: "heading", text: "Holding space" },
-      {
-        type: "paragraph",
-        text: "With a focus on Yin, Yoga Nidra, and trauma-sensitive practices, I hold spaces where stress can soften and where each person can move at their own pace.",
-      },
-    ],
-  },
-  {
     name: "Agata",
     role: "Power",
     image: "/Agata%20profilbilde.jpg",

@@ -24,12 +24,6 @@ const ALL_TEACHERS: Record<string, Teacher> = {
     image: "/Anastasiia%20profilbilde.jpg",
     position: "center 30%",
   },
-  Liana: {
-    name: "Liana",
-    role: "Flow",
-    image: "/Liana%20profilbilde.jpg",
-    position: "center 30%",
-  },
   Agata: {
     name: "Agata",
     role: "Power",
