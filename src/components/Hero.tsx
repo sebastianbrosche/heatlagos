@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import DiscoverMenu from "./DiscoverMenu";
 
-const VIDEO_DESKTOP = "/hero-desktop.mp4";
-const VIDEO_MOBILE = "/hero-mobile.mp4";
+const VIDEO_DESKTOP = "/video.mp4";
+const VIDEO_MOBILE = "/video.mp4";
 
 function shouldSkipVideo(): boolean {
   if (typeof window === "undefined") return true;
