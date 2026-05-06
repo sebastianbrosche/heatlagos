@@ -52,7 +52,7 @@ const CATEGORIES: Category[] = [
         duration: "60 min",
         description:
           "Creative, connected sequences led by the breath. Warm, fluid and grounding, with enough space inside each class to arrive, settle, and actually feel the practice.",
-        image: "/Flow.jpg",
+        image: "/heat%20flow.JPG",
       },
     ],
   },

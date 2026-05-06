@@ -32,7 +32,7 @@ const ALL_CLASSES: Record<string, ClassItem> = {
     duration: "60 min",
     description:
       "Creative, breath-led sequences. Warm, fluid, grounding, with space to actually feel the practice.",
-    image: "/Flow.jpg",
+    image: "/heat%20flow.JPG",
   },
   "Heat Mobility": {
     name: "Heat Mobility",
