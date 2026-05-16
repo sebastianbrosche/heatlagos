@@ -16,7 +16,7 @@ function Paragraphs() {
         guidance can genuinely shift something in a person.
       </p>
       <p className="leading-relaxed">
-        Every class at Heat Lagos is held in our infrared-heated studio, taught
+        Every class at Heat Lagos is held in our infra red-heated studio, taught
         by experienced, passionate teachers who care about more than just
         getting you through the hour. We are here to help you move better,
         feel stronger and become more aware of your body and what it&apos;s
@@ -103,7 +103,7 @@ export default function About() {
 
           <div className="mt-4 flex flex-wrap gap-3">
             {[
-              "Infrared heated",
+              "infra red heated",
               "Certified teachers",
               "All levels welcome",
               "Beachside location",

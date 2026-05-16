@@ -72,7 +72,7 @@ export default function Hero() {
             Welcome to HEAT Lagos
           </p>
           <h1 className="font-serif text-[1.9rem] leading-[1.05]">
-            Infrared <em className="text-brand">Pilates</em>, Yoga, Sculpt,
+            infra red <em className="text-brand">Pilates</em>, Yoga, Sculpt,
             Mobility <span className="text-brand-soft">& more.</span>
           </h1>
           <div className="mt-6 text-sm text-foreground/90">
@@ -112,7 +112,7 @@ export default function Hero() {
             Welcome to HEAT Lagos
           </p>
           <h1 className="max-w-5xl font-serif text-5xl leading-[1.05] lg:text-[5.5rem]">
-            Infrared <em className="text-brand">Pilates</em>, Yoga,
+            infra red <em className="text-brand">Pilates</em>, Yoga,
             <br />
             Sculpt, Mobility
             <br />
