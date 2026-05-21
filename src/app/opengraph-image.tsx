@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 export const alt =
   "Heat Lagos — Infrared Pilates, Yoga & Recovery in Lagos, Portugal";
