@@ -17,7 +17,7 @@ type Category = {
 
 const CATEGORIES: Category[] = [
   {
-    label: "infra red Pilates",
+    label: "Infrared Pilates",
     tagline: "Low-impact · high-heat · deep core",
     items: [
       {
@@ -37,7 +37,7 @@ const CATEGORIES: Category[] = [
         name: "Heat Sculpt",
         duration: "50 min",
         description:
-          "Weights, resistance props and infra red heat. A full-body strength class that tones, energises and leaves you with that particular kind of satisfaction that only comes from working hard and doing it well.",
+          "Weights, resistance props and infrared heat. A full-body strength class that toness, energises and leaves you with that particular kind of satisfaction that only comes from working hard and doing it well.",
         image: "/Sculpt.jpg",
       },
       {
