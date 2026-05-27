@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-4">
         <div>
           <div className="flex items-center leading-none">
-            <img src="/logo%20heat.png" alt="Heat" className="h-20 w-auto" />
+            <img src="/logo%20heat.png?v=1" alt="Heat" className="h-20 w-auto" />
           </div>
           <p className="mt-6 max-w-xs text-sm text-foreground/70">
             Infrared heated Pilates, Yoga & Sculpt · Mobility, Recovery & Yin —

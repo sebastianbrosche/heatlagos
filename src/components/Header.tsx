@@ -33,7 +33,7 @@ export default function Header() {
             onClick={() => setOpen(false)}
           >
             <img
-              src="/logo%20heat.png"
+              src="/logo%20heat.png?v=1"
               alt="Heat"
               className="h-12 w-auto sm:h-14 lg:h-16"
             />

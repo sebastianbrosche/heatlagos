@@ -21,6 +21,7 @@ const serif = Instrument_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.heatlagos.com"),
+  // DEPLOY_VERSION: 28
   title: {
     default: "Heat Lagos · Infrared Pilates, Yoga & Recovery in Lagos, Portugal",
     template: "%s | Heat Lagos",
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
       "Infrared-heated Pilates, Yoga, Sculpt, Mobility & Recovery in Lagos. English-speaking classes for active expats and residents across the Algarve.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/opengraph-image?v=1",
         width: 1200,
         height: 630,
         alt: "Heat Lagos · Infrared Pilates, Yoga & Recovery in Lagos, Portugal",
@@ -78,7 +79,7 @@ export const metadata: Metadata = {
     title: "Heat Lagos · Infrared Pilates, Yoga & Recovery",
     description:
       "Infrared-heated Pilates, Yoga, Sculpt, Mobility & Recovery in Lagos, Portugal. English-speaking studio.",
-    images: ["/opengraph-image"],
+    images: ["/opengraph-image?v=1"],
   },
   robots: {
     index: true,
@@ -92,8 +93,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: "/icon.png?v=1",
+    apple: "/icon.png?v=1",
   },
 };
 
@@ -114,7 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
         <SchemaMarkup />
       </head>
-      <body className="min-h-screen bg-background text-foreground">
+      <body className="min-h-screen bg-background text-foreground" data-version="28">
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}

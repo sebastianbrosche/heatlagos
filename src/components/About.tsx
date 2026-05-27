@@ -68,8 +68,8 @@ export default function About() {
         <div className="flex flex-col gap-6 text-foreground/80 lg:col-span-7">
           <div className="overflow-hidden rounded-3xl">
             <img
-              src="/detail.JPG"
-              alt="Heat Lagos studio detail"
+              src="/praiabatata-2.jpg?v=1"
+              alt="Praia Batata beach near Heat Lagos studio"
               className="h-full w-full object-cover"
             />
           </div>

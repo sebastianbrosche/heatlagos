@@ -25,7 +25,7 @@ const TEACHERS: Teacher[] = [
   {
     name: "Stine",
     role: "Founder · Flow, Power, Sculpt & Yin",
-    image: "/Stine%20profilbilde.jpg",
+    image: "/Stine%20profilbilde.jpg?v=1",
     position: "70% 34%",
     zoom: 1.9,
     tagline: "Meet Stine",
@@ -94,7 +94,7 @@ const TEACHERS: Teacher[] = [
   {
     name: "Sebastian",
     role: "Pilates, Power, Mobility & Recovery",
-    image: "/Sebastian%20profilbilde.jpg",
+    image: "/Sebastian%20profilbilde.jpg?v=1",
     position: "center 25%",
     zoom: 1,
     tagline: "Meet Sebastian",
@@ -126,7 +126,7 @@ const TEACHERS: Teacher[] = [
   {
     name: "Anastasiia",
     role: "Sculpt & Mobility",
-    image: "/Anastasiia%20profilbilde.jpg",
+    image: "/Anastasiia%20profilbilde.jpg?v=1",
     position: "center 28%",
     zoom: 1,
     tagline: "Meet Anastasiia",
@@ -168,7 +168,7 @@ const TEACHERS: Teacher[] = [
   {
     name: "Agata",
     role: "Power",
-    image: "/Agata%20profilbilde.jpg",
+    image: "/Agata%20profilbilde.jpg?v=1",
     position: "center 30%",
     zoom: 1,
     tagline: "Meet Agata",
@@ -199,7 +199,7 @@ const TEACHERS: Teacher[] = [
   },
 ];
 
-const BANNER_IMAGE = "/ring%20detail.jpeg";
+const BANNER_IMAGE = "/ring%20detail.jpeg?v=1";
 
 const BIO_TEACHERS = TEACHERS.filter((t) => t.bio);
 
