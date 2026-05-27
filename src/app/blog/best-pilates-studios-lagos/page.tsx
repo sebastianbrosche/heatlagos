@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
+// DEPLOYED: TOP 5 pilates studios, no rankings, strengths highlighted
 export default function BestPilatesStudiosLagos() {
   return (
     <SeoPageShell
