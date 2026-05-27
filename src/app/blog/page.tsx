@@ -31,9 +31,9 @@ const posts = [
   },
   {
     slug: "best-pilates-studios-lagos",
-    title: "10 Best Pilates Studios in Lagos, Portugal (2026)",
+    title: "TOP 5 Pilates Studios in Lagos, Portugal (2026)",
     excerpt:
-      "The honest top 10 pilates studios in Lagos, ranked by equipment, teacher quality, and what makes each one different. No sponsorships, no pay-to-play.",
+      "A curated guide to the best pilates studios in Lagos. What each studio does best — reformer, mat, infrared heat, and more. No sponsorships, no pay-to-play.",
     date: "May 26, 2026",
     category: "Lagos Rankings",
   },
