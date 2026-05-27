@@ -22,6 +22,86 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-yoga-studios-lagos",
+    title: "10 Best Yoga Studios in Lagos, Portugal (2026)",
+    excerpt:
+      "The honest top 10 yoga studios in Lagos, ranked by class variety, teacher quality, and what makes each one worth visiting. No sponsorships, no pay-to-play.",
+    date: "May 26, 2026",
+    category: "Lagos Rankings",
+  },
+  {
+    slug: "best-pilates-studios-lagos",
+    title: "10 Best Pilates Studios in Lagos, Portugal (2026)",
+    excerpt:
+      "The honest top 10 pilates studios in Lagos, ranked by equipment, teacher quality, and what makes each one different. No sponsorships, no pay-to-play.",
+    date: "May 26, 2026",
+    category: "Lagos Rankings",
+  },
+  {
+    slug: "best-wellness-spots-lagos",
+    title: "10 Best Wellness Spots in Lagos for Yoga, Pilates and Recovery",
+    excerpt:
+      "The top wellness spots in Lagos - yoga, pilates, massage, sauna, and recovery. Ranked by what each offers and who it suits.",
+    date: "May 26, 2026",
+    category: "Lagos Wellness",
+  },
+  {
+    slug: "surf-recovery-lagos",
+    title: "10 Best Surf Recovery Classes in Lagos, Portugal (2026)",
+    excerpt:
+      "The best yoga, pilates, massage, and recovery options in Lagos for surfers. Where to recover between sessions and prevent injury.",
+    date: "May 26, 2026",
+    category: "Surf Recovery",
+  },
+  {
+    slug: "fitness-things-to-do-lagos",
+    title: "Top 10 Things to Do in Lagos for Fitness Lovers",
+    excerpt:
+      "The best active experiences in Lagos, Portugal. Surf, hike, kayak, yoga, and more. For travellers who want to move.",
+    date: "May 26, 2026",
+    category: "Active Lagos",
+  },
+  {
+    slug: "digital-nomad-yoga-pilates-lagos",
+    title: "Best Yoga and Pilates for Digital Nomads in Lagos, Portugal (2026)",
+    excerpt:
+      "A practical guide to yoga, pilates, and staying active in Lagos as a digital nomad. Drop-in friendly, no memberships, flexible schedules.",
+    date: "May 26, 2026",
+    category: "Digital Nomads",
+  },
+  {
+    slug: "golf-lagos-algarve",
+    title: "Golf in Lagos, Portugal: Best Courses and Where to Play",
+    excerpt:
+      "Palmares, Espiche, Boavista — the honest breakdown of where to play, what it costs, and how to recover after 18 holes.",
+    date: "May 26, 2026",
+    category: "Golf",
+  },
+  {
+    slug: "boutique-fitness-lagos",
+    title: "10 Best Boutique Fitness Studios in Lagos, Portugal (2026)",
+    excerpt:
+      "The best boutique fitness studios in Lagos. Small classes, specialised training, and premium experiences. Ranked honestly.",
+    date: "May 26, 2026",
+    category: "Boutique Fitness",
+  },
+  {
+    slug: "infrared-yoga-algarve",
+    title: "Where to Find the Best Infrared Yoga and Pilates in the Algarve",
+    excerpt:
+      "A guide to infrared-heated yoga and pilates across the Algarve. Where to find it, how it works, and what the alternatives are.",
+    date: "May 26, 2026",
+    category: "Infrared Fitness",
+  },
+  {
+    slug: "healthy-cafes-lagos",
+    title: "10 Best Healthy Cafes and Spots to Eat After Yoga in Lagos",
+    excerpt:
+      "The best healthy cafes and restaurants in Lagos, Portugal. Vegetarian, vegan, and post-workout food worth eating.",
+    date: "May 26, 2026",
+    category: "Healthy Food",
+  },
+  {
     slug: "yoga-lagos-guide",
     title: "The Complete Guide to Yoga in Lagos, Portugal (2026)",
     excerpt:
