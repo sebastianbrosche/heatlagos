@@ -54,7 +54,7 @@ export default function DiscoverMenu() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex min-w-[150px] items-center justify-center gap-2 rounded-full border border-foreground/30 bg-foreground/5 px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground backdrop-blur-sm hover:bg-foreground/10 hover:border-foreground/50 transition-colors sm:min-w-[170px] sm:gap-3 sm:px-8 sm:py-4 sm:text-[12px] sm:tracking-[0.25em]"
+        className="inline-flex min-w-[150px] items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-dark backdrop-blur-sm hover:bg-brand-soft transition-colors sm:min-w-[170px] sm:gap-3 sm:px-8 sm:py-4 sm:text-[12px] sm:tracking-[0.25em]"
       >
         Discover
       </button>
