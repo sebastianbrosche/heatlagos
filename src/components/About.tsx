@@ -60,7 +60,7 @@ export default function About() {
           <button
             type="button"
             onClick={() => setExpanded(!expanded)}
-            className="mt-8 hidden w-fit items-center gap-2 rounded-full border border-foreground/30 bg-foreground/5 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground transition-colors hover:border-foreground/50 hover:bg-foreground/10 lg:inline-flex"
+            className="mt-4 block text-[11px] font-medium uppercase tracking-[0.2em] text-foreground/50 transition-colors hover:text-foreground/80"
           >
             {expanded ? "Close" : "Read our story"}
           </button>
@@ -84,15 +84,6 @@ export default function About() {
               className="h-full w-full object-cover"
             />
           </div>
-          <blockquote className="relative pl-12 font-serif text-2xl italic leading-snug text-brand-soft sm:pl-16 sm:text-3xl lg:text-4xl">
-            <span
-              aria-hidden
-              className="absolute -top-4 left-0 font-serif text-[5rem] leading-none text-brand sm:-top-6 sm:text-[7rem] lg:text-[8rem]"
-            >
-              &ldquo;
-            </span>
-            Lagos&apos; first and only infrared-heated studio. The only sculpt classes in the Algarve. Taught by teachers with 15+ years of experience.
-          </blockquote>
 
           {/* Mobile-only expandable text */}
           <div
@@ -110,24 +101,31 @@ export default function About() {
           >
             {expanded ? "Read less" : "Read more"}
           </button>
+        </div>
+      </div>
 
-          <div className="mt-4 flex flex-wrap gap-3">
-            {[
-              "Lagos' only heated studio",
-              "Only sculpt classes in Algarve",
-              "Infrared + LED technology",
-              "15+ years teaching experience",
-              "Beachside at Praia Batata",
-              "Yoga Alliance certified",
-            ].map((chip) => (
-              <span
-                key={chip}
-                className="rounded-full border border-white/10 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-foreground/80"
-              >
-                {chip}
-              </span>
-            ))}
-          </div>
+      {/* Full-width quote + USPs below the grid */}
+      <div className="mx-auto mt-16 max-w-[1400px]">
+        <p className="font-serif text-xl italic leading-relaxed text-brand-soft sm:text-2xl lg:text-3xl">
+          Lagos&apos; first and only infrared-heated studio. The only sculpt classes in the Algarve. Teachers with 15+ years of experience.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          {[
+            "Lagos' only heated studio",
+            "Only sculpt classes in Algarve",
+            "Infrared + LED technology",
+            "15+ years teaching experience",
+            "Beachside at Praia Batata",
+            "Yoga Alliance certified",
+          ].map((chip) => (
+            <span
+              key={chip}
+              className="rounded-full border border-white/10 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-foreground/80"
+            >
+              {chip}
+            </span>
+          ))}
         </div>
       </div>
     </section>
