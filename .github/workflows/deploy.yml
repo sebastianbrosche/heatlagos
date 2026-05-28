@@ -29,6 +29,7 @@ jobs:
       - name: Build site
         run: npm run build
 
+      # Secret test: CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
