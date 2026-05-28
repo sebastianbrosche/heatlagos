@@ -42,10 +42,21 @@ export default function About() {
             About us
           </p>
           <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl lg:text-6xl">
-            A place built
+            Train with us
             <br />
-            <em className="text-brand">with purpose.</em>
+            <em className="text-brand">in Portugal.</em>
           </h2>
+          <p className="mt-4 text-sm leading-relaxed text-foreground/70">
+            Our 200-hour Yoga Alliance certified teacher training starts September 2026. Online + live hybrid format. Early bird ends July 1.
+          </p>
+          <a
+            href="https://yogateachertrainingportugal.eu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand transition-colors hover:border-brand hover:bg-brand/20"
+          >
+            View Teacher Training
+          </a>
           <button
             type="button"
             onClick={() => setExpanded(!expanded)}
@@ -80,8 +91,7 @@ export default function About() {
             >
               &ldquo;
             </span>
-            The right space and the right teacher can change your whole day
-            &mdash; sometimes more.
+            Lagos&apos; first and only infrared-heated studio. The only sculpt classes in the Algarve. Taught by teachers with 15+ years of experience.
           </blockquote>
 
           {/* Mobile-only expandable text */}
@@ -103,10 +113,12 @@ export default function About() {
 
           <div className="mt-4 flex flex-wrap gap-3">
             {[
-              "infrared heated",
-              "Certified teachers",
-              "All levels welcome",
-              "Beachside location",
+              "Lagos' only heated studio",
+              "Only sculpt classes in Algarve",
+              "Infrared + LED technology",
+              "15+ years teaching experience",
+              "Beachside at Praia Batata",
+              "Yoga Alliance certified",
             ].map((chip) => (
               <span
                 key={chip}

@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { href: "/#teachers", label: "Teachers" },
   { href: "/#memberships", label: "Memberships" },
   { href: "/#workshops", label: "Workshops" },
-  { href: "/#training", label: "Teacher Trainings", note: "coming" },
+  { href: "https://yogateachertrainingportugal.eu", label: "Teacher Trainings", note: "NEW", external: true },
   { href: "/#find-us", label: "Where to find us" },
 ];
 
@@ -73,6 +73,8 @@ export default function Header() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 className="group flex flex-wrap items-baseline gap-x-3 gap-y-1 text-foreground hover:text-brand transition-colors"
               >
                 <span className="font-mono text-[10px] text-stone">

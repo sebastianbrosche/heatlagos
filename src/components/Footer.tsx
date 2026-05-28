@@ -58,8 +58,20 @@ export default function Footer() {
                 Workshops
               </a>
             </li>
-            <li id="training" className="text-foreground/50">
-              Teacher Trainings — coming soon
+            <li>
+              <a href="/blog" className="hover:text-brand">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://yogateachertrainingportugal.eu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-brand"
+              >
+                Teacher Trainings
+              </a>
             </li>
           </ul>
         </div>
@@ -141,7 +153,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-12 flex max-w-[1400px] flex-col items-start justify-between gap-4 border-t border-white/5 pt-8 text-[11px] uppercase tracking-[0.2em] text-stone sm:flex-row">
-        <span>© Heat Lagos v30</span>
+        <span>© Heat Lagos v31</span>
         <span>Movement is life.</span>
       </div>
     </footer>
