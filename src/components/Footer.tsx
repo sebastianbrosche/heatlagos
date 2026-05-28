@@ -141,7 +141,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-12 flex max-w-[1400px] flex-col items-start justify-between gap-4 border-t border-white/5 pt-8 text-[11px] uppercase tracking-[0.2em] text-stone sm:flex-row">
-        <span>© Heat Lagos</span>
+        <span>© Heat Lagos v30</span>
         <span>Movement is life.</span>
       </div>
     </footer>

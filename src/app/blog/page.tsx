@@ -22,6 +22,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "parking-lagos-guide",
+    title: "Where to Park in Lagos, Portugal (2026): A Complete Guide",
+    excerpt:
+      "The honest guide to parking in Lagos, Portugal. Free lots, beach parking, street parking, and what to expect in high season. Written by locals.",
+    date: "May 28, 2026",
+    category: "Lagos Practical",
+  },
+  {
     slug: "best-yoga-studios-lagos",
     title: "10 Best Yoga Studios in Lagos, Portugal (2026)",
     excerpt:
