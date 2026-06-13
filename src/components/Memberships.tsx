@@ -21,15 +21,6 @@ const PLANS: Plan[] = [
     href: "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true",
   },
   {
-    name: "Summer Membership",
-    price: "390€",
-    description: "3 months unlimited - for the full Lagos summer.",
-    badge: "Most popular",
-    glow: true,
-    note: "Available until 31 May",
-    href: "https://backoffice.bsport.io/customer/payment/pass/751501/?membership=5821&force=true",
-  },
-  {
     name: "12 Month Membership",
     price: "125€",
     unit: "/month",

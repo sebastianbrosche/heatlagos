@@ -55,14 +55,14 @@ export default function FAQ() {
     >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-10 flex flex-col items-start gap-4 sm:mb-14">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
-            Frequently Asked
-          </p>
           <h2 className="font-serif text-[2rem] leading-[1.1] sm:text-5xl lg:text-6xl">
-            Everything you might
+            Frequently Asked
             <br />
-            be <em className="text-brand">wondering.</em>
+            <em className="text-brand">Questions.</em>
           </h2>
+          <p className="text-foreground/70">
+            Everything you might be wondering.
+          </p>
         </div>
 
         <ul className="flex flex-col divide-y divide-white/5 border-y border-white/5">

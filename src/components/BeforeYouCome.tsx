@@ -1,7 +1,7 @@
 const BRING = [
-  "Yourself and an open mind",
   "A water bottle. We recommend arriving well hydrated",
   "Comfortable, lightweight clothes you can move and sweat in",
+  "A towel to put over your mat for hygienic purposes. We will offer rental towels and towels for sale from July 1",
   "That's it. We have mats, props, and all the equipment you need",
 ];
 
@@ -21,14 +21,14 @@ export default function BeforeYouCome() {
     >
       <div className="mx-auto max-w-[1400px]">
         <div className="mb-12 flex flex-col items-start gap-4 sm:mb-16">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
-            Before you come
-          </p>
           <h2 className="font-serif text-[2rem] leading-[1.1] sm:text-5xl lg:text-6xl">
-            A few things
+            Before you
             <br />
-            <em className="text-brand">worth knowing.</em>
+            <em className="text-brand">come.</em>
           </h2>
+          <p className="text-foreground/70">
+            A few things worth knowing.
+          </p>
         </div>
 
         <div className="grid gap-5 sm:gap-6 lg:grid-cols-2">

@@ -54,11 +54,6 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/#workshops" className="hover:text-brand">
-                Workshops
-              </a>
-            </li>
-            <li>
               <a href="/blog" className="hover:text-brand">
                 Blog
               </a>

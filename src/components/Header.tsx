@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { href: "/#classes", label: "Classes" },
   { href: "/#teachers", label: "Teachers" },
   { href: "/#memberships", label: "Memberships" },
-  { href: "/#workshops", label: "Workshops" },
   { href: "https://yogateachertrainingportugal.eu", label: "Teacher Trainings", note: "NEW", external: true },
   { href: "/#find-us", label: "Where to find us" },
 ];
