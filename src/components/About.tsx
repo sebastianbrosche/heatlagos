@@ -39,7 +39,7 @@ export default function About() {
       <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-12">
         <div className="text-foreground/80 lg:col-span-5">
           <p className="text-[11px] uppercase tracking-[0.3em] text-brand">
-            About us
+            Teacher trainings for instructors
           </p>
           <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl lg:text-6xl">
             Train with us
@@ -57,24 +57,6 @@ export default function About() {
           >
             View Teacher Training
           </a>
-          <button
-            type="button"
-            onClick={() => setExpanded(!expanded)}
-            className="mt-4 block text-[11px] font-medium uppercase tracking-[0.2em] text-foreground/50 transition-colors hover:text-foreground/80"
-          >
-            {expanded ? "Close" : "Read our story"}
-          </button>
-
-          {/* Desktop-only expandable text under the button */}
-          <div
-            className={`hidden flex-col gap-6 overflow-hidden transition-all duration-300 lg:flex ${
-              expanded
-                ? "mt-8 max-h-[2000px] opacity-100"
-                : "mt-0 max-h-0 opacity-0"
-            }`}
-          >
-            <Paragraphs />
-          </div>
         </div>
         <div className="flex flex-col gap-6 text-foreground/80 lg:col-span-7">
           <div className="overflow-hidden rounded-3xl">
@@ -107,17 +89,17 @@ export default function About() {
       {/* Full-width quote + USPs below the grid */}
       <div className="mx-auto mt-16 max-w-[1400px]">
         <p className="font-serif text-xl italic leading-relaxed text-brand-soft sm:text-2xl lg:text-3xl">
-          Lagos&apos; first and only infrared-heated studio. The only sculpt classes in the Algarve. Teachers with 15+ years of experience.
+          Lagos&apos; first and only infrared-heated studio. Mat Pilates and Sculpt that build real strength, plus the recovery work that keeps active bodies moving. A room where locals, surfers, travellers and total beginners all belong.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
           {[
-            "Lagos' only heated studio",
-            "Only sculpt classes in Algarve",
-            "Infrared + LED technology",
-            "15+ years teaching experience",
+            "Lagos' only infrared studio",
+            "Only sculpt classes in the Algarve",
+            "Mat Pilates that builds real strength",
+            "Built for recovery & longevity",
+            "All levels, beginners welcome",
             "Beachside at Praia Batata",
-            "Yoga Alliance certified",
           ].map((chip) => (
             <span
               key={chip}

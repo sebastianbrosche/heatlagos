@@ -57,17 +57,12 @@ export default function Schedule({ hideHeading = false }: Props = {}) {
       />
       {!hideHeading && (
         <div className="mx-auto mb-12 flex max-w-[1400px] flex-col items-start gap-4 px-6 lg:px-20">
-          <p className="text-[11px] uppercase tracking-[0.3em] text-brand">
-            Heat Schedule
-          </p>
           <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:text-7xl">
-            Find your class,
-            <br />
-            <em className="text-brand">book your mat.</em>
+            Heat <em className="text-brand">Schedule.</em>
           </h2>
           <p className="mt-2 max-w-2xl text-foreground/70">
-            Every class, every teacher - updated daily and bookable straight from
-            this page.
+            Find your class, book your mat. Every class, every teacher, updated
+            daily and bookable straight from this page.
           </p>
         </div>
       )}
