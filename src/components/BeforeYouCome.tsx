@@ -6,8 +6,8 @@ const BRING = [
 ];
 
 const KNOW = [
-  "The studio is heated to 30°C",
-  "We provide small towels for class",
+  "The studio is heated to 30-32°C for most classes",
+  "We provide small face towels for class for free",
   "No locker rooms or showers, but a bathroom is available for changing",
   "Arrive no later than 5 minutes before class. Coming 15 minutes early lets you settle, meet us, and find your spot",
   "The studio doors close when class starts, so please be on time",
