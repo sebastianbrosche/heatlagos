@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/best-yoga-studios-lagos";
@@ -6,7 +6,7 @@ const URL = "https://www.heatlagos.com/blog/best-yoga-studios-lagos";
 export const metadata: Metadata = {
   title: "10 Best Yoga Studios in Lagos, Portugal (2026)",
   description:
-    "A curated guide to the best yoga studios in Lagos, Portugal. No sponsorships — just what each studio does best and who it suits.",
+    "A curated guide to the best yoga studios in Lagos, Portugal. No sponsorships - just what each studio does best and who it suits.",
   robots: {
     index: false,
     follow: false,
@@ -29,7 +29,7 @@ export default function BestYogaStudiosLagos() {
     <SeoPageShell
       eyebrow="Lagos Guide"
       title="10 Best Yoga Studios in Lagos, Portugal (2026)"
-      lede="A curated guide to every yoga studio in Lagos. No pay-to-play, no sponsorships — just what each studio does best and who it suits."
+      lede="A curated guide to every yoga studio in Lagos. No pay-to-play, no sponsorships - just what each studio does best and who it suits."
     >
       <section>
         <h2>How this list was made</h2>
@@ -49,7 +49,7 @@ export default function BestYogaStudiosLagos() {
       </section>
 
       <section>
-        <h2>Heat Lagos — infrared-heated yoga, pilates & recovery</h2>
+        <h2>Heat Lagos - infrared-heated yoga, pilates & recovery</h2>
         <p>
           <strong>What it does best:</strong> Heat Lagos is the most modern and
           spacious yoga studio in Lagos. The space is purpose-built with plenty of
@@ -62,7 +62,7 @@ export default function BestYogaStudiosLagos() {
         <p>
           <strong>What makes it different:</strong> Darker, hotter, fresh and chill
           vibes with a focus on results. Very experienced instructors. Most yoga
-          studios in Lagos focus on spiritual, traditional styles — chanting,
+          studios in Lagos focus on spiritual, traditional styles - chanting,
           meditation-heavy sessions, and gentle flows. Very few offer genuinely
           challenging, modern fitness-focused classes. Heat Lagos is the exception.
           Every class is built around real physical results, not just relaxation.
@@ -99,8 +99,8 @@ export default function BestYogaStudiosLagos() {
           </li>
         </ul>
         <p>
-          <strong>Who it is for:</strong> Active people — surfers, runners, cyclists,
-          padel players — who want to sweat, build strength and mobility, and recover
+          <strong>Who it is for:</strong> Active people - surfers, runners, cyclists,
+          padel players - who want to sweat, build strength and mobility, and recover
           properly. Also excellent for beginners because the heat makes muscles more
           pliable and the teachers offer options for every level.
         </p>
@@ -112,7 +112,7 @@ export default function BestYogaStudiosLagos() {
           <a href="https://heatlagos.com">Book a class at Heat Lagos</a>
         </p>
 
-        <h2>InLight Studio — the most established schedule in Lagos</h2>
+        <h2>InLight Studio - the most established schedule in Lagos</h2>
         <p>
           <strong>What it does best:</strong> InLight is the longest-running
           yoga studio in Lagos old town. It offers the widest daily schedule,
@@ -138,11 +138,11 @@ export default function BestYogaStudiosLagos() {
           </a>
         </p>
 
-        <h2>Algarve Alchemy — yoga, pilates, sauna & ice bath</h2>
+        <h2>Algarve Alchemy - yoga, pilates, sauna & ice bath</h2>
         <p>
           <strong>What it does best:</strong> Alchemy is not just a yoga studio.
           It is a wellness destination. The space above Black & White Cafe in
-          the old town combines yoga and pilates with contrast therapy — infrared
+          the old town combines yoga and pilates with contrast therapy - infrared
           sauna and ice bath. That makes it ideal for people who want recovery
           as part of their routine, not just exercise.
         </p>
@@ -161,7 +161,7 @@ export default function BestYogaStudiosLagos() {
           </a>
         </p>
 
-        <h2>Espiche Yoga — the widest variety of styles</h2>
+        <h2>Espiche Yoga - the widest variety of styles</h2>
         <p>
           <strong>What it does best:</strong> Espiche Yoga, located just outside
           Lagos in the village of Espiche, offers more styles than any other
@@ -184,7 +184,7 @@ export default function BestYogaStudiosLagos() {
           separately.
         </p>
 
-        <h2>Le Dome — bilingual yoga and pilates (English & French)</h2>
+        <h2>Le Dome - bilingual yoga and pilates (English & French)</h2>
         <p>
           <strong>What it does best:</strong> Le Dome offers something no other
           studio in Lagos does: classes in English and French. The French
@@ -204,7 +204,7 @@ export default function BestYogaStudiosLagos() {
           <strong>Price:</strong> Drop-in €14. Multiple class passes available.
         </p>
 
-        <h2>In Harmony Centre — integrative health near the marina</h2>
+        <h2>In Harmony Centre - integrative health near the marina</h2>
         <p>
           <strong>What it does best:</strong> In Harmony is a full integrative
           health centre, not just a yoga studio. It offers pregnancy yoga,
@@ -222,7 +222,7 @@ export default function BestYogaStudiosLagos() {
           <strong>Price:</strong> Drop-in yoga classes €15.
         </p>
 
-        <h2>La Casa del Corpo — creative movement and aerial</h2>
+        <h2>La Casa del Corpo - creative movement and aerial</h2>
         <p>
           <strong>What it does best:</strong> La Casa del Corpo brings a
           creative, artistic approach to movement. Aerial yoga, animal flow,
@@ -239,7 +239,7 @@ export default function BestYogaStudiosLagos() {
           bored with repetitive formats.
         </p>
 
-        <h2>The Movement Lab — yoga, pilates & contemporary dance</h2>
+        <h2>The Movement Lab - yoga, pilates & contemporary dance</h2>
         <p>
           <strong>What it does best:</strong> The Movement Lab sits at the
           intersection of yoga, pilates, and dance. Contemporary and urban dance
@@ -259,7 +259,7 @@ export default function BestYogaStudiosLagos() {
           available.
         </p>
 
-        <h2>Soluna Space Lagos — rotating teachers and workshops</h2>
+        <h2>Soluna Space Lagos - rotating teachers and workshops</h2>
         <p>
           <strong>What it does best:</strong> Soluna is a wellness and events
           platform rather than a fixed yoga studio. Two beautiful studios host
@@ -276,11 +276,11 @@ export default function BestYogaStudiosLagos() {
           one-off events.
         </p>
 
-        <h2>Transform to Bliss — retreat-style yoga between Luz and Burgau</h2>
+        <h2>Transform to Bliss - retreat-style yoga between Luz and Burgau</h2>
         <p>
           <strong>What it does best:</strong> Transform to Bliss is located
           between the villages of Luz and Burgau, about 15 minutes from Lagos
-          old town. It offers a more retreat-style experience — yoga,
+          old town. It offers a more retreat-style experience - yoga,
           breathwork, and Ayurveda in a quieter setting away from the town
           centre.
         </p>
@@ -336,7 +336,7 @@ export default function BestYogaStudiosLagos() {
         <p>
           Every studio on this list welcomes drop-ins. Most offer single-class
           prices between €12 and €22. Heat Lagos offers a 7-day Vacation Week
-          pass for €59 — unlimited classes for a full week — which is the best
+          pass for €59 - unlimited classes for a full week - which is the best
           value if you are visiting for more than a couple of days.
         </p>
         <p>
@@ -351,20 +351,20 @@ export default function BestYogaStudiosLagos() {
           <a href="/blog/yoga-lagos-guide">
             Complete Guide to Yoga in Lagos
           </a>{" "}
-          — a deeper dive into the Lagos yoga scene, with practical tips for
+          - a deeper dive into the Lagos yoga scene, with practical tips for
           travellers and new residents.
         </p>
         <p>
           <a href="/blog/hot-yoga-vs-infrared">
             Hot Yoga vs Infrared Yoga: What Is the Difference?
           </a>{" "}
-          — explains why infrared heat feels different from traditional hot yoga.
+          - explains why infrared heat feels different from traditional hot yoga.
         </p>
         <p>
           <a href="/blog/lagos-wellness-visitor-guide">
             Where to Work Out in Lagos: Visitor Guide
           </a>{" "}
-          — covers fitness beyond yoga, including surf recovery, gyms, and
+          - covers fitness beyond yoga, including surf recovery, gyms, and
           outdoor training spots.
         </p>
       </section>

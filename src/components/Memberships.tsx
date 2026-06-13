@@ -1,4 +1,4 @@
-type Plan = {
+﻿type Plan = {
   name: string;
   price: string;
   unit?: string;
@@ -23,7 +23,7 @@ const PLANS: Plan[] = [
   {
     name: "Summer Membership",
     price: "390€",
-    description: "3 months unlimited — for the full Lagos summer.",
+    description: "3 months unlimited - for the full Lagos summer.",
     badge: "Most popular",
     glow: true,
     note: "Available until 31 May",
@@ -61,7 +61,7 @@ const PLANS: Plan[] = [
   {
     name: "Vacation Week",
     price: "59€",
-    description: "7 days unlimited — designed for travelers staying in Lagos.",
+    description: "7 days unlimited - designed for travelers staying in Lagos.",
     href: "https://backoffice.bsport.io/customer/payment/pass/751519/?membership=5821&force=true",
   },
   {
@@ -90,7 +90,7 @@ export default function Memberships() {
           </h2>
           <p className="mt-2 max-w-2xl text-foreground/70">
             Drop in once, stay for the season, or make Heat part of your week.
-            All memberships include access to every class — Pilates, Yoga,
+            All memberships include access to every class - Pilates, Yoga,
             Sculpt, Mobility, Recovery and Yin.
           </p>
         </div>
@@ -143,7 +143,7 @@ export default function Memberships() {
                 href={plan.href ?? "#schedule"}
                 target={plan.href ? "_blank" : undefined}
                 rel={plan.href ? "noopener noreferrer" : undefined}
-                aria-label={`Join now — ${plan.name}`}
+                aria-label={`Join now - ${plan.name}`}
                 className="absolute inset-0 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <span className="sr-only">Join now</span>

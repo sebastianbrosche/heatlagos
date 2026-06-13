@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -44,7 +44,7 @@ const CATEGORIES: Category[] = [
         name: "Heat Power",
         duration: "60 min",
         description:
-          "Not a complicated class. But a challenging one. Physically demanding in the best way — and it meets you exactly where you are. Show up, move, breathe. Let the class take you somewhere in yourself you didn't know existed.",
+          "Not a complicated class. But a challenging one. Physically demanding in the best way - and it meets you exactly where you are. Show up, move, breathe. Let the class take you somewhere in yourself you didn't know existed.",
         image: "/Power.jpg",
       },
       {

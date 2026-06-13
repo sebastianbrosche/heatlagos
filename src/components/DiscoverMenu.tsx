@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 
@@ -26,7 +26,7 @@ const ITEMS = [
   {
     href: "#workshops",
     label: "Workshops",
-    description: "Masterclasses — one topic, more time.",
+    description: "Masterclasses - one topic, more time.",
   },
 ];
 

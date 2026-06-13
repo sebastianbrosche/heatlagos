@@ -1,4 +1,4 @@
-const EXPLORE_LINKS: Array<{ href: string; label: string }> = [
+﻿const EXPLORE_LINKS: Array<{ href: string; label: string }> = [
   { href: "/infrared-classes-lagos", label: "Infrared classes in Lagos" },
   { href: "/pilates-lagos-portugal", label: "Pilates in Lagos" },
   { href: "/yoga-lagos-portugal", label: "Yoga in Lagos" },
@@ -23,7 +23,7 @@ export default function Footer() {
             <img src="/logo%20heat.png?v=1" alt="Heat" className="h-20 w-auto" />
           </div>
           <p className="mt-6 max-w-xs text-sm text-foreground/70">
-            Infrared heated Pilates, Yoga & Sculpt · Mobility, Recovery & Yin —
+            Infrared heated Pilates, Yoga & Sculpt · Mobility, Recovery & Yin -
             in Lagos, Portugal.
           </p>
         </div>

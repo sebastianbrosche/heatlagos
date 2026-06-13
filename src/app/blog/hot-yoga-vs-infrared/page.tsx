@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/hot-yoga-vs-infrared";
@@ -47,7 +47,7 @@ export default function HotYogaVsInfrared() {
         <h2>What infrared yoga is</h2>
         <p>
           Infrared yoga uses radiant heat panels that warm the body directly,
-          rather than heating the air around you. The room sits at around 30°C —
+          rather than heating the air around you. The room sits at around 30°C -
           warm, but not punishing. The humidity stays low, which means you can
           actually breathe.
         </p>
@@ -65,7 +65,7 @@ export default function HotYogaVsInfrared() {
           <strong>Traditional hot yoga at 40°C:</strong> You walk in and the air
           hits you like a wall. Within ten minutes you are soaked. Your heart rate
           is elevated from heat alone, not from the yoga. Breathing deeply is hard
-          because the air is thick. The challenge is partly environmental — can
+          because the air is thick. The challenge is partly environmental - can
           you tolerate the heat?
         </p>
         <p>
@@ -101,7 +101,7 @@ export default function HotYogaVsInfrared() {
         <h2>Recovery and long holds</h2>
         <p>
           This is where infrared really separates from traditional hot yoga. Long
-          yin holds — two, three, five minutes in a posture — need warmth that
+          yin holds - two, three, five minutes in a posture - need warmth that
           lasts. In a cold room, the body tightens back up during the hold. In a
           traditional hot room, you are so busy managing your breathing that
           stillness is difficult.
@@ -110,7 +110,7 @@ export default function HotYogaVsInfrared() {
           Infrared heat stays with the tissues through the entire hold. The body
           does not tighten, does not fight, and does not need to recover from
           the room itself. That makes infrared yoga genuinely effective for
-          recovery work — the kind of practice that undoes a hard surf session or
+          recovery work - the kind of practice that undoes a hard surf session or
           a long run.
         </p>
       </section>
@@ -125,7 +125,7 @@ export default function HotYogaVsInfrared() {
         </p>
         <p>
           <strong>Infrared yoga is for:</strong> People who want the benefits of
-          heat — deeper stretches, faster warm-up, better recovery — without the
+          heat - deeper stretches, faster warm-up, better recovery - without the
           punishment. Surfers who need to recover. Runners with tight hips.
           Beginners who want to feel what heat does without being overwhelmed.
           Anyone who wants to focus on the yoga, not survive the room.
@@ -143,7 +143,7 @@ export default function HotYogaVsInfrared() {
         <p>
           Our classes run at around 30°C with far-infrared panels. Heat Flow,
           Heat Power, Heat Yin, Heat Pilates, Heat Sculpt, Heat Mobility and
-          Heat Recovery — all in the same warm room. The heat supports the
+          Heat Recovery - all in the same warm room. The heat supports the
           practice. It does not replace it.
         </p>
         <p>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/digital-nomad-yoga-pilates-lagos";
@@ -303,7 +303,7 @@ export default function DigitalNomadYogaPilatesLagos() {
         </p>
         <p>
           <strong>Cafes to work from:</strong> Black and White Coffee is the
-          best cafe in Lagos — the roasted veggie bowl with extra hash browns
+          best cafe in Lagos - the roasted veggie bowl with extra hash browns
           is the standout post-class meal, though the queue can be 30 minutes.
           Abigail's Cafe is laptop-friendly with good Wi-Fi and smoothie bowls.
           Family Hub, next door to Heat Lagos, offers babysitting while you

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/healthy-cafes-lagos";
@@ -36,13 +36,13 @@ export default function HealthyCafesLagos() {
         <p>
           This list covers the best places in Lagos for healthy, fresh,
           and post-workout eating. Every entry serves food that you would
-          actually want to eat after a yoga or pilates class — not tourist
+          actually want to eat after a yoga or pilates class - not tourist
           trap fare, not deep-fried beach food, and not the same generic
           menu you see everywhere else in town.
         </p>
         <p>
           Black and White tops this list because it is genuinely the best
-          cafe in Lagos — the queue is often 30 minutes and the roasted
+          cafe in Lagos - the queue is often 30 minutes and the roasted
           veggie bowl with extra hash browns is worth every minute of the wait.
           Family Hub is the newcomer that changes the game for parents,
           with babysitting while you take class next door at Heat Lagos.
@@ -52,7 +52,7 @@ export default function HealthyCafesLagos() {
       </section>
 
       <section>
-        <h2>1. Black and White Coffee — the best cafe in Lagos</h2>
+        <h2>1. Black and White Coffee - the best cafe in Lagos</h2>
         <p>
           <strong>Address:</strong> Rua Candido dos Reis, Lagos old town.
         </p>
@@ -75,10 +75,10 @@ export default function HealthyCafesLagos() {
         </p>
         <p>
           <strong>Best for:</strong> Post-class brunch or lunch. Arrive early
-          or be prepared to wait — but it is worth it.
+          or be prepared to wait - but it is worth it.
         </p>
 
-        <h2>2. Family Hub — babysitter, yoga, and brunch next door to Heat Lagos</h2>
+        <h2>2. Family Hub - babysitter, yoga, and brunch next door to Heat Lagos</h2>
         <p>
           <strong>Why it ranks second:</strong> Family Hub is the newcomer that
           changes everything for parents. Located next door to Heat Lagos, it
@@ -104,7 +104,7 @@ export default function HealthyCafesLagos() {
           unbeatable.
         </p>
 
-        <h2>3. Abigail's Cafe — smoothie bowls and laptop-friendly</h2>
+        <h2>3. Abigail's Cafe - smoothie bowls and laptop-friendly</h2>
         <p>
           <strong>Why it ranks third:</strong> Abigail's Cafe is known among
           digital nomads and locals for good smoothie bowls, fresh salads,
@@ -125,7 +125,7 @@ export default function HealthyCafesLagos() {
           pilates class. Eat, answer emails, and plan your afternoon.
         </p>
 
-        <h2>4. Dot Coffee — specialty coffee and light bites</h2>
+        <h2>4. Dot Coffee - specialty coffee and light bites</h2>
         <p>
           <strong>Why it ranks fourth:</strong> Dot Coffee is a specialty coffee
           spot that takes its beans seriously. The food menu is smaller than
@@ -145,10 +145,10 @@ export default function HealthyCafesLagos() {
           class. In and out in 20 minutes.
         </p>
 
-        <h2>5. Coffee and Waves — surf-town energy</h2>
+        <h2>5. Coffee and Waves - surf-town energy</h2>
         <p>
           <strong>Why it ranks fifth:</strong> Coffee and Waves brings a surf-town
-          vibe to Lagos. The name says it all — this is a cafe for people who
+          vibe to Lagos. The name says it all - this is a cafe for people who
           surf, practise yoga, and want food that matches their lifestyle.
           The menu is built around fresh, energising options.
         </p>
@@ -166,7 +166,7 @@ export default function HealthyCafesLagos() {
           energy matches the active Lagos crowd.
         </p>
 
-        <h2>6. Goldig Cafe — vegan options done well</h2>
+        <h2>6. Goldig Cafe - vegan options done well</h2>
         <p>
           <strong>Why it ranks sixth:</strong> Goldig Cafe has some of the best
           vegan options in Lagos. The menu is not fully plant-based, but the
@@ -186,7 +186,7 @@ export default function HealthyCafesLagos() {
           choices. Good for groups with mixed dietary needs.
         </p>
 
-        <h2>7. All Things Dough Centro — the new arrival</h2>
+        <h2>7. All Things Dough Centro - the new arrival</h2>
         <p>
           <strong>Why it ranks seventh:</strong> All Things Dough Centro is the
           newest opening on this list. It brings a fresh option to Lagos with
@@ -206,7 +206,7 @@ export default function HealthyCafesLagos() {
           out if the queue at Black and White is too long.
         </p>
 
-        <h2>8. Estudio Vegetariano — the established vegetarian restaurant</h2>
+        <h2>8. Estudio Vegetariano - the established vegetarian restaurant</h2>
         <p>
           <strong>Address:</strong> Rua da Oliveira 30, Lagos old town.
         </p>
@@ -218,7 +218,7 @@ export default function HealthyCafesLagos() {
           juices are beautifully presented.
         </p>
         <p>
-          <strong>What to order:</strong> The daily special — usually a
+          <strong>What to order:</strong> The daily special - usually a
           creative pasta or grain bowl. Fresh juices served like cocktails.
         </p>
         <p>
@@ -230,7 +230,7 @@ export default function HealthyCafesLagos() {
           is slow and the food is light enough for good sleep.
         </p>
 
-        <h2>9. Lalitana — vegetarian food, yoga, and pilates in one place</h2>
+        <h2>9. Lalitana - vegetarian food, yoga, and pilates in one place</h2>
         <p>
           <strong>Address:</strong> Rua Gil Vicente 28, Lagos old town.
         </p>
@@ -251,7 +251,7 @@ export default function HealthyCafesLagos() {
           Eat, then book a yoga or pilates session for the afternoon.
         </p>
 
-        <h2>10. Indian restaurants in Lagos — reliable vegan options</h2>
+        <h2>10. Indian restaurants in Lagos - reliable vegan options</h2>
         <p>
           <strong>Why it ranks tenth:</strong> Lagos has several Indian
           restaurants, and most offer vegan options or will adapt dishes on

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/lagos-wellness-visitor-guide";
@@ -42,7 +42,7 @@ export default function LagosWellnessVisitorGuide() {
         </p>
         <p>
           Lagos has good indoor options, but they are scattered. This guide
-          puts them in one place so you can plan your week properly — outdoor
+          puts them in one place so you can plan your week properly - outdoor
           adventure plus indoor recovery and strength.
         </p>
       </section>
@@ -50,7 +50,7 @@ export default function LagosWellnessVisitorGuide() {
       <section>
         <h2>The studios: what each offers</h2>
 
-        <h3>Heat Lagos — infrared Pilates, Yoga, Sculpt &amp; Recovery</h3>
+        <h3>Heat Lagos - infrared Pilates, Yoga, Sculpt &amp; Recovery</h3>
         <p>
           The only infrared-heated studio in Lagos. Classes at around 30°C
           using radiant heat panels that warm muscles directly. Best for:
@@ -63,7 +63,7 @@ export default function LagosWellnessVisitorGuide() {
           English. Located on Avenida dos Descobrimentos, central Lagos.
         </p>
 
-        <h3>InLight Studio — traditional Vinyasa, Hatha, Rocket &amp; Ashtanga</h3>
+        <h3>InLight Studio - traditional Vinyasa, Hatha, Rocket &amp; Ashtanga</h3>
         <p>
           Long-established studio in Lagos old town. Bright, spacious, daily
           schedule. Best for: travellers who want a familiar yoga format without
@@ -74,14 +74,14 @@ export default function LagosWellnessVisitorGuide() {
           at inlight.pt.
         </p>
 
-        <h3>Algarve Alchemy — yoga, pilates, sauna &amp; ice bath</h3>
+        <h3>Algarve Alchemy - yoga, pilates, sauna &amp; ice bath</h3>
         <p>
           Wellness space above Black &amp; White Cafe in the old town. Classes
           plus contrast therapy. Best for: people who want the full wellness
-          experience — class, then sauna, then ice bath.
+          experience - class, then sauna, then ice bath.
         </p>
 
-        <h3>The Movement Lab — yoga, pilates &amp; dance</h3>
+        <h3>The Movement Lab - yoga, pilates &amp; dance</h3>
         <p>
           Movement-focused studio with contemporary and urban dance alongside
           yoga and pilates. Best for: people who want cross-training between
@@ -101,12 +101,12 @@ export default function LagosWellnessVisitorGuide() {
 
         <p>
           <strong>Monday:</strong> Morning surf at Praia do Canavial. Afternoon
-          Heat Mobility at Heat Lagos — 45 minutes of joint and tissue work
+          Heat Mobility at Heat Lagos - 45 minutes of joint and tissue work
           that undoes paddling.
         </p>
         <p>
           <strong>Tuesday:</strong> Morning run along the coast to Ponta da
-          Piedade. Evening Heat Yin — long holds in the warmth for calves,
+          Piedade. Evening Heat Yin - long holds in the warmth for calves,
           hamstrings, and hip flexors.
         </p>
         <p>
@@ -115,11 +115,11 @@ export default function LagosWellnessVisitorGuide() {
         </p>
         <p>
           <strong>Thursday:</strong> Morning bike ride toward Sagres. Afternoon
-          Heat Pilates — core and stabiliser work that protects the lower back
+          Heat Pilates - core and stabiliser work that protects the lower back
           after hours in the saddle.
         </p>
         <p>
-          <strong>Friday:</strong> Morning surf. Evening Heat Recovery — the
+          <strong>Friday:</strong> Morning surf. Evening Heat Recovery - the
           deepest reset on the schedule. Mobility, breathwork, long holds, guided
           rest.
         </p>
@@ -150,7 +150,7 @@ export default function LagosWellnessVisitorGuide() {
         </p>
         <p>
           Most members at Heat Lagos are residents, not tourists. The monthly
-          and yearly memberships are built for that life — two or three classes
+          and yearly memberships are built for that life - two or three classes
           a week that keep everything else sustainable.
         </p>
       </section>
@@ -163,7 +163,7 @@ export default function LagosWellnessVisitorGuide() {
         </p>
         <p>
           <strong>Booking:</strong> Most studios require advance booking, especially
-          in summer. Heat Lagos uses bsport — book online or through the app.
+          in summer. Heat Lagos uses bsport - book online or through the app.
         </p>
         <p>
           <strong>What to bring:</strong> Water bottle, comfortable clothes, and

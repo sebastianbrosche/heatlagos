@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 import ClassPreview from "@/components/ClassPreview";
 import LocationPreview from "@/components/LocationPreview";
@@ -35,7 +35,7 @@ export default function YogaLagosGuide() {
           Lagos is not a big city. It is a surf town on the western Algarve with
           a small but serious yoga community. Most studios sit in or near the old
           town centre, within a few minutes' walk of each other. Classes run in
-          English because the student base is international — Portuguese,
+          English because the student base is international - Portuguese,
           British, Swedish, German, Dutch, and a rotating cast of visitors who
           stay for a week or a season.
         </p>
@@ -55,11 +55,11 @@ export default function YogaLagosGuide() {
           <a href="https://heatlagos.com" target="_blank" rel="noopener noreferrer">
             Heat Lagos
           </a>{" "}
-          — infrared-heated Pilates, Yoga, Sculpt & Recovery
+          - infrared-heated Pilates, Yoga, Sculpt & Recovery
         </h3>
         <p>
           <strong>What makes it different:</strong> Heat Lagos is the only
-          infrared-heated studio in Lagos. Classes run at around 30°C — warm
+          infrared-heated studio in Lagos. Classes run at around 30°C - warm
           enough to deepen the practice without the oppressive humidity of
           traditional hot yoga at 40°C. The heat comes from infrared panels that
           warm the body directly, not forced air that dries out your throat.
@@ -73,7 +73,7 @@ export default function YogaLagosGuide() {
           <strong>Who it is for:</strong> People who want to sweat, build
           strength, and recover properly. Surfers, runners, cyclists and
           gym-goers use Heat Lagos as their balance. Complete beginners are
-          welcome — the teachers cue clearly and offer options for every level.
+          welcome - the teachers cue clearly and offer options for every level.
         </p>
         <p>
           <strong>Price:</strong> Intro Offer €79 for 2 weeks unlimited. Drop-in
@@ -87,7 +87,7 @@ export default function YogaLagosGuide() {
           <a href="https://inlight.pt" target="_blank" rel="noopener noreferrer">
             InLight Studio
           </a>{" "}
-          — established Vinyasa, Hatha, Rocket & Ashtanga
+          - established Vinyasa, Hatha, Rocket & Ashtanga
         </h3>
         <p>
           <strong>What makes it different:</strong> InLight is the longest-running
@@ -107,11 +107,11 @@ export default function YogaLagosGuide() {
           <a href="https://algarve-alchemy.com" target="_blank" rel="noopener noreferrer">
             Algarve Alchemy
           </a>{" "}
-          — yoga, pilates, sauna & ice bath
+          - yoga, pilates, sauna & ice bath
         </h3>
         <p>
           <strong>What makes it different:</strong> Alchemy combines yoga and
-          pilates with contrast therapy — infrared sauna and ice bath. The space
+          pilates with contrast therapy - infrared sauna and ice bath. The space
           is sunlit and above Black & White Cafe in the old town.
         </p>
         <p>
@@ -124,7 +124,7 @@ export default function YogaLagosGuide() {
           destination rather than a quick stop.
         </p>
 
-        <h3>Soluna Space Lagos — wellness, yoga & creative events</h3>
+        <h3>Soluna Space Lagos - wellness, yoga & creative events</h3>
         <p>
           <strong>What makes it different:</strong> Soluna is a wellness and events
           space that hires out its two studios for yoga, movement, therapies, and
@@ -145,7 +145,7 @@ export default function YogaLagosGuide() {
           <a href="https://inharmony-centre.com" target="_blank" rel="noopener noreferrer">
             In Harmony Centre
           </a>{" "}
-          — integrative health near the marina
+          - integrative health near the marina
         </h3>
         <p>
           <strong>What makes it different:</strong> In Harmony is a full
@@ -169,7 +169,7 @@ export default function YogaLagosGuide() {
           <a href="https://instagram.com/le_dome_yoga" target="_blank" rel="noopener noreferrer">
             Le Dome
           </a>{" "}
-          — Vinyasa, Yin, Hatha & pilates in English and French
+          - Vinyasa, Yin, Hatha & pilates in English and French
         </h3>
         <p>
           <strong>What makes it different:</strong> Le Dome offers classes in
@@ -187,7 +187,7 @@ export default function YogaLagosGuide() {
           bilingual teaching environment.
         </p>
 
-        <h3>The Movement Lab — yoga, pilates & contemporary dance</h3>
+        <h3>The Movement Lab - yoga, pilates & contemporary dance</h3>
         <p>
           <strong>What makes it different:</strong> The Movement Lab brings a
           dance and movement perspective to yoga and pilates, with contemporary
@@ -244,7 +244,7 @@ export default function YogaLagosGuide() {
         <h2>For travellers: what you need to know</h2>
         <p>
           Most Lagos studios welcome drop-ins. Heat Lagos offers a 7-day
-          Vacation Week pass for €59 — unlimited classes for a full week — plus
+          Vacation Week pass for €59 - unlimited classes for a full week - plus
           single drop-ins at €22. InLight, Le Dome, and In Harmony all offer
           single class options.
         </p>

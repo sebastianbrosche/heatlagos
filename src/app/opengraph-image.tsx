@@ -1,9 +1,9 @@
-import { ImageResponse } from "next/og";
+﻿import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
 
 export const alt =
-  "Heat Lagos — Infrared Pilates, Yoga & Recovery in Lagos, Portugal";
+  "Heat Lagos - Infrared Pilates, Yoga & Recovery in Lagos, Portugal";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

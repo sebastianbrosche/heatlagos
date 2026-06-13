@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/best-pilates-studios-lagos";
@@ -6,7 +6,7 @@ const URL = "https://www.heatlagos.com/blog/best-pilates-studios-lagos";
 export const metadata: Metadata = {
   title: "TOP 5 Pilates Studios in Lagos, Portugal (2026)",
   description:
-    "A curated guide to the best pilates studios in Lagos, Portugal. No sponsorships — just what each studio does best and who it suits.",
+    "A curated guide to the best pilates studios in Lagos, Portugal. No sponsorships - just what each studio does best and who it suits.",
   robots: {
     index: false,
     follow: false,
@@ -30,7 +30,7 @@ export default function BestPilatesStudiosLagos() {
     <SeoPageShell
       eyebrow="Lagos Guide"
       title="TOP 5 Pilates Studios in Lagos, Portugal (2026)"
-      lede="A curated guide to the best pilates studios in Lagos. No pay-to-play, no sponsorships — just what each studio does best and who it suits."
+      lede="A curated guide to the best pilates studios in Lagos. No pay-to-play, no sponsorships - just what each studio does best and who it suits."
     >
       <section>
         <h2>How this list was made</h2>
@@ -48,12 +48,12 @@ export default function BestPilatesStudiosLagos() {
       </section>
 
       <section>
-        <h2>Heat Lagos — infrared-heated pilates and sculpt</h2>
+        <h2>Heat Lagos - infrared-heated pilates and sculpt</h2>
         <p>
           <strong>What it does best:</strong> Heat Lagos is the most modern
           pilates studio in Lagos. The space is purpose-built with plenty of room,
           modern new equipment, and the only infrared-heated classes in town.
-          The heat changes the pilates experience entirely — muscles warm faster,
+          The heat changes the pilates experience entirely - muscles warm faster,
           range of motion increases, and the cardiovascular demand is higher than
           standard mat pilates. The Sculpt format adds light weights and high reps
           for a full-body conditioning class that sits between pilates and strength
@@ -61,7 +61,7 @@ export default function BestPilatesStudiosLagos() {
         </p>
         <p>
           <strong>What makes it different:</strong> Most pilates studios in Lagos
-          focus almost entirely on reformer pilates — classical, slow, equipment-
+          focus almost entirely on reformer pilates - classical, slow, equipment-
           based sessions. That is fine for rehabilitation and precision work,
           but it does not give you a tough workout. Heat Lagos offers mat pilates
           in the infrared heat, plus Sculpt, which is the most challenging and
@@ -92,7 +92,7 @@ export default function BestPilatesStudiosLagos() {
         <p>
           <strong>Who it is for:</strong> Active people who want pilates with
           intensity. Surfers, runners, cyclists, padel players use Heat Pilates
-          as their core and stability work. Beginners are welcome — the heat makes
+          as their core and stability work. Beginners are welcome - the heat makes
           movements more accessible and the teachers offer modifications.
         </p>
         <p>
@@ -103,7 +103,7 @@ export default function BestPilatesStudiosLagos() {
           <a href="https://heatlagos.com">Book a class at Heat Lagos</a>
         </p>
 
-        <h2>Spot Pilates — the only dedicated reformer studio in Lagos</h2>
+        <h2>Spot Pilates - the only dedicated reformer studio in Lagos</h2>
         <p>
           <strong>What it does best:</strong> Spot Pilates is the only studio
           in Lagos that focuses exclusively on pilates with professional-grade
@@ -117,19 +117,19 @@ export default function BestPilatesStudiosLagos() {
         </p>
         <p>
           <strong>Who it is for:</strong> People who want serious pilates on
-          equipment — injury recovery, core strength, posture correction.
+          equipment - injury recovery, core strength, posture correction.
           Small groups mean personal attention.
         </p>
         <p>
           <strong>Price:</strong> Contact studio for pricing.
         </p>
 
-        <h2>The Pilates Room — mat and apparatus pilates</h2>
+        <h2>The Pilates Room - mat and apparatus pilates</h2>
         <p>
           <strong>What it does best:</strong> The Pilates Room offers both
           mat and apparatus classes, making it one of the few studios in Lagos
           with equipment beyond the mat. The focus is on classical pilates
-          principles — control, precision, breath.
+          principles - control, precision, breath.
         </p>
         <p>
           <strong>Class types:</strong> Mat pilates, apparatus pilates (reformer,
@@ -141,11 +141,11 @@ export default function BestPilatesStudiosLagos() {
           who want to progress from mat to equipment.
         </p>
 
-        <h2>Algarve Alchemy — pilates plus sauna and ice bath</h2>
+        <h2>Algarve Alchemy - pilates plus sauna and ice bath</h2>
         <p>
           <strong>What it does best:</strong> Alchemy offers pilates in a
           wellness context. The space above Black & White Cafe combines pilates
-          with contrast therapy — infrared sauna and ice bath. That makes it
+          with contrast therapy - infrared sauna and ice bath. That makes it
           a destination for people who want recovery as part of their pilates
           practice.
         </p>
@@ -164,7 +164,7 @@ export default function BestPilatesStudiosLagos() {
           </a>
         </p>
 
-        <h2>Espiche Yoga — pilates with aerial options</h2>
+        <h2>Espiche Yoga - pilates with aerial options</h2>
         <p>
           <strong>What it does best:</strong> Espiche Yoga, located in the
           village of Espiche just outside Lagos, offers pilates alongside an
@@ -210,7 +210,7 @@ export default function BestPilatesStudiosLagos() {
           Most studios on this list welcome drop-ins. Prices range from €12 to
           €22 per class. Heat Lagos offers a 7-day Vacation Week pass for €59,
           which covers all pilates, yoga, and sculpt classes. If you want
-          reformer work, contact Spot Pilates directly — reformer classes
+          reformer work, contact Spot Pilates directly - reformer classes
           often require advance booking.
         </p>
         <p>
@@ -227,19 +227,19 @@ export default function BestPilatesStudiosLagos() {
           <a href="/blog/best-yoga-studios-lagos">
             10 Best Yoga Studios in Lagos
           </a>{" "}
-          — the companion guide for yoga studios in Lagos.
+          - the companion guide for yoga studios in Lagos.
         </p>
         <p>
           <a href="/blog/yoga-lagos-guide">
             Complete Guide to Yoga in Lagos
           </a>{" "}
-          — a deeper dive into the Lagos yoga and pilates scene.
+          - a deeper dive into the Lagos yoga and pilates scene.
         </p>
         <p>
           <a href="/blog/lagos-wellness-visitor-guide">
             Where to Work Out in Lagos: Visitor Guide
           </a>{" "}
-          — covers fitness beyond pilates, including surf recovery and gyms.
+          - covers fitness beyond pilates, including surf recovery and gyms.
         </p>
       </section>
     </SeoPageShell>

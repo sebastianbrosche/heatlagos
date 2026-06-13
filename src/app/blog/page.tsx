@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
 
 export const metadata: Metadata = {
-  title: "Blog — Wellness, Yoga & Pilates in Lagos",
+  title: "Blog - Wellness, Yoga & Pilates in Lagos",
   description:
     "Guides, insights and honest stories about yoga, pilates, infrared training and wellness life in Lagos, Portugal. Written by the Heat Lagos team.",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.heatlagos.com/blog",
-    title: "Blog — Wellness, Yoga & Pilates in Lagos | Heat Lagos",
+    title: "Blog - Wellness, Yoga & Pilates in Lagos | Heat Lagos",
     description:
       "Guides and stories about yoga, pilates, infrared training and wellness in Lagos, Portugal.",
   },
@@ -41,7 +41,7 @@ const posts = [
     slug: "best-pilates-studios-lagos",
     title: "TOP 5 Pilates Studios in Lagos, Portugal (2026)",
     excerpt:
-      "A curated guide to the best pilates studios in Lagos. What each studio does best — reformer, mat, infrared heat, and more. No sponsorships, no pay-to-play.",
+      "A curated guide to the best pilates studios in Lagos. What each studio does best - reformer, mat, infrared heat, and more. No sponsorships, no pay-to-play.",
     date: "May 26, 2026",
     category: "Lagos Rankings",
   },
@@ -81,7 +81,7 @@ const posts = [
     slug: "golf-lagos-algarve",
     title: "Golf in Lagos, Portugal: Best Courses and Where to Play",
     excerpt:
-      "Palmares, Espiche, Boavista — the honest breakdown of where to play, what it costs, and how to recover after 18 holes.",
+      "Palmares, Espiche, Boavista - the honest breakdown of where to play, what it costs, and how to recover after 18 holes.",
     date: "May 26, 2026",
     category: "Golf",
   },

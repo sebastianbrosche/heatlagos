@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -32,21 +32,21 @@ const TEACHERS: Teacher[] = [
     bio: [
       {
         type: "quote",
-        text: "I am not here to just take you through the movements. I am here to give you the space to discover something along the way — and to be there with you while you do.",
+        text: "I am not here to just take you through the movements. I am here to give you the space to discover something along the way - and to be there with you while you do.",
       },
       {
         type: "paragraph",
-        text: "I have been teaching yoga for seventeen years, fifteen of them full-time, and I still show up to every class with the same feeling I had at the beginning — that what happens in this room matters, and so do the people in it.",
+        text: "I have been teaching yoga for seventeen years, fifteen of them full-time, and I still show up to every class with the same feeling I had at the beginning - that what happens in this room matters, and so do the people in it.",
       },
       { type: "heading", text: "How I got here" },
       {
         type: "paragraph",
-        text: "My own story with movement didn't start gracefully. I came to yoga as a complete beginner with no sports background and a body I didn't fully trust. What I found on the mat changed that slowly, quietly, and then profoundly — not just physically, but in the way I understood myself. That experience never left me, and it shapes everything I teach.",
+        text: "My own story with movement didn't start gracefully. I came to yoga as a complete beginner with no sports background and a body I didn't fully trust. What I found on the mat changed that slowly, quietly, and then profoundly - not just physically, but in the way I understood myself. That experience never left me, and it shapes everything I teach.",
       },
       { type: "heading", text: "A few chapters along the way" },
       {
         type: "paragraph",
-        text: "I founded Joy Yoga Oslo in 2015, built one of Norway's first online yoga platforms, and co-founded Yoga for BJJ — an online platform bringing yoga, mobility and recovery work to Brazilian jiu-jitsu athletes around the world. I have led teacher trainings for over eight years, with a particular focus on athletes and on people who never thought movement was for them.",
+        text: "I founded Joy Yoga Oslo in 2015, built one of Norway's first online yoga platforms, and co-founded Yoga for BJJ - an online platform bringing yoga, mobility and recovery work to Brazilian jiu-jitsu athletes around the world. I have led teacher trainings for over eight years, with a particular focus on athletes and on people who never thought movement was for them.",
       },
       { type: "heading", text: "Still a student" },
       {
@@ -64,7 +64,7 @@ const TEACHERS: Teacher[] = [
       { type: "heading", text: "How I teach" },
       {
         type: "paragraph",
-        text: "My teaching style is worth knowing about before you come. I am not the teacher who picks apart every detail or tells you exactly how your body should look in every moment. I believe people are layered and complex, and that the most valuable thing I can offer in a group setting is intelligent guidance alongside genuine space — space for you to feel what is actually happening in your own body and to start listening to it.",
+        text: "My teaching style is worth knowing about before you come. I am not the teacher who picks apart every detail or tells you exactly how your body should look in every moment. I believe people are layered and complex, and that the most valuable thing I can offer in a group setting is intelligent guidance alongside genuine space - space for you to feel what is actually happening in your own body and to start listening to it.",
       },
       {
         type: "paragraph",
@@ -133,11 +133,11 @@ const TEACHERS: Teacher[] = [
     bio: [
       {
         type: "quote",
-        text: "Movement is not only about the body — but about connection, confidence, and self-expression.",
+        text: "Movement is not only about the body - but about connection, confidence, and self-expression.",
       },
       {
         type: "paragraph",
-        text: "Hello, I'm Anastasiia. Movement has been part of my life for as long as I can remember. Since childhood, I've been fascinated by the strength, beauty, and potential of the human body — a curiosity that led me to the gym as a teenager and shaped the path I follow today.",
+        text: "Hello, I'm Anastasiia. Movement has been part of my life for as long as I can remember. Since childhood, I've been fascinated by the strength, beauty, and potential of the human body - a curiosity that led me to the gym as a teenager and shaped the path I follow today.",
       },
       { type: "heading", text: "A lifetime with movement" },
       {
@@ -157,7 +157,7 @@ const TEACHERS: Teacher[] = [
       { type: "heading", text: "In my classes" },
       {
         type: "paragraph",
-        text: "My classes are designed to improve strength, flexibility, posture, and body awareness — in a supportive and empowering atmosphere where every level is welcome.",
+        text: "My classes are designed to improve strength, flexibility, posture, and body awareness - in a supportive and empowering atmosphere where every level is welcome.",
       },
       {
         type: "quote",

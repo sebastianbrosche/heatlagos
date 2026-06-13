@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -7,7 +7,7 @@ function Paragraphs() {
     <>
       <p className="text-lg leading-relaxed lg:text-xl">
         Heat Lagos was born out of years of teaching, training and a genuine
-        love for what movement can do to a person — not just physically, but in
+        love for what movement can do to a person - not just physically, but in
         the way they carry themselves, the way they feel in their own skin, the
         way they come to know themselves a little better.
       </p>

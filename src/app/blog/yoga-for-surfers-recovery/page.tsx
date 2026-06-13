@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/yoga-for-surfers-recovery";
@@ -6,7 +6,7 @@ const URL = "https://www.heatlagos.com/blog/yoga-for-surfers-recovery";
 export const metadata: Metadata = {
   title: "Yoga for Surfers: The Recovery Guide for the Algarve",
   description:
-    "You surf in the morning. You hurt in the evening. Here is what to do about it — a practical recovery guide for surfers in Lagos and the western Algarve.",
+    "You surf in the morning. You hurt in the evening. Here is what to do about it - a practical recovery guide for surfers in Lagos and the western Algarve.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -25,7 +25,7 @@ export default function YogaForSurfers() {
     <SeoPageShell
       eyebrow="Surfer Guide"
       title="Yoga for Surfers: The Recovery Guide for the Algarve"
-      lede="You surf in the morning. You hurt in the evening. Here is what to do about it — a practical recovery guide for surfers in Lagos and the western Algarve."
+      lede="You surf in the morning. You hurt in the evening. Here is what to do about it - a practical recovery guide for surfers in Lagos and the western Algarve."
     >
       <section>
         <h2>The problem with surfing every day</h2>
@@ -161,7 +161,7 @@ export default function YogaForSurfers() {
           Infrared heat at around 30°C warms tissue from the inside. Tight
           shoulders that take twenty minutes to release in a cold room loosen
           in five. Hip flexors that resist stretching in the morning give way
-          in the warmth. The heat does not replace the work — it accelerates
+          in the warmth. The heat does not replace the work - it accelerates
           it.
         </p>
         <p>
@@ -187,26 +187,26 @@ export default function YogaForSurfers() {
         </p>
         <p>
           <strong>Monday:</strong> Morning surf at Praia do Canavial.
-          Afternoon Heat Mobility — 45 minutes of joint and tissue work
+          Afternoon Heat Mobility - 45 minutes of joint and tissue work
           focused on shoulders, hips, and spine.
         </p>
         <p>
-          <strong>Tuesday:</strong> Morning surf. Evening Heat Yin — long
+          <strong>Tuesday:</strong> Morning surf. Evening Heat Yin - long
           holds in the warmth for calves, hamstrings, hip flexors, and chest.
           The deepest reset on the schedule.
         </p>
         <p>
           <strong>Wednesday:</strong> Rest day or light surf. If you surf,
-          keep it short. No yoga needed — let the body absorb the work from
+          keep it short. No yoga needed - let the body absorb the work from
           Monday and Tuesday.
         </p>
         <p>
-          <strong>Thursday:</strong> Morning surf. Afternoon Heat Pilates —
+          <strong>Thursday:</strong> Morning surf. Afternoon Heat Pilates -
           core and stabiliser work. This protects the lower back and builds
           the hip strength that makes pop-ups easier.
         </p>
         <p>
-          <strong>Friday:</strong> Morning surf. Evening Heat Recovery —
+          <strong>Friday:</strong> Morning surf. Evening Heat Recovery -
           gentle movement, breathwork, guided rest. The session for when you
           are tired but still want to move.
         </p>
@@ -251,7 +251,7 @@ export default function YogaForSurfers() {
         <p>
           A monthly membership at Heat Lagos is cheaper than a physio session
           and more effective than hoping your shoulders sort themselves out.
-          Two or three classes a week — mobility, yin, and pilates — is the
+          Two or three classes a week - mobility, yin, and pilates - is the
           difference between a full season and a season interrupted by
           injury.
         </p>

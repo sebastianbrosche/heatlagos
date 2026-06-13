@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Script from "next/script";
 import { useEffect } from "react";
@@ -66,7 +66,7 @@ export default function Schedule({ hideHeading = false }: Props = {}) {
             <em className="text-brand">book your mat.</em>
           </h2>
           <p className="mt-2 max-w-2xl text-foreground/70">
-            Every class, every teacher — updated daily and bookable straight from
+            Every class, every teacher - updated daily and bookable straight from
             this page.
           </p>
         </div>
