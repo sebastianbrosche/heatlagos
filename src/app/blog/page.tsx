@@ -22,6 +22,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "pilates-for-beginners-lagos",
+    title: "Pilates for Beginners in Lagos: What to Expect in Your First Class",
+    excerpt:
+      "New to Pilates? Here is exactly what happens in a beginner Pilates class in Lagos, what to bring, what to wear, and what the first few weeks feel like. No experience needed.",
+    date: "June 14, 2026",
+    category: "Beginner Guide",
+  },
+  {
     slug: "parking-lagos-guide",
     title: "Where to Park in Lagos, Portugal (2026): A Complete Guide",
     excerpt:
