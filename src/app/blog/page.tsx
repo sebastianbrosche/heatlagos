@@ -22,6 +22,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "sculpt-class-lagos",
+    title: "Sculpt Class in Lagos: What It Is and What to Expect",
+    excerpt:
+      "Sculpt is not Pilates. It is not yoga. It uses resistance bands, ankle weights, and light dumbbells to fatigue the muscles through high-repetition movement. Here is what a sculpt class in Lagos actually looks like.",
+    date: "June 14, 2026",
+    category: "Class Guide",
+  },
+  {
     slug: "pilates-for-beginners-lagos",
     title: "Pilates for Beginners in Lagos: What to Expect in Your First Class",
     excerpt:
