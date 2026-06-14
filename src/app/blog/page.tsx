@@ -22,6 +22,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "mobility-class-what-to-expect",
+    title: "Mobility Class: What It Is, What to Expect, and Whether You Need It",
+    excerpt:
+      "A mobility class is not yoga and not stretching. It is active range of motion training. Here is what happens in a mobility class in Lagos and who benefits most from it.",
+    date: "June 14, 2026",
+    category: "Class Guide",
+  },
+  {
     slug: "sculpt-class-lagos",
     title: "Sculpt Class in Lagos: What It Is and What to Expect",
     excerpt:
