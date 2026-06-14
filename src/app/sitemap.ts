@@ -146,5 +146,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${BASE}/blog/yoga-for-surfers-recovery`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 }

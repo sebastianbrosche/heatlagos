@@ -54,6 +54,14 @@ const posts = [
     category: "Lagos Wellness",
   },
   {
+    slug: "yoga-for-surfers-recovery",
+    title: "Yoga for Surfers: The Recovery Guide for the Algarve",
+    excerpt:
+      "You surf in the morning. You hurt in the evening. Here is what to do about it — a practical recovery guide for surfers in Lagos and the western Algarve.",
+    date: "May 26, 2026",
+    category: "Surf Recovery",
+  },
+  {
     slug: "surf-recovery-lagos",
     title: "10 Best Surf Recovery Classes in Lagos, Portugal (2026)",
     excerpt:

@@ -117,11 +117,6 @@ const OFFERS = [
     description: "2 weeks unlimited for new students.",
   },
   {
-    name: "Summer Membership",
-    price: "390",
-    description: "3 months unlimited for the full Lagos summer.",
-  },
-  {
     name: "12 Month Membership",
     price: "125",
     description: "Rolling monthly subscription, unlimited classes. Lowest monthly rate.",
