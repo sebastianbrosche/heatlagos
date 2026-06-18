@@ -197,6 +197,38 @@ const TEACHERS: Teacher[] = [
       },
     ],
   },
+  {
+    name: "Nadine",
+    role: "Bikram Yoga",
+    image: "/Nadine%20profilbilde.jpg?v=1",
+    position: "center 30%",
+    zoom: 1,
+    tagline: "Meet Nadine",
+    bio: [
+      {
+        type: "quote",
+        text: "On a mission to guide others on their journey of self-transformation and discovery.",
+      },
+      {
+        type: "paragraph",
+        text: "Nadine is a world-travelling yoga teacher with over 19 years of experience. She has visited more than 50 countries and lived in 7 of them, teaching and learning along the way.",
+      },
+      { type: "heading", text: "How she got here" },
+      {
+        type: "paragraph",
+        text: "After experiencing burnout and depression herself, Nadine found healing through the practice of yoga and mindfulness. That way of living transformed her life, and now she is passionate about helping others do the same.",
+      },
+      {
+        type: "paragraph",
+        text: "Through yoga, meditation, breathwork and coaching, she supports people from all walks of life in reconnecting with their joy and purpose, helping them find clarity and make choices that truly fulfill them.",
+      },
+      { type: "heading", text: "Her path" },
+      {
+        type: "paragraph",
+        text: "Despite a background in business administration, Nadine found her true calling in sharing the healing power of yoga. She hopes her story inspires others to design a life filled with purpose, joy and happiness.",
+      },
+    ],
+  },
 ];
 
 const BANNER_IMAGE = "/ring%20detail.jpeg?v=1";

@@ -30,6 +30,15 @@ const PLANS: Plan[] = [
     href: "https://backoffice.bsport.io/customer/payment/pass/751520/?membership=5821&force=true",
   },
   {
+    name: "Essential",
+    price: "95€",
+    unit: "/month",
+    description:
+      "8 classes a month on a rolling subscription. Ideal if you train two or three times a week and want a set routine.",
+    note: "8 classes / month",
+    href: "https://backoffice.bsport.io/customer/payment/pass/766154/?membership=5821&force=true",
+  },
+  {
     name: "1 Month",
     price: "160€",
     description: "One-off monthly unlimited, no subscription commitment.",

@@ -8,6 +8,7 @@ import Hero from "@/components/Hero";
 import Location from "@/components/Location";
 import Marquee from "@/components/Marquee";
 import Memberships from "@/components/Memberships";
+import QuickBuy from "@/components/QuickBuy";
 import Schedule from "@/components/Schedule";
 import Teachers from "@/components/Teachers";
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
         <BeforeYouCome />
         <FAQ />
         <Location />
+        <QuickBuy />
       </main>
       <Footer />
     </>
