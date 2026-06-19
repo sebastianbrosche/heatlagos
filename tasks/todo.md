@@ -78,6 +78,34 @@ Lenker (scroll til seksjon på samme side):
 6. **Domene/deploy:** Skal jeg sette opp deploy (f.eks. Vercel) nå, eller vente til siden er ferdig?
 7. **Font:** Samme fonter som prescription.pt (serif + monospace-lignende uppercase)? Jeg foreslår "Instrument Serif" + "Inter" — ok?
 
+---
+
+# Connectivity & Portability Plan (Google + Meta + phone)
+
+## Goal
+Same Google/Meta/GitHub access and context from any device (Stine's laptop now,
+her phone later), surviving fresh sessions. New sessions = fresh containers that
+lose everything in `/root`, so the setup must live in the **repo** (scripts +
+docs) and the **environment** (credentials), not in uploaded files.
+
+## Plan
+- [ ] Move helper scripts into the repo under `scripts/` (`google_sa.py`,
+      `google_oauth.py`), rewritten to read all credentials from env vars
+      (no hardcoded `/root` paths).
+- [ ] Document the connected services + required env vars in `AGENTS.md`.
+- [ ] Decide credential storage (Option A: plain env vars, simple but visible /
+      Option B: encrypted blob in repo + one passphrase env var).
+- [ ] Produce the ready-to-paste env-var block for the chosen option.
+- [ ] Commit + push to `claude/fervent-newton-280yq7`.
+- [ ] User starts a NEW session (network=full) → I verify Google + Meta both work.
+- [ ] Then resume Meta: link Page + Instagram, mint Page/IG token, plan App Review.
+
+## Notes
+- Network change to "full" applies to new sessions only (confirmed via 403).
+- Environment-variables box is world-visible to environment users — drives the
+  Option A vs B decision below.
+- Secrets were pasted in chat → rotate after migrating into the environment.
+
 ## Review
 
 ### Det som er bygd

@@ -27,6 +27,15 @@ yarn-error.log*
 .env*
 !.env.example
 
+# credentials / secrets — never commit (see docs/CLAUDE_OPS.md, use env vars)
+*client_secret*.json
+*service*account*.json
+*kimiclaw*.json
+*_token.json
+*sa_key*.pem
+cred_bundle*.json
+secrets.env
+
 # vercel
 .vercel
 
