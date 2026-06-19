@@ -149,6 +149,9 @@ export default function Footer() {
 
       <div className="mx-auto mt-12 flex max-w-[1400px] flex-col items-start justify-between gap-4 border-t border-white/5 pt-8 text-[11px] uppercase tracking-[0.2em] text-stone sm:flex-row">
         <span>© Heat Lagos v33</span>
+        <a href="/privacy" className="hover:text-brand">
+          Privacy Policy
+        </a>
         <span>Movement is life.</span>
       </div>
     </footer>
