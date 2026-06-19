@@ -33,12 +33,17 @@ When committing automation/ops changes, reference the fingerprint
 | Service | Auth | Status |
 |---|---|---|
 | GitHub | session integration | ✅ connected |
-| Google Search Console | service account | ✅ full access incl. `sc-domain:heatlagos.com`, `yogateachertrainingportugal.eu` |
-| Google Analytics (GA4) | service account | ✅ account/properties reachable |
-| Google Drive / Docs | service account | ✅ auth works; only sees files **shared with** the SA email |
-| Gmail (stine.hegre@gmail.com) | user OAuth refresh token | ✅ full access (read/send/modify/delete) |
-| Google Photos | user OAuth refresh token | ⚠️ connected, but Google's 2025 API limits restrict full-library reads |
-| Instagram + Facebook | Meta app | 🚧 app created; needs network=Full + Page/IG token + App Review |
+| Gmail / Calendar / Drive | **MCP connector** (Stine's Claude account) | ✅ connected; portable to any device via her login — no env vars needed |
+| Cloudflare (Workers/D1/KV/R2) | MCP connector | ✅ connected |
+| Linear | MCP connector | ✅ connected |
+| Google Search Console | service account (`GOOGLE_SA_KEY`) | ✅ full access incl. `sc-domain:heatlagos.com`, `yogateachertrainingportugal.eu` |
+| Google Analytics (GA4) | service account (`GOOGLE_SA_KEY`) | ✅ account/properties reachable |
+| Instagram + Facebook | Meta app (`META_APP_ID`/`SECRET`) | 🚧 app created; needs network=Full + Page/IG token + App Review |
+| Anthropic Managed Agents | `ANTHROPIC_API_KEY` + `/launch-your-agent` skill | 🚧 skill installed on `main`; agent not yet launched |
+
+Google Photos is intentionally **out of scope** (Google's 2025 API limits cripple
+full-library reads). Gmail/Calendar/Drive now run via MCP connectors, so the
+earlier manual OAuth refresh tokens are no longer used.
 
 Service-account address (share Search Console / GA4 / Drive resources with it):
 `claudecode@kimiclaw-bot-1.iam.gserviceaccount.com`
@@ -48,19 +53,20 @@ Service-account address (share Search Console / GA4 / Drive resources with it):
 ## 3. Required environment variables (set in Claude Code env, NOT in git)
 
 ```
-GOOGLE_SA_KEY               = <full service-account JSON, single line>
-GOOGLE_OAUTH_CLIENT_ID      = <OAuth desktop client id>
-GOOGLE_OAUTH_CLIENT_SECRET  = <OAuth desktop client secret>
-GMAIL_REFRESH_TOKEN         = <refresh token for stine.hegre@gmail.com>
-PHOTOS_REFRESH_TOKEN        = <refresh token for Photos>
+GOOGLE_SA_KEY               = <full service-account JSON, single line>   # Search Console + GA4
 META_APP_ID                 = 1005398102280025
 META_APP_SECRET             = <meta app secret>
 META_PAGE_TOKEN             = <long-lived Page token — added once obtained>
+ANTHROPIC_API_KEY           = <your own key from platform.claude.com — for /launch-your-agent>
 ```
 
+Gmail / Calendar / Drive / Cloudflare / Linear use **MCP connectors** (tied to
+Stine's Claude account), so they need **no env vars**.
+
 ⚠️ The environment-variables box is visible to anyone who can open this
-environment. Keep the environment private to Stine. Rotate any credential that
-has been exposed in chat.
+environment. Keep the environment private to Stine. **Rotate any credential that
+has been exposed in chat** (the Meta secret, the OAuth client secret, and any
+Anthropic API key pasted in chat).
 
 ---
 
@@ -71,9 +77,8 @@ has been exposed in chat.
 python3 scripts/google_sa.py call "https://www.googleapis.com/auth/webmasters.readonly" \
   "https://www.googleapis.com/webmasters/v3/sites"
 
-# Gmail (and Photos) via stored refresh token
-python3 scripts/google_user.py call GMAIL_REFRESH_TOKEN \
-  "https://gmail.googleapis.com/gmail/v1/users/me/profile"
+# Gmail / Calendar / Drive — use the MCP connector tools (no script needed)
+#   e.g. Gmail search_threads / get_thread, Calendar list_events, Drive search_files
 
 # Meta Graph API (needs network=Full)
 python3 scripts/meta.py apptoken
@@ -101,6 +106,9 @@ only.
   `META_PAGE_TOKEN`.
 - Submit Meta **App Review** for `instagram_manage_messages` / `pages_messaging`
   to enable the auto-reply DM bot for real users.
-- Build the always-on **DM webhook** in the deployed Vercel app (this container
-  is ephemeral and can't host a webhook).
+- Build the always-on **DM webhook** as a **Cloudflare Worker / Pages Function**
+  (this Claude container is ephemeral and can't host a webhook).
+- Wire **Cloudflare Pages** deploy: add the `@opennextjs/cloudflare` adapter +
+  Pages project so pushes to `main` build/deploy (Vercel is retired).
+- Launch the Heat Lagos agent via `/launch-your-agent` (needs `ANTHROPIC_API_KEY`).
 - Rotate all credentials once migrated, since they were pasted in chat.

@@ -8,12 +8,14 @@ Owner: Sebastian Brosche. Site: https://www.heatlagos.com. Repo: kingofthecodeca
 
 - Next.js 16 (App Router) + React 19 + TypeScript
 - Tailwind CSS 4
-- Deployed on Vercel — every push to `main` auto-deploys in ~1 minute
+- Deployed on **Cloudflare Pages** (Vercel is retired — do not deploy to Vercel)
 - Google Tag Manager already installed (`GTM-5WTJ6L62`) in `src/app/layout.tsx`
 
 ## How to deploy
 
-Just commit and push to `main`:
+Target: **Cloudflare Pages**. Do **not** deploy to Vercel.
+
+Commit and push to `main`:
 
 ```
 git add .
@@ -21,9 +23,15 @@ git commit -m "your message"
 git push origin main
 ```
 
-Vercel handles build + deploy automatically. No manual step.
+If the Cloudflare Pages project is connected to this repo, it builds + deploys on push. Next.js 16 runs on Pages via the `@opennextjs/cloudflare` adapter.
+
+> ⚠️ Setup status: the `@opennextjs/cloudflare` adapter + the Cloudflare Pages project wiring are the current **pending** task. Until that's done, a push to `main` does not auto-deploy. See `docs/CLAUDE_OPS.md`.
 
 **Always run `npm run build` before pushing.** If it fails, fix the error. A failing build won't deploy, but it wastes everyone's time.
+
+## Automation & connected services
+
+Google (Search Console, GA4, Gmail/Calendar/Drive), Meta (Instagram/Facebook), Cloudflare, GitHub and Linear are wired up for automation. The full inventory, credential/env-var contract, helper scripts (`scripts/`), and **operator identity** (which Claude is which) live in **`docs/CLAUDE_OPS.md`** — read it before touching anything credential- or deploy-related.
 
 ## Where to edit what
 
@@ -138,7 +146,7 @@ If a requested change would alter styling, confirm with Sebastian before doing i
 ## When things break
 
 If a deploy fails:
-1. Check the Vercel deployment log (or the GitHub commit status check)
+1. Check the Cloudflare Pages build log (or the GitHub commit status check)
 2. Run `npm run build` locally — the error will be the same
 3. Fix and push again
 4. If you're stuck, ping Kai

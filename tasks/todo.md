@@ -89,16 +89,52 @@ lose everything in `/root`, so the setup must live in the **repo** (scripts +
 docs) and the **environment** (credentials), not in uploaded files.
 
 ## Plan
-- [ ] Move helper scripts into the repo under `scripts/` (`google_sa.py`,
-      `google_oauth.py`), rewritten to read all credentials from env vars
-      (no hardcoded `/root` paths).
-- [ ] Document the connected services + required env vars in `AGENTS.md`.
-- [ ] Decide credential storage (Option A: plain env vars, simple but visible /
-      Option B: encrypted blob in repo + one passphrase env var).
-- [ ] Produce the ready-to-paste env-var block for the chosen option.
-- [ ] Commit + push to `claude/fervent-newton-280yq7`.
-- [ ] User starts a NEW session (network=full) → I verify Google + Meta both work.
-- [ ] Then resume Meta: link Page + Instagram, mint Page/IG token, plan App Review.
+- [x] Move helper scripts into the repo under `scripts/` (`google_sa.py`,
+      `google_user.py`, `meta.py`), reading all credentials from env vars.
+- [x] Document the connected services + env-var contract (`docs/CLAUDE_OPS.md`,
+      `AGENTS.md`) with an operator-identity fingerprint.
+- [x] Credential storage decided: **plain env vars** in the Claude Code
+      environment (secrets never in git; safety classifier blocked the
+      consolidate-to-git approach, confirming the call).
+- [x] Produce the ready-to-paste env-var block (in chat).
+- [x] Commit + push, then merge to `main` (skills + scripts + docs permanent).
+- [x] Discovered Gmail/Calendar/Drive/Cloudflare/Linear MCP connectors →
+      dropped manual Gmail/Photos tokens; Photos out of scope.
+- [x] Install `launch-your-agent` + `wrap-up` skills.
+- [x] Switch deploy target Vercel → Cloudflare Pages in docs.
+- [ ] **USER:** rotate exposed secrets; paste env-var block; start a fresh
+      session (network=Full).
+- [ ] Verify Search Console/GA4 from env + Meta reachable in the new session.
+- [ ] Resume Meta: link Page + Instagram, mint `META_PAGE_TOKEN`, plan App Review.
+- [ ] Wire `@opennextjs/cloudflare` adapter + Pages project.
+- [ ] Build the SEO "Visitor Pass" + narrative Schedule pages (from SEO email).
+- [ ] `/launch-your-agent` → launch the Heat Lagos DM agent.
+
+## Review (connectivity & portability)
+
+What got done this session, all committed to `main`:
+- **Helper scripts** (`scripts/google_sa.py`, `google_user.py`, `meta.py`) —
+  stdlib + openssl, env-var driven, no secrets.
+- **`docs/CLAUDE_OPS.md`** — connected-services inventory, env-var contract,
+  usage, network policy, and operator identity (`HL-OPS-FB809683537B`) so
+  Stine's Claude and Sebastian's Claude never get confused.
+- **`AGENTS.md`** — Vercel removed, Cloudflare Pages set as deploy target,
+  pointer to the ops doc.
+- **`.gitignore`** — blocks credential files from ever being committed.
+- **Skills** — `launch-your-agent` + `wrap-up` vendored (Apache-2.0).
+
+Connectivity outcome:
+- ✅ GitHub, Gmail/Calendar/Drive, Cloudflare, Linear (connectors); Search
+  Console + GA4 (service account, verified live).
+- 🚧 Meta app created but blocked by the "Trusted" network policy until a new
+  session picks up the "Full" setting.
+- Secrets live only in the Claude Code env-vars box (portable, not in git).
+
+Key learnings:
+- Network/policy changes apply to **new sessions** only.
+- Connectors (account-scoped) are the cleanest portability path; env vars cover
+  the rest. GitHub Actions secrets only reach Actions runs, not Claude sessions.
+- Several credentials were pasted in chat → flagged for rotation.
 
 ## Notes
 - Network change to "full" applies to new sessions only (confirmed via 403).
