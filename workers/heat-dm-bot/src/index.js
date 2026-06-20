@@ -13,11 +13,13 @@
  * served by Cloudflare Pages — not from this Worker.)
  *
  * Secrets / vars:
- *   META_VERIFY_TOKEN  - webhook handshake string (var)
- *   META_APP_SECRET    - verifies X-Hub-Signature-256 (secret)
- *   META_PAGE_TOKEN    - Facebook Page token, sends Messenger replies (secret)
- *   IG_ACCESS_TOKEN    - Instagram Login token, sends Instagram DM replies (secret)
- *   ANTHROPIC_API_KEY  - Claude API key (secret)
+ *   META_VERIFY_TOKEN   - webhook handshake string (var)
+ *   META_APP_SECRET     - verifies X-Hub-Signature-256 (secret)
+ *   META_PAGE_TOKEN     - Facebook Page token, sends Messenger replies (secret)
+ *   IG_ACCESS_TOKEN     - Instagram Login token, sends Instagram DM replies (secret)
+ *   ANTHROPIC_API_KEY   - Claude API key (secret)
+ *   WHATSAPP_TOKEN      - WhatsApp Cloud API system user token (secret)
+ *   WHATSAPP_PHONE_ID   - WhatsApp phone number ID from Meta dashboard (secret)
  */
 
 const FB_GRAPH = "https://graph.facebook.com/v21.0";
@@ -75,7 +77,11 @@ export default {
       } catch {
         return new Response("Bad JSON", { status: 400 });
       }
-      ctx.waitUntil(handleEvents(payload, env));
+      const handler =
+        payload.object === "whatsapp_business_account"
+          ? handleWhatsApp
+          : handleEvents;
+      ctx.waitUntil(handler(payload, env));
       return new Response("EVENT_RECEIVED", { status: 200 });
     }
 
@@ -159,6 +165,56 @@ async function handleEvents(payload, env) {
       }
     }
   }
+}
+
+async function handleWhatsApp(payload, env) {
+  const token = env.WHATSAPP_TOKEN;
+  const phoneNumberId = env.WHATSAPP_PHONE_ID;
+  if (!token || !phoneNumberId) {
+    console.log("whatsapp: missing WHATSAPP_TOKEN or WHATSAPP_PHONE_ID");
+    return;
+  }
+
+  for (const entry of payload.entry ?? []) {
+    for (const change of entry.changes ?? []) {
+      if (change.field !== "messages") continue;
+      for (const msg of change.value?.messages ?? []) {
+        if (msg.type !== "text") continue;
+        const from = msg.from;
+        const text = msg.text?.body;
+        if (!from || !text) continue;
+
+        await env.TOKENS?.put("q:" + from, text, { expirationTtl: 604800 });
+
+        try {
+          const reply = await draftReply(text, env);
+          if (reply) await sendWhatsApp(phoneNumberId, token, from, reply);
+        } catch (err) {
+          console.log("whatsapp reply failed:", err.message);
+        }
+      }
+    }
+  }
+}
+
+async function sendWhatsApp(phoneNumberId, token, to, text) {
+  const res = await fetch(
+    `${FB_GRAPH}/${phoneNumberId}/messages`,
+    {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        messaging_product: "whatsapp",
+        to,
+        type: "text",
+        text: { body: text },
+      }),
+    },
+  );
+  if (!res.ok) throw new Error("wa send " + res.status + " " + (await res.text()));
 }
 
 async function draftReply(message, env) {
