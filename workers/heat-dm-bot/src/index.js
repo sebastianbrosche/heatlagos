@@ -154,6 +154,10 @@ export default {
       return handleLearnedUI(url, env);
     }
 
+    if (request.method === "GET" && url.pathname === "/admin/scan-dms") {
+      return handleScanDMs(url, env);
+    }
+
     if (request.method === "GET") {
       const mode = url.searchParams.get("hub.mode");
       const token = url.searchParams.get("hub.verify_token");
@@ -512,4 +516,99 @@ ${cards || "<p>Nothing waiting — you're all caught up 🎉</p>"}
   return new Response(html, {
     headers: { "content-type": "text/html; charset=utf-8" },
   });
+}
+
+// Scan recent Instagram conversations and save real customer Q&A pairs as
+// pending entries in the learned table. Protected by the same LEARN_KEY.
+async function handleScanDMs(url, env) {
+  const key = await env.TOKENS?.get("LEARN_KEY");
+  if (!key || url.searchParams.get("key") !== key) {
+    return new Response("Forbidden", { status: 403 });
+  }
+
+  const token =
+    (await env.TOKENS?.get("IG_ACCESS_TOKEN")) || env.IG_ACCESS_TOKEN;
+  if (!token) {
+    return new Response("No IG token found", { status: 500 });
+  }
+
+  // Fetch up to 30 recent conversations
+  const convoRes = await fetch(
+    `${IG_GRAPH}/me/conversations?platform=instagram&fields=id,participants&limit=30&access_token=${token}`,
+  );
+  if (!convoRes.ok) {
+    const err = await convoRes.text();
+    return new Response("IG conversations error: " + err, { status: 500 });
+  }
+  const convoData = await convoRes.json();
+  const conversations = convoData.data ?? [];
+
+  let saved = 0;
+  let skipped = 0;
+  const log = [];
+
+  for (const convo of conversations) {
+    // Fetch last 20 messages in this conversation
+    const msgRes = await fetch(
+      `${IG_GRAPH}/${convo.id}/messages?fields=id,from,to,message,created_time&limit=20&access_token=${token}`,
+    );
+    if (!msgRes.ok) continue;
+    const msgData = await msgRes.json();
+    const msgs = (msgData.data ?? []).reverse(); // oldest first
+
+    // Find the studio's own IG user id from the first studio message
+    const studioId = msgs.find((m) => m.from?.username === "heat_lagos")?.from?.id;
+
+    // Walk messages: when a customer asks something, look for the next studio reply
+    for (let i = 0; i < msgs.length - 1; i++) {
+      const m = msgs[i];
+      const isCustomer = studioId ? m.from?.id !== studioId : m.from?.username !== "heat_lagos";
+      if (!isCustomer) continue;
+      const question = m.message?.trim();
+      if (!question || question.length < 5) continue;
+
+      // Find the next studio reply
+      const reply = msgs.slice(i + 1).find((r) => {
+        const isStudio = studioId ? r.from?.id === studioId : r.from?.username === "heat_lagos";
+        return isStudio && r.message?.trim().length > 5;
+      });
+      if (!reply) continue;
+
+      const answer = reply.message.trim();
+      // Skip if we already have this pair
+      try {
+        const existing = await env.DB.prepare(
+          "SELECT id FROM learned WHERE question=? AND answer=?",
+        ).bind(question, answer).first();
+        if (existing) { skipped++; continue; }
+
+        await env.DB.prepare(
+          "INSERT INTO learned (question, answer, channel, status) VALUES (?, ?, 'instagram', 'pending')",
+        ).bind(question, answer).run();
+        saved++;
+        log.push({ q: question.slice(0, 80), a: answer.slice(0, 80) });
+      } catch (err) {
+        log.push({ err: err.message });
+      }
+    }
+  }
+
+  const rows = log.map((l) =>
+    l.err
+      ? `<li style="color:red">${esc(l.err)}</li>`
+      : `<li><strong>Q:</strong> ${esc(l.q)}<br><strong>A:</strong> ${esc(l.a)}</li>`,
+  ).join("");
+
+  const learnKey = key;
+  const html = `<!doctype html><html><head><meta charset="utf-8">
+<title>Heat Lagos — DM scan</title></head>
+<body style="font-family:system-ui,sans-serif;max-width:640px;margin:24px auto;padding:0 16px;color:#3a3633">
+<h1 style="color:#FC966A">DM scan complete</h1>
+<p>Conversations scanned: <strong>${conversations.length}</strong> &nbsp;|&nbsp;
+   Saved: <strong>${saved}</strong> &nbsp;|&nbsp;
+   Skipped (duplicate): <strong>${skipped}</strong></p>
+<p><a href="/learned?key=${esc(learnKey)}">Go to approval page &rarr;</a></p>
+<ul style="line-height:1.8">${rows || "<li>No new Q&amp;A pairs found.</li>"}</ul>
+</body></html>`;
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
 }
