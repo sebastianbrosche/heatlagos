@@ -182,6 +182,9 @@ async function handleEvents(payload, env) {
       // Remember this question so a later manual reply can be paired with it.
       await env.TOKENS?.put("q:" + senderId, text, { expirationTtl: 604800 });
 
+      // Kill switch: when paused, capture/learn but never auto-reply to members.
+      if (!(await botEnabled(env))) continue;
+
       try {
         const reply = await draftReply(text, env);
         if (reply) {
@@ -196,6 +199,12 @@ async function handleEvents(payload, env) {
       }
     }
   }
+}
+
+// Master on/off switch. The bot only auto-replies when KV BOT_ENABLED === "true".
+// Anything else (missing, "false") means paused — fail-safe to OFF.
+async function botEnabled(env) {
+  return (await env.TOKENS?.get("BOT_ENABLED")) === "true";
 }
 
 async function handleWhatsApp(payload, env) {
@@ -216,6 +225,9 @@ async function handleWhatsApp(payload, env) {
         if (!from || !text) continue;
 
         await env.TOKENS?.put("q:" + from, text, { expirationTtl: 604800 });
+
+        // Kill switch: when paused, never auto-reply to members.
+        if (!(await botEnabled(env))) continue;
 
         try {
           const reply = await draftReply(text, env);
