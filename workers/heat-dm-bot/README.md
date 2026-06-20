@@ -86,3 +86,27 @@ worker secret) and the messaging permissions, then subscribe the Page/IG account
 The personality, facts and pricing live in `SYSTEM_PROMPT` in `src/index.js`.
 Edit and re-run `npx wrangler deploy`. The model is set by `MODEL` (currently
 `claude-haiku-4-5` — cheap and fast for DMs).
+
+## Learning from manual replies
+
+When someone DMs a question the bot can't answer well and **the studio replies
+by hand** in the Instagram/Messenger inbox, that reply is saved as a *pending*
+Q&A. It is **not** reused until approved, on this page:
+
+```
+https://heat-dm-bot.sebastian-brosche.workers.dev/learned?key=<LEARN_KEY>
+```
+
+The key is stored in KV (`TOKENS` namespace, key `LEARN_KEY`). Approve an answer
+and the bot will reuse it for similar questions from then on (it is injected into
+the prompt, matched by keyword overlap). Reject one to discard it.
+
+Storage: the `learned` table in the `heat_ops` D1 database
+(`question, answer, channel, status`).
+
+## Token auto-refresh
+
+`IG_ACCESS_TOKEN` lives in the `TOKENS` KV namespace, not just as a secret. A
+daily cron (`0 3 * * *`) calls Instagram's `refresh_access_token`, which extends
+the long-lived token another ~60 days, and writes the new value back to KV. The
+fetch handler reads KV first and falls back to the secret. No manual rotation.

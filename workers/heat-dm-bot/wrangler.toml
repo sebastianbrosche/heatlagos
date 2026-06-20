@@ -11,6 +11,13 @@ workers_dev = true
 binding = "TOKENS"
 id = "9e1bd5c27a8c4cea8363fc13351bc5a6"
 
+# Shared knowledge base. The `learned` table holds Q&A pairs captured from the
+# studio's manual replies; approved ones are reused in future answers.
+[[d1_databases]]
+binding = "DB"
+database_name = "heat_ops"
+database_id = "de98183a-1263-46d6-a62b-f05d66f7486f"
+
 # Refresh the Instagram token daily at 03:00 UTC. Each refresh extends the
 # long-lived token another ~60 days, so it never lapses.
 [triggers]

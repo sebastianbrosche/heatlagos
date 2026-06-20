@@ -4,6 +4,10 @@
  * Routes:
  *   GET  /webhook   - Meta webhook verification handshake
  *   POST /webhook   - Meta message events -> Claude reply -> Graph API send
+ *   GET  /learned   - studio approval page for answers the bot has learned
+ *
+ * Learning: hand-typed studio replies are saved as pending Q&A, approved on the
+ * /learned page, then reused (injected into the prompt) for similar questions.
  *
  * (Legal pages live on the main site at heatlagos.com/privacy and /terms,
  * served by Cloudflare Pages — not from this Worker.)
@@ -45,6 +49,10 @@ Style:
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    if (request.method === "GET" && url.pathname.startsWith("/learned")) {
+      return handleLearnedUI(url, env);
+    }
 
     if (request.method === "GET") {
       const mode = url.searchParams.get("hub.mode");
@@ -117,15 +125,35 @@ async function handleEvents(payload, env) {
       env.META_PAGE_TOKEN
     : env.META_PAGE_TOKEN;
 
+  const channel = isInstagram ? "instagram" : "messenger";
+
   for (const entry of payload.entry ?? []) {
     for (const event of entry.messaging ?? []) {
-      const senderId = event.sender?.id;
       const text = event.message?.text;
-      if (!senderId || !text || event.message?.is_echo) continue;
+      if (!text) continue;
+
+      // Outbound echo: if the studio typed this reply by hand (not the bot),
+      // capture it as a pending answer to learn from.
+      if (event.message?.is_echo) {
+        const userId = event.recipient?.id;
+        if (userId) await captureManualReply(env, userId, channel, text);
+        continue;
+      }
+
+      const senderId = event.sender?.id;
+      if (!senderId) continue;
+      // Remember this question so a later manual reply can be paired with it.
+      await env.TOKENS?.put("q:" + senderId, text, { expirationTtl: 604800 });
 
       try {
-        const reply = await draftReply(text, env.ANTHROPIC_API_KEY);
-        if (reply) await sendMessage(base, token, senderId, reply);
+        const reply = await draftReply(text, env);
+        if (reply) {
+          await sendMessage(base, token, senderId, reply);
+          // Mark as bot-sent so its echo isn't mislearned as a manual reply.
+          await env.TOKENS?.put("sent:" + hash(senderId + "|" + reply), "1", {
+            expirationTtl: 3600,
+          });
+        }
       } catch (err) {
         console.log("reply failed:", err.message);
       }
@@ -133,18 +161,27 @@ async function handleEvents(payload, env) {
   }
 }
 
-async function draftReply(message, apiKey) {
+async function draftReply(message, env) {
+  let system = SYSTEM_PROMPT;
+  const matches = matchAnswers(message, await approvedAnswers(env));
+  if (matches.length) {
+    system +=
+      "\n\nThe studio has approved these answers to questions like this. If one " +
+      "fits, base your reply on it and do not contradict it:\n" +
+      matches.map((m) => `- Q: ${m.question}\n  A: ${m.answer}`).join("\n");
+  }
+
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      "x-api-key": apiKey,
+      "x-api-key": env.ANTHROPIC_API_KEY,
       "anthropic-version": "2023-06-01",
     },
     body: JSON.stringify({
       model: MODEL,
       max_tokens: 300,
-      system: SYSTEM_PROMPT,
+      system,
       messages: [{ role: "user", content: message }],
     }),
   });
@@ -190,4 +227,123 @@ function timingSafeEqual(a, b) {
   let diff = 0;
   for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
   return diff === 0;
+}
+
+// ---- Learning: capture, reuse and approve studio answers --------------------
+
+// Save a hand-typed studio reply as a pending Q&A (skipping the bot's own
+// sends, which are marked in KV). The studio approves it before it is reused.
+async function captureManualReply(env, userId, channel, answer) {
+  if (!env.DB) return;
+  if (await env.TOKENS?.get("sent:" + hash(userId + "|" + answer))) return;
+  const question = await env.TOKENS?.get("q:" + userId);
+  if (!question) return;
+  try {
+    await env.DB.prepare(
+      "INSERT INTO learned (question, answer, channel, status) VALUES (?, ?, ?, 'pending')",
+    )
+      .bind(question, answer, channel)
+      .run();
+  } catch (err) {
+    console.log("learn insert failed:", err.message);
+  }
+}
+
+async function approvedAnswers(env) {
+  if (!env.DB) return [];
+  try {
+    const { results } = await env.DB.prepare(
+      "SELECT question, answer FROM learned WHERE status = 'approved'",
+    ).all();
+    return results ?? [];
+  } catch (err) {
+    console.log("learned query failed:", err.message);
+    return [];
+  }
+}
+
+// Cheap keyword overlap so we only inject answers relevant to this message.
+function matchAnswers(message, rows, limit = 3) {
+  const words = new Set((message.toLowerCase().match(/[a-z0-9]+/g) ?? []));
+  return rows
+    .map((r) => {
+      let score = 0;
+      for (const w of r.question.toLowerCase().match(/[a-z0-9]+/g) ?? []) {
+        if (w.length > 2 && words.has(w)) score++;
+      }
+      return { ...r, score };
+    })
+    .filter((r) => r.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit);
+}
+
+function hash(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = (h << 5) - h + s.charCodeAt(i);
+    h |= 0;
+  }
+  return (h >>> 0).toString(16);
+}
+
+function esc(s) {
+  return String(s).replace(
+    /[&<>"]/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+  );
+}
+
+// Simple password-in-URL page where the studio approves or rejects the answers
+// the bot has learned. Linked from nowhere; share the URL with the key.
+async function handleLearnedUI(url, env) {
+  const key = await env.TOKENS?.get("LEARN_KEY");
+  if (!env.DB || !key || url.searchParams.get("key") !== key) {
+    return new Response("Forbidden", { status: 403 });
+  }
+
+  const id = url.searchParams.get("id");
+  if (url.pathname === "/learned/approve" && id) {
+    await env.DB.prepare("UPDATE learned SET status='approved' WHERE id=?")
+      .bind(id)
+      .run();
+    return Response.redirect(url.origin + "/learned?key=" + key, 302);
+  }
+  if (url.pathname === "/learned/reject" && id) {
+    await env.DB.prepare("UPDATE learned SET status='rejected' WHERE id=?")
+      .bind(id)
+      .run();
+    return Response.redirect(url.origin + "/learned?key=" + key, 302);
+  }
+
+  const { results } = await env.DB.prepare(
+    "SELECT id, question, answer, channel, created_at FROM learned WHERE status='pending' ORDER BY created_at DESC",
+  ).all();
+
+  const cards = (results ?? [])
+    .map(
+      (r) => `
+    <div style="border:1px solid #e5e0db;border-radius:12px;padding:16px;margin:16px 0">
+      <div style="color:#8A8682;font-size:12px">${esc(r.channel)} · ${esc(r.created_at)}</div>
+      <p><strong>Q:</strong> ${esc(r.question)}</p>
+      <p><strong>A:</strong> ${esc(r.answer)}</p>
+      <a href="/learned/approve?id=${r.id}&key=${esc(key)}"
+         style="background:#FC966A;color:#fff;text-decoration:none;padding:8px 16px;border-radius:8px;margin-right:8px">Approve</a>
+      <a href="/learned/reject?id=${r.id}&key=${esc(key)}"
+         style="color:#8A8682">Reject</a>
+    </div>`,
+    )
+    .join("");
+
+  const html = `<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heat Lagos — answers to approve</title></head>
+<body style="font-family:system-ui,sans-serif;max-width:640px;margin:24px auto;padding:0 16px;color:#3a3633">
+<h1 style="color:#FC966A">Answers to approve</h1>
+<p style="color:#8A8682">Approve an answer to let the bot reuse it for the next person who asks something similar.</p>
+${cards || "<p>Nothing waiting — you're all caught up 🎉</p>"}
+</body></html>`;
+  return new Response(html, {
+    headers: { "content-type": "text/html; charset=utf-8" },
+  });
 }

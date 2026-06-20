@@ -254,3 +254,19 @@ When Stine does reply manually, the bot learns that answer and reuses it.
 ## Notes
 - Keep each channel a thin branch on the existing worker; one shared knowledge
   base and one shared `draftReply`. Simplicity first.
+
+## Review — 2026-06-20 (this session)
+- DONE #1 Instagram token auto-refresh: KV `TOKENS` + daily cron `0 3 * * *`
+  calling `refresh_access_token`; worker reads token from KV (secret fallback).
+  Verified the refresh endpoint returns a fresh 60-day token.
+- DONE #5 Learning loop (IG + Messenger): hand-typed studio replies are captured
+  as pending Q&A (`learned` table in heat_ops D1), approved at `/learned?key=...`,
+  then injected into future replies by keyword match. Capture skips the bot's own
+  sends via a KV marker. Verified: auth (403 w/o key), list, approve, reuse.
+- Per decision, manual answers are SAVED then APPROVED before reuse (not auto).
+- NEXT (need credentials/owner action, not code):
+  - Messenger: generate a long-lived Page token -> `wrangler secret put META_PAGE_TOKEN`
+    -> subscribe the Page to `messages`. Code path already live.
+  - WhatsApp: register +351 927 290 812 in WhatsApp Cloud API (must not be on a
+    consumer WhatsApp app) -> add `whatsapp` branch + token.
+  - Email: hybrid (send when confident, else draft). Needs Gmail OAuth + poller.
