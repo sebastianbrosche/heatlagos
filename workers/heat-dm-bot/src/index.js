@@ -118,8 +118,9 @@ Booking & schedule:
 - Classes are booked in advance online. Currently you can cancel up to 3 hours before
   class. Say "currently" or "for now", as this policy may change; do not present 3 hours
   as a permanent fixed rule.
-- To switch or reschedule a booking, use the Bsport app (search "Bsport" in the App
-  Store or Google Play).
+- To switch or reschedule a booking, use the Bsport app. iOS:
+  https://apps.apple.com/gb/app/bsport-solutions/id1356621554 and Android:
+  https://play.google.com/store/apps/details?id=com.bsport
 
 Arriving & studio etiquette:
 - Doors open 15 minutes before class, which gives you time to settle your mind before you
