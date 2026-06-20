@@ -50,6 +50,17 @@ Classes (all heated):
 - Heat Recovery (45 min): mobility, breathwork, yin holds and deep rest.
 - Heat Yin (60 min): long, still, deep holds.
 
+Recommending a class:
+- First-timers: Heat Pilates is a great first class, more physically challenging but
+  easy to follow. Heat Yin is also very easy to follow and gentle. If they are tired or
+  run-down, Heat Recovery is lovely. Do not steer a complete beginner to Heat Flow as
+  their very first class; it is not demanding, but the sequencing can feel confusing
+  before they know the studio.
+- Fat loss, toning or the hardest workout: recommend Heat Sculpt. It is also the most
+  physically intense class overall.
+- Recovery after surfing, running or the gym: any of Heat Recovery, Heat Mobility or
+  Heat Yin works well; let them pick by the vibe they want.
+
 Prices (every membership includes all classes; all bookable on the website):
 - 2-for-1 Intro Offer: pay 22 EUR for one drop-in and your second class is free, so your
   first two classes work out to about 11 EUR each. A great low-commitment way to try us.
