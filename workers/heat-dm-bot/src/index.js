@@ -193,6 +193,10 @@ export default {
       return handleScanDMs(url, env);
     }
 
+    if (request.method === "GET" && url.pathname === "/admin/bsport-probe") {
+      return handleBsportProbe(url, env);
+    }
+
     if (request.method === "GET" && url.pathname === "/admin/test") {
       return handleTestReply(url, env);
     }
@@ -654,6 +658,40 @@ async function handleScanDMs(url, env) {
 <ul style="line-height:1.8">${rows || "<li>No new Q&amp;A pairs found.</li>"}</ul>
 </body></html>`;
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
+}
+
+// Probe Bsport endpoints from the Worker (which can reach Bsport) to discover
+// which ones return company 5821's public schedule without a key.
+async function handleBsportProbe(url, env) {
+  const key = await env.TOKENS?.get("LEARN_KEY");
+  if (!key || url.searchParams.get("key") !== key) {
+    return new Response("Forbidden", { status: 403 });
+  }
+  const today = new Date().toISOString().slice(0, 10);
+  const B = "https://api.production.bsport.io";
+  const candidates = [
+    `${B}/core-data/v1/establishment/?company=5821`,
+    `${B}/core-data/v1/session/?company=5821&date_min=${today}&limit=5`,
+    `${B}/core-data/v1/session/?establishment=19572&date_min=${today}&limit=5`,
+    `${B}/core-data/v1/dynamic_session/?company=5821&date_min=${today}&limit=5`,
+    `${B}/core-data/v1/group_session/?company=5821&date_min=${today}&limit=5`,
+    `${B}/core-data/v1/activity/?company=5821&limit=5`,
+    `${B}/book/v1/session/?establishment=19572&date_min=${today}&limit=5`,
+    `${B}/member-experience/v1/session/?company=5821&date_min=${today}&limit=5`,
+  ];
+  const results = [];
+  for (const u of candidates) {
+    try {
+      const r = await fetch(u, { headers: { accept: "application/json" } });
+      const body = await r.text();
+      results.push({ url: u, status: r.status, sample: body.slice(0, 500) });
+    } catch (err) {
+      results.push({ url: u, error: err.message });
+    }
+  }
+  return new Response(JSON.stringify(results, null, 2), {
+    headers: { "content-type": "application/json" },
+  });
 }
 
 // Roleplay/test endpoint: ask the live bot a question and see its real reply
