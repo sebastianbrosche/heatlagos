@@ -1,11 +1,12 @@
 /**
- * Heat Lagos — Instagram / Facebook DM auto-reply bot + legal pages.
+ * Heat Lagos — Instagram / Facebook DM auto-reply bot.
  *
  * Routes:
- *   GET  /privacy   - privacy policy (for Meta app settings)
- *   GET  /terms     - terms of service (for Meta app settings)
  *   GET  /webhook   - Meta webhook verification handshake
  *   POST /webhook   - Meta message events -> Claude reply -> Graph API send
+ *
+ * (Legal pages live on the main site at heatlagos.com/privacy and /terms,
+ * served by Cloudflare Pages — not from this Worker.)
  *
  * Secrets / vars:
  *   META_VERIFY_TOKEN  - webhook handshake string (var)
@@ -46,17 +47,13 @@ export default {
     const url = new URL(request.url);
 
     if (request.method === "GET") {
-      if (url.pathname === "/privacy") return html(PRIVACY_HTML);
-      if (url.pathname === "/terms") return html(TERMS_HTML);
-
       const mode = url.searchParams.get("hub.mode");
       const token = url.searchParams.get("hub.verify_token");
       const challenge = url.searchParams.get("hub.challenge");
       if (mode === "subscribe" && token === env.META_VERIFY_TOKEN) {
         return new Response(challenge, { status: 200 });
       }
-      if (url.pathname === "/webhook") return new Response("Forbidden", { status: 403 });
-      return new Response("Heat Lagos DM bot", { status: 200 });
+      return new Response("Forbidden", { status: 403 });
     }
 
     if (request.method === "POST") {
@@ -78,14 +75,9 @@ export default {
   },
 };
 
-function html(body) {
-  return new Response(body, {
-    status: 200,
-    headers: { "content-type": "text/html; charset=utf-8" },
-  });
-}
-
 async function handleEvents(payload, env) {
+  // "instagram" events reply via graph.instagram.com with the IG token;
+  // "page" (Messenger) events reply via graph.facebook.com with the Page token.
   const isInstagram = payload.object === "instagram";
   const base = isInstagram ? IG_GRAPH : FB_GRAPH;
   const token = isInstagram
@@ -166,77 +158,3 @@ function timingSafeEqual(a, b) {
   for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
   return diff === 0;
 }
-
-const PAGE_CSS =
-  "body{max-width:760px;margin:40px auto;padding:0 20px;font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;color:#1a1a1a}h1{font-size:1.8rem}h2{font-size:1.15rem;margin-top:1.8em}a{color:#c2552b}small{color:#666}";
-
-const PRIVACY_HTML = `<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Heat Lagos - Privacy Policy</title><style>${PAGE_CSS}</style></head><body>
-<h1>Privacy Policy</h1><small>Last updated 20 June 2026</small>
-<p>This policy explains what information Heat Lagos collects, how we use it, and the
-choices you have. It covers our website and the messages you send us on Instagram and
-Facebook.</p>
-<h2>Who we are</h2><p>Heat Lagos is an infrared Pilates, yoga and recovery studio in
-Lagos, Portugal, operating heatlagos.com. We are the data controller for the data
-described here. Contact: <a href="mailto:hello@heatlagos.com">hello@heatlagos.com</a>.</p>
-<h2>Information we collect</h2><p>When you visit our website we use analytics cookies
-(Google) to count visits. When you contact us we receive what you send (name, email or
-phone, message). When you message our Instagram or Facebook accounts, Meta passes us
-your message and public profile name so we can reply. Bookings are handled by our
-scheduling provider (Bsport) under its own policy.</p>
-<h2>Messaging and automation</h2><p>To answer common questions quickly we use an
-automated assistant (the Claude AI service by Anthropic) that can read messages sent to
-our Instagram and Facebook accounts and draft or send replies. A human can step in at
-any time. We access only conversations people start with us; we do not read your other
-private messages and do not post on your behalf. Message content is used solely to
-respond to you, is not sold, and is not used for advertising. Anthropic processes the
-text to generate a reply and does not use it to train its models.</p>
-<h2>How we use your information</h2><p>To reply to you, manage bookings and memberships,
-keep the website working, and meet legal obligations. Our legal bases are consent,
-performance of a contract, and our legitimate interest in running the studio.</p>
-<h2>Who we share data with</h2><p>Trusted providers acting on our behalf only: Meta
-(Instagram/Facebook), Google (analytics), Bsport (bookings), Cloudflare (hosting),
-Anthropic (the reply assistant). We do not sell your personal data.</p>
-<h2>Your rights and data deletion</h2><p>Under the GDPR you can access, correct, delete,
-restrict or object to use of your data, and withdraw consent, and complain to the
-Portuguese authority (CNPD). <strong>To delete your data</strong>, including message
-history, email <a href="mailto:hello@heatlagos.com">hello@heatlagos.com</a> with subject
-"Delete my data" and the handle you messaged from; we complete deletion within 30 days,
-free. You can also remove our access from the "Apps and Websites" settings in your Meta
-account.</p>
-<h2>Retention, transfers and children</h2><p>We keep data only as long as needed.
-Some providers are outside the EEA and rely on GDPR safeguards. Our services are for
-adults; we do not knowingly collect data from children under 16.</p>
-<h2>Changes &amp; contact</h2><p>We may update this policy; the date above shows the
-last change. Questions: <a href="mailto:hello@heatlagos.com">hello@heatlagos.com</a>.</p>
-</body></html>`;
-
-const TERMS_HTML = `<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Heat Lagos - Terms of Service</title><style>${PAGE_CSS}</style></head><body>
-<h1>Terms of Service</h1><small>Last updated 20 June 2026</small>
-<p>These terms govern your use of Heat Lagos' website, classes, and our Instagram and
-Facebook messaging. By using them you agree to these terms.</p>
-<h2>The service</h2><p>Heat Lagos provides infrared Pilates, yoga and recovery classes
-in Lagos, Portugal, information about them, and an assistant that answers questions over
-Instagram and Facebook direct messages.</p>
-<h2>Bookings and payments</h2><p>Class bookings, memberships and payments are handled by
-our scheduling provider (Bsport). Prices and schedules may change; the website shows
-current details.</p>
-<h2>Automated messaging</h2><p>Replies to your direct messages may be generated
-automatically by an AI assistant. They are for general information only and are not
-professional, medical, or legal advice. For anything important, a team member will
-follow up, or you can email <a href="mailto:hello@heatlagos.com">hello@heatlagos.com</a>.</p>
-<h2>Acceptable use</h2><p>Do not misuse the service, send unlawful or abusive content,
-or attempt to disrupt it. We may decline to respond to or block such use.</p>
-<h2>Intellectual property</h2><p>The Heat Lagos name, content and branding belong to
-Heat Lagos and may not be used without permission.</p>
-<h2>Disclaimer and liability</h2><p>The service is provided "as is". Exercise carries
-inherent risks; consult a physician before starting. To the extent permitted by law,
-Heat Lagos is not liable for indirect or consequential loss arising from use of the
-website or messaging service.</p>
-<h2>Changes, law &amp; contact</h2><p>We may update these terms; the date above shows the
-last change. These terms are governed by the laws of Portugal. Questions:
-<a href="mailto:hello@heatlagos.com">hello@heatlagos.com</a>.</p>
-</body></html>`;
