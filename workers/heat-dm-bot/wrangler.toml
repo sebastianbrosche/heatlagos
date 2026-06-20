@@ -1,0 +1,14 @@
+name = "heat-dm-bot"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+workers_dev = true
+
+# Non-secret shared string for the webhook verification handshake.
+# Set the SAME value in the Meta App > Webhooks config.
+[vars]
+META_VERIFY_TOKEN = "heat_lagos_verify_9f3a2c7b"
+
+# Secrets are NOT stored here. Set them once after the first deploy:
+#   wrangler secret put META_APP_SECRET     --name heat-dm-bot
+#   wrangler secret put META_PAGE_TOKEN     --name heat-dm-bot
+#   wrangler secret put ANTHROPIC_API_KEY   --name heat-dm-bot
