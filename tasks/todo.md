@@ -200,3 +200,57 @@ heatlagos/
         └── Teachers.tsx
 ```
 
+
+---
+
+# Heat Lagos — DM/Email Concierge Expansion Plan (2026-06-20)
+
+## Goal
+Stine answers any given "dumb" question (prices, schedule, what to bring, etc.)
+**once**. After that the bot handles it for every future asker, across every
+channel she gets messages on: Instagram, Facebook Messenger, WhatsApp, and email.
+When Stine does reply manually, the bot learns that answer and reuses it.
+
+## Pieces
+
+### 1. Instagram token auto-refresh  — DONE
+- [x] Created KV namespace `TOKENS` (id 9e1bd5c2...) to hold the rotating token.
+- [x] Worker reads `IG_ACCESS_TOKEN` from KV first, falls back to the secret.
+- [x] Added daily cron (`0 3 * * *`) calling `refresh_access_token` and writing
+      the new 60-day token back to KV. Verified the endpoint returns a fresh
+      token with `instagram_business_manage_messages`.
+- Result: the IG token now never expires; no manual rotation needed.
+
+### 2. Facebook Messenger  — needs a Page token (low effort)
+- The worker already handles `page` events (FB_GRAPH + META_PAGE_TOKEN). Code is
+  done; just needs the token + Page subscribed to the app webhook for `messages`.
+- [ ] Generate a long-lived Page token (pages_messaging) for the Heat Lagos Page.
+- [ ] `wrangler secret put META_PAGE_TOKEN`.
+- [ ] Subscribe the Page to the app's `messages`/`messaging_postbacks` fields.
+
+### 3. WhatsApp  — needs a dedicated number (medium effort)
+- WhatsApp Cloud API: a WhatsApp Business Account + a phone number NOT used on a
+  normal WhatsApp app. Different webhook payload + send endpoint than Messenger.
+- [ ] Provision/confirm the phone number + WABA in Meta.
+- [ ] Add a `whatsapp_business_account` branch to the worker (parse + send).
+- [ ] Subscribe the WhatsApp webhook; set `WHATSAPP_TOKEN` + phone number id.
+
+### 4. Email concierge  — biggest piece (decision needed)
+- Bot reads Stine's incoming Gmail and handles common questions.
+- DECISION: auto-send vs draft-for-approval vs hybrid (confident => send, else draft).
+- [ ] Stand up Gmail access (OAuth refresh token) for a scheduled poller.
+- [ ] Classify incoming mail; answer the easy ones using the shared knowledge base.
+
+### 5. Learning loop (shared across all channels)
+- Capture Stine's manual replies (IG/Messenger `is_echo` outbound, sent emails),
+  pair each with the question it answered, and store as a Q&A in a shared store.
+- On every new inbound message, retrieve the closest learned Q&A and feed it to
+  Claude as authoritative context so the same answer goes out next time.
+- DECISION: reuse manual answers immediately, or have Stine approve first.
+- [ ] Create `learned` store (D1 table).
+- [ ] Capture outbound/manual answers per channel.
+- [ ] Retrieve + inject on inbound (keyword first; embeddings if volume grows).
+
+## Notes
+- Keep each channel a thin branch on the existing worker; one shared knowledge
+  base and one shared `draftReply`. Simplicity first.

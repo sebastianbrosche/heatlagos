@@ -73,7 +73,38 @@ export default {
 
     return new Response("Heat Lagos DM bot", { status: 200 });
   },
+
+  // Weekly cron: refresh the Instagram long-lived token so it never expires.
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(refreshIgToken(env));
+  },
 };
+
+// Instagram long-lived tokens last ~60 days and can be extended any time after
+// they are 24h old. We refresh weekly and store the new token in KV, which the
+// fetch handler reads first. The current token is taken from KV (or the
+// IG_ACCESS_TOKEN secret on the very first run).
+async function refreshIgToken(env) {
+  const current =
+    (await env.TOKENS?.get("IG_ACCESS_TOKEN")) || env.IG_ACCESS_TOKEN;
+  if (!current) {
+    console.log("refresh skipped: no current IG token");
+    return;
+  }
+  const res = await fetch(
+    `${IG_GRAPH.replace("/v21.0", "")}/refresh_access_token` +
+      `?grant_type=ig_refresh_token&access_token=${current}`,
+  );
+  if (!res.ok) {
+    console.log("ig token refresh failed:", res.status, await res.text());
+    return;
+  }
+  const data = await res.json();
+  if (data.access_token) {
+    await env.TOKENS.put("IG_ACCESS_TOKEN", data.access_token);
+    console.log("ig token refreshed, expires_in:", data.expires_in);
+  }
+}
 
 async function handleEvents(payload, env) {
   // "instagram" events reply via graph.instagram.com with the IG token;
@@ -81,7 +112,9 @@ async function handleEvents(payload, env) {
   const isInstagram = payload.object === "instagram";
   const base = isInstagram ? IG_GRAPH : FB_GRAPH;
   const token = isInstagram
-    ? env.IG_ACCESS_TOKEN || env.META_PAGE_TOKEN
+    ? (await env.TOKENS?.get("IG_ACCESS_TOKEN")) ||
+      env.IG_ACCESS_TOKEN ||
+      env.META_PAGE_TOKEN
     : env.META_PAGE_TOKEN;
 
   for (const entry of payload.entry ?? []) {

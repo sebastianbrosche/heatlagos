@@ -3,6 +3,19 @@ main = "src/index.js"
 compatibility_date = "2024-11-01"
 workers_dev = true
 
+# Holds the rotating IG_ACCESS_TOKEN. A weekly cron refreshes the Instagram
+# long-lived token (valid ~60 days) and writes the new value back here, so it
+# never expires. The fetch handler reads the token from here, falling back to
+# the IG_ACCESS_TOKEN secret if the store is empty.
+[[kv_namespaces]]
+binding = "TOKENS"
+id = "9e1bd5c27a8c4cea8363fc13351bc5a6"
+
+# Refresh the Instagram token daily at 03:00 UTC. Each refresh extends the
+# long-lived token another ~60 days, so it never lapses.
+[triggers]
+crons = ["0 3 * * *"]
+
 # Non-secret shared string for the webhook verification handshake.
 # Set the SAME value in the Meta App > Webhooks config.
 [vars]
