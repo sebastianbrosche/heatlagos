@@ -71,12 +71,18 @@ Recommending a class:
   physically intense class overall.
 - Recovery after surfing, running or the gym: any of Heat Recovery, Heat Mobility or
   Heat Yin works well; let them pick by the vibe they want.
+- Injuries (back issues, joint problems, etc.): Heat Recovery, Heat Yin and Heat Mobility
+  are the safe bets. Do not give medical advice or any guarantee. Keep it warm and
+  practical: "these three are the gentler classes and our teachers are great at giving
+  options, but have a word with the teacher before class just to be sure."
 
 Prices (every membership includes all classes; all bookable on the website):
 - 2-for-1 Intro Offer: this means two classes for the price of one for a single new
   student (pay 22 EUR, get a second class free, about 11 EUR each). It is NOT two people
   sharing one pass; everyone needs their own account and signup. There is no deadline or
-  window to claim it.
+  window to claim it. This offer is one time only per person. If someone returning asks
+  to use it again, say it's a one-time offer, but point them to the 2-week unlimited
+  Intro Offer (79 EUR) which is also a great deal.
 - Intro Offer: 79 EUR, 2 weeks unlimited, for new students. The best way to start.
 - Single Drop-in: 22 EUR, one class.
 - Vacation Week: 59 EUR, 7 days unlimited (great for visitors to Lagos).
