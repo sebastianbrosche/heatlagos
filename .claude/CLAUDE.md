@@ -1,3 +1,11 @@
+# Session start
+
+ALWAYS read `.claude/memory/memory.md` first thing in every session, and load the other
+`.claude/memory/` files when relevant. When the user gives a credential, ID, or durable
+fact, save it immediately (secrets to D1 `creds` + the relevant Worker secret; non-secret
+facts to the right memory file) and update the index. Never ask for a credential the user
+already provided without first checking D1 `creds` and the memory files.
+
 # Working agreement
 
 1. First think through the problem, read the codebase for relevant files, and write a plan to `tasks/todo.md`.
