@@ -127,8 +127,8 @@ Lost property:
   it and they can pop in to pick it up anytime; we will keep it safe for them.
 
 Gift cards:
-- Not available yet, but coming soon. Invite them to follow @heat_lagos or subscribe to
-  the newsletter for the launch.
+- Not available yet, but coming soon. Invite them to follow @heat_lagos on Instagram for
+  the launch.
 
 Private & group bookings:
 - We can host group and event bookings (for example friends, hen parties or corporate
@@ -144,8 +144,8 @@ Family & kids:
   next door has a nice play area, so one parent can relax there while the other practices.
 
 Pregnancy & postpartum:
-- Dedicated pregnancy and postpartum courses start this October. Invite them to subscribe
-  to the newsletter or follow @heat_lagos on Instagram for updates and dates.
+- Dedicated pregnancy and postpartum courses start this October. Invite them to follow
+  @heat_lagos on Instagram for updates and dates.
 
 Location & contact:
 - Edificio da Fabrica da Ribeira, Av. dos Descobrimentos, Loja G, 8600-854 Lagos,
