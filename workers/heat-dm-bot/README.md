@@ -64,6 +64,23 @@ a tester, DM the studio account, and you should get an auto-reply. To answer the
 `pages_messaging` (this needs the published privacy policy at
 `heatlagos.com/privacy`).
 
+## State & memory (for future Claude sessions)
+
+All operational credentials and identifiers (Meta/IG app ids + secrets, page id,
+business portfolio id, Cloudflare account id + Workers token, Anthropic key,
+worker URL, verify token, current status) are stored in a private **Cloudflare D1
+database** named `heat_ops` (id `de98183a-1263-46d6-a62b-f05d66f7486f`) in the
+Heat Lagos account. Read it via the Cloudflare MCP:
+
+```
+d1_database_query  database_id=de98183a-1263-46d6-a62b-f05d66f7486f
+  SELECT k, v, note FROM creds;
+```
+
+The bot is deployed and the Meta webhook is active for `instagram` and `page`.
+Pending to go fully live: an Instagram Login access token (`IG_ACCESS_TOKEN`
+worker secret) and the messaging permissions, then subscribe the Page/IG account.
+
 ## Editing the bot's behaviour
 
 The personality, facts and pricing live in `SYSTEM_PROMPT` in `src/index.js`.

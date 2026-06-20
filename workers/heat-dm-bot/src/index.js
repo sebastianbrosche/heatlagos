@@ -5,16 +5,18 @@
  *   1. Answers Meta's webhook verification handshake (GET).
  *   2. Receives message events (POST) for Instagram DMs and Messenger.
  *   3. Asks Claude to draft a short, on-brand reply.
- *   4. Sends the reply back through the Meta Graph API.
+ *   4. Sends the reply back through the correct Graph API for the channel.
  *
- * Secrets / vars (set with `wrangler secret put` or in wrangler.toml [vars]):
- *   META_VERIFY_TOKEN  - shared string used only for the webhook handshake (var)
- *   META_APP_SECRET    - app secret, used to verify the X-Hub-Signature-256 (secret)
- *   META_PAGE_TOKEN    - long-lived Page access token used to send replies (secret)
+ * Secrets / vars:
+ *   META_VERIFY_TOKEN  - shared string for the webhook handshake (var)
+ *   META_APP_SECRET    - app secret, verifies X-Hub-Signature-256 (secret)
+ *   META_PAGE_TOKEN    - Facebook Page token, sends Messenger replies (secret)
+ *   IG_ACCESS_TOKEN    - Instagram Login token, sends Instagram DM replies (secret)
  *   ANTHROPIC_API_KEY  - Claude API key (secret)
  */
 
-const GRAPH = "https://graph.facebook.com/v21.0";
+const FB_GRAPH = "https://graph.facebook.com/v21.0";
+const IG_GRAPH = "https://graph.instagram.com/v21.0";
 const MODEL = "claude-haiku-4-5";
 
 const SYSTEM_PROMPT = `You are the friendly front-desk assistant for Heat Lagos, an
@@ -43,7 +45,6 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // 1. Webhook verification handshake.
     if (request.method === "GET") {
       const mode = url.searchParams.get("hub.mode");
       const token = url.searchParams.get("hub.verify_token");
@@ -54,23 +55,17 @@ export default {
       return new Response("Forbidden", { status: 403 });
     }
 
-    // 2. Incoming events.
     if (request.method === "POST") {
       const raw = await request.text();
-
       if (!(await verifySignature(request, raw, env.META_APP_SECRET))) {
         return new Response("Bad signature", { status: 403 });
       }
-
       let payload;
       try {
         payload = JSON.parse(raw);
       } catch {
         return new Response("Bad JSON", { status: 400 });
       }
-
-      // Acknowledge immediately; process replies in the background so Meta
-      // never sees a slow response and retries.
       ctx.waitUntil(handleEvents(payload, env));
       return new Response("EVENT_RECEIVED", { status: 200 });
     }
@@ -80,18 +75,23 @@ export default {
 };
 
 async function handleEvents(payload, env) {
-  // Both "instagram" and "page" objects deliver messages under entry[].messaging[].
+  // "instagram" events reply via graph.instagram.com with the IG token;
+  // "page" (Messenger) events reply via graph.facebook.com with the Page token.
+  const isInstagram = payload.object === "instagram";
+  const base = isInstagram ? IG_GRAPH : FB_GRAPH;
+  const token = isInstagram
+    ? env.IG_ACCESS_TOKEN || env.META_PAGE_TOKEN
+    : env.META_PAGE_TOKEN;
+
   for (const entry of payload.entry ?? []) {
     for (const event of entry.messaging ?? []) {
       const senderId = event.sender?.id;
       const text = event.message?.text;
-
-      // Skip echoes of our own messages, delivery receipts, reactions, etc.
       if (!senderId || !text || event.message?.is_echo) continue;
 
       try {
         const reply = await draftReply(text, env.ANTHROPIC_API_KEY);
-        if (reply) await sendMessage(senderId, reply, env.META_PAGE_TOKEN);
+        if (reply) await sendMessage(base, token, senderId, reply);
       } catch (err) {
         console.log("reply failed:", err.message);
       }
@@ -119,8 +119,8 @@ async function draftReply(message, apiKey) {
   return data.content?.[0]?.text?.trim();
 }
 
-async function sendMessage(recipientId, text, pageToken) {
-  const res = await fetch(`${GRAPH}/me/messages?access_token=${pageToken}`, {
+async function sendMessage(base, token, recipientId, text) {
+  const res = await fetch(`${base}/me/messages?access_token=${token}`, {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({
@@ -129,11 +129,10 @@ async function sendMessage(recipientId, text, pageToken) {
       messaging_type: "RESPONSE",
     }),
   });
-  if (!res.ok) throw new Error("graph send " + res.status + " " + (await res.text()));
+  if (!res.ok) throw new Error("send " + res.status + " " + (await res.text()));
 }
 
 async function verifySignature(request, raw, appSecret) {
-  // If no app secret is configured, skip verification (useful for first tests).
   if (!appSecret) return true;
   const header = request.headers.get("x-hub-signature-256");
   if (!header?.startsWith("sha256=")) return false;
