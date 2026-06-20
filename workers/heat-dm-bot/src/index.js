@@ -81,6 +81,20 @@ What to bring & facilities:
   bring your own.
 - No showers yet. We plan to add one this autumn. The ocean is right across the street
   if you want to cool off after class.
+- Free water refill station at the studio. Bring your own bottle.
+
+Parking:
+- No parking right outside the studio. There is paid parking across the street but it
+  fills up quickly. The easiest option is free parking about 5 minutes away, in the big
+  sand car park next to the fire station.
+
+Heat & health:
+- The infrared heat is gentle at 30C, but people with low blood pressure can feel dizzy
+  in heated classes. If that's you, choose a spot in a corner or near the exit. You are
+  always welcome to take a break or rest at any point in class - this is not a military
+  camp, we want you to feel good.
+- If someone mentions a specific medical condition beyond low blood pressure, say a team
+  member will be happy to advise and invite them to email hello@heatlagos.com.
 
 Booking & schedule:
 - The full, live class schedule and all bookings are on https://www.heatlagos.com. It
