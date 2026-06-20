@@ -176,6 +176,10 @@ export default {
       return handleScanDMs(url, env);
     }
 
+    if (request.method === "GET" && url.pathname === "/admin/test") {
+      return handleTestReply(url, env);
+    }
+
     if (request.method === "GET") {
       const mode = url.searchParams.get("hub.mode");
       const token = url.searchParams.get("hub.verify_token");
@@ -633,4 +637,41 @@ async function handleScanDMs(url, env) {
 <ul style="line-height:1.8">${rows || "<li>No new Q&amp;A pairs found.</li>"}</ul>
 </body></html>`;
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
+}
+
+// Roleplay/test endpoint: ask the live bot a question and see its real reply
+// (or whether it would stay silent). Protected by LEARN_KEY. Does not send
+// anything to anyone; it only runs draftReply and shows the result.
+async function handleTestReply(url, env) {
+  const key = await env.TOKENS?.get("LEARN_KEY");
+  if (!key || url.searchParams.get("key") !== key) {
+    return new Response("Forbidden", { status: 403 });
+  }
+  const q = url.searchParams.get("q");
+  if (!q) {
+    return new Response(
+      JSON.stringify({ error: "add ?q=your+question" }),
+      { headers: { "content-type": "application/json" } },
+    );
+  }
+  let reply, error;
+  try {
+    reply = await draftReply(q, env);
+  } catch (err) {
+    error = err.message;
+  }
+  return new Response(
+    JSON.stringify(
+      {
+        question: q,
+        reply: reply ?? null,
+        silent: reply == null,
+        note: reply == null ? "Bot would stay silent (NO_ANSWER) so Stine answers." : undefined,
+        error,
+      },
+      null,
+      2,
+    ),
+    { headers: { "content-type": "application/json" } },
+  );
 }
