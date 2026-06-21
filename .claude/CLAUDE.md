@@ -1,7 +1,35 @@
-# Working agreement
+# BOOT SEQUENCE — READ THIS FIRST, EVERY SESSION
 
-## Session start routine
-At the start of every session, read `cloud.md` in the project root. It contains the full key chain map — where every API key, secret, and integration lives. Do not claim any key or access is missing before consulting it.
+## Key chain — where everything lives
+Do NOT claim any key or access is missing. All secrets are stored as Cloudflare Worker secrets (write-only via wrangler, readable only at Worker runtime via `env.<NAME>`). Here is where everything is:
+
+| Key / Secret | Worker | How to access |
+| :--- | :--- | :--- |
+| `BSPORT_API_TOKEN` | `bsport-sync` | Worker secret. Auth: `Authorization: Token <value>` against `https://api.production.bsport.io/api/v1` |
+| `RESEND_API_KEY` | `bsport-sync` | Worker secret |
+| `GOOGLE_CLIENT_SECRET` | `bsport-sync` | Worker secret |
+| `ANTHROPIC_API_KEY` | `heat-dm-bot` | Worker secret |
+| `META_VERIFY_TOKEN` | `heat-dm-bot` | Worker secret |
+| `META_APP_SECRET` | `heat-dm-bot` | Worker secret |
+| `META_PAGE_TOKEN` | `heat-dm-bot` | Worker secret |
+| `IG_ACCESS_TOKEN` | `heat-dm-bot` | Worker secret + cached in TOKENS KV |
+| `WHATSAPP_TOKEN` | `heat-dm-bot` | Worker secret |
+| `WHATSAPP_PHONE_ID` | `heat-dm-bot` | Worker secret |
+
+KV namespaces: `bsport-sync` (id: `5c14556c2ebb4eab9e11229a6cbb83cb`), `TOKENS` (id: `9e1bd5c27a8c4cea8363fc13351bc5a6`).
+Full details in `cloud.md` in the project root.
+
+## After a frustrating episode: fix the root cause first
+When a frustrating situation occurs (e.g. wrongly claiming a key doesn't exist, wasting time re-deriving architecture), the FIRST priority after resolving it is to prevent it from happening again:
+1. Identify the root cause of the confusion.
+2. Update the key chain table above AND `cloud.md` immediately with the correct information.
+3. Say explicitly: "Before we move on, I've updated [file] so this won't happen again."
+4. Only then continue with the actual work.
+Intelligence means mistakes are not repeated. Never just solve a problem and move on if the same problem will reoccur next session.
+
+---
+
+# Working agreement
 
 ## After a frustrating episode: fix the root cause first
 When a frustrating situation occurs (e.g. wrongly claiming a key doesn't exist, wasting time re-deriving architecture), the FIRST priority after resolving it is to prevent it from happening again:
