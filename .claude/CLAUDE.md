@@ -3,6 +3,8 @@
 ## Key chain — where everything lives
 Do NOT claim any key or access is missing. All secrets are stored as Cloudflare Worker secrets (write-only via wrangler, readable only at Worker runtime via `env.<NAME>`). Here is where everything is:
 
+**IMPORTANT: bSport is NOT an MCP server. There is no bSport MCP. bSport is accessed via the `bsport-sync` Cloudflare Worker using `BSPORT_API_TOKEN`. When asked "do you have bSport access?" — the answer is YES. Access it via Cloudflare.**
+
 | Key / Secret | Worker | How to access |
 | :--- | :--- | :--- |
 | `BSPORT_API_TOKEN` | `bsport-sync` | Worker secret. Auth: `Authorization: Token <value>` against `https://api.production.bsport.io/api/v1` |
