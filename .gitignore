@@ -39,6 +39,9 @@ secrets.env
 # vercel
 .vercel
 
+# wrangler local cache
+.wrangler/
+
 # image originals (local only)
 /_originals
 
