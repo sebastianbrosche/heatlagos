@@ -52,7 +52,7 @@ export default function Page() {
         eyebrow="Pilates in Lagos"
         title="Pilates in Lagos, Portugal"
         lede="Heated Pilates in a boutique infrared studio in the centre of Lagos. Slow, precise, quietly powerful work that builds deep core strength, control and mobility, taught in English to a community of active locals, expats and travellers across the western Algarve."
-        heroImage="/Pilates.jpg"
+        heroImage="/pilates-ball-3.jpg"
         heroImageAlt="Heat Pilates class in Lagos"
         extras={
           <>

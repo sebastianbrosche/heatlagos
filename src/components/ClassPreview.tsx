@@ -11,7 +11,7 @@ const ALL_CLASSES: Record<string, ClassItem> = {
     duration: "50 min",
     description:
       "Slow, precise mat work that builds deep strength and a body that feels more connected, more capable.",
-    image: "/Pilates.jpg",
+    image: "/pilates-ball-3.jpg",
   },
   "Heat Sculpt": {
     name: "Heat Sculpt",
@@ -53,7 +53,7 @@ const ALL_CLASSES: Record<string, ClassItem> = {
     duration: "60 min",
     description:
       "Long, still holds that reach the deeper layers of the body. Meditative, unhurried, quietly profound.",
-    image: "/DSC08021.JPG",
+    image: "/yin-stine.jpg",
   },
 };
 

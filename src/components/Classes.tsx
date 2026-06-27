@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -25,7 +25,7 @@ const CATEGORIES: Category[] = [
         duration: "50 min",
         description:
           "Slow, precise and quietly powerful. Heat Pilates builds deep strength through intentional mat work that leaves your whole body feeling more connected, more capable and genuinely good.",
-        image: "/Pilates.jpg",
+        image: "/pilates-ball-3.jpg",
       },
     ],
   },
@@ -79,7 +79,7 @@ const CATEGORIES: Category[] = [
         duration: "60 min",
         description:
           "Long, still holds that reach the deeper layers of the body. Meditative, unhurried and quietly profound. A genuinely good reason to slow down.",
-        image: "/DSC08021.JPG",
+        image: "/yin-stine.jpg",
       },
     ],
   },
