@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
+import ImagePlaceholderCarousel from "@/components/ImagePlaceholderCarousel";
 
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-b";
 
@@ -23,19 +24,32 @@ export default function Page() {
       <Marquee />
       
       <main className="mx-auto max-w-5xl px-5 pt-32 pb-16 sm:px-6 sm:pt-40 lg:pb-24">
-        {/* Banner Section */}
-        <div className="rounded-3xl bg-stone-dark/30 border border-white/5 p-6 sm:p-10 mb-8">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
-            <div>
-              <span className="text-xs uppercase tracking-wider text-brand">Special Offer</span>
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mt-2">Heat Lagos Studio</h1>
-              <p className="text-base text-foreground/60 mt-1">Batata Beach, Lagos, Portugal • Open Daily</p>
+        {/* Banner Section with Carousel */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+          <div className="lg:col-span-8 rounded-3xl bg-stone-dark/30 border border-white/5 p-6 sm:p-10 flex flex-col justify-center">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+              <div>
+                <span className="text-xs uppercase tracking-wider text-brand">Special Offer</span>
+                <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mt-2">Heat Lagos Studio</h1>
+                <p className="text-base text-foreground/60 mt-1">Batata Beach, Lagos, Portugal • Open Daily</p>
+              </div>
+              <div className="bg-stone-dark border border-white/10 rounded-2xl p-4 text-center min-w-[150px]">
+                <span className="text-xs text-foreground/50 block">From Only</span>
+                <span className="font-serif text-4xl text-brand font-bold">€79</span>
+                <span className="text-xs text-foreground/50 block mt-1">No contract trial</span>
+              </div>
             </div>
-            <div className="bg-stone-dark border border-white/10 rounded-2xl p-4 text-center min-w-[150px]">
-              <span className="text-xs text-foreground/50 block">From Only</span>
-              <span className="font-serif text-4xl text-brand font-bold">€79</span>
-              <span className="text-xs text-foreground/50 block mt-1">No contract trial</span>
-            </div>
+          </div>
+          <div className="lg:col-span-4">
+            <ImagePlaceholderCarousel
+              placeholderId={1}
+              options={[
+                { src: "/pilates-ball-3.jpg", alt: "Heated Mat Pilates class" },
+                { src: "/Power.jpg", alt: "Heated Yoga training session" },
+                { src: "/ad-sculpt-kickback.jpg", alt: "Infrared Sculpt workout" }
+              ]}
+              aspectRatioClass="aspect-[4/3] lg:aspect-square"
+            />
           </div>
         </div>
 
@@ -129,6 +143,20 @@ export default function Page() {
               >
                 Express Checkout
               </a>
+            </div>
+
+            {/* Gallery Preview Card */}
+            <div className="bg-stone-dark/30 border border-white/5 rounded-3xl p-6 mb-6">
+              <h3 className="font-serif text-lg text-foreground mb-4">Studio Preview</h3>
+              <ImagePlaceholderCarousel
+                placeholderId={2}
+                options={[
+                  { src: "/yin-stine.jpg", alt: "Restorative Yin Yoga with bolster" },
+                  { src: "/ad-pilates-stretch.jpg", alt: "Sideways Pilates stretch with ball" },
+                  { src: "/ad-sculpt-pushup.jpg", alt: "Infrared Sculpt single leg pushup" }
+                ]}
+                aspectRatioClass="aspect-[4/3]"
+              />
             </div>
 
             {/* Location Card */}

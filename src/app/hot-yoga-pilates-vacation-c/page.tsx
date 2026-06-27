@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
+import ImagePlaceholderCarousel from "@/components/ImagePlaceholderCarousel";
 
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-vacation-c";
 
@@ -30,18 +31,29 @@ export default function Page() {
         <section className="px-5 py-12 sm:px-6 lg:px-20 lg:py-16">
           <div className="mx-auto max-w-7xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              {/* Left Column: Heading & Leade */}
-              <div className="lg:col-span-7 space-y-6">
-                <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
-                  Traveler Pass
-                </span>
-                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-[1.05]">
-                  Sweat &amp; Recover in the Sun
-                </h1>
-                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-xl">
-                  Keep active during your Algarve holiday. We blend mat Pilates core work, intense results-oriented 
-                  Sculpt sessions, and active recovery Yoga. Heated by clean infrared panels, right by Batata Beach.
-                </p>
+              {/* Left Column: Heading, Leade & Carousel */}
+              <div className="lg:col-span-7 space-y-8">
+                <div className="space-y-6">
+                  <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
+                    Traveler Pass
+                  </span>
+                  <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-[1.05]">
+                    Sweat &amp; Recover in the Sun
+                  </h1>
+                  <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-xl">
+                    Keep active during your Algarve holiday. We blend mat Pilates core work, intense results-oriented 
+                    Sculpt sessions, and active recovery Yoga. Heated by clean infrared panels, right by Batata Beach.
+                  </p>
+                </div>
+                <ImagePlaceholderCarousel
+                  placeholderId={1}
+                  options={[
+                    { src: "/pilates-ball-3.jpg", alt: "Heated Mat Pilates class" },
+                    { src: "/Power.jpg", alt: "Heated Yoga training session" },
+                    { src: "/ad-sculpt-kickback.jpg", alt: "Infrared Sculpt workout" }
+                  ]}
+                  aspectRatioClass="aspect-video"
+                />
               </div>
 
               {/* Right Column: Checkout Widget */}
@@ -110,6 +122,31 @@ export default function Page() {
                   Located directly across Praia da Batata. Take a sweaty heated session, then run directly into the cooling Atlantic waves.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Studio Gallery Spotlight */}
+        <section className="px-5 py-20 sm:px-6 lg:px-20 max-w-5xl mx-auto border-t border-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-4 text-left">
+              <span className="text-xs uppercase tracking-widest text-brand font-mono">Ocean-Side Recovery</span>
+              <h2 className="font-serif text-3xl text-foreground">Mat Pilates &amp; Recovery</h2>
+              <p className="text-sm text-foreground/75 leading-relaxed font-light">
+                Our infrared hot workouts match core alignment with active restoration. 
+                Cycle through the options on the right to select the best creative choice for this section.
+              </p>
+            </div>
+            <div>
+              <ImagePlaceholderCarousel
+                placeholderId={2}
+                options={[
+                  { src: "/yin-stine.jpg", alt: "Restorative Yin Yoga with bolster" },
+                  { src: "/ad-pilates-stretch.jpg", alt: "Sideways Pilates stretch with ball" },
+                  { src: "/ad-sculpt-pushup.jpg", alt: "Infrared Sculpt single leg pushup" }
+                ]}
+                aspectRatioClass="aspect-video"
+              />
             </div>
           </div>
         </section>

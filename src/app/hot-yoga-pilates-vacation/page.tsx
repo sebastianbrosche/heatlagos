@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
+import ImagePlaceholderCarousel from "@/components/ImagePlaceholderCarousel";
 
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-vacation";
 
@@ -178,6 +179,31 @@ export default function Page() {
                 </div>
                 <p className="mt-6 text-xs text-foreground/50">— Roxane G. (US)</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery / Aesthetic Spotlight */}
+        <section className="border-t border-white/5 px-5 py-20 sm:px-6 lg:px-20 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-7">
+              <ImagePlaceholderCarousel
+                placeholderId={2}
+                options={[
+                  { src: "/yin-stine.jpg", alt: "Restorative Yin Yoga with bolster" },
+                  { src: "/ad-pilates-stretch.jpg", alt: "Sideways Pilates stretch with ball" },
+                  { src: "/ad-sculpt-pushup.jpg", alt: "Infrared Sculpt single leg pushup" }
+                ]}
+                aspectRatioClass="aspect-video"
+              />
+            </div>
+            <div className="md:col-span-5 space-y-4 text-left">
+              <span className="text-xs uppercase tracking-widest text-brand font-mono">The Studio Experience</span>
+              <h2 className="font-serif text-3xl text-foreground">Find Your Flow</h2>
+              <p className="text-sm text-foreground/75 leading-relaxed font-light">
+                Whether you want to build raw strength in Pilates and Sculpt, or restore your mind and joints in recovery, 
+                our space by Batata Beach is built to support your daily movement practice.
+              </p>
             </div>
           </div>
         </section>

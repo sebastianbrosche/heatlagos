@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
+import ImagePlaceholderCarousel from "@/components/ImagePlaceholderCarousel";
 
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-d";
 
@@ -34,6 +35,19 @@ export default function Page() {
               Heat Lagos is the premier infrared-heated studio in Portugal. We design results-focused, 
               low-impact classes that tone your body, build core strength, and leave you feeling completely refreshed.
             </p>
+          </section>
+
+          {/* Hero Carousel */}
+          <section className="mx-auto max-w-3xl">
+            <ImagePlaceholderCarousel
+              placeholderId={1}
+              options={[
+                { src: "/pilates-ball-3.jpg", alt: "Heated Mat Pilates class" },
+                { src: "/Power.jpg", alt: "Heated Yoga training session" },
+                { src: "/ad-sculpt-kickback.jpg", alt: "Infrared Sculpt workout" }
+              ]}
+              aspectRatioClass="aspect-video"
+            />
           </section>
 
           {/* Minimalist Pricing Table */}
@@ -74,6 +88,22 @@ export default function Page() {
                 <li>- 12-hour cancellation policy to release mats for other members</li>
                 <li>- Batata Beach plunge after class is highly recommended</li>
               </ul>
+            </div>
+          </section>
+
+          {/* Aesthetic Spotlight */}
+          <section className="mx-auto max-w-3xl border-t border-white/10 pt-16">
+            <div className="space-y-6">
+              <span className="text-[11px] uppercase tracking-[0.4em] text-brand/80 block text-center">Option Selection 2</span>
+              <ImagePlaceholderCarousel
+                placeholderId={2}
+                options={[
+                  { src: "/yin-stine.jpg", alt: "Restorative Yin Yoga with bolster" },
+                  { src: "/ad-pilates-stretch.jpg", alt: "Sideways Pilates stretch with ball" },
+                  { src: "/ad-sculpt-pushup.jpg", alt: "Infrared Sculpt single leg pushup" }
+                ]}
+                aspectRatioClass="aspect-video"
+              />
             </div>
           </section>
         </div>

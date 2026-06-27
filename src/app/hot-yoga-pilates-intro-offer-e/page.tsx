@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
+import ImagePlaceholderCarousel from "@/components/ImagePlaceholderCarousel";
 
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-e";
 
@@ -63,8 +64,17 @@ export default function Page() {
 
         {/* 2-Column Content Section */}
         <section className="px-5 max-w-5xl mx-auto py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Column: Simple Philosophy */}
+          {/* Left Column: Simple Philosophy & Carousel */}
           <div className="lg:col-span-7 space-y-8">
+            <ImagePlaceholderCarousel
+              placeholderId={1}
+              options={[
+                { src: "/pilates-ball-3.jpg", alt: "Heated Mat Pilates class" },
+                { src: "/Power.jpg", alt: "Heated Yoga training session" },
+                { src: "/ad-sculpt-kickback.jpg", alt: "Infrared Sculpt workout" }
+              ]}
+              aspectRatioClass="aspect-video"
+            />
             <div className="space-y-4">
               <h2 className="font-sans font-extrabold text-2xl uppercase tracking-wider">The Concept</h2>
               <p className="text-base text-foreground/80 leading-relaxed font-light">
@@ -114,6 +124,30 @@ export default function Page() {
               >
                 Book Your Pass
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Studio Specs Spotlight */}
+        <section className="px-5 max-w-5xl mx-auto py-16 border-t border-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <ImagePlaceholderCarousel
+                placeholderId={2}
+                options={[
+                  { src: "/yin-stine.jpg", alt: "Restorative Yin Yoga with bolster" },
+                  { src: "/ad-pilates-stretch.jpg", alt: "Sideways Pilates stretch with ball" },
+                  { src: "/ad-sculpt-pushup.jpg", alt: "Infrared Sculpt single leg pushup" }
+                ]}
+                aspectRatioClass="aspect-video"
+              />
+            </div>
+            <div className="space-y-4 text-left">
+              <span className="text-xs uppercase tracking-widest text-brand font-mono">Heat Lagos Recovery</span>
+              <h2 className="font-sans font-extrabold text-2xl uppercase tracking-wider">Aesthetic Focus</h2>
+              <p className="text-sm text-foreground/75 leading-relaxed font-light">
+                Cycle through the options on the left to select the best visual match for recovery and sculpt.
+              </p>
             </div>
           </div>
         </section>

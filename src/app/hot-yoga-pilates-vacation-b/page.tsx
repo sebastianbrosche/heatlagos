@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
+import ImagePlaceholderCarousel from "@/components/ImagePlaceholderCarousel";
 
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-vacation-b";
 
@@ -129,6 +130,20 @@ export default function Page() {
               >
                 Express Checkout
               </a>
+            </div>
+
+            {/* Gallery Preview Card */}
+            <div className="bg-stone-dark/30 border border-white/5 rounded-3xl p-6 mb-6">
+              <h3 className="font-serif text-lg text-foreground mb-4">Studio Preview</h3>
+              <ImagePlaceholderCarousel
+                placeholderId={2}
+                options={[
+                  { src: "/yin-stine.jpg", alt: "Restorative Yin Yoga with bolster" },
+                  { src: "/ad-pilates-stretch.jpg", alt: "Sideways Pilates stretch with ball" },
+                  { src: "/ad-sculpt-pushup.jpg", alt: "Infrared Sculpt single leg pushup" }
+                ]}
+                aspectRatioClass="aspect-[4/3]"
+              />
             </div>
 
             {/* Location Card */}
