@@ -22,7 +22,7 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="relative overflow-hidden pt-28 sm:pt-36">
+      <main className="relative overflow-hidden pt-32 sm:pt-40">
         {/* Dynamic geometric accents */}
         <div className="absolute top-0 right-0 -z-10 h-[500px] w-[500px] rounded-full bg-brand/5 blur-[120px]" />
         
@@ -32,14 +32,14 @@ export default function Page() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* Left Column: Heading & Leade */}
               <div className="lg:col-span-7 space-y-6">
-                <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1 text-[10px] font-semibold uppercase tracking-wider text-brand">
+                <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
                   FS8 Template C
                 </span>
                 <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-[1.05]">
                   Sweat &amp; Recover in the Sun
                 </h1>
-                <p className="text-base text-foreground/80 leading-relaxed max-w-xl">
-                  Keep active during your Algarve holiday. We blend mat Pilates core work, intense calorie-burning 
+                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-xl">
+                  Keep active during your Algarve holiday. We blend mat Pilates core work, intense results-oriented 
                   Sculpt sessions, and active recovery Yoga. Heated by clean infrared panels, right by Batata Beach.
                 </p>
               </div>
@@ -65,7 +65,7 @@ export default function Page() {
                     Get Vacation Pass
                   </a>
                   
-                  <p className="text-[10px] text-center text-foreground/40 mt-4 leading-normal">
+                  <p className="text-xs text-center text-foreground/40 mt-4 leading-normal">
                     *Mats and towels included. Valid for 7 consecutive days starting on your first booked class.
                   </p>
                 </div>
@@ -84,34 +84,30 @@ export default function Page() {
 
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-2xl border border-white/5 bg-stone-dark/30 p-6 space-y-4">
-                <span className="text-3xl">🏄</span>
-                <h3 className="font-serif text-lg text-foreground">Surf Recovery</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed">
-                  Infrared heat targets sore shoulders and tight hamstrings. Repair muscles and stretch joints post-surf.
+                <span className="text-sm font-bold text-brand uppercase tracking-wider">Surf Recovery</span>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  Infrared heat targets sore shoulders and tight hamstrings. Repair muscles and stretch joints post-surf. Decades of teaching experience.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/5 bg-stone-dark/30 p-6 space-y-4">
-                <span className="text-3xl">⚡</span>
-                <h3 className="font-serif text-lg text-foreground">Jetlag Detox</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed">
-                  Intense cardiovascular sweat that flushes travel toxins, reboots metabolism, and boosts vacation energy.
+                <span className="text-sm font-bold text-brand uppercase tracking-wider">Jetlag Detox</span>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  Intense cardiovascular sweat that flushes travel toxins, reboots metabolism, and leaves you refreshed. Fresh, breathable room air.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/5 bg-stone-dark/30 p-6 space-y-4">
-                <span className="text-3xl">🤸</span>
-                <h3 className="font-serif text-lg text-foreground">Mat Pilates</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed">
-                  Low-impact core training, postural alignment, and alignment check. Perfect active holiday work.
+                <span className="text-sm font-bold text-brand uppercase tracking-wider">Mat Pilates</span>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  Low-impact core training, postural check, and body balance. Friendly coaches, doable class paces for all levels.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/5 bg-stone-dark/30 p-6 space-y-4">
-                <span className="text-3xl">🌊</span>
-                <h3 className="font-serif text-lg text-foreground">Atlantic Dip</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed">
-                  Located directly across Praia da Batata. Take a sweaty heated session, then run into the cooling Atlantic waves.
+                <span className="text-sm font-bold text-brand uppercase tracking-wider">Atlantic Plunge</span>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  Located directly across Praia da Batata. Take a sweaty heated session, then run directly into the cooling Atlantic waves.
                 </p>
               </div>
             </div>

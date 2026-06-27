@@ -22,15 +22,15 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="px-5 pt-28 pb-20 sm:px-6 sm:pt-36 lg:px-20 lg:pb-32 bg-stone-dark/10">
+      <main className="px-5 pt-32 pb-20 sm:px-6 sm:pt-40 lg:px-20 lg:pb-32 bg-stone-dark/10">
         <div className="mx-auto max-w-4xl space-y-16">
           {/* NYP Bold Typographic Hero */}
           <section className="text-center space-y-6">
-            <span className="text-[9px] uppercase tracking-[0.4em] text-brand/80">NYP Style Template D</span>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-brand/80">NYP Style Template D</span>
             <h1 className="font-sans font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tighter text-foreground uppercase leading-none">
               SWEAT. RESTORE.<br />BEACH PLUNGE.
             </h1>
-            <p className="mx-auto max-w-xl text-sm sm:text-base text-foreground/75 leading-relaxed font-light">
+            <p className="mx-auto max-w-xl text-base sm:text-lg text-foreground/75 leading-relaxed font-light">
               Heat Lagos is your premium hot holiday fitness spot. Restore your muscle flexibility post-surf or post-flight, 
               sweat out flight toxins, and run straight into the Batata beach waves.
             </p>
@@ -43,12 +43,12 @@ export default function Page() {
                 <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-foreground">Vacation Week</h3>
                 <span className="font-sans text-3xl font-light text-brand">€59</span>
               </div>
-              <p className="text-xs text-foreground/60 leading-relaxed mb-6 font-light">
+              <p className="text-sm text-foreground/60 leading-relaxed mb-6 font-light">
                 Unlock 7 days of unlimited access to Heated Pilates, Yoga, Sculpt, and Mobility. The ideal pass for surfers and holiday visitors.
               </p>
               <a
                 href={checkoutUrl}
-                className="block w-full text-center border border-foreground hover:bg-foreground hover:text-stone-dark font-sans font-bold text-[10px] uppercase tracking-[0.25em] py-4 rounded-none transition-all"
+                className="block w-full text-center border border-foreground hover:bg-foreground hover:text-stone-dark font-sans font-bold text-xs uppercase tracking-[0.25em] py-4 rounded-none transition-all"
               >
                 Get Vacation Pass
               </a>
@@ -58,21 +58,21 @@ export default function Page() {
           {/* Amenities & Studio Rules */}
           <section className="grid gap-12 sm:grid-cols-2 pt-8 border-t border-white/10">
             <div>
-              <h3 className="font-sans font-bold text-sm uppercase tracking-widest text-brand mb-4">Traveler Amenities</h3>
-              <ul className="space-y-3 text-xs text-foreground/80 font-light">
-                <li>• Premium infrared heaters target muscle tightness and joint soreness</li>
-                <li>• Certified Manduka yoga mats & sweat towels provided in-studio</li>
-                <li>• Classes guided in clear, easy English for international travelers</li>
-                <li>• Located right across the Batata Beach entrance</li>
+              <h3 className="font-sans font-bold text-base uppercase tracking-widest text-brand mb-4">Traveler Features</h3>
+              <ul className="space-y-3 text-sm text-foreground/80 font-light">
+                <li>- Fresh far-infrared heat targets joint soreness and stiffness directly</li>
+                <li>- Premium studio yoga mats and sweat towels provided in-class</li>
+                <li>- Decades of experience. Friendly, present international instructors</li>
+                <li>- Located just 20 meters from Batata Beach entrance</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-sans font-bold text-sm uppercase tracking-widest text-brand mb-4">Holiday Rules</h3>
-              <ul className="space-y-3 text-xs text-foreground/80 font-light">
-                <li>• Book your mat in advance (schedule fills up quickly)</li>
-                <li>• Arrive 10 minutes before class to set up</li>
-                <li>• 12-hour cancellation policy to release mats for other travelers</li>
-                <li>• Bring a water bottle (filtered refills in studio)</li>
+              <h3 className="font-sans font-bold text-base uppercase tracking-widest text-brand mb-4">Holiday Rules</h3>
+              <ul className="space-y-3 text-sm text-foreground/80 font-light">
+                <li>- Book your mat in advance (schedule fills up quickly)</li>
+                <li>- Active classes are hard but doable. Yoga/recovery classes are chill</li>
+                <li>- 12-hour cancellation policy to release mats for other travelers</li>
+                <li>- Bring a water bottle (filtered refills in studio)</li>
               </ul>
             </div>
           </section>

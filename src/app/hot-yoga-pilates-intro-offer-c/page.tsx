@@ -22,7 +22,7 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="relative overflow-hidden pt-28 sm:pt-36">
+      <main className="relative overflow-hidden pt-32 sm:pt-40">
         {/* Dynamic geometric accents */}
         <div className="absolute top-0 right-0 -z-10 h-[500px] w-[500px] rounded-full bg-brand/5 blur-[120px]" />
         
@@ -32,16 +32,15 @@ export default function Page() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* Left Column: Heading & Leade */}
               <div className="lg:col-span-7 space-y-6">
-                <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1 text-[10px] font-semibold uppercase tracking-wider text-brand">
+                <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
                   FS8 Template C
                 </span>
                 <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-[1.05]">
                   Pilates, Sculpt &amp; Yoga Remixed
                 </h1>
-                <p className="text-base text-foreground/80 leading-relaxed max-w-xl">
-                  Welcome to Heat Lagos. We combine the best elements of mat Pilates, sweaty cardio Sculpt, and deep 
-                  restorative Yoga under our high-performance infrared heat panels. Low-impact, high-intensity 
-                  movement with some serious sweat.
+                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-xl">
+                  Welcome to Heat Lagos. We combine the best elements of results-oriented mat Pilates, sweaty cardio Sculpt, and deep 
+                  restorative Yoga under our fresh far-infrared heating panels. Hard work, doable paces, and good vibes.
                 </p>
               </div>
 
@@ -66,7 +65,7 @@ export default function Page() {
                     Buy Trial Pass
                   </a>
                   
-                  <p className="text-[10px] text-center text-foreground/40 mt-4 leading-normal">
+                  <p className="text-xs text-center text-foreground/40 mt-4 leading-normal">
                     *Pass activates automatically on your first booked class. Non-transferable.
                   </p>
                 </div>
@@ -85,34 +84,30 @@ export default function Page() {
 
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-2xl border border-white/5 bg-stone-dark/30 p-6 space-y-4">
-                <span className="text-3xl">🤸</span>
-                <h3 className="font-serif text-lg text-foreground">Mat Pilates</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed">
-                  Low-impact core training, postural alignment, and balance. We focus on building deep abdominal strength.
+                <span className="text-sm font-bold text-brand uppercase tracking-wider">Mat Pilates</span>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  Low-impact core training, posture checking, and alignment. We focus on building deep abdominal strength. Hard but doable for all levels.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/5 bg-stone-dark/30 p-6 space-y-4">
-                <span className="text-3xl">⚡</span>
-                <h3 className="font-serif text-lg text-foreground">Heated Sculpt</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed">
-                  High-energy tone workouts matching light resistance, pulse movements, and direct infrared sweat.
+                <span className="text-sm font-bold text-brand uppercase tracking-wider">Heated Sculpt</span>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  High-energy tone workouts matching light resistance, pulse movements, and direct infrared sweat. Results-oriented and loaded with good vibes.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/5 bg-stone-dark/30 p-6 space-y-4">
-                <span className="text-3xl">🧘</span>
-                <h3 className="font-serif text-lg text-foreground">Heated Flow</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed">
-                  Dynamic vinyasa structures focusing on movement flow, breath sync, and joint flexibility under the heat.
+                <span className="text-sm font-bold text-brand uppercase tracking-wider">Heated Flow</span>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  Dynamic vinyasa structures focusing on movement flow, breath sync, and joint flexibility under clean, fresh infrared heat.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/5 bg-stone-dark/30 p-6 space-y-4">
-                <span className="text-3xl">🌊</span>
-                <h3 className="font-serif text-lg text-foreground">Yin &amp; Recovery</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed">
-                  Deep, slow-release passive stretches to heal sore muscles. Step out and take a cooling plunge in Batata beach.
+                <span className="text-sm font-bold text-brand uppercase tracking-wider">Yin &amp; Recovery</span>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  Chill, relaxing deep-stretch classes to recover from stiffness and melt travel tension. Step out and plunge straight into Batata beach.
                 </p>
               </div>
             </div>

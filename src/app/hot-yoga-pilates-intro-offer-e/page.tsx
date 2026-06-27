@@ -22,22 +22,22 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="relative overflow-hidden pt-28 pb-20 sm:pt-36 lg:pb-32">
+      <main className="relative overflow-hidden pt-32 pb-20 sm:pt-40 lg:pb-32">
         {/* Glow Effects */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -z-10 h-[600px] w-[600px] rounded-full bg-brand/10 blur-[150px]" />
 
         {/* WeHo High Energy Hero */}
         <section className="px-5 py-12 text-center sm:px-6 lg:px-20 lg:py-16">
           <div className="mx-auto max-w-4xl space-y-6">
-            <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1 text-[10px] font-semibold uppercase tracking-wider text-brand">
+            <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
               WeHo Style Template E
             </span>
             <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-foreground leading-[1.05] tracking-tight">
               Sculpt — Lagos&apos; Best Sweaty Workout
             </h1>
-            <p className="mx-auto max-w-2xl text-base text-foreground/80 leading-relaxed font-light">
-              High-intensity, low-impact, muscle-exhausting movements designed to push your core limits, 
-              boost cardiorespiratory capacity, and get that deep, detoxifying sweat under far-infrared heat.
+            <p className="mx-auto max-w-2xl text-base sm:text-lg text-foreground/80 leading-relaxed font-light">
+              Results-focused workouts. High-intensity, low-impact, muscle-exhausting movements designed to push your 
+              core limits, build real strength, and trigger a deep detox sweat under far-infrared heat.
             </p>
           </div>
         </section>
@@ -46,18 +46,26 @@ export default function Page() {
         <section className="px-5 mb-16">
           <div className="mx-auto max-w-md bg-stone-dark/30 border border-white/10 rounded-3xl p-8 shadow-2xl text-center">
             <h3 className="font-serif text-2xl text-foreground mb-1">New Member Pass</h3>
-            <p className="text-xs text-foreground/50 mb-6">Experience our signature burn for two weeks.</p>
+            <p className="text-sm text-foreground/50 mb-6 font-light">Experience our signature burn for two weeks.</p>
             
             <div className="my-6">
               <span className="font-serif text-5xl font-light text-brand">€79</span>
               <span className="text-xs text-foreground/50"> / 14-days unlimited</span>
             </div>
 
-            <ul className="mb-8 space-y-3 text-left text-xs text-foreground/75 border-t border-white/5 pt-6">
-              <li className="flex items-center gap-2">🔥 Unlimited access to all Sculpt, Pilates & Yoga classes</li>
-              <li className="flex items-center gap-2">🔥 Premium far-infrared muscle detox heating</li>
-              <li className="flex items-center gap-2">🔥 Fast-paced, results-focused English instruction</li>
-              <li className="flex items-center gap-2">🔥 Manduka mats & tools provided in studio</li>
+            <ul className="mb-8 space-y-4 text-left text-sm text-foreground/75 border-t border-white/5 pt-6 leading-relaxed">
+              <li className="flex items-start gap-2">
+                <span className="text-brand font-bold">-</span> Unlimited access to Heated Sculpt, Pilates &amp; Yoga
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-brand font-bold">-</span> Fresh far-infrared heating panels (easy to breathe)
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-brand font-bold">-</span> Decades of experience. Friendly and present teachers
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-brand font-bold">-</span> Premium studio mats provided. No wet gear to pack
+              </li>
             </ul>
 
             <a
@@ -77,15 +85,15 @@ export default function Page() {
             <div className="grid gap-8 sm:grid-cols-2">
               <div className="space-y-3">
                 <h3 className="font-sans font-bold text-sm text-brand uppercase tracking-wider">Workout Intensity</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed font-light">
-                  Our classes are designed to exhaust muscles using slow, controlled movements, isometric holds, 
-                  and quick transition cardio elements. Get ready to shake and sweat.
+                <p className="text-sm text-foreground/70 leading-relaxed font-light">
+                  Active classes like Pilates and Sculpt are hard, results-focused workouts designed to challenge your core, 
+                  but remain doable for all levels. Yoga and recovery classes are chill and relaxing.
                 </p>
               </div>
 
               <div className="space-y-3">
-                <h3 className="font-sans font-bold text-sm text-brand uppercase tracking-wider">Arrival & Rules</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed font-light">
+                <h3 className="font-sans font-bold text-sm text-brand uppercase tracking-wider">Arrival &amp; Rules</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed font-light">
                   First-timers must arrive 10 minutes early. We enforce a strict 12-hour cancellation policy to release mats. Grip socks are optional but recommended.
                 </p>
               </div>

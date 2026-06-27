@@ -22,17 +22,17 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="px-5 pt-28 pb-20 sm:px-6 sm:pt-36 lg:px-20 lg:pb-32 bg-stone-dark/10">
+      <main className="px-5 pt-32 pb-20 sm:px-6 sm:pt-40 lg:px-20 lg:pb-32 bg-stone-dark/10">
         <div className="mx-auto max-w-4xl space-y-16">
           {/* NYP Bold Typographic Hero */}
           <section className="text-center space-y-6">
-            <span className="text-[9px] uppercase tracking-[0.4em] text-brand/80">NYP Style Template D</span>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-brand/80">NYP Style Template D</span>
             <h1 className="font-sans font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tighter text-foreground uppercase leading-none">
               CORE. SWEAT.<br />MORNING GLOW.
             </h1>
-            <p className="mx-auto max-w-xl text-sm sm:text-base text-foreground/75 leading-relaxed font-light">
-              Heat Lagos is the premier infrared-heated studio in Portugal. We design sweaty, high-intensity, 
-              low-impact reformer-inspired classes that tone your body and leave you glowing.
+            <p className="mx-auto max-w-xl text-base sm:text-lg text-foreground/75 leading-relaxed font-light">
+              Heat Lagos is the premier infrared-heated studio in Portugal. We design results-focused, 
+              low-impact classes that tone your body, build core strength, and leave you feeling completely refreshed.
             </p>
           </section>
 
@@ -43,12 +43,12 @@ export default function Page() {
                 <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-foreground">14 Days Unlimited</h3>
                 <span className="font-sans text-3xl font-light text-brand">€79</span>
               </div>
-              <p className="text-xs text-foreground/60 leading-relaxed mb-6 font-light">
-                Unlock full access to Heated Pilates, Sculpt, Yoga, and Mobility. Valid for two weeks from your first booked class. Express Mindbody-style setup.
+              <p className="text-sm text-foreground/60 leading-relaxed mb-6 font-light">
+                Unlock full access to Heated Pilates, Sculpt, Yoga, and Mobility. Valid for two weeks from your first booked class. Express checkout.
               </p>
               <a
                 href={checkoutUrl}
-                className="block w-full text-center border border-foreground hover:bg-foreground hover:text-stone-dark font-sans font-bold text-[10px] uppercase tracking-[0.25em] py-4 rounded-none transition-all"
+                className="block w-full text-center border border-foreground hover:bg-foreground hover:text-stone-dark font-sans font-bold text-xs uppercase tracking-[0.25em] py-4 rounded-none transition-all"
               >
                 Buy Trial Package
               </a>
@@ -58,21 +58,21 @@ export default function Page() {
           {/* Amenities & Studio Rules */}
           <section className="grid gap-12 sm:grid-cols-2 pt-8 border-t border-white/10">
             <div>
-              <h3 className="font-sans font-bold text-sm uppercase tracking-widest text-brand mb-4">Studio Amenities</h3>
-              <ul className="space-y-3 text-xs text-foreground/80 font-light">
-                <li>• Premium infrared heaters designed for deep muscle warmth</li>
-                <li>• Certified Manduka yoga mats provided in-studio</li>
-                <li>• English-taught classes for expats and travelers</li>
-                <li>• Filtered water refill station</li>
+              <h3 className="font-sans font-bold text-base uppercase tracking-widest text-brand mb-4">Studio Features</h3>
+              <ul className="space-y-3 text-sm text-foreground/80 font-light">
+                <li>- Fresh far-infrared heat (heats the body directly, air stays easy to breathe)</li>
+                <li>- Premium studio yoga mats and props provided in class</li>
+                <li>- Friendly, present instructors with decades of teaching experience</li>
+                <li>- Filtered water refill station</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-sans font-bold text-sm uppercase tracking-widest text-brand mb-4">Studio Rules</h3>
-              <ul className="space-y-3 text-xs text-foreground/80 font-light">
-                <li>• Arrive 10 minutes before class to set up your mat</li>
-                <li>• Respect the quiet space inside the studio</li>
-                <li>• 12-hour cancellation policy for booked mats</li>
-                <li>• Batata Beach plunge after class is highly recommended</li>
+              <h3 className="font-sans font-bold text-base uppercase tracking-widest text-brand mb-4">Studio Rules</h3>
+              <ul className="space-y-3 text-sm text-foreground/80 font-light">
+                <li>- Arrive 10 minutes before class to set up your mat</li>
+                <li>- Active classes are hard but doable for all levels</li>
+                <li>- 12-hour cancellation policy to release mats for other members</li>
+                <li>- Batata Beach plunge after class is highly recommended</li>
               </ul>
             </div>
           </section>

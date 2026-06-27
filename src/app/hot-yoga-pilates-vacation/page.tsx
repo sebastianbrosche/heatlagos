@@ -28,7 +28,7 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="relative overflow-hidden pt-28 sm:pt-36">
+      <main className="relative overflow-hidden pt-32 sm:pt-40">
         {/* Decorative ambient spots */}
         <div className="absolute top-1/4 -left-20 -z-10 h-96 w-96 rounded-full bg-brand/5 blur-3xl" />
         <div className="absolute bottom-1/4 -right-20 -z-10 h-96 w-96 rounded-full bg-brand-soft/5 blur-3xl" />
@@ -36,15 +36,15 @@ export default function Page() {
         {/* Hero Section */}
         <section className="px-5 py-12 text-center sm:px-6 lg:px-20 lg:py-20">
           <div className="mx-auto max-w-4xl">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
+            <span className="text-xs uppercase tracking-[0.3em] text-brand">
               Aligne Template A
             </span>
-            <h1 className="mt-4 font-serif text-[2.5rem] leading-[1.05] sm:text-6xl lg:text-[5rem]">
+            <h1 className="mt-4 font-serif text-[2.8rem] leading-[1.05] sm:text-6xl lg:text-[5.5rem]">
               Unravel From Your Travel
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-foreground/80 leading-relaxed sm:text-lg">
-              Heat Lagos is your holiday wellness destination in the Algarve. Unwind, sweat, and stretch in our 
-              modern infrared-heated studio, located right next to Batata Beach. Perfect for surfers, hikers, 
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80 leading-relaxed sm:text-xl">
+              Heat Lagos is your holiday wellness destination in the Algarve. Sweat, recover, and energize in our 
+              fresh, infrared-heated studio, located right next to Batata Beach. Perfect for surfers, hikers, 
               and active travelers.
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function Page() {
           {/* Pricing Box / Booking Card */}
           <div className="mx-auto mt-12 max-w-md sm:mt-16">
             <div className="relative rounded-3xl border border-white/10 bg-stone-dark/40 p-8 shadow-2xl backdrop-blur-md">
-              <span className="rounded-full bg-brand/10 px-4 py-1 text-[10px] font-semibold uppercase tracking-wider text-brand">
+              <span className="rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
                 Vacationer Special
               </span>
               <h2 className="mt-4 font-serif text-3xl text-foreground">Vacation Week Pass</h2>
@@ -63,24 +63,24 @@ export default function Page() {
                 <span className="text-sm text-foreground/50"> / one-time</span>
               </div>
 
-              <ul className="mb-8 space-y-3 text-left text-sm text-foreground/80">
-                <li className="flex items-center gap-2">
-                  <span className="text-brand">✓</span> Unlimited Hot Pilates, Yoga & Sculpt
+              <ul className="mb-8 space-y-4 text-left text-sm text-foreground/80 leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">-</span> Unlimited Hot Pilates, Yoga &amp; Sculpt
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-brand">✓</span> Ideal for surf & travel muscle recovery
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">-</span> Decades of experience &amp; chill vibes
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-brand">✓</span> Dynamic English instruction
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">-</span> Fresh far-infrared heat (easy to breathe)
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-brand">✓</span> Mats, towels & props provided in studio
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">-</span> Premium mats and towels provided
                 </li>
               </ul>
 
               <a
                 href={checkoutUrl}
-                className="block w-full rounded-full bg-brand py-4 text-center text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg hover:shadow-brand/10"
+                className="block w-full rounded-full bg-brand py-4.5 text-center text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg hover:shadow-brand/10"
               >
                 Book Your Pass Instantly
               </a>
@@ -98,42 +98,42 @@ export default function Page() {
 
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
-                  🧘
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand text-sm font-bold">
+                  01
                 </div>
                 <h3 className="mt-4 font-serif text-lg text-foreground">Classes in English</h3>
                 <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  All classes are led in simple, easy-to-follow English by certified international instructors.
+                  All sessions are led in clear, easy-to-follow English by friendly instructors with decades of experience.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
-                  🏄
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand text-sm font-bold">
+                  02
                 </div>
                 <h3 className="mt-4 font-serif text-lg text-foreground">Active Surf Recovery</h3>
                 <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  Deep infrared heat speeds up muscle healing, relieves joint tightness, and stretches your back and shoulders.
+                  Deep infrared warmth penetrates muscles to relieve tightness and soothe shoulders after a day in the ocean.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
-                  🔥
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand text-sm font-bold">
+                  03
                 </div>
                 <h3 className="mt-4 font-serif text-lg text-foreground">Sweaty Jetlag Detox</h3>
                 <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  Fly in, sweat it out. Release flight toxins, restore metabolic balance, and reset your body clocks.
+                  Fly in, sweat it out. Release flight fatigue and reset your system in our fresh-air heated studio.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
-                  🌊
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand text-sm font-bold">
+                  04
                 </div>
                 <h3 className="mt-4 font-serif text-lg text-foreground">Batata Beach Plunge</h3>
                 <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  We are located directly across the beach. Hot workout inside, refreshing ocean plunge outside.
+                  Located directly across Batata Beach. Complete your sweaty workout, walk outside, and plunge straight into the Atlantic.
                 </p>
               </div>
             </div>
@@ -151,7 +151,7 @@ export default function Page() {
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-3xl border border-white/5 bg-stone-dark/20 p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-brand text-lg mb-4">★★★★★</div>
+                  <div className="text-brand text-xs uppercase tracking-widest mb-4">5.0 / 5.0 Rating</div>
                   <p className="text-sm text-foreground/80 leading-relaxed">
                     &quot;Best sweaty workout in Lagos! Stretched my surf-tired shoulders and left feeling completely refreshed. A must-visit.&quot;
                   </p>
@@ -161,9 +161,9 @@ export default function Page() {
 
               <div className="rounded-3xl border border-white/5 bg-stone-dark/20 p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-brand text-lg mb-4">★★★★★</div>
+                  <div className="text-brand text-xs uppercase tracking-widest mb-4">5.0 / 5.0 Rating</div>
                   <p className="text-sm text-foreground/80 leading-relaxed">
-                    &quot;Clean facilities, high-end mats, friendly teachers. The beach view outside and the heat inside are an amazing combo!&quot;
+                    &quot;Clean facilities, premium mats, friendly teachers. The beach view outside and the heat inside are an amazing combo!&quot;
                   </p>
                 </div>
                 <p className="mt-6 text-xs text-foreground/50">— Katie W. (UK)</p>
@@ -171,7 +171,7 @@ export default function Page() {
 
               <div className="rounded-3xl border border-white/5 bg-stone-dark/20 p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-brand text-lg mb-4">★★★★★</div>
+                  <div className="text-brand text-xs uppercase tracking-widest mb-4">5.0 / 5.0 Rating</div>
                   <p className="text-sm text-foreground/80 leading-relaxed">
                     &quot;Loved the Sculpt class here. Easy to book, quick checkout, and perfect jetlag recovery after my long flight.&quot;
                   </p>
@@ -199,14 +199,14 @@ export default function Page() {
               <div className="hidden h-[1px] w-12 bg-white/10 sm:block" />
               <div className="flex items-center gap-3">
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-stone-dark text-sm font-bold">3</span>
-                <span className="text-sm text-foreground/80">Stretch, sweat & swim</span>
+                <span className="text-sm text-foreground/80">Stretch, sweat &amp; swim</span>
               </div>
             </div>
 
             <div className="mt-12">
               <a
                 href={checkoutUrl}
-                className="inline-flex rounded-full bg-brand px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg"
+                className="inline-flex rounded-full bg-brand px-8 py-4.5 text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg"
               >
                 Buy Vacation Pass Now
               </a>

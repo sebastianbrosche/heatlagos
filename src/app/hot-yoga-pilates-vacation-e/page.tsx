@@ -22,22 +22,22 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="relative overflow-hidden pt-28 pb-20 sm:pt-36 lg:pb-32">
+      <main className="relative overflow-hidden pt-32 pb-20 sm:pt-40 lg:pb-32">
         {/* Glow Effects */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -z-10 h-[600px] w-[600px] rounded-full bg-brand/10 blur-[150px]" />
 
         {/* WeHo High Energy Hero */}
         <section className="px-5 py-12 text-center sm:px-6 lg:px-20 lg:py-16">
           <div className="mx-auto max-w-4xl space-y-6">
-            <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1 text-[10px] font-semibold uppercase tracking-wider text-brand">
+            <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
               WeHo Style Template E
             </span>
             <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-foreground leading-[1.05] tracking-tight">
               Sculpt — Lagos&apos; Best Sweaty Jetlag Detox!
             </h1>
-            <p className="mx-auto max-w-2xl text-base text-foreground/80 leading-relaxed font-light">
+            <p className="mx-auto max-w-2xl text-base sm:text-lg text-foreground/80 leading-relaxed font-light">
               Unravel from your travel. Sweat out flight fatigue and toxic dehydration with a high-intensity, 
-              low-impact heated session. Re-energize your system and kick off your holiday glowing.
+              low-impact heated session. Re-energize your system, feel refreshed, and kick off your holiday with real results.
             </p>
           </div>
         </section>
@@ -46,18 +46,26 @@ export default function Page() {
         <section className="px-5 mb-16">
           <div className="mx-auto max-w-md bg-stone-dark/30 border border-white/10 rounded-3xl p-8 shadow-2xl text-center">
             <h3 className="font-serif text-2xl text-foreground mb-1">Vacation Pass</h3>
-            <p className="text-xs text-foreground/50 mb-6">Enjoy unlimited heated workouts for a full week.</p>
+            <p className="text-sm text-foreground/50 mb-6 font-light">Enjoy unlimited heated workouts for a full week.</p>
             
             <div className="my-6">
               <span className="font-serif text-5xl font-light text-brand">€59</span>
               <span className="text-xs text-foreground/50"> / 7-days unlimited</span>
             </div>
 
-            <ul className="mb-8 space-y-3 text-left text-xs text-foreground/75 border-t border-white/5 pt-6">
-              <li className="flex items-center gap-2">🔥 Unlimited access to Heated Sculpt, Pilates & Yoga</li>
-              <li className="flex items-center gap-2">🔥 Deep infrared muscle recovery & travel detox</li>
-              <li className="flex items-center gap-2">🔥 Fast-paced, results-focused English instruction</li>
-              <li className="flex items-center gap-2">🔥 Mats and towels provided in studio</li>
+            <ul className="mb-8 space-y-4 text-left text-sm text-foreground/75 border-t border-white/5 pt-6 leading-relaxed">
+              <li className="flex items-start gap-2">
+                <span className="text-brand font-bold">-</span> Unlimited access to Heated Sculpt, Pilates &amp; Yoga
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-brand font-bold">-</span> Deep infrared muscle recovery &amp; travel detox
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-brand font-bold">-</span> Decades of experience. Friendly and present teachers
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-brand font-bold">-</span> Premium mats and towels provided in studio
+              </li>
             </ul>
 
             <a
@@ -77,15 +85,15 @@ export default function Page() {
             <div className="grid gap-8 sm:grid-cols-2">
               <div className="space-y-3">
                 <h3 className="font-sans font-bold text-sm text-brand uppercase tracking-wider">Holiday Workout Focus</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed font-light">
+                <p className="text-sm text-foreground/70 leading-relaxed font-light">
                   Our classes target specific muscle groups with zero joint impact. Perfect for active hikers, 
-                  surfers, or travelers who want a high-end burn without getting injured on holiday.
+                  surfers, or travelers who want a hard but doable workout to stay fit on holiday.
                 </p>
               </div>
 
               <div className="space-y-3">
-                <h3 className="font-sans font-bold text-sm text-brand uppercase tracking-wider">Arrival & Rules</h3>
-                <p className="text-xs text-foreground/70 leading-relaxed font-light">
+                <h3 className="font-sans font-bold text-sm text-brand uppercase tracking-wider">Arrival &amp; Rules</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed font-light">
                   First-timers must arrive 10 minutes early. We enforce a strict 12-hour cancellation policy to release mats for other travelers. Grip socks are optional but recommended.
                 </p>
               </div>

@@ -28,7 +28,7 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="relative overflow-hidden pt-28 sm:pt-36">
+      <main className="relative overflow-hidden pt-32 sm:pt-40">
         {/* Decorative ambient spots */}
         <div className="absolute top-1/4 -left-20 -z-10 h-96 w-96 rounded-full bg-brand/5 blur-3xl" />
         <div className="absolute bottom-1/4 -right-20 -z-10 h-96 w-96 rounded-full bg-brand-soft/5 blur-3xl" />
@@ -36,23 +36,22 @@ export default function Page() {
         {/* Hero Section */}
         <section className="px-5 py-12 text-center sm:px-6 lg:px-20 lg:py-20">
           <div className="mx-auto max-w-4xl">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
+            <span className="text-xs uppercase tracking-[0.3em] text-brand">
               Aligne Template A
             </span>
-            <h1 className="mt-4 font-serif text-[2.5rem] leading-[1.05] sm:text-6xl lg:text-[5rem]">
+            <h1 className="mt-4 font-serif text-[2.8rem] leading-[1.05] sm:text-6xl lg:text-[5.5rem]">
               Transform Your Body
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-foreground/80 leading-relaxed sm:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80 leading-relaxed sm:text-xl">
               Heat Lagos is the Algarve&apos;s premier heated studio, offering a modern approach to movement. 
-              We focus on core strength, flexibility, and mindful sweat to help you achieve your goals in our 
-              infrared-heated studio right by Batata Beach.
+              We focus on results-oriented training and good vibes in our fresh, infrared-heated studio right by Batata Beach.
             </p>
           </div>
 
           {/* Pricing Box / Booking Card */}
           <div className="mx-auto mt-12 max-w-md sm:mt-16">
             <div className="relative rounded-3xl border border-white/10 bg-stone-dark/40 p-8 shadow-2xl backdrop-blur-md">
-              <span className="rounded-full bg-brand/10 px-4 py-1 text-[10px] font-semibold uppercase tracking-wider text-brand">
+              <span className="rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
                 New Member Offer
               </span>
               <h2 className="mt-4 font-serif text-3xl text-foreground">Two Weeks Trial</h2>
@@ -63,24 +62,24 @@ export default function Page() {
                 <span className="text-sm text-foreground/50"> / one-time</span>
               </div>
 
-              <ul className="mb-8 space-y-3 text-left text-sm text-foreground/80">
-                <li className="flex items-center gap-2">
-                  <span className="text-brand">✓</span> Unlimited Hot Pilates, Yoga & Sculpt
+              <ul className="mb-8 space-y-4 text-left text-sm text-foreground/80 leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">-</span> Unlimited Hot Pilates, Yoga &amp; Sculpt
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-brand">✓</span> Premium infrared heat panels
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">-</span> Fresh far-infrared heat (easy to breathe)
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-brand">✓</span> Dynamic English instruction
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">-</span> Decades of teaching experience
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-brand">✓</span> Mats and props included in studio
+                <li className="flex items-start gap-2">
+                  <span className="text-brand font-bold">-</span> Premium mats and props provided
                 </li>
               </ul>
 
               <a
                 href={checkoutUrl}
-                className="block w-full rounded-full bg-brand py-4 text-center text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg hover:shadow-brand/10"
+                className="block w-full rounded-full bg-brand py-4.5 text-center text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg hover:shadow-brand/10"
               >
                 Book Your Pass Instantly
               </a>
@@ -98,42 +97,42 @@ export default function Page() {
 
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
-                  🧘
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand text-sm font-bold">
+                  01
                 </div>
-                <h3 className="mt-4 font-serif text-lg text-foreground">Expert Instruction</h3>
+                <h3 className="mt-4 font-serif text-lg text-foreground">Fresh Infrared Heat</h3>
                 <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  Learn from certified international teachers with years of professional yoga and Pilates training.
+                  Our panels heat your body directly, not the room. The air remains clean and easy to breathe, while deep heat targets muscle and joint stiffness.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
-                  ✨
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand text-sm font-bold">
+                  02
                 </div>
-                <h3 className="mt-4 font-serif text-lg text-foreground">Small Class Sizes</h3>
+                <h3 className="mt-4 font-serif text-lg text-foreground">Decades of Experience</h3>
                 <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  Intimate sessions guarantee personalized feedback, correct alignment, and maximum sweat efficiency.
+                  Our instructors bring decades of teaching experience and a friendly, supportive approach, creating hard but doable classes.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
-                  🔥
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand text-sm font-bold">
+                  03
                 </div>
-                <h3 className="mt-4 font-serif text-lg text-foreground">Premium Infrared Heat</h3>
+                <h3 className="mt-4 font-serif text-lg text-foreground">The Batata Plunge</h3>
                 <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  Far-infrared panels heat your body directly, deep-warming joints, boosting mobility, and detoxing muscles.
+                  Located just meters from Batata Beach. Step out of a sweaty Pilates or Sculpt session and dive directly into the cool Atlantic ocean.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
-                  🌊
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand text-sm font-bold">
+                  04
                 </div>
-                <h3 className="mt-4 font-serif text-lg text-foreground">Batata Beach Proximity</h3>
+                <h3 className="mt-4 font-serif text-lg text-foreground">Measurable Results</h3>
                 <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  Our studio sits right next to the beach. Finish your class, step outside, and take a fresh dip in the Atlantic.
+                  Our workouts deliver tangible progress. Leave the studio feeling refreshed, light, and clear-headed all day long.
                 </p>
               </div>
             </div>
@@ -151,7 +150,7 @@ export default function Page() {
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-3xl border border-white/5 bg-stone-dark/20 p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-brand text-lg mb-4">★★★★★</div>
+                  <div className="text-brand text-xs uppercase tracking-widest mb-4">5.0 / 5.0 Rating</div>
                   <p className="text-sm text-foreground/80 leading-relaxed">
                     &quot;Beautiful studio. Great teacher. Loved the incorporation of the heating panels into the session. Highly recommend!&quot;
                   </p>
@@ -161,7 +160,7 @@ export default function Page() {
 
               <div className="rounded-3xl border border-white/5 bg-stone-dark/20 p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-brand text-lg mb-4">★★★★★</div>
+                  <div className="text-brand text-xs uppercase tracking-widest mb-4">5.0 / 5.0 Rating</div>
                   <p className="text-sm text-foreground/80 leading-relaxed">
                     &quot;What a great class this morning. Clear English instructions, warm heat that wasn&apos;t overwhelming that really helped my muscles stretch. Left with an inner glow!&quot;
                   </p>
@@ -171,7 +170,7 @@ export default function Page() {
 
               <div className="rounded-3xl border border-white/5 bg-stone-dark/20 p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-brand text-lg mb-4">★★★★★</div>
+                  <div className="text-brand text-xs uppercase tracking-widest mb-4">5.0 / 5.0 Rating</div>
                   <p className="text-sm text-foreground/80 leading-relaxed">
                     &quot;Amazing class, relaxing and challenging at the same time. The infrared panels create a beautiful ambiance and great recovery.&quot;
                   </p>
@@ -199,14 +198,14 @@ export default function Page() {
               <div className="hidden h-[1px] w-12 bg-white/10 sm:block" />
               <div className="flex items-center gap-3">
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-stone-dark text-sm font-bold">3</span>
-                <span className="text-sm text-foreground/80">Roll out your mat & glow</span>
+                <span className="text-sm text-foreground/80">Roll out your mat &amp; glow</span>
               </div>
             </div>
 
             <div className="mt-12">
               <a
                 href={checkoutUrl}
-                className="inline-flex rounded-full bg-brand px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg"
+                className="inline-flex rounded-full bg-brand px-8 py-4.5 text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg"
               >
                 Get Started Now
               </a>

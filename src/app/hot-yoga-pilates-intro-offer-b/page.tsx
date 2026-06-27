@@ -22,14 +22,14 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="mx-auto max-w-5xl px-5 pt-28 pb-16 sm:px-6 sm:pt-36 lg:pb-24">
+      <main className="mx-auto max-w-5xl px-5 pt-32 pb-16 sm:px-6 sm:pt-40 lg:pb-24">
         {/* Banner Section */}
         <div className="rounded-3xl bg-stone-dark/30 border border-white/5 p-6 sm:p-10 mb-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
             <div>
-              <span className="text-[10px] uppercase tracking-wider text-brand">PureGym Template B (Shortened)</span>
+              <span className="text-xs uppercase tracking-wider text-brand">PureGym Template B (Shortened)</span>
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mt-2">Heat Lagos Studio</h1>
-              <p className="text-sm text-foreground/60 mt-1">Batata Beach, Lagos, Portugal • Open Daily</p>
+              <p className="text-base text-foreground/60 mt-1">Batata Beach, Lagos, Portugal • Open Daily</p>
             </div>
             <div className="bg-stone-dark border border-white/10 rounded-2xl p-4 text-center min-w-[150px]">
               <span className="text-xs text-foreground/50 block">From Only</span>
@@ -46,12 +46,12 @@ export default function Page() {
             {/* Offer Block */}
             <section className="bg-stone-dark/20 border border-white/5 rounded-3xl p-6 sm:p-8">
               <h2 className="font-serif text-2xl text-foreground mb-4">Two Weeks Unlimited Trial Offer</h2>
-              <p className="text-sm text-foreground/80 leading-relaxed mb-6">
+              <p className="text-base text-foreground/80 leading-relaxed mb-6">
                 Ready to experience the heat? If you&apos;ve been curious about our infrared hot workouts, this is the perfect introduction. No rules, no hidden fees—just unlimited access to our entire schedule for 14 consecutive days.
               </p>
               <a
                 href={checkoutUrl}
-                className="inline-block bg-brand hover:bg-brand-soft text-stone-dark font-bold text-xs uppercase tracking-wider py-4 px-8 rounded-full transition-all"
+                className="inline-block bg-brand hover:bg-brand-soft text-stone-dark font-bold text-sm uppercase tracking-wider py-4 px-8 rounded-full transition-all"
               >
                 Join Now for €79
               </a>
@@ -62,20 +62,20 @@ export default function Page() {
               <h2 className="font-serif text-2xl text-foreground">What to Expect at Heat Lagos</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-4 rounded-2xl bg-stone-dark/10 border border-white/5">
-                  <h3 className="font-bold text-foreground text-sm">🔥 Infrared Heating Panels</h3>
-                  <p className="text-xs text-foreground/70 mt-1">Deep muscle warmth that boosts stretch capacity and speeds up recovery.</p>
+                  <h3 className="font-bold text-foreground text-base">Fresh Infrared Heating</h3>
+                  <p className="text-sm text-foreground/70 mt-1">Our panels heat your body directly. The air stays fresh, clean, and easy to breathe, while deep heat targets muscle stiffness.</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-stone-dark/10 border border-white/5">
-                  <h3 className="font-bold text-foreground text-sm">🧘 Certified Instructors</h3>
-                  <p className="text-xs text-foreground/70 mt-1">Experienced certified teachers guiding all classes in simple English.</p>
+                  <h3 className="font-bold text-foreground text-base">Decades of Experience</h3>
+                  <p className="text-sm text-foreground/70 mt-1">Our friendly, present instructors bring decades of teaching experience to guide you through hard but doable classes.</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-stone-dark/10 border border-white/5">
-                  <h3 className="font-bold text-foreground text-sm">🧼 Fully Equipped Studio</h3>
-                  <p className="text-xs text-foreground/70 mt-1">High-end yoga mats and training equipment provided. No gear needed.</p>
+                  <h3 className="font-bold text-foreground text-base">Premium Studio Mats</h3>
+                  <p className="text-sm text-foreground/70 mt-1">Premium yoga mats and props are provided in-studio. Roll in, work out, and leave without packing wet gear.</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-stone-dark/10 border border-white/5">
-                  <h3 className="font-bold text-foreground text-sm">🌊 Praia da Batata Location</h3>
-                  <p className="text-xs text-foreground/70 mt-1">Right next to Batata Beach. Perfect for a refreshing dip post-workout.</p>
+                  <h3 className="font-bold text-foreground text-base">Praia da Batata Location</h3>
+                  <p className="text-sm text-foreground/70 mt-1">Located just meters from Batata Beach. Step out of a sweaty session and dive directly into the cool Atlantic ocean.</p>
                 </div>
               </div>
             </section>
@@ -83,18 +83,18 @@ export default function Page() {
             {/* Classes Included */}
             <section className="space-y-4">
               <h2 className="font-serif text-2xl text-foreground">Classes Included in Your Trial</h2>
-              <ul className="space-y-3 text-sm text-foreground/80">
+              <ul className="space-y-3 text-base text-foreground/80">
                 <li className="flex items-start gap-2">
-                  <span className="text-brand">⚡</span> <strong>Heated Sculpt:</strong> Full body dynamic workouts blending cardio, light weights, and heat.
+                  <span className="text-brand font-bold">-</span> <strong>Heated Sculpt:</strong> Full body results-oriented workouts designed to challenge your strength and core. Hard but doable.
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-brand">🧘</span> <strong>Heated Pilates:</strong> Intense core activation, alignment training, and posture building.
+                  <span className="text-brand font-bold">-</span> <strong>Heated Pilates:</strong> Low-impact core activation, posture alignment, and deep muscular focus.
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-brand">✨</span> <strong>Heated Flow:</strong> Vinyasa-style movements designed to warm joints and build daily energy.
+                  <span className="text-brand font-bold">-</span> <strong>Heated Flow:</strong> Active morning yoga classes built to stretch, sweat, and energize your day.
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-brand">🌙</span> <strong>Yin & Mobility:</strong> Deep slow-stretch sessions to release tension and soothe muscles.
+                  <span className="text-brand font-bold">-</span> <strong>Yin &amp; Mobility:</strong> Chill, relaxing deep-stretch classes to recover from stiffness and stress.
                 </li>
               </ul>
             </section>
@@ -105,7 +105,7 @@ export default function Page() {
             {/* Quick Details Card */}
             <div className="bg-stone-dark/30 border border-white/5 rounded-3xl p-6">
               <h3 className="font-serif text-lg text-foreground mb-4">Trial Information</h3>
-              <ul className="space-y-3 text-xs text-foreground/80">
+              <ul className="space-y-3 text-sm text-foreground/80">
                 <li className="flex justify-between border-b border-white/5 pb-2">
                   <span>Price</span>
                   <span className="font-bold text-brand">€79</span>
@@ -134,11 +134,11 @@ export default function Page() {
             {/* Location Card */}
             <div className="bg-stone-dark/30 border border-white/5 rounded-3xl p-6">
               <h3 className="font-serif text-lg text-foreground mb-2">Location</h3>
-              <p className="text-xs text-foreground/75 mb-4 leading-relaxed">
+              <p className="text-sm text-foreground/75 mb-4 leading-relaxed">
                 Rua da Silva (Batata Beach Entrance)<br />
                 8600-513 Lagos, Portugal
               </p>
-              <div className="aspect-[4/3] rounded-2xl bg-stone-dark border border-white/10 flex items-center justify-center text-xs text-foreground/40">
+              <div className="aspect-[4/3] rounded-2xl bg-stone-dark border border-white/10 flex items-center justify-center text-sm text-foreground/40">
                 [ Batata Beach Studio Map ]
               </div>
             </div>
