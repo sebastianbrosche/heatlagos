@@ -1,4 +1,5 @@
-﻿type Plan = {
+type Plan = {
+  id?: string;
   name: string;
   price: string;
   unit?: string;
@@ -12,15 +13,17 @@
 
 const PLANS: Plan[] = [
   {
+    id: "cta-intro-offer",
     name: "Intro Offer",
-    price: "79€",
+    price: "22€",
     description:
-      "2 weeks unlimited for new students. The best way to meet the studio and every class on the schedule.",
+      "2 classes for the price of 1. The best way to try the studio and experience our classes.",
     badge: "Start here",
     highlight: true,
-    href: "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
   },
   {
+    id: "cta-12month",
     name: "12 Month Membership",
     price: "125€",
     unit: "/month",
@@ -30,21 +33,24 @@ const PLANS: Plan[] = [
     href: "https://backoffice.bsport.io/customer/payment/pass/751520/?membership=5821&force=true",
   },
   {
-    name: "Essential",
+    id: "cta-essential",
+    name: "Essential Membership",
     price: "95€",
     unit: "/month",
     description:
-      "8 classes a month on a rolling subscription. Ideal if you train two or three times a week and want a set routine.",
+      "8 classes a month on a rolling subscription. Ideal if you train twice a week and want a set routine.",
     note: "8 classes / month",
     href: "https://backoffice.bsport.io/customer/payment/pass/766154/?membership=5821&force=true",
   },
   {
+    id: "cta-1month",
     name: "1 Month",
     price: "160€",
     description: "One-off monthly unlimited, no subscription commitment.",
     href: "https://backoffice.bsport.io/customer/payment/pass/751517/?membership=5821&force=true",
   },
   {
+    id: "cta-yearly",
     name: "Yearly",
     price: "1 200€",
     description: "Pay up front and save 300€ compared to the 12-month plan.",
@@ -52,6 +58,7 @@ const PLANS: Plan[] = [
     href: "https://backoffice.bsport.io/customer/payment/pass/751518/?membership=5821&force=true",
   },
   {
+    id: "cta-10class",
     name: "10 Class Package",
     price: "180€",
     description: "Flexible 10-pack for regulars who want variety.",
@@ -59,16 +66,18 @@ const PLANS: Plan[] = [
     href: "https://backoffice.bsport.io/customer/payment/pass/751509/?membership=5821&force=true",
   },
   {
+    id: "cta-vacation-week",
     name: "Vacation Week",
     price: "59€",
     description: "7 days unlimited - designed for travelers staying in Lagos.",
     href: "https://backoffice.bsport.io/customer/payment/pass/751519/?membership=5821&force=true",
   },
   {
+    id: "cta-drop-in",
     name: "Single Drop-in",
     price: "22€",
     description: "One class, no commitment.",
-    href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
+    href: "https://backoffice.bsport.io/customer/payment/pass/766017/?membership=5821&force=true",
   },
 ];
 
@@ -140,6 +149,7 @@ export default function Memberships() {
                 </p>
               )}
               <a
+                id={plan.id}
                 href={plan.href ?? "#schedule"}
                 target={plan.href ? "_blank" : undefined}
                 rel={plan.href ? "noopener noreferrer" : undefined}
