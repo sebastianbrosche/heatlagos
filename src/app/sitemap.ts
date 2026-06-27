@@ -171,13 +171,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE}/trial`,
+      url: `${BASE}/hot-yoga-pilates-intro-offer`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${BASE}/vacation`,
+      url: `${BASE}/hot-yoga-pilates-vacation`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,

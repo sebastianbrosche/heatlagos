@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
-const URL = "https://www.heatlagos.com/trial";
+const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer";
 
 export const metadata: Metadata = {
   title: "Two Weeks Unlimited Intro Offer - Heat Lagos",
