@@ -6,8 +6,8 @@ import Marquee from "@/components/Marquee";
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-vacation-e";
 
 export const metadata: Metadata = {
-  title: "High Intensity Vacation Pass - WeHo Style - Heat Lagos",
-  description: "Sculpt - Lagos' best sweaty jetlag detox! Unravel from your travel, sweat out flight toxins, and feel refreshed. 7 days unlimited heated classes for €59.",
+  title: "STRONG Heated Pilates & Sculpt - Vacation Week Pass - Heat Lagos",
+  description: "Experience the athletic simplicity of heated Pilates and Sculpt during your vacation. 7 days of unlimited classes for €59. Near Batata Beach.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -22,87 +22,97 @@ export default function Page() {
       <Header />
       <Marquee />
       
-      <main className="relative overflow-hidden pt-32 pb-20 sm:pt-40 lg:pb-32">
-        {/* Glow Effects */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -z-10 h-[600px] w-[600px] rounded-full bg-brand/10 blur-[150px]" />
-
-        {/* WeHo High Energy Hero */}
-        <section className="px-5 py-12 text-center sm:px-6 lg:px-20 lg:py-16">
-          <div className="mx-auto max-w-4xl space-y-6">
-            <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
-              Jetlag Detox Sculpt
-            </span>
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-foreground leading-[1.05] tracking-tight">
-              Sculpt — Lagos&apos; Best Sweaty Jetlag Detox!
-            </h1>
-            <p className="mx-auto max-w-2xl text-base sm:text-lg text-foreground/80 leading-relaxed font-light">
-              Unravel from your travel. Sweat out flight fatigue and toxic dehydration with a high-intensity, 
-              low-impact heated session. Re-energize your system, feel refreshed, and kick off your holiday with real results.
-            </p>
+      <main className="bg-stone-dark text-foreground min-h-screen pt-32 pb-20 sm:pt-40 lg:pb-32">
+        {/* Simple Strong Header */}
+        <section className="px-5 max-w-5xl mx-auto border-b border-white/10 pb-12">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+              <span className="text-xs uppercase tracking-[0.3em] text-brand font-bold">Jetlag Detox Sculpt</span>
+              <h1 className="font-sans font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tight uppercase leading-none mt-4">
+                SWEAT.<br />DETOX. PLUNGE.
+              </h1>
+            </div>
+            <div className="md:text-right space-y-2">
+              <p className="text-sm uppercase tracking-widest text-foreground/60">Batata Beach, Lagos</p>
+              <p className="text-lg font-bold text-brand">7 Days Unlimited • €59</p>
+            </div>
           </div>
         </section>
 
-        {/* Pricing Offer Card */}
-        <section className="px-5 mb-16">
-          <div className="mx-auto max-w-md bg-stone-dark/30 border border-white/10 rounded-3xl p-8 shadow-2xl text-center">
-            <h3 className="font-serif text-2xl text-foreground mb-1">Vacation Pass</h3>
-            <p className="text-sm text-foreground/50 mb-6 font-light">Enjoy unlimited heated workouts for a full week.</p>
-            
-            <div className="my-6">
-              <span className="font-serif text-5xl font-light text-brand">€59</span>
-              <span className="text-xs text-foreground/50"> / 7-days unlimited</span>
+        {/* Studio Specs Bar */}
+        <section className="px-5 max-w-5xl mx-auto py-8 border-b border-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
+            <div>
+              <span className="text-xs uppercase tracking-wider text-foreground/40 block">Session Length</span>
+              <span className="text-base font-bold mt-1 block">50 Minutes</span>
             </div>
-
-            <ul className="mb-8 space-y-4 text-left text-sm text-foreground/75 border-t border-white/5 pt-6 leading-relaxed">
-              <li className="flex items-start gap-2">
-                <span className="text-brand font-bold">-</span> Unlimited access to Heated Sculpt, Pilates &amp; Yoga
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand font-bold">-</span> Deep infrared muscle recovery &amp; travel detox
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand font-bold">-</span> Decades of experience. Friendly and present teachers
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand font-bold">-</span> Premium mats and towels provided in studio
-              </li>
-            </ul>
-
-            <a
-              href={checkoutUrl}
-              className="block w-full bg-brand hover:bg-brand-soft text-stone-dark font-sans font-bold text-xs uppercase tracking-widest py-4 rounded-xl transition-all"
-            >
-              Get The Vacation Pass
-            </a>
+            <div>
+              <span className="text-xs uppercase tracking-wider text-foreground/40 block">Temperature</span>
+              <span className="text-base font-bold mt-1 block">Infrared Heat</span>
+            </div>
+            <div>
+              <span className="text-xs uppercase tracking-wider text-foreground/40 block">Skill Level</span>
+              <span className="text-base font-bold mt-1 block">All Levels Welcome</span>
+            </div>
+            <div>
+              <span className="text-xs uppercase tracking-wider text-foreground/40 block">Proximity</span>
+              <span className="text-base font-bold mt-1 block">20m from Batata Beach</span>
+            </div>
           </div>
         </section>
 
-        {/* What You Need To Know (WeHo Style Rules) */}
-        <section className="border-t border-white/5 bg-stone-dark/10 px-5 py-20 sm:px-6 lg:px-20">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-serif text-2xl sm:text-3xl text-foreground text-center mb-12">What You Need To Know</h2>
-            
-            <div className="grid gap-8 sm:grid-cols-2">
-              <div className="space-y-3">
-                <h3 className="font-sans font-bold text-sm text-brand uppercase tracking-wider">Holiday Workout Focus</h3>
-                <p className="text-sm text-foreground/70 leading-relaxed font-light">
-                  Our classes target specific muscle groups with zero joint impact. Perfect for active hikers, 
-                  surfers, or travelers who want a hard but doable workout to stay fit on holiday.
-                </p>
-              </div>
-
-              <div className="space-y-3">
-                <h3 className="font-sans font-bold text-sm text-brand uppercase tracking-wider">Arrival &amp; Rules</h3>
-                <p className="text-sm text-foreground/70 leading-relaxed font-light">
-                  First-timers must arrive 10 minutes early. We enforce a strict 12-hour cancellation policy to release mats for other travelers. Grip socks are optional but recommended.
-                </p>
-              </div>
+        {/* 2-Column Content Section */}
+        <section className="px-5 max-w-5xl mx-auto py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Left Column: Simple Philosophy */}
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <h2 className="font-sans font-extrabold text-2xl uppercase tracking-wider">The Concept</h2>
+              <p className="text-base text-foreground/80 leading-relaxed font-light">
+                Keep fit and recover during your Algarve holiday. We offer high-intensity, low-impact heated workouts 
+                designed to stretch out flight stiffness, release travel toxins, and recover muscles after surfing. 
+                Heated by fresh-air infrared panels, right next to Batata Beach.
+              </p>
             </div>
 
-            {/* Big quote block */}
-            <div className="mt-16 border-l-2 border-brand/50 pl-6 py-2 italic text-sm text-foreground/80 leading-relaxed">
-              &quot;The absolute best jetlag recovery. Sweated out the plane fatigue, got a killer core workout, and then went straight to Batata Beach!&quot;
-              <span className="block mt-2 text-xs text-foreground/50 not-italic">— Holiday Visitor Review</span>
+            <div className="space-y-6">
+              <h2 className="font-sans font-extrabold text-2xl uppercase tracking-wider">The Sessions</h2>
+              <div className="space-y-4">
+                <div className="border-l-2 border-brand pl-4 py-1">
+                  <h3 className="font-bold text-base uppercase">Surf Recovery</h3>
+                  <p className="text-sm text-foreground/70 mt-1">Deep infrared heat penetrates muscles to relieve tightness and soothe shoulders. Decades of teaching experience.</p>
+                </div>
+                <div className="border-l-2 border-brand/50 pl-4 py-1">
+                  <h3 className="font-bold text-base uppercase">Jetlag Detox</h3>
+                  <p className="text-sm text-foreground/70 mt-1">Intense cardiovascular sweat that flushes travel fatigue and reboots your body systems. Fresh, breathable air.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Direct Purchase Card */}
+          <div className="lg:col-span-5">
+            <div className="border border-white/10 bg-stone-dark p-8 rounded-none sticky top-32">
+              <h3 className="font-sans font-extrabold text-xl uppercase tracking-wider mb-2">Buy Vacation Pass</h3>
+              <p className="text-sm text-foreground/60 font-light mb-6">7 days of unlimited access. Valid for holidaymakers. Start anytime.</p>
+              
+              <div className="mb-6 border-t border-b border-white/10 py-4 flex justify-between items-baseline">
+                <span className="text-xs uppercase tracking-wider text-foreground/50">Total Price</span>
+                <span className="font-sans text-4xl font-extrabold text-brand">€59</span>
+              </div>
+
+              <ul className="mb-8 space-y-3 text-sm text-foreground/80 font-light">
+                <li>- Unlimited heated Sculpt &amp; Pilates classes</li>
+                <li>- Fresh far-infrared heating panels</li>
+                <li>- Premium studio mats &amp; towels provided</li>
+                <li>- Decades of instructor teaching experience</li>
+              </ul>
+
+              <a
+                href={checkoutUrl}
+                className="block w-full text-center bg-foreground hover:bg-brand text-stone-dark font-sans font-extrabold text-xs uppercase tracking-[0.2em] py-4.5 transition-all"
+              >
+                Book Your Pass
+              </a>
             </div>
           </div>
         </section>
