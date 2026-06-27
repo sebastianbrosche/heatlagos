@@ -45,7 +45,7 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
             <div>
               <span className="text-xs uppercase tracking-wider text-foreground/40 block">Session Length</span>
-              <span className="text-base font-bold mt-1 block">50 Minutes</span>
+              <span className="text-base font-bold mt-1 block">45–60 min</span>
             </div>
             <div>
               <span className="text-xs uppercase tracking-wider text-foreground/40 block">Temperature</span>
@@ -57,7 +57,7 @@ export default function Page() {
             </div>
             <div>
               <span className="text-xs uppercase tracking-wider text-foreground/40 block">Proximity</span>
-              <span className="text-base font-bold mt-1 block">20m from Batata Beach</span>
+              <span className="text-base font-bold mt-1 block">30 seconds from Lagos main beach</span>
             </div>
           </div>
         </section>
