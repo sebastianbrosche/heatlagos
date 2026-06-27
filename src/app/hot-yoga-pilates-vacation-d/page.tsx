@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import SeoPageShell from "@/components/SeoPageShell";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Marquee from "@/components/Marquee";
 
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-vacation-d";
 
 export const metadata: Metadata = {
-  title: "Traveler Reviews - Vacation Pass - Heat Lagos",
-  description: "Read reviews from travelers and surfers who trained with us. Get 7 days of unlimited hot Pilates and Yoga classes in Lagos for €59.",
+  title: "Chic Vacation Pass - NYP Template - Heat Lagos",
+  description: "Experience luxury heated holiday workouts at Heat Lagos. Get 7 days unlimited classes for €59. Near Praia da Batata.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -16,29 +18,68 @@ export default function Page() {
   const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751519/?membership=5821&force=true";
 
   return (
-    <SeoPageShell
-      eyebrow="Traveler Stories"
-      title="What Travelers Say"
-      lede="See why vacationers, surfers, and digital nomads name Heat Lagos their favorite studio in the Algarve. Enjoy our €59 Vacation Week pass."
-      heroImage="/DSC07910.JPG"
-      heroImageAlt="Heat Lagos traveler community"
-      bookingHref={checkoutUrl}
-    >
-      <section>
-        <h2>"A must-visit wellness spot in Lagos"</h2>
-        <p>
-          Travelers love our location right across from the popular Praia da Batata beach and right beneath Lagos Old Town. It is the easiest way to add health, sweat, and community to your trip.
-        </p>
-      </section>
+    <>
+      <Header />
+      <Marquee />
+      
+      <main className="px-5 pt-28 pb-20 sm:px-6 sm:pt-36 lg:px-20 lg:pb-32 bg-stone-dark/10">
+        <div className="mx-auto max-w-4xl space-y-16">
+          {/* NYP Bold Typographic Hero */}
+          <section className="text-center space-y-6">
+            <span className="text-[9px] uppercase tracking-[0.4em] text-brand/80">NYP Style Template D</span>
+            <h1 className="font-sans font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tighter text-foreground uppercase leading-none">
+              SWEAT. RESTORE.<br />BEACH PLUNGE.
+            </h1>
+            <p className="mx-auto max-w-xl text-sm sm:text-base text-foreground/75 leading-relaxed font-light">
+              Heat Lagos is your premium hot holiday fitness spot. Restore your muscle flexibility post-surf or post-flight, 
+              sweat out flight toxins, and run straight into the Batata beach waves.
+            </p>
+          </section>
 
-      <section>
-        <h2>Why Travelers Recommend Us</h2>
-        <ul>
-          <li><strong>Easy English instruction:</strong> Simple, clear guidance.</li>
-          <li><strong>Great schedule variety:</strong> Heated Pilates, Yoga, Sculpt, and Yin.</li>
-          <li><strong>No equipment needed:</strong> Premium mats, clean facilities, and towels.</li>
-        </ul>
-      </section>
-    </SeoPageShell>
+          {/* Minimalist Pricing Table */}
+          <section className="mx-auto max-w-md">
+            <div className="border-t-2 border-white/20 pt-8">
+              <div className="flex justify-between items-baseline mb-4">
+                <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-foreground">Vacation Week</h3>
+                <span className="font-sans text-3xl font-light text-brand">€59</span>
+              </div>
+              <p className="text-xs text-foreground/60 leading-relaxed mb-6 font-light">
+                Unlock 7 days of unlimited access to Heated Pilates, Yoga, Sculpt, and Mobility. The ideal pass for surfers and holiday visitors.
+              </p>
+              <a
+                href={checkoutUrl}
+                className="block w-full text-center border border-foreground hover:bg-foreground hover:text-stone-dark font-sans font-bold text-[10px] uppercase tracking-[0.25em] py-4 rounded-none transition-all"
+              >
+                Get Vacation Pass
+              </a>
+            </div>
+          </section>
+
+          {/* Amenities & Studio Rules */}
+          <section className="grid gap-12 sm:grid-cols-2 pt-8 border-t border-white/10">
+            <div>
+              <h3 className="font-sans font-bold text-sm uppercase tracking-widest text-brand mb-4">Traveler Amenities</h3>
+              <ul className="space-y-3 text-xs text-foreground/80 font-light">
+                <li>• Premium infrared heaters target muscle tightness and joint soreness</li>
+                <li>• Certified Manduka yoga mats & sweat towels provided in-studio</li>
+                <li>• Classes guided in clear, easy English for international travelers</li>
+                <li>• Located right across the Batata Beach entrance</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-sans font-bold text-sm uppercase tracking-widest text-brand mb-4">Holiday Rules</h3>
+              <ul className="space-y-3 text-xs text-foreground/80 font-light">
+                <li>• Book your mat in advance (schedule fills up quickly)</li>
+                <li>• Arrive 10 minutes before class to set up</li>
+                <li>• 12-hour cancellation policy to release mats for other travelers</li>
+                <li>• Bring a water bottle (filtered refills in studio)</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <Footer />
+    </>
   );
 }

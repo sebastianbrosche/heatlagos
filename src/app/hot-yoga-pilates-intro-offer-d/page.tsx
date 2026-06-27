@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import SeoPageShell from "@/components/SeoPageShell";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Marquee from "@/components/Marquee";
 
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-d";
 
 export const metadata: Metadata = {
-  title: "Infrared Heat Benefits & Intro Offer - Heat Lagos",
-  description: "Learn how far-infrared heat works to deep warm muscles, improve flexibility, and speed up recovery. Get 2 weeks unlimited classes for €79.",
+  title: "Chic Hot Pilates & Yoga Trial - NYP Template - Heat Lagos",
+  description: "Experience luxury heated workouts at Heat Lagos. Get 2 weeks unlimited classes for €79. Enjoy high-performance infrared heat.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -16,36 +18,68 @@ export default function Page() {
   const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true";
 
   return (
-    <SeoPageShell
-      eyebrow="The Science of Heat"
-      title="How Infrared Heat Works"
-      lede="Unlike fan-blown hot air that just warms the skin, our far-infrared panels warm your body directly. Get a deeper stretch, protect your joints, and sweat out tension."
-      heroImage="/detail.JPG"
-      heroImageAlt="Heat Lagos infrared panels detail"
-      bookingHref={checkoutUrl}
-    >
-      <section>
-        <h2>The Infrared Benefit</h2>
-        <p>
-          Far-infrared heat reaches several centimeters into soft tissue. This increases circulation, helps stiff joints relax, and triggers a deep, cleansing sweat. It is the ultimate tool for recovery and flexibility.
-        </p>
-      </section>
+    <>
+      <Header />
+      <Marquee />
+      
+      <main className="px-5 pt-28 pb-20 sm:px-6 sm:pt-36 lg:px-20 lg:pb-32 bg-stone-dark/10">
+        <div className="mx-auto max-w-4xl space-y-16">
+          {/* NYP Bold Typographic Hero */}
+          <section className="text-center space-y-6">
+            <span className="text-[9px] uppercase tracking-[0.4em] text-brand/80">NYP Style Template D</span>
+            <h1 className="font-sans font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tighter text-foreground uppercase leading-none">
+              CORE. SWEAT.<br />MORNING GLOW.
+            </h1>
+            <p className="mx-auto max-w-xl text-sm sm:text-base text-foreground/75 leading-relaxed font-light">
+              Heat Lagos is the premier infrared-heated studio in Portugal. We design sweaty, high-intensity, 
+              low-impact reformer-inspired classes that tone your body and leave you glowing.
+            </p>
+          </section>
 
-      <section>
-        <h2>What You Get in 14 Days</h2>
-        <ul>
-          <li><strong>Increased Flexibility:</strong> Stretch deeper and safer with warm connective tissue.</li>
-          <li><strong>Muscle Recovery:</strong> Boost blood flow to heal sore shoulders, backs, and hips.</li>
-          <li><strong>Sweaty Cardio:</strong> Get an extra cardiovascular workout just from the heat.</li>
-        </ul>
-      </section>
+          {/* Minimalist Pricing Table */}
+          <section className="mx-auto max-w-md">
+            <div className="border-t-2 border-white/20 pt-8">
+              <div className="flex justify-between items-baseline mb-4">
+                <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-foreground">14 Days Unlimited</h3>
+                <span className="font-sans text-3xl font-light text-brand">€79</span>
+              </div>
+              <p className="text-xs text-foreground/60 leading-relaxed mb-6 font-light">
+                Unlock full access to Heated Pilates, Sculpt, Yoga, and Mobility. Valid for two weeks from your first booked class. Express Mindbody-style setup.
+              </p>
+              <a
+                href={checkoutUrl}
+                className="block w-full text-center border border-foreground hover:bg-foreground hover:text-stone-dark font-sans font-bold text-[10px] uppercase tracking-[0.25em] py-4 rounded-none transition-all"
+              >
+                Buy Trial Package
+              </a>
+            </div>
+          </section>
 
-      <section>
-        <h2>Experience the Glow for €79</h2>
-        <p>
-          Get two weeks of unlimited access to test all our infrared classes. Simply click below to check out.
-        </p>
-      </section>
-    </SeoPageShell>
+          {/* Amenities & Studio Rules */}
+          <section className="grid gap-12 sm:grid-cols-2 pt-8 border-t border-white/10">
+            <div>
+              <h3 className="font-sans font-bold text-sm uppercase tracking-widest text-brand mb-4">Studio Amenities</h3>
+              <ul className="space-y-3 text-xs text-foreground/80 font-light">
+                <li>• Premium infrared heaters designed for deep muscle warmth</li>
+                <li>• Certified Manduka yoga mats provided in-studio</li>
+                <li>• English-taught classes for expats and travelers</li>
+                <li>• Filtered water refill station</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-sans font-bold text-sm uppercase tracking-widest text-brand mb-4">Studio Rules</h3>
+              <ul className="space-y-3 text-xs text-foreground/80 font-light">
+                <li>• Arrive 10 minutes before class to set up your mat</li>
+                <li>• Respect the quiet space inside the studio</li>
+                <li>• 12-hour cancellation policy for booked mats</li>
+                <li>• Batata Beach plunge after class is highly recommended</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <Footer />
+    </>
   );
 }

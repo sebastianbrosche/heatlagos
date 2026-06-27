@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import SeoPageShell from "@/components/SeoPageShell";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Marquee from "@/components/Marquee";
 
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer";
 
 export const metadata: Metadata = {
   title: "Two Weeks Unlimited Intro Offer - Heat Lagos",
-  description:
-    "Try heated Pilates, Yoga, Sculpt, Mobility, and Yin for two weeks. 14 days of unlimited classes for €79. Experience the Algarve's first infrared studio.",
+  description: "Try heated Pilates, Yoga, Sculpt, Mobility, and Yin for two weeks. 14 days of unlimited classes for €79. Experience the Algarve's first infrared studio.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -15,8 +16,7 @@ export const metadata: Metadata = {
     type: "website",
     url: URL,
     title: "14 Days Intro Offer | Heat Lagos",
-    description:
-      "€79 for two weeks of unlimited access to all infrared hot yoga, pilates, sculpt, and mobility classes in Lagos.",
+    description: "€79 for two weeks of unlimited access to all infrared hot yoga, pilates, sculpt, and mobility classes in Lagos.",
   },
 };
 
@@ -24,36 +24,198 @@ export default function Page() {
   const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true";
 
   return (
-    <SeoPageShell
-      eyebrow="Special Offer"
-      title="Two Weeks Unlimited — €79"
-      lede="If you've been curious about us, this is the best way to find out if it's for you. Try heated Pilates, Yoga, Sculpt, Mobility, and Yin. Come once, or come every day."
-      heroImage="/heat flow.JPG"
-      heroImageAlt="Heat Lagos heated infrared yoga class"
-      bookingHref={checkoutUrl}
-    >
-      <section>
-        <h2>No rules. Just explore.</h2>
-        <p>
-          At Heat, we don&apos;t do complex contracts, rules, or hidden fees. We believe in building consistency through experience. This intro offer gives you complete access to our entire schedule so you can find the practice that matches your body.
-        </p>
-      </section>
+    <>
+      <Header />
+      <Marquee />
+      
+      <main className="relative overflow-hidden pt-28 sm:pt-36">
+        {/* Decorative ambient spots */}
+        <div className="absolute top-1/4 -left-20 -z-10 h-96 w-96 rounded-full bg-brand/5 blur-3xl" />
+        <div className="absolute bottom-1/4 -right-20 -z-10 h-96 w-96 rounded-full bg-brand-soft/5 blur-3xl" />
 
-      <section>
-        <h2>Why Infrared?</h2>
-        <ul>
-          <li><strong>Deep Tissue Heat:</strong> Far-infrared heat warms your body from the inside out, helping muscles and joints release stiffness in minutes.</li>
-          <li><strong>Low Impact, High Focus:</strong> Build core strength, mobility, and cardiovascular health without the heavy impact.</li>
-          <li><strong>English Instruction:</strong> All classes are instructed in simple, clear, and easy-to-follow English by certified international teachers.</li>
-        </ul>
-      </section>
+        {/* Hero Section */}
+        <section className="px-5 py-12 text-center sm:px-6 lg:px-20 lg:py-20">
+          <div className="mx-auto max-w-4xl">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
+              Aligne Template A
+            </span>
+            <h1 className="mt-4 font-serif text-[2.5rem] leading-[1.05] sm:text-6xl lg:text-[5rem]">
+              Transform Your Body
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-base text-foreground/80 leading-relaxed sm:text-lg">
+              Heat Lagos is the Algarve&apos;s premier heated studio, offering a modern approach to movement. 
+              We focus on core strength, flexibility, and mindful sweat to help you achieve your goals in our 
+              infrared-heated studio right by Batata Beach.
+            </p>
+          </div>
 
-      <section>
-        <h2>What to Bring</h2>
-        <p>
-          Bring a water bottle (we have filtered refills) and comfortable clothes. We provide mats and infrared heating. Simply show up, roll out your mat, and let the heat do the rest.
-        </p>
-      </section>
-    </SeoPageShell>
+          {/* Pricing Box / Booking Card */}
+          <div className="mx-auto mt-12 max-w-md sm:mt-16">
+            <div className="relative rounded-3xl border border-white/10 bg-stone-dark/40 p-8 shadow-2xl backdrop-blur-md">
+              <span className="rounded-full bg-brand/10 px-4 py-1 text-[10px] font-semibold uppercase tracking-wider text-brand">
+                New Member Offer
+              </span>
+              <h2 className="mt-4 font-serif text-3xl text-foreground">Two Weeks Trial</h2>
+              <p className="mt-2 text-sm text-foreground/60">14 Days of Unlimited Classes</p>
+              
+              <div className="my-6">
+                <span className="font-serif text-5xl font-light text-brand">€79</span>
+                <span className="text-sm text-foreground/50"> / one-time</span>
+              </div>
+
+              <ul className="mb-8 space-y-3 text-left text-sm text-foreground/80">
+                <li className="flex items-center gap-2">
+                  <span className="text-brand">✓</span> Unlimited Hot Pilates, Yoga & Sculpt
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-brand">✓</span> Premium infrared heat panels
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-brand">✓</span> Dynamic English instruction
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-brand">✓</span> Mats and props included in studio
+                </li>
+              </ul>
+
+              <a
+                href={checkoutUrl}
+                className="block w-full rounded-full bg-brand py-4 text-center text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg hover:shadow-brand/10"
+              >
+                Book Your Pass Instantly
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Grid */}
+        <section className="border-t border-white/5 bg-stone-dark/10 px-5 py-20 sm:px-6 lg:px-20 lg:py-28">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground">Why Choose Heat Lagos</h2>
+              <div className="mx-auto mt-4 h-[1px] w-24 bg-gradient-to-r from-transparent via-stone/50 to-transparent" />
+            </div>
+
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="text-center">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
+                  🧘
+                </div>
+                <h3 className="mt-4 font-serif text-lg text-foreground">Expert Instruction</h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                  Learn from certified international teachers with years of professional yoga and Pilates training.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
+                  ✨
+                </div>
+                <h3 className="mt-4 font-serif text-lg text-foreground">Small Class Sizes</h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                  Intimate sessions guarantee personalized feedback, correct alignment, and maximum sweat efficiency.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
+                  🔥
+                </div>
+                <h3 className="mt-4 font-serif text-lg text-foreground">Premium Infrared Heat</h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                  Far-infrared panels heat your body directly, deep-warming joints, boosting mobility, and detoxing muscles.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-dark border border-white/5 text-brand">
+                  🌊
+                </div>
+                <h3 className="mt-4 font-serif text-lg text-foreground">Batata Beach Proximity</h3>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
+                  Our studio sits right next to the beach. Finish your class, step outside, and take a fresh dip in the Atlantic.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Student Reviews Section */}
+        <section className="px-5 py-20 sm:px-6 lg:px-20 lg:py-28">
+          <div className="mx-auto max-w-5xl">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground">What Our Members Say</h2>
+              <div className="mx-auto mt-4 h-[1px] w-24 bg-gradient-to-r from-transparent via-stone/50 to-transparent" />
+            </div>
+
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="rounded-3xl border border-white/5 bg-stone-dark/20 p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-brand text-lg mb-4">★★★★★</div>
+                  <p className="text-sm text-foreground/80 leading-relaxed">
+                    &quot;Beautiful studio. Great teacher. Loved the incorporation of the heating panels into the session. Highly recommend!&quot;
+                  </p>
+                </div>
+                <p className="mt-6 text-xs text-foreground/50">— Katy S.</p>
+              </div>
+
+              <div className="rounded-3xl border border-white/5 bg-stone-dark/20 p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-brand text-lg mb-4">★★★★★</div>
+                  <p className="text-sm text-foreground/80 leading-relaxed">
+                    &quot;What a great class this morning. Clear English instructions, warm heat that wasn&apos;t overwhelming that really helped my muscles stretch. Left with an inner glow!&quot;
+                  </p>
+                </div>
+                <p className="mt-6 text-xs text-foreground/50">— Sarah F.</p>
+              </div>
+
+              <div className="rounded-3xl border border-white/5 bg-stone-dark/20 p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-brand text-lg mb-4">★★★★★</div>
+                  <p className="text-sm text-foreground/80 leading-relaxed">
+                    &quot;Amazing class, relaxing and challenging at the same time. The infrared panels create a beautiful ambiance and great recovery.&quot;
+                  </p>
+                </div>
+                <p className="mt-6 text-xs text-foreground/50">— Roxane G.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 3 Simple Steps */}
+        <section className="border-t border-white/5 bg-stone-dark/10 px-5 py-20 text-center sm:px-6 lg:px-20 lg:py-28">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-serif text-3xl sm:text-4xl text-foreground">Book in 3 Simple Steps</h2>
+            <div className="mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row">
+              <div className="flex items-center gap-3">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-stone-dark text-sm font-bold">1</span>
+                <span className="text-sm text-foreground/80">Buy your 2-Week Pass</span>
+              </div>
+              <div className="hidden h-[1px] w-12 bg-white/10 sm:block" />
+              <div className="flex items-center gap-3">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-stone-dark text-sm font-bold">2</span>
+                <span className="text-sm text-foreground/80">Choose your class date</span>
+              </div>
+              <div className="hidden h-[1px] w-12 bg-white/10 sm:block" />
+              <div className="flex items-center gap-3">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-stone-dark text-sm font-bold">3</span>
+                <span className="text-sm text-foreground/80">Roll out your mat & glow</span>
+              </div>
+            </div>
+
+            <div className="mt-12">
+              <a
+                href={checkoutUrl}
+                className="inline-flex rounded-full bg-brand px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-stone-dark transition-all hover:bg-brand-soft hover:shadow-lg"
+              >
+                Get Started Now
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }
