@@ -27,7 +27,7 @@ export default function Page() {
         <div className="rounded-3xl bg-stone-dark/30 border border-white/5 p-6 sm:p-10 mb-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
             <div>
-              <span className="text-xs uppercase tracking-wider text-brand">PureGym Template B (Shortened)</span>
+              <span className="text-xs uppercase tracking-wider text-brand">Special Offer</span>
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mt-2">Heat Lagos Studio</h1>
               <p className="text-base text-foreground/60 mt-1">Batata Beach, Lagos, Portugal • Open Daily</p>
             </div>

@@ -37,7 +37,7 @@ export default function Page() {
         <section className="px-5 py-12 text-center sm:px-6 lg:px-20 lg:py-20">
           <div className="mx-auto max-w-4xl">
             <span className="text-xs uppercase tracking-[0.3em] text-brand">
-              Aligne Template A
+              Introductory Offer
             </span>
             <h1 className="mt-4 font-serif text-[2.8rem] leading-[1.05] sm:text-6xl lg:text-[5.5rem]">
               Transform Your Body

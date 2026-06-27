@@ -30,7 +30,7 @@ export default function Page() {
         <section className="px-5 py-12 text-center sm:px-6 lg:px-20 lg:py-16">
           <div className="mx-auto max-w-4xl space-y-6">
             <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
-              WeHo Style Template E
+              Heated Pilates &amp; Sculpt
             </span>
             <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-foreground leading-[1.05] tracking-tight">
               Sculpt — Lagos&apos; Best Sweaty Workout

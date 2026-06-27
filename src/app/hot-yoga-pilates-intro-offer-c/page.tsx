@@ -33,7 +33,7 @@ export default function Page() {
               {/* Left Column: Heading & Leade */}
               <div className="lg:col-span-7 space-y-6">
                 <span className="inline-block rounded-full bg-brand/10 border border-brand/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
-                  FS8 Template C
+                  Introductory Pass
                 </span>
                 <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-[1.05]">
                   Pilates, Sculpt &amp; Yoga Remixed

@@ -26,7 +26,7 @@ export default function Page() {
         <div className="mx-auto max-w-4xl space-y-16">
           {/* NYP Bold Typographic Hero */}
           <section className="text-center space-y-6">
-            <span className="text-[11px] uppercase tracking-[0.4em] text-brand/80">NYP Style Template D</span>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-brand/80">Batata Beach Lagos</span>
             <h1 className="font-sans font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tighter text-foreground uppercase leading-none">
               CORE. SWEAT.<br />MORNING GLOW.
             </h1>
