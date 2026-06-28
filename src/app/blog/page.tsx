@@ -22,6 +22,46 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "gym-lagos-portugal",
+    title: "Looking for a Gym in Lagos, Portugal? Here Is What You Will Actually Find",
+    excerpt:
+      "Traditional gyms, boutique studios, Sculpt classes, infrared heat. A practical breakdown of your fitness options in Lagos and why most people end up at a studio instead of a gym.",
+    date: "June 28, 2026",
+    category: "Lagos Fitness",
+  },
+  {
+    slug: "yoga-near-me-lagos",
+    title: "Yoga Classes Near Me in Lagos, Portugal: Where to Find Them and What to Expect",
+    excerpt:
+      "A practical guide to yoga studios and classes in Lagos. What is available, how the styles differ, and what to look for whether you are visiting for a week or living here year-round.",
+    date: "June 28, 2026",
+    category: "Yoga Guide",
+  },
+  {
+    slug: "pilates-near-me-lagos",
+    title: "Pilates Classes Near Me in Lagos, Portugal: A Practical Guide",
+    excerpt:
+      "Looking for Pilates near you in Lagos or the Algarve? What is available, how the options differ, and how to find the right class for your level and schedule.",
+    date: "June 28, 2026",
+    category: "Local Guide",
+  },
+  {
+    slug: "hot-yoga-lagos",
+    title: "Hot Yoga in Lagos, Portugal: What to Expect (And Why Our Studio Runs Infrared)",
+    excerpt:
+      "What traditional hot yoga is, how infrared heating works differently, and where to find heated yoga and Pilates classes in Lagos, Portugal.",
+    date: "June 28, 2026",
+    category: "Yoga Guide",
+  },
+  {
+    slug: "reformer-pilates-lagos",
+    title: "Reformer vs Mat Pilates in Lagos, Portugal: What Is the Difference?",
+    excerpt:
+      "Looking for reformer Pilates in Lagos? Here is an honest breakdown of reformer vs mat Pilates, what each does, who each suits, and what Pilates options actually exist in Lagos right now.",
+    date: "June 28, 2026",
+    category: "Pilates Guide",
+  },
+  {
     slug: "mobility-class-what-to-expect",
     title: "Mobility Class: What It Is, What to Expect, and Whether You Need It",
     excerpt:
