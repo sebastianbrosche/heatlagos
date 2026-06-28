@@ -88,21 +88,48 @@ Data from three GSC properties. Goal: win every term in this vertical completely
 | yoga class near me | 1 | 2 |
 | ginasios lagos | 1 | 2 |
 
-### Content already created targeting these terms (2026-06-28)
-- `/blog/reformer-pilates-lagos` — reformer vs mat, converts reformer searches
+### Content created/updated targeting these terms (2026-06-28)
+- `/blog/reformer-pilates-lagos` — REWRITTEN: names real reformer studios (Pilates Room Lagos, OMA, SPOT), explains reformer vs mat, positions Heat Lagos as the mat option. We DO say "reformer" throughout so we rank; we do NOT claim to have machines.
 - `/blog/hot-yoga-lagos` — hot yoga lagos, infrared conversion
 - `/blog/pilates-near-me-lagos` — near-me local intent, pilates algarve
 - `/blog/yoga-near-me-lagos` — yoga near me, yoga class near me, tai chi searchers
 - `/blog/gym-lagos-portugal` — gym lagos, ginasios lagos, sculpt, boutique fitness
+- `/blog/yoga-lagos-guide` — REWRITTEN: now a proper Top 5 numbered list beating TripAdvisor on detail. Heat #1, InLight #2, Algarve Alchemy #3, Espiche Yoga #4, Soluna Space #5.
 
-### Outstanding gaps (next agent: create posts for these)
-- "yoga lagos" has 239 impressions, 1.7% CTR — needs a dedicated pillar page or major refresh of yoga-lagos-guide
-- "reformer pilates lagos portugal" — already covered in reformer-pilates-lagos post
-- "pilates algarve" — partially covered, could build a dedicated /pilates-algarve page
-- Any new terms that appear in GSC — run this analysis monthly and fill gaps immediately
+### Competitive intelligence (researched 2026-06-28)
+**Who ranks for "yoga lagos":**
+- InLight Studio (inlight.pt) — top direct result, most established in Lagos old town
+- TripAdvisor "5 Best Lagos Yoga & Pilates" — basic list, no real detail
+- BookYogaRetreats / BookRetreats — retreat aggregators, not local studio guides
+- GetYourGuide — booking aggregator
+
+**Studio roster in Lagos (for future content — DO NOT get these wrong):**
+| Studio | Type | Notes |
+|---|---|---|
+| Heat Lagos | mat Pilates, infrared yoga, Sculpt, mobility | Only infrared studio in Algarve. We own this site. |
+| InLight Studio | Vinyasa, Hatha, Yin, Rocket, Ashtanga | Longest-running yoga studio in Lagos. inlight.pt |
+| Algarve Alchemy | Yoga, Pilates, infrared sauna + ice bath | Above Black & White Cafe, old town. algarve-alchemy.com |
+| Espiche Yoga | Multi-style, retreats | Village of Espiche just outside Lagos. espicheyoga.com |
+| Soluna Space | Rotating teachers, events, workshops | Venue not fixed studio. solunaspacelagos.com |
+| Le Dome | Vinyasa, Yin, Hatha, Pilates, English+French | Bilingual. instagram: le_dome_yoga |
+| The Movement Lab | Yoga, Pilates, contemporary + urban dance | Cross-training focus |
+| In Harmony Centre | Yoga incl. pregnancy yoga, integrative health | Near marina. inharmony-centre.com |
+| Pilates Room Lagos | REFORMER + mat Pilates, tower, Wunda chair | Since 2012. Rua Fernao Villarinho. pilatesroomlagos.com |
+| OMA The Spa | Cadillac Pilates + spa | First Cadillac studio in Lagos |
+| SPOT Pilates | Reformer + mat | Professional studio |
+
+**Key rule on reformer copy:** We DO write about reformer Pilates in content. We mention real reformer studios (Pilates Room Lagos, OMA, SPOT) honestly. We then position Heat Lagos as the mat Pilates option. We never claim to have reformer machines. This is the correct framing — not avoiding the word.
+
+### Outstanding gaps (next agent: pick up here)
+- **"pilates algarve"** — 29 impressions, weak CTR. Needs a dedicated `/blog/pilates-algarve` or standalone `/pilates-algarve` page targeting the wider Algarve region beyond Lagos.
+- **"pilates lagos portugal" pillar page** — the `/pilates-lagos-portugal` standalone page may need a refresh with more structured content now that we have competitive intel on the studio roster.
+- **Monthly GSC pull** — run this keyword analysis every month, fill any new impression gaps immediately. Pattern: impressions with low CTR = we rank but copy/title not converting = rewrite. No impressions = need a new page.
+- **Schema markup** — add Article + LocalBusiness JSON-LD schema to the blog posts for rich results in search. Currently blog posts have no structured data.
+- **Internal linking** — the new blog posts do not link to each other. Add cross-links between yoga-lagos-guide, reformer-pilates-lagos, hot-yoga-lagos, and pilates-near-me-lagos so PageRank flows between them.
 
 ## Known Constraints
-- No reformers — mat Pilates only. Never say "reformer".
+- We DO say "reformer" in content — but we never claim to have reformer machines. Frame as: "here are the reformer studios, here is what mat Pilates is, here is why Heat Lagos chose mat."
+- Infrared, NOT hot yoga (40 degrees C). Ours is 30 degrees C. Always convert hot yoga searchers, never promise the same experience.
 - Infrared, NOT hot yoga (40°C). Ours is 30°C. Convert not correct.
 - No em dashes in any public copy.
 - Seasonal: peak July–Sept, slow Nov–Mar. Adjust messaging by season.

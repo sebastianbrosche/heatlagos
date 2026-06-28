@@ -183,11 +183,11 @@ const posts = [
   },
   {
     slug: "yoga-lagos-guide",
-    title: "The Complete Guide to Yoga in Lagos, Portugal (2026)",
+    title: "Top 5 Yoga Studios in Lagos, Portugal (2026 Honest Guide)",
     excerpt:
-      "An honest breakdown of every yoga studio in Lagos, what they offer, and how to find the right class for your body and your schedule.",
-    date: "May 25, 2026",
-    category: "Lagos Guide",
+      "The real top 5 yoga studios in Lagos, ranked honestly by class quality, teacher consistency, and what each is actually good at. Heat, traditional, contrast therapy, nature-based, and events.",
+    date: "June 28, 2026",
+    category: "Lagos Rankings",
   },
   {
     slug: "hot-yoga-vs-infrared",
