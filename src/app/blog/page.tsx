@@ -22,6 +22,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "infrared-pilates-vs-regular",
+    title: "Infrared Pilates vs Regular Pilates: What Actually Changes",
+    excerpt:
+      "Infrared heat around 30C versus a cool room. How each format feels, who it suits, and which class to book in Lagos.",
+    date: "July 16, 2026",
+    category: "Pilates Guide",
+  },
+  {
+    slug: "first-hot-yoga-class-lagos",
+    title: "What to Expect at Your First Hot Yoga Class in Lagos",
+    excerpt:
+      "What to wear, how infrared heat feels, how hard a first class should be, and how to leave feeling better not wrecked.",
+    date: "July 16, 2026",
+    category: "Beginner Guide",
+  },
+  {
     slug: "gym-lagos-portugal",
     title: "Looking for a Gym in Lagos, Portugal? Here Is What You Will Actually Find",
     excerpt:

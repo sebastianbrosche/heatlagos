@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/digital-nomad-yoga-pilates-lagos";
@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "Best Yoga and Pilates for Digital Nomads in Lagos, Portugal (2026)",
   description:
     "A practical guide to yoga, pilates, and staying active in Lagos as a digital nomad. Drop-in friendly, no memberships, flexible schedules.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },

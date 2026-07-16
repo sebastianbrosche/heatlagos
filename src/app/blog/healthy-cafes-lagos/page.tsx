@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/healthy-cafes-lagos";
@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "10 Best Healthy Cafes and Spots to Eat After Yoga in Lagos",
   description:
     "The best healthy cafes and restaurants in Lagos, Portugal. Vegetarian, vegan, and post-workout food worth eating.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },

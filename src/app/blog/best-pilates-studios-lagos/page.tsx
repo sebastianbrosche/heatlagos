@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/best-pilates-studios-lagos";
@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "TOP 5 Pilates Studios in Lagos, Portugal (2026)",
   description:
     "A curated guide to the best pilates studios in Lagos, Portugal. No sponsorships - just what each studio does best and who it suits.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },

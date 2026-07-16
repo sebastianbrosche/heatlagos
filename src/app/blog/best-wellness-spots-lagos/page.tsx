@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "10 Best Wellness Spots in Lagos for Yoga, Pilates and Recovery",
   description:
     "The top wellness spots in Lagos, Portugal. Yoga, pilates, massage, sauna, and recovery - ranked by what each offers and who it suits.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },

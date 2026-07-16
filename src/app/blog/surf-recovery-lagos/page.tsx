@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "10 Best Surf Recovery Classes in Lagos, Portugal (2026)",
   description:
     "The best yoga, pilates, massage, and recovery options in Lagos for surfers. Where to recover between sessions and prevent injury.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },

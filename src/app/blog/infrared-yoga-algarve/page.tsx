@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "Where to Find the Best Infrared Yoga and Pilates in the Algarve",
   description:
     "A guide to infrared-heated yoga and pilates across the Algarve. Where to find it, how it works, and what the alternatives are.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },

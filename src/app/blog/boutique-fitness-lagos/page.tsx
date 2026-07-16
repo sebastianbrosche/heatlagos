@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "10 Best Boutique Fitness Studios in Lagos, Portugal (2026)",
   description:
     "The best boutique fitness studios in Lagos, Portugal. Small classes, specialised training, and premium experiences. Ranked honestly.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },

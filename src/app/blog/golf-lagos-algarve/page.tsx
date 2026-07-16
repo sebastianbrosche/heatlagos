@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "Golf in Lagos, Portugal: Best Courses and Where to Play",
   description:
     "A practical guide to golfing in Lagos and the western Algarve. Course reviews, green fees, and how to mix golf with yoga and recovery.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },

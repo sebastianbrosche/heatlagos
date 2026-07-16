@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "Top 10 Things to Do in Lagos for Fitness Lovers",
   description:
     "The best active experiences in Lagos, Portugal. Surf, run, paddle, train, and recover. For travellers who want to move.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
