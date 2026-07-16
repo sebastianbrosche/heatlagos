@@ -7,7 +7,8 @@ const STUDIO = {
   name: "Heat Lagos",
   alternateName: "Heat Lagos · Infrared Heated Studio",
   url: BASE,
-  image: `${BASE}/og-image.png`,
+  // opengraph-image is the live OG asset (og-image.png 404s and breaks rich results)
+  image: `${BASE}/opengraph-image`,
   logo: `${BASE}/logo%20heat.png`,
   description:
     "Infrared-heated Pilates, Yoga, Sculpt, Mobility, Recovery and Yin studio in Lagos, Portugal. English-speaking instructors, classes for active locals, expats and travellers.",
