@@ -4,6 +4,10 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/first-hot-yoga-class-lagos";
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: "What to Expect at Your First Hot Yoga Class in Lagos",
   description:
     "First heated yoga class in Lagos? What to wear, how infrared heat feels, how hard it should be, and how to leave feeling better not wrecked.",

@@ -4,6 +4,10 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/best-yoga-studios-lagos";
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: "10 Best Yoga Studios in Lagos, Portugal (2026)",
   description:
     "A curated guide to the best yoga studios in Lagos, Portugal. No sponsorships - just what each studio does best and who it suits.",

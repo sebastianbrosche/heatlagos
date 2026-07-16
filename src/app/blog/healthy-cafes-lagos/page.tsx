@@ -4,6 +4,10 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/healthy-cafes-lagos";
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: "10 Best Healthy Cafes and Spots to Eat After Yoga in Lagos",
   description:
     "The best healthy cafes and restaurants in Lagos, Portugal. Vegetarian, vegan, and post-workout food worth eating.",

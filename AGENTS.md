@@ -152,3 +152,7 @@ If a deploy fails:
 4. If you're stuck, ping Kai
 
 The previous successful deploy stays live until a new one succeeds, so a broken build doesn't take the site down.
+
+## Blog SEO publish gate (owner 2026-07-16)
+
+New or AI-drafted blog posts stay `robots: { index: false, follow: false }` until Sebastian reviews them for quality (avoid shipping AI slop). Only remove noindex after explicit human approval of that post. Do not bulk-index draft SEO content.

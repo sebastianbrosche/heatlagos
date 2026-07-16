@@ -4,6 +4,10 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/boutique-fitness-lagos";
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: "10 Best Boutique Fitness Studios in Lagos, Portugal (2026)",
   description:
     "The best boutique fitness studios in Lagos, Portugal. Small classes, specialised training, and premium experiences. Ranked honestly.",

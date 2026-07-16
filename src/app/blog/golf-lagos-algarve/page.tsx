@@ -4,6 +4,10 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/golf-lagos-algarve";
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: "Golf in Lagos, Portugal: Best Courses and Where to Play",
   description:
     "A practical guide to golfing in Lagos and the western Algarve. Course reviews, green fees, and how to mix golf with yoga and recovery.",

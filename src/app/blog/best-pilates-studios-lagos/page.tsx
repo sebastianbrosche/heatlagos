@@ -4,6 +4,10 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/best-pilates-studios-lagos";
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: "TOP 5 Pilates Studios in Lagos, Portugal (2026)",
   description:
     "A curated guide to the best pilates studios in Lagos, Portugal. No sponsorships - just what each studio does best and who it suits.",
