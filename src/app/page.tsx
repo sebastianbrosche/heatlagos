@@ -19,10 +19,10 @@ export default function Home() {
       <main>
         <Hero />
         <Schedule />
+        <Memberships />
         <About />
         <Classes />
         <Teachers />
-        <Memberships />
         <BeforeYouCome />
         <FAQ />
         <Location />

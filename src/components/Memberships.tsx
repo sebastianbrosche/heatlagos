@@ -93,9 +93,7 @@ export default function Memberships() {
             Heat Memberships
           </p>
           <h2 className="font-serif text-[2rem] leading-[1.1] sm:text-5xl lg:text-7xl">
-            Pricing made
-            <br />
-            <em className="text-brand">simple.</em>
+            Prices.
           </h2>
           <p className="mt-2 max-w-2xl text-foreground/70">
             Drop in once, stay for the season, or make Heat part of your week.
