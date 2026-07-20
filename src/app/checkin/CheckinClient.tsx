@@ -109,7 +109,37 @@ function classStatusLabel(c: ClassSummary, now: number) {
   return "Past";
 }
 
+/** Only last class, present class, next class. */
+function windowAround(
+  all: ClassSummary[],
+  centerIdx: number
+): { items: ClassSummary[]; localIndex: number } {
+  if (!all.length) return { items: [], localIndex: 0 };
+  const safe = Math.max(0, Math.min(centerIdx, all.length - 1));
+  const items: ClassSummary[] = [];
+  if (safe > 0) items.push(all[safe - 1]);
+  items.push(all[safe]);
+  if (safe < all.length - 1) items.push(all[safe + 1]);
+  const localIndex = items.findIndex((c) => c.id === all[safe].id);
+  return { items, localIndex: Math.max(0, localIndex) };
+}
+
+function pickPrimaryIndex(all: ClassSummary[], now: number, preferredId?: number) {
+  if (preferredId != null) {
+    const found = all.findIndex((c) => c.id === preferredId);
+    if (found >= 0) return found;
+  }
+  for (let i = 0; i < all.length; i++) {
+    if (isInPrimaryWindow(all[i], now)) return i;
+  }
+  for (let i = 0; i < all.length; i++) {
+    if (all[i].startMs >= now) return i;
+  }
+  return Math.max(0, all.length - 1);
+}
+
 export default function CheckinClient() {
+  const [allClasses, setAllClasses] = useState<ClassSummary[]>([]);
   const [classes, setClasses] = useState<ClassSummary[]>([]);
   const [index, setIndex] = useState(0);
   const [attendees, setAttendees] = useState<Attendee[]>([]);
@@ -120,7 +150,6 @@ export default function CheckinClient() {
   const [search, setSearch] = useState("");
   const [now, setNow] = useState(() => Date.now());
   const [lastRefresh, setLastRefresh] = useState<Date | null>(null);
-  const [swipeHint, setSwipeHint] = useState(0);
 
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
@@ -131,32 +160,51 @@ export default function CheckinClient() {
     return () => clearInterval(t);
   }, []);
 
-  const loadClassList = useCallback(async (preferId?: number) => {
-    setLoadingList(true);
-    setError(null);
-    try {
-      const res = await fetch(`${API_BASE}/classes`, { cache: "no-store" });
-      if (!res.ok) throw new Error(`Classes ${res.status}`);
-      const data = (await res.json()) as {
-        classes: ClassSummary[];
-        defaultIndex: number;
-      };
-      const list = data.classes || [];
-      setClasses(list);
-
-      let nextIndex = data.defaultIndex >= 0 ? data.defaultIndex : 0;
-      if (preferId != null) {
-        const found = list.findIndex((c) => c.id === preferId);
-        if (found >= 0) nextIndex = found;
+  const applyWindow = useCallback(
+    (all: ClassSummary[], centerIdx: number, preferLocalId?: number) => {
+      const { items, localIndex } = windowAround(all, centerIdx);
+      setClasses(items);
+      if (preferLocalId != null) {
+        const local = items.findIndex((c) => c.id === preferLocalId);
+        setIndex(local >= 0 ? local : localIndex);
+      } else {
+        setIndex(localIndex);
       }
-      setIndex(nextIndex);
-      setLastRefresh(new Date());
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to load classes");
-    } finally {
-      setLoadingList(false);
-    }
-  }, []);
+    },
+    []
+  );
+
+  const loadClassList = useCallback(
+    async (preferId?: number) => {
+      setLoadingList(true);
+      setError(null);
+      try {
+        const res = await fetch(`${API_BASE}/classes`, { cache: "no-store" });
+        if (!res.ok) throw new Error(`Classes ${res.status}`);
+        const data = (await res.json()) as {
+          classes: ClassSummary[];
+          defaultIndex: number;
+        };
+        const list = data.classes || [];
+        setAllClasses(list);
+
+        const nowMs = Date.now();
+        let center =
+          data.defaultIndex >= 0 ? data.defaultIndex : pickPrimaryIndex(list, nowMs);
+        if (preferId != null) {
+          const found = list.findIndex((c) => c.id === preferId);
+          if (found >= 0) center = found;
+        }
+        applyWindow(list, center, preferId);
+        setLastRefresh(new Date());
+      } catch (e) {
+        setError(e instanceof Error ? e.message : "Failed to load classes");
+      } finally {
+        setLoadingList(false);
+      }
+    },
+    [applyWindow]
+  );
 
   const loadAttendees = useCallback(async (classId: number, silent = false) => {
     if (!silent) setLoadingClass(true);
@@ -172,15 +220,19 @@ export default function CheckinClient() {
       };
       setAttendees(data.attendees || []);
 
-      // Keep teacher name in list if class detail returns it
       if (data.class?.teacherName) {
-        setClasses((prev) =>
-          prev.map((c) =>
+        const patch = (list: ClassSummary[]) =>
+          list.map((c) =>
             c.id === classId
-              ? { ...c, teacherName: data.class.teacherName, coachId: data.class.coachId }
+              ? {
+                  ...c,
+                  teacherName: data.class.teacherName,
+                  coachId: data.class.coachId,
+                }
               : c
-          )
-        );
+          );
+        setClasses(patch);
+        setAllClasses(patch);
       }
 
       const saved = loadAttendance(classId);
@@ -230,27 +282,27 @@ export default function CheckinClient() {
     return () => clearInterval(id);
   }, [currentClass, loadAttendees]);
 
+  // When primary window moves on, re-center on the new present class
   useEffect(() => {
-    if (!classes.length) return;
+    if (!allClasses.length) return;
     const t = setInterval(() => {
       const n = Date.now();
       setNow(n);
-      const cur = classes[index];
-      if (cur && isInPrimaryWindow(cur, n)) return;
-      const next = classes.findIndex((c) => isInPrimaryWindow(c, n));
-      if (next >= 0 && next !== index) setIndex(next);
+      const primary = pickPrimaryIndex(allClasses, n);
+      const primaryId = allClasses[primary]?.id;
+      if (!primaryId) return;
+      if (currentClass && isInPrimaryWindow(currentClass, n)) return;
+      // Rebuild last / present / next around the new primary
+      applyWindow(allClasses, primary);
     }, 60_000);
     return () => clearInterval(t);
-  }, [classes, index]);
+  }, [allClasses, currentClass, applyWindow]);
 
   const go = useCallback(
     (delta: number) => {
       setIndex((i) => {
         const next = i + delta;
-        if (next < 0 || next >= classes.length) {
-          setSwipeHint((h) => h + 1);
-          return i;
-        }
+        if (next < 0 || next >= classes.length) return i;
         return next;
       });
     },
@@ -369,42 +421,38 @@ export default function CheckinClient() {
           margin: 0 auto;
         }
         .checkin-header {
+          display: flex;
+          align-items: center;
+          gap: 12px;
           background: var(--surface);
           color: var(--text);
-          padding: 24px 22px 20px;
+          padding: 16px 14px;
           border-radius: var(--radius);
           border: 1px solid var(--border);
           margin-bottom: 16px;
         }
+        .checkin-header-title {
+          flex: 1;
+          text-align: center;
+          min-width: 0;
+        }
         .checkin-header h1 {
           font-family: var(--font-serif), Georgia, serif;
-          font-size: 1.75rem;
+          font-size: 1.5rem;
           font-weight: 400;
           letter-spacing: -0.02em;
-          margin: 0 0 6px;
-          line-height: 1.15;
-        }
-        .checkin-header .subtitle {
-          font-size: 12px;
-          color: var(--text-secondary);
           margin: 0;
-          text-transform: uppercase;
-          letter-spacing: 0.18em;
-        }
-        .checkin-nav {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-bottom: 12px;
+          line-height: 1.15;
         }
         .checkin-nav-btn {
           width: 44px;
           height: 44px;
           border-radius: 12px;
           border: 1px solid var(--border);
-          background: var(--surface);
+          background: rgba(255, 255, 255, 0.03);
           color: var(--text);
-          font-size: 20px;
+          font-size: 22px;
+          line-height: 1;
           cursor: pointer;
           display: flex;
           align-items: center;
@@ -413,25 +461,12 @@ export default function CheckinClient() {
           transition: border-color 0.15s, color 0.15s, opacity 0.15s;
         }
         .checkin-nav-btn:disabled {
-          opacity: 0.35;
+          opacity: 0.3;
           cursor: default;
         }
         .checkin-nav-btn:not(:disabled):hover {
           border-color: rgba(252, 150, 106, 0.45);
           color: var(--brand);
-        }
-        .checkin-nav-meta {
-          flex: 1;
-          text-align: center;
-          font-size: 12px;
-          color: var(--text-secondary);
-        }
-        .checkin-nav-meta strong {
-          display: block;
-          color: var(--text);
-          font-size: 13px;
-          margin-bottom: 2px;
-          font-weight: 600;
         }
         .checkin-class-card {
           background: var(--surface);
@@ -702,8 +737,27 @@ export default function CheckinClient() {
 
       <div className="checkin-container">
         <div className="checkin-header">
-          <h1>Class Check-in</h1>
-          <p className="subtitle">Heat Lagos</p>
+          <button
+            type="button"
+            className="checkin-nav-btn"
+            aria-label="Previous class"
+            disabled={!canPrev || loadingList || !classes.length}
+            onClick={() => go(-1)}
+          >
+            ‹
+          </button>
+          <div className="checkin-header-title">
+            <h1>Class Check-in</h1>
+          </div>
+          <button
+            type="button"
+            className="checkin-nav-btn"
+            aria-label="Next class"
+            disabled={!canNext || loadingList || !classes.length}
+            onClick={() => go(1)}
+          >
+            ›
+          </button>
         </div>
 
         {error && (
@@ -746,33 +800,6 @@ export default function CheckinClient() {
           <div className="checkin-empty">No classes in the schedule window</div>
         ) : (
           <>
-            <div className="checkin-nav">
-              <button
-                type="button"
-                className="checkin-nav-btn"
-                aria-label="Previous class"
-                disabled={!canPrev}
-                onClick={() => go(-1)}
-              >
-                ‹
-              </button>
-              <div className="checkin-nav-meta" key={swipeHint}>
-                <strong>
-                  Class {index + 1} of {classes.length}
-                </strong>
-                &lt; previous&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next &gt;
-              </div>
-              <button
-                type="button"
-                className="checkin-nav-btn"
-                aria-label="Next class"
-                disabled={!canNext}
-                onClick={() => go(1)}
-              >
-                ›
-              </button>
-            </div>
-
             {currentClass && (
               <div className="checkin-class-card">
                 <div className="checkin-class-name">
@@ -934,8 +961,6 @@ export default function CheckinClient() {
               })}
             </>
           )}
-          <br />
-          Ctrl/Cmd+R refresh
         </p>
       </div>
     </div>
