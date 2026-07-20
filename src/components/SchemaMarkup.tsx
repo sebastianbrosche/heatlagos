@@ -22,7 +22,7 @@ const STUDIO = {
     streetAddress: "Edificio da Fabrica da Ribeira, Av. dos Descobrimentos, Loja G",
     addressLocality: "Lagos",
     addressRegion: "Faro",
-    postalCode: "8600-854",
+    postalCode: "8600-584",
     addressCountry: "PT",
   },
   geo: {

@@ -170,7 +170,7 @@ export default function Page() {
           <h2>Where to find us</h2>
           <p>
             The studio is at Edificio da Fabrica da Ribeira, Av. dos
-            Descobrimentos, Loja G, 8600-854 Lagos. A short walk from the
+            Descobrimentos, Loja G, 8600-584 Lagos. A short walk from the
             marina and the historic centre. Easy parking on the avenida.
             From the surrounding area: Luz 12-13 min, Burgau 15-16 min,
             Portimão 19-23 min by car.

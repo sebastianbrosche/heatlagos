@@ -5,7 +5,7 @@ Goal: systematically turn class attendees into Google (priority) + TripAdvisor r
 ## Links
 - **Google review (PRIORITY):** https://search.google.com/local/writereview?placeid=ChIJe-p6C2YxGw0RRCSeMIQuUbQ
 - TripAdvisor (alternate): [TODO get Heat Lagos TripAdvisor listing URL]
-- Place: Heat Lagos - Hot Yoga, Pilates & Sculpt, Av. dos Descobrimentos Loja G, 8600-854 Lagos. place_id ChIJe-p6C2YxGw0RRCSeMIQuUbQ.
+- Place: Heat Lagos - Hot Yoga, Pilates & Sculpt, Av. dos Descobrimentos Loja G, 8600-584 Lagos. place_id ChIJe-p6C2YxGw0RRCSeMIQuUbQ.
 
 ## Flow (escalating ask)
 1. **After 1st class** (~3-4h later): Ask #1 -> Google link.

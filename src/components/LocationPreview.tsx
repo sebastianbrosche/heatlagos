@@ -32,7 +32,7 @@ export default function LocationPreview() {
                 <br />
                 Av. dos Descobrimentos, Loja G,
                 <br />
-                8600-854 Lagos, Portugal
+                8600-584 Lagos, Portugal
               </p>
             </div>
             <div>

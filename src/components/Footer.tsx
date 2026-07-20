@@ -1,4 +1,4 @@
-﻿const EXPLORE_LINKS: Array<{ href: string; label: string }> = [
+const EXPLORE_LINKS: Array<{ href: string; label: string }> = [
   { href: "/infrared-classes-lagos", label: "Infrared classes in Lagos" },
   { href: "/pilates-lagos-portugal", label: "Pilates in Lagos" },
   { href: "/yoga-lagos-portugal", label: "Yoga in Lagos" },
@@ -58,16 +58,6 @@ export default function Footer() {
                 Blog
               </a>
             </li>
-            <li>
-              <a
-                href="https://yogateachertrainingportugal.eu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-brand"
-              >
-                Teacher Trainings
-              </a>
-            </li>
           </ul>
         </div>
 
@@ -97,7 +87,7 @@ export default function Footer() {
                 <br />
                 Av. dos Descobrimentos, Loja G,
                 <br />
-                8600-854 Lagos, Portugal
+                8600-584 Lagos, Portugal
               </a>
             </li>
           </ul>
