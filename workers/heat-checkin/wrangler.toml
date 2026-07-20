@@ -1,0 +1,13 @@
+name = "heat-checkin"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+workers_dev = true
+
+# Same-origin API under heatlagos.com (Pages serves /checkin; this Worker serves /api/checkin/*)
+routes = [
+  { pattern = "www.heatlagos.com/api/checkin/*", zone_name = "heatlagos.com" },
+  { pattern = "heatlagos.com/api/checkin/*", zone_name = "heatlagos.com" }
+]
+
+# Secret: BSPORT_API_TOKEN  (session Token from bsport)
+# Set with: npx wrangler secret put BSPORT_API_TOKEN --name heat-checkin
