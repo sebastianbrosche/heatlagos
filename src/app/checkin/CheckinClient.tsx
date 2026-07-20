@@ -19,6 +19,8 @@ type ClassSummary = {
   endMs: number;
   booked: number;
   capacity: number | null;
+  teacherName?: string | null;
+  coachId?: number | null;
 };
 
 type Attendee = {
@@ -93,7 +95,6 @@ function isInPrimaryWindow(c: ClassSummary, now: number) {
 }
 
 function isInLiveRefreshWindow(c: ClassSummary, now: number) {
-  // Every minute from 15 min before start until 10 min after end
   return now >= c.startMs - FIFTEEN_M_MS && now <= c.endMs + TEN_M_MS;
 }
 
@@ -125,7 +126,6 @@ export default function CheckinClient() {
   const touchStartY = useRef<number | null>(null);
   const currentClass = classes[index] ?? null;
 
-  // Tick clock every 30s for status labels + window checks
   useEffect(() => {
     const t = setInterval(() => setNow(Date.now()), 30_000);
     return () => clearInterval(t);
@@ -172,16 +172,24 @@ export default function CheckinClient() {
       };
       setAttendees(data.attendees || []);
 
-      // Merge local attendance; default missing
+      // Keep teacher name in list if class detail returns it
+      if (data.class?.teacherName) {
+        setClasses((prev) =>
+          prev.map((c) =>
+            c.id === classId
+              ? { ...c, teacherName: data.class.teacherName, coachId: data.class.coachId }
+              : c
+          )
+        );
+      }
+
       const saved = loadAttendance(classId);
       const next: AttendanceMap = { ...saved };
       for (const a of data.attendees || []) {
         if (!next[a.userId]) {
-          // Seed from bSport attendance when first seen
           next[a.userId] = a.attendanceBsport ? "present" : "missing";
         }
       }
-      // Drop people who unbooked
       const liveIds = new Set((data.attendees || []).map((a) => a.userId));
       for (const key of Object.keys(next)) {
         if (!liveIds.has(key)) delete next[key];
@@ -199,19 +207,16 @@ export default function CheckinClient() {
     }
   }, []);
 
-  // Initial load
   useEffect(() => {
     void loadClassList();
   }, [loadClassList]);
 
-  // Load attendees when class changes
   useEffect(() => {
     if (!currentClass) return;
     setSearch("");
     void loadAttendees(currentClass.id);
   }, [currentClass?.id, loadAttendees]);
 
-  // Minute refresh in the 15-min-before → 10-min-after window
   useEffect(() => {
     if (!currentClass) return;
     const tick = () => {
@@ -225,7 +230,6 @@ export default function CheckinClient() {
     return () => clearInterval(id);
   }, [currentClass, loadAttendees]);
 
-  // When primary window expires, re-pick default class
   useEffect(() => {
     if (!classes.length) return;
     const t = setInterval(() => {
@@ -233,7 +237,6 @@ export default function CheckinClient() {
       setNow(n);
       const cur = classes[index];
       if (cur && isInPrimaryWindow(cur, n)) return;
-      // Find first class in primary window
       const next = classes.findIndex((c) => isInPrimaryWindow(c, n));
       if (next >= 0 && next !== index) setIndex(next);
     }, 60_000);
@@ -254,7 +257,6 @@ export default function CheckinClient() {
     [classes.length]
   );
 
-  // Keyboard: arrows
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") {
@@ -285,7 +287,6 @@ export default function CheckinClient() {
     touchStartX.current = null;
     touchStartY.current = null;
     if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
-    // Swipe right → previous class; swipe left → next class
     if (dx > 0) go(-1);
     else go(1);
   };
@@ -331,8 +332,6 @@ export default function CheckinClient() {
 
   const canPrev = index > 0;
   const canNext = index < classes.length - 1;
-  const liveRefresh =
-    currentClass != null && isInLiveRefreshWindow(currentClass, now);
 
   return (
     <div
@@ -342,22 +341,20 @@ export default function CheckinClient() {
     >
       <style>{`
         .checkin-root {
-          --bg: #f8faf9;
-          --surface: #ffffff;
-          --border: #e8eeec;
-          --text: #1a2e2a;
-          --text-secondary: #5c736c;
-          --primary: #0f766e;
-          --primary-soft: #ccfbf1;
-          --present: #059669;
-          --present-bg: #ecfdf5;
-          --missing: #e11d48;
-          --missing-bg: #fff1f2;
-          --shadow: 0 1px 3px rgba(15, 40, 35, 0.04),
-            0 4px 16px rgba(15, 40, 35, 0.06);
+          --bg: #1a1512;
+          --surface: #2a231f;
+          --border: rgba(255, 255, 255, 0.08);
+          --text: #f5efe8;
+          --text-secondary: #8a8682;
+          --brand: #fc966a;
+          --brand-soft: #ffb48f;
+          --present: #6ee7b7;
+          --present-bg: rgba(16, 185, 129, 0.16);
+          --missing: #fca5a5;
+          --missing-bg: rgba(239, 68, 68, 0.14);
           --radius: 16px;
           --radius-sm: 10px;
-          font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+          font-family: Inter, var(--font-inter), system-ui, sans-serif;
           background: var(--bg);
           color: var(--text);
           min-height: 100vh;
@@ -372,37 +369,27 @@ export default function CheckinClient() {
           margin: 0 auto;
         }
         .checkin-header {
-          background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
-          color: white;
+          background: var(--surface);
+          color: var(--text);
           padding: 24px 22px 20px;
           border-radius: var(--radius);
-          box-shadow: var(--shadow);
+          border: 1px solid var(--border);
           margin-bottom: 16px;
-          position: relative;
-          overflow: hidden;
-        }
-        .checkin-header::after {
-          content: "";
-          position: absolute;
-          top: -40%;
-          right: -20%;
-          width: 180px;
-          height: 180px;
-          background: rgba(255, 255, 255, 0.08);
-          border-radius: 50%;
         }
         .checkin-header h1 {
-          font-size: 22px;
-          font-weight: 700;
+          font-family: var(--font-serif), Georgia, serif;
+          font-size: 1.75rem;
+          font-weight: 400;
           letter-spacing: -0.02em;
-          margin: 0 0 4px;
-          position: relative;
+          margin: 0 0 6px;
+          line-height: 1.15;
         }
         .checkin-header .subtitle {
-          font-size: 13px;
-          opacity: 0.9;
+          font-size: 12px;
+          color: var(--text-secondary);
           margin: 0;
-          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 0.18em;
         }
         .checkin-nav {
           display: flex;
@@ -423,14 +410,15 @@ export default function CheckinClient() {
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
-          transition: background 0.15s, opacity 0.15s;
+          transition: border-color 0.15s, color 0.15s, opacity 0.15s;
         }
         .checkin-nav-btn:disabled {
           opacity: 0.35;
           cursor: default;
         }
         .checkin-nav-btn:not(:disabled):hover {
-          background: var(--bg);
+          border-color: rgba(252, 150, 106, 0.45);
+          color: var(--brand);
         }
         .checkin-nav-meta {
           flex: 1;
@@ -443,25 +431,31 @@ export default function CheckinClient() {
           color: var(--text);
           font-size: 13px;
           margin-bottom: 2px;
+          font-weight: 600;
         }
         .checkin-class-card {
           background: var(--surface);
           border-radius: var(--radius);
-          box-shadow: var(--shadow);
           padding: 18px 20px;
           margin-bottom: 14px;
           border: 1px solid var(--border);
         }
         .checkin-class-name {
-          font-size: 18px;
-          font-weight: 600;
+          font-family: var(--font-serif), Georgia, serif;
+          font-size: 1.35rem;
+          font-weight: 400;
           letter-spacing: -0.01em;
-          margin: 0 0 4px;
+          margin: 0 0 6px;
+          line-height: 1.25;
+        }
+        .checkin-class-name em {
+          font-style: italic;
+          color: var(--brand);
         }
         .checkin-class-time {
           font-size: 13px;
           color: var(--text-secondary);
-          margin: 0 0 10px;
+          margin: 0 0 12px;
         }
         .checkin-status-row {
           display: flex;
@@ -471,16 +465,18 @@ export default function CheckinClient() {
           margin-bottom: 14px;
         }
         .checkin-badge {
-          font-size: 12px;
+          font-size: 11px;
           font-weight: 600;
-          padding: 4px 10px;
+          padding: 5px 11px;
           border-radius: 999px;
-          background: var(--primary-soft);
-          color: var(--primary);
+          background: rgba(252, 150, 106, 0.14);
+          color: var(--brand);
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
         }
-        .checkin-badge.live {
-          background: #fef3c7;
-          color: #b45309;
+        .checkin-badge.muted {
+          background: rgba(255, 255, 255, 0.05);
+          color: var(--text-secondary);
         }
         .checkin-stats {
           display: flex;
@@ -495,7 +491,8 @@ export default function CheckinClient() {
           font-weight: 500;
           padding: 6px 12px;
           border-radius: 999px;
-          background: var(--bg);
+          background: rgba(255, 255, 255, 0.04);
+          color: var(--text);
         }
         .checkin-pill .dot {
           width: 8px;
@@ -514,14 +511,14 @@ export default function CheckinClient() {
         .checkin-progress {
           flex: 1;
           height: 6px;
-          background: var(--border);
+          background: rgba(255, 255, 255, 0.08);
           border-radius: 999px;
           overflow: hidden;
           min-width: 40px;
         }
         .checkin-progress > div {
           height: 100%;
-          background: linear-gradient(90deg, var(--present), #34d399);
+          background: linear-gradient(90deg, var(--brand), var(--brand-soft));
           border-radius: 999px;
           transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -546,10 +543,13 @@ export default function CheckinClient() {
           background: var(--surface);
           color: var(--text);
         }
+        .checkin-search input::placeholder {
+          color: var(--text-secondary);
+        }
         .checkin-search input:focus {
           outline: none;
-          border-color: var(--primary);
-          box-shadow: 0 0 0 3px var(--primary-soft);
+          border-color: rgba(252, 150, 106, 0.55);
+          box-shadow: 0 0 0 3px rgba(252, 150, 106, 0.12);
         }
         .checkin-search svg {
           position: absolute;
@@ -564,31 +564,35 @@ export default function CheckinClient() {
         .checkin-btn {
           padding: 10px 16px;
           border: none;
-          border-radius: var(--radius-sm);
-          font-size: 13px;
+          border-radius: 999px;
+          font-size: 11px;
           font-weight: 600;
           font-family: inherit;
           cursor: pointer;
           white-space: nowrap;
-          transition: background 0.15s, color 0.15s;
+          text-transform: uppercase;
+          letter-spacing: 0.14em;
+          transition: background 0.15s, color 0.15s, border-color 0.15s;
         }
         .checkin-btn.secondary {
-          background: var(--surface);
+          background: transparent;
           color: var(--text-secondary);
           border: 1px solid var(--border);
         }
         .checkin-btn.secondary:hover {
-          background: var(--bg);
-          color: var(--text);
+          border-color: rgba(252, 150, 106, 0.45);
+          color: var(--brand);
         }
         .checkin-btn.primary {
-          background: var(--primary);
-          color: white;
+          background: var(--brand);
+          color: #2a231f;
+        }
+        .checkin-btn.primary:hover {
+          background: var(--brand-soft);
         }
         .checkin-list {
           background: var(--surface);
           border-radius: var(--radius);
-          box-shadow: var(--shadow);
           border: 1px solid var(--border);
           overflow: hidden;
         }
@@ -606,8 +610,8 @@ export default function CheckinClient() {
           width: 40px;
           height: 40px;
           border-radius: 12px;
-          background: linear-gradient(135deg, #ccfbf1, #99f6e4);
-          color: var(--primary);
+          background: rgba(252, 150, 106, 0.16);
+          color: var(--brand);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -634,7 +638,7 @@ export default function CheckinClient() {
           cursor: pointer;
           min-width: 96px;
           flex-shrink: 0;
-          transition: transform 0.15s, background 0.15s;
+          transition: background 0.15s, color 0.15s;
         }
         .checkin-status.present {
           background: var(--present-bg);
@@ -645,7 +649,7 @@ export default function CheckinClient() {
           color: var(--missing);
         }
         .checkin-status:hover {
-          transform: scale(1.03);
+          filter: brightness(1.08);
         }
         .checkin-empty,
         .checkin-error,
@@ -656,16 +660,16 @@ export default function CheckinClient() {
           font-size: 14px;
         }
         .checkin-error {
-          background: #fff1f2;
+          background: var(--missing-bg);
           color: var(--missing);
           border-radius: var(--radius);
+          border: 1px solid rgba(239, 68, 68, 0.2);
         }
         .checkin-footer {
           text-align: center;
           font-size: 12px;
           color: var(--text-secondary);
           margin-top: 18px;
-          opacity: 0.75;
           line-height: 1.5;
         }
         .checkin-skeleton {
@@ -679,33 +683,27 @@ export default function CheckinClient() {
           width: 40px;
           height: 40px;
           border-radius: 12px;
-          background: linear-gradient(90deg, #e8eeec 25%, #f1f5f4 50%, #e8eeec 75%);
+          background: linear-gradient(90deg, #2a231f 25%, #3a322c 50%, #2a231f 75%);
           background-size: 200% 100%;
           animation: checkin-shimmer 1.4s infinite;
         }
         .checkin-skeleton-line {
           height: 14px;
           border-radius: 6px;
-          background: linear-gradient(90deg, #e8eeec 25%, #f1f5f4 50%, #e8eeec 75%);
+          background: linear-gradient(90deg, #2a231f 25%, #3a322c 50%, #2a231f 75%);
           background-size: 200% 100%;
           animation: checkin-shimmer 1.4s infinite;
         }
         @keyframes checkin-shimmer {
-          0% {
-            background-position: 200% 0;
-          }
-          100% {
-            background-position: -200% 0;
-          }
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
         }
       `}</style>
 
       <div className="checkin-container">
         <div className="checkin-header">
           <h1>Class Check-in</h1>
-          <p className="subtitle">
-            Swipe or use arrows for last / next class · Heat Lagos
-          </p>
+          <p className="subtitle">Heat Lagos · swipe for last / next</p>
         </div>
 
         {error && (
@@ -777,7 +775,16 @@ export default function CheckinClient() {
 
             {currentClass && (
               <div className="checkin-class-card">
-                <div className="checkin-class-name">{currentClass.name}</div>
+                <div className="checkin-class-name">
+                  {currentClass.teacherName ? (
+                    <>
+                      {currentClass.name}
+                      <em>, with {currentClass.teacherName}</em>
+                    </>
+                  ) : (
+                    currentClass.name
+                  )}
+                </div>
                 <div className="checkin-class-time">
                   {formatClassTime(
                     currentClass.dateStart,
@@ -788,19 +795,8 @@ export default function CheckinClient() {
                   <span className="checkin-badge">
                     {classStatusLabel(currentClass, now)}
                   </span>
-                  {liveRefresh && (
-                    <span className="checkin-badge live">
-                      Live list · updates every min
-                    </span>
-                  )}
                   {currentClass.capacity != null && (
-                    <span
-                      className="checkin-badge"
-                      style={{
-                        background: "var(--bg)",
-                        color: "var(--text-secondary)",
-                      }}
-                    >
+                    <span className="checkin-badge muted">
                       {attendees.length || currentClass.booked}/
                       {currentClass.capacity} booked
                     </span>

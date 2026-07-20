@@ -93,10 +93,25 @@ function addDays(isoDate, days) {
   return d.toISOString().slice(0, 10);
 }
 
-function summarizeOffer(o) {
+/** Preferred first names as shown on heatlagos.com */
+const COACH_DISPLAY = {
+  136954: "Stine",
+  136955: "Sebastian",
+  137174: "Anastasiia",
+  137176: "Anastasiia",
+  137175: "Agata",
+  139837: "Nadine",
+  143247: "Alizee",
+  98364: "Liana",
+};
+
+function summarizeOffer(o, coachNameById = new Map()) {
   const startMs = Date.parse(o.date_start);
   const durationMin = o.duration_minute || 60;
   const endMs = startMs + durationMin * 60 * 1000;
+  const coachId = o.coach_override || o.coach || null;
+  const teacherName =
+    (coachId && (COACH_DISPLAY[coachId] || coachNameById.get(coachId))) || null;
   return {
     id: o.id,
     activityId: o.activity,
@@ -107,9 +122,33 @@ function summarizeOffer(o) {
     startMs,
     booked: o.validated_booking_count ?? (o.bookings?.length || 0),
     capacity: o.effectif ?? o.tot_slots ?? null,
-    coachId: o.coach,
+    coachId,
+    teacherName,
     color: o.meta_activity_color || null,
   };
+}
+
+async function fetchCoachNames(env, coachIds) {
+  const map = new Map();
+  const unique = [...new Set(coachIds.filter(Boolean))];
+  await Promise.all(
+    unique.map(async (id) => {
+      if (COACH_DISPLAY[id]) {
+        map.set(id, COACH_DISPLAY[id]);
+        return;
+      }
+      try {
+        const c = await bsport(env, `/coach/${id}/`);
+        const first =
+          c?.user?.first_name ||
+          (c?.user?.name ? String(c.user.name).split(/\s+/)[0] : null);
+        if (first) map.set(id, first);
+      } catch {
+        /* leave missing */
+      }
+    })
+  );
+  return map;
 }
 
 /**
@@ -129,7 +168,11 @@ async function listClasses(env, params) {
     ordering: "date_start",
   });
 
-  const classes = (data.results || []).map(summarizeOffer);
+  const raw = data.results || [];
+  const coachIds = raw.map((o) => o.coach_override || o.coach).filter(Boolean);
+  const coachNames = await fetchCoachNames(env, coachIds);
+
+  const classes = raw.map((o) => summarizeOffer(o, coachNames));
   classes.sort((a, b) => a.startMs - b.startMs);
 
   const defaultIndex = pickDefaultIndex(classes, now);
@@ -187,7 +230,9 @@ async function getClassWithAttendees(env, offerId) {
     }),
   ]);
 
-  const summary = summarizeOffer(offer);
+  const coachId = offer.coach_override || offer.coach;
+  const coachNames = await fetchCoachNames(env, coachId ? [coachId] : []);
+  const summary = summarizeOffer(offer, coachNames);
   const raw = bookingData.results || [];
 
   // Active bookings only (not canceled / deleted)
