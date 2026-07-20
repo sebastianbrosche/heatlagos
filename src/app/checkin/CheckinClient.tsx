@@ -703,7 +703,7 @@ export default function CheckinClient() {
       <div className="checkin-container">
         <div className="checkin-header">
           <h1>Class Check-in</h1>
-          <p className="subtitle">Heat Lagos · swipe for last / next</p>
+          <p className="subtitle">Heat Lagos</p>
         </div>
 
         {error && (
@@ -760,7 +760,7 @@ export default function CheckinClient() {
                 <strong>
                   Class {index + 1} of {classes.length}
                 </strong>
-                Swipe left / right to change
+                &lt; previous&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next &gt;
               </div>
               <button
                 type="button"
@@ -935,7 +935,7 @@ export default function CheckinClient() {
             </>
           )}
           <br />
-          Ctrl/Cmd+R refresh · ← → change class
+          Ctrl/Cmd+R refresh
         </p>
       </div>
     </div>
