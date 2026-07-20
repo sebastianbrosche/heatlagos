@@ -2,6 +2,8 @@ type Plan = {
   id?: string;
   name: string;
   price: string;
+  /** Shown with strikethrough when the plan is on sale. */
+  wasPrice?: string;
   unit?: string;
   description: string;
   badge?: string;
@@ -14,13 +16,14 @@ type Plan = {
 const PLANS: Plan[] = [
   {
     id: "cta-intro-offer",
-    name: "Intro Offer",
-    price: "22€",
+    name: "2 for 1 Intro Offer",
+    price: "79€",
     description:
-      "2 classes for the price of 1. The best way to try the studio and experience our classes.",
+      "Two weeks of unlimited access to every class. The best way to try the studio.",
     badge: "Start here",
+    note: "New students",
     highlight: true,
-    href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true",
   },
   {
     id: "cta-12month",
@@ -28,8 +31,6 @@ const PLANS: Plan[] = [
     price: "125€",
     unit: "/month",
     description: "Our lowest monthly rate. Rolling subscription, unlimited classes.",
-    badge: "Best value",
-    highlight: true,
     href: "https://backoffice.bsport.io/customer/payment/pass/751520/?membership=5821&force=true",
   },
   {
@@ -44,9 +45,13 @@ const PLANS: Plan[] = [
   },
   {
     id: "cta-1month",
-    name: "1 Month",
-    price: "160€",
-    description: "One-off monthly unlimited, no subscription commitment.",
+    name: "1 Month Unlimited",
+    price: "99€",
+    wasPrice: "160€",
+    description:
+      "X-mas is July! 30 days unlimited, one-off, no subscription. Expires 31 July. Save 61€.",
+    badge: "Great value",
+    highlight: true,
     href: "https://backoffice.bsport.io/customer/payment/pass/751517/?membership=5821&force=true",
   },
   {
@@ -128,7 +133,18 @@ export default function Memberships() {
               <div className="flex items-baseline justify-between">
                 <h3 className="font-serif text-xl sm:text-2xl">{plan.name}</h3>
               </div>
-              <div className="flex items-baseline gap-1">
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                {plan.wasPrice && (
+                  <span
+                    className={`font-serif text-xl line-through sm:text-2xl ${
+                      plan.highlight
+                        ? "text-stone-dark/45 decoration-stone-dark/40"
+                        : "text-foreground/40 decoration-foreground/35"
+                    }`}
+                  >
+                    {plan.wasPrice}
+                  </span>
+                )}
                 <span className="font-serif text-4xl sm:text-5xl">{plan.price}</span>
                 {plan.unit && (
                   <span className="text-sm opacity-70">{plan.unit}</span>
