@@ -19,6 +19,8 @@ type ClassSummary = {
   endMs: number;
   booked: number;
   capacity: number | null;
+  waitlistCount?: number;
+  overbooked?: boolean;
   teacherName?: string | null;
   coachId?: number | null;
 };
@@ -27,7 +29,16 @@ type Attendee = {
   userId: string;
   bookingId: number;
   name: string;
+  passId?: number | null;
   attendanceBsport?: boolean;
+};
+
+type MemberHit = {
+  userId: string;
+  memberId: number;
+  name: string;
+  email?: string | null;
+  passId?: number | null;
 };
 
 type AttendanceMap = Record<string, "present" | "missing">;
@@ -143,13 +154,19 @@ export default function CheckinClient() {
   const [classes, setClasses] = useState<ClassSummary[]>([]);
   const [index, setIndex] = useState(0);
   const [attendees, setAttendees] = useState<Attendee[]>([]);
+  const [waitlist, setWaitlist] = useState<Attendee[]>([]);
   const [attendance, setAttendance] = useState<AttendanceMap>({});
   const [loadingList, setLoadingList] = useState(true);
   const [loadingClass, setLoadingClass] = useState(false);
+  const [addingId, setAddingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [search, setSearch] = useState("");
+  const [memberQuery, setMemberQuery] = useState("");
+  const [memberHits, setMemberHits] = useState<MemberHit[]>([]);
+  const [memberSearching, setMemberSearching] = useState(false);
+  const [memberSearchError, setMemberSearchError] = useState<string | null>(null);
   const [now, setNow] = useState(() => Date.now());
   const [lastRefresh, setLastRefresh] = useState<Date | null>(null);
+  const memberSearchTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
@@ -216,18 +233,25 @@ export default function CheckinClient() {
       if (!res.ok) throw new Error(`Class ${res.status}`);
       const data = (await res.json()) as {
         attendees: Attendee[];
+        waitlist?: Attendee[];
         class: ClassSummary;
       };
       setAttendees(data.attendees || []);
+      setWaitlist(data.waitlist || []);
 
-      if (data.class?.teacherName) {
+      if (data.class) {
         const patch = (list: ClassSummary[]) =>
           list.map((c) =>
             c.id === classId
               ? {
                   ...c,
-                  teacherName: data.class.teacherName,
-                  coachId: data.class.coachId,
+                  ...data.class,
+                  teacherName: data.class.teacherName ?? c.teacherName,
+                  coachId: data.class.coachId ?? c.coachId,
+                  booked: data.class.booked ?? c.booked,
+                  capacity: data.class.capacity ?? c.capacity,
+                  waitlistCount: data.class.waitlistCount ?? c.waitlistCount,
+                  overbooked: data.class.overbooked ?? c.overbooked,
                 }
               : c
           );
@@ -253,6 +277,7 @@ export default function CheckinClient() {
       if (!silent) {
         setError(e instanceof Error ? e.message : "Failed to load attendees");
         setAttendees([]);
+        setWaitlist([]);
       }
     } finally {
       if (!silent) setLoadingClass(false);
@@ -265,9 +290,52 @@ export default function CheckinClient() {
 
   useEffect(() => {
     if (!currentClass) return;
-    setSearch("");
+    setMemberQuery("");
+    setMemberHits([]);
+    setMemberSearchError(null);
     void loadAttendees(currentClass.id);
   }, [currentClass?.id, loadAttendees]);
+
+  useEffect(() => {
+    if (memberSearchTimer.current) clearTimeout(memberSearchTimer.current);
+    const q = memberQuery.trim();
+    if (q.length < 2) {
+      setMemberHits([]);
+      setMemberSearching(false);
+      setMemberSearchError(null);
+      return;
+    }
+    setMemberSearching(true);
+    setMemberSearchError(null);
+    memberSearchTimer.current = setTimeout(() => {
+      void (async () => {
+        try {
+          const res = await fetch(
+            `${API_BASE}/members?q=${encodeURIComponent(q)}`,
+            { cache: "no-store" }
+          );
+          const data = (await res.json().catch(() => ({}))) as {
+            members?: MemberHit[];
+            error?: string;
+          };
+          if (!res.ok) {
+            throw new Error(data.error || `Search failed (${res.status})`);
+          }
+          setMemberHits(data.members || []);
+        } catch (e) {
+          setMemberHits([]);
+          setMemberSearchError(
+            e instanceof Error ? e.message : "Member search failed"
+          );
+        } finally {
+          setMemberSearching(false);
+        }
+      })();
+    }, 280);
+    return () => {
+      if (memberSearchTimer.current) clearTimeout(memberSearchTimer.current);
+    };
+  }, [memberQuery]);
 
   useEffect(() => {
     if (!currentClass) return;
@@ -355,12 +423,56 @@ export default function CheckinClient() {
     });
   };
 
-  const markAll = (status: "present" | "missing") => {
+  const addToClass = async (
+    person: Pick<Attendee, "userId" | "passId"> & {
+      bookingId?: number;
+      name?: string;
+    }
+  ) => {
     if (!currentClass) return;
-    const next: AttendanceMap = {};
-    for (const a of attendees) next[a.userId] = status;
-    setAttendance(next);
-    saveAttendance(currentClass.id, next);
+    setAddingId(person.userId);
+    setError(null);
+    try {
+      const res = await fetch(`${API_BASE}/add-to-class`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          offerId: currentClass.id,
+          memberId: Number(person.userId),
+          passId: person.passId ?? undefined,
+          waitlistBookingId: person.bookingId,
+        }),
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        error?: string;
+        attendees?: Attendee[];
+        waitlist?: Attendee[];
+        class?: ClassSummary;
+      };
+      if (!res.ok) {
+        throw new Error(data.error || `Add failed (${res.status})`);
+      }
+      if (data.attendees) setAttendees(data.attendees);
+      if (data.waitlist) setWaitlist(data.waitlist);
+      if (data.class) {
+        const patch = (list: ClassSummary[]) =>
+          list.map((c) =>
+            c.id === currentClass.id ? { ...c, ...data.class! } : c
+          );
+        setClasses(patch);
+        setAllClasses(patch);
+      } else {
+        await loadAttendees(currentClass.id, true);
+      }
+      // Clear search after a successful walk-in add
+      setMemberQuery("");
+      setMemberHits([]);
+      setLastRefresh(new Date());
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Failed to add to class");
+    } finally {
+      setAddingId(null);
+    }
   };
 
   const { present, missing } = useMemo(() => {
@@ -373,14 +485,24 @@ export default function CheckinClient() {
     return { present: p, missing: m };
   }, [attendees, attendance]);
 
-  const filtered = useMemo(() => {
-    const q = search.toLowerCase().trim();
-    if (!q) return attendees;
-    return attendees.filter((a) => a.name.toLowerCase().includes(q));
-  }, [attendees, search]);
+  const bookedCount = Math.max(
+    attendees.length,
+    currentClass?.booked ?? 0
+  );
+  const capacity = currentClass?.capacity ?? null;
+  const isOverbooked =
+    capacity != null && bookedCount > capacity
+      ? true
+      : Boolean(currentClass?.overbooked);
 
   const progressPct =
     present + missing > 0 ? Math.round((present / (present + missing)) * 100) : 0;
+
+  // Occupancy fill for the "download bar" feel — can exceed 100% when overbooked
+  const occupancyPct =
+    capacity && capacity > 0
+      ? Math.min(100, Math.round((bookedCount / capacity) * 100))
+      : progressPct;
 
   const canPrev = index > 0;
   const canNext = index < classes.length - 1;
@@ -475,17 +597,30 @@ export default function CheckinClient() {
           margin-bottom: 14px;
           border: 1px solid var(--border);
         }
+        .checkin-class-head {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 12px;
+          margin: 0 0 6px;
+        }
         .checkin-class-name {
           font-family: var(--font-serif), Georgia, serif;
           font-size: 1.35rem;
           font-weight: 400;
           letter-spacing: -0.01em;
-          margin: 0 0 6px;
+          margin: 0;
           line-height: 1.25;
+          flex: 1;
+          min-width: 0;
         }
         .checkin-class-name em {
           font-style: italic;
           color: var(--brand);
+        }
+        .checkin-class-head .checkin-btn {
+          flex-shrink: 0;
+          margin-top: 2px;
         }
         .checkin-class-time {
           font-size: 13px;
@@ -512,6 +647,11 @@ export default function CheckinClient() {
         .checkin-badge.muted {
           background: rgba(255, 255, 255, 0.05);
           color: var(--text-secondary);
+        }
+        .checkin-badge.overbooked {
+          background: rgba(239, 68, 68, 0.18);
+          color: #fca5a5;
+          letter-spacing: 0.08em;
         }
         .checkin-stats {
           display: flex;
@@ -555,46 +695,14 @@ export default function CheckinClient() {
           height: 100%;
           background: linear-gradient(90deg, var(--brand), var(--brand-soft));
           border-radius: 999px;
-          transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s;
         }
-        .checkin-controls {
-          display: flex;
-          gap: 10px;
-          margin-bottom: 14px;
-          flex-wrap: wrap;
+        .checkin-progress.overbooked > div {
+          background: linear-gradient(90deg, #ef4444, #f87171);
         }
-        .checkin-search {
-          flex: 1;
-          min-width: 160px;
-          position: relative;
-        }
-        .checkin-search input {
-          width: 100%;
-          padding: 11px 14px 11px 40px;
-          border: 1px solid var(--border);
-          border-radius: var(--radius-sm);
-          font-size: 14px;
-          font-family: inherit;
-          background: var(--surface);
-          color: var(--text);
-        }
-        .checkin-search input::placeholder {
-          color: var(--text-secondary);
-        }
-        .checkin-search input:focus {
-          outline: none;
-          border-color: rgba(252, 150, 106, 0.55);
-          box-shadow: 0 0 0 3px rgba(252, 150, 106, 0.12);
-        }
-        .checkin-search svg {
-          position: absolute;
-          left: 13px;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 16px;
-          height: 16px;
-          color: var(--text-secondary);
-          pointer-events: none;
+        .checkin-progress.overbooked {
+          background: rgba(239, 68, 68, 0.18);
+          box-shadow: inset 0 0 0 1px rgba(239, 68, 68, 0.25);
         }
         .checkin-btn {
           padding: 10px 16px;
@@ -624,6 +732,23 @@ export default function CheckinClient() {
         }
         .checkin-btn.primary:hover {
           background: var(--brand-soft);
+        }
+        .checkin-btn.primary:disabled {
+          opacity: 0.5;
+          cursor: default;
+        }
+        .checkin-section-label {
+          margin: 18px 0 8px;
+          padding: 0 4px;
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.16em;
+          color: var(--text-secondary);
+        }
+        .checkin-section-label strong {
+          color: var(--brand);
+          font-weight: 700;
         }
         .checkin-list {
           background: var(--surface);
@@ -706,6 +831,59 @@ export default function CheckinClient() {
           color: var(--text-secondary);
           margin-top: 18px;
           line-height: 1.5;
+        }
+        .checkin-add-member {
+          margin-top: 14px;
+          padding: 16px 16px 14px;
+          border-radius: var(--radius);
+          background: #342c27;
+          border: 1px solid rgba(252, 150, 106, 0.18);
+        }
+        .checkin-add-member .checkin-section-label {
+          margin: 0 0 10px;
+          padding: 0;
+        }
+        .checkin-add-input {
+          width: 100%;
+          padding: 12px 14px;
+          border-radius: var(--radius-sm);
+          border: 1px solid var(--border);
+          background: rgba(0, 0, 0, 0.22);
+          color: var(--text);
+          font-size: 15px;
+          font-family: inherit;
+          outline: none;
+        }
+        .checkin-add-input::placeholder {
+          color: var(--text-secondary);
+        }
+        .checkin-add-input:focus {
+          border-color: rgba(252, 150, 106, 0.5);
+        }
+        .checkin-add-hint {
+          margin: 8px 0 0;
+          font-size: 12px;
+          color: var(--text-secondary);
+        }
+        .checkin-add-results {
+          margin-top: 10px;
+          border-radius: var(--radius-sm);
+          overflow: hidden;
+          border: 1px solid var(--border);
+          background: rgba(0, 0, 0, 0.18);
+        }
+        .checkin-add-results .checkin-item {
+          background: transparent;
+        }
+        .checkin-add-results .checkin-name small {
+          display: block;
+          font-size: 11px;
+          font-weight: 400;
+          color: var(--text-secondary);
+          margin-top: 2px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
         .checkin-skeleton {
           display: flex;
@@ -802,15 +980,24 @@ export default function CheckinClient() {
           <>
             {currentClass && (
               <div className="checkin-class-card">
-                <div className="checkin-class-name">
-                  {currentClass.teacherName ? (
-                    <>
-                      {currentClass.name}
-                      <em>, with {currentClass.teacherName}</em>
-                    </>
-                  ) : (
-                    currentClass.name
-                  )}
+                <div className="checkin-class-head">
+                  <div className="checkin-class-name">
+                    {currentClass.teacherName ? (
+                      <>
+                        {currentClass.name}
+                        <em>, with {currentClass.teacherName}</em>
+                      </>
+                    ) : (
+                      currentClass.name
+                    )}
+                  </div>
+                  <button
+                    type="button"
+                    className="checkin-btn secondary"
+                    onClick={() => void loadAttendees(currentClass.id)}
+                  >
+                    Refresh
+                  </button>
                 </div>
                 <div className="checkin-class-time">
                   {formatClassTime(
@@ -822,10 +1009,20 @@ export default function CheckinClient() {
                   <span className="checkin-badge">
                     {classStatusLabel(currentClass, now)}
                   </span>
-                  {currentClass.capacity != null && (
+                  {capacity != null && (
+                    <span
+                      className={`checkin-badge ${
+                        isOverbooked ? "overbooked" : "muted"
+                      }`}
+                    >
+                      {isOverbooked
+                        ? `⚠️ ${bookedCount}/${capacity} OVERBOOKED!`
+                        : `${bookedCount}/${capacity} booked`}
+                    </span>
+                  )}
+                  {waitlist.length > 0 && (
                     <span className="checkin-badge muted">
-                      {attendees.length || currentClass.booked}/
-                      {currentClass.capacity} booked
+                      {waitlist.length} waitlist
                     </span>
                   )}
                 </div>
@@ -838,63 +1035,31 @@ export default function CheckinClient() {
                     <span className="dot" />
                     Missing <span className="n">{missing}</span>
                   </div>
-                  <div className="checkin-progress">
-                    <div style={{ width: `${progressPct}%` }} />
+                  <div
+                    className={`checkin-progress${
+                      isOverbooked ? " overbooked" : ""
+                    }`}
+                    title={
+                      isOverbooked
+                        ? `Overbooked ${bookedCount}/${capacity}`
+                        : capacity != null
+                          ? `${bookedCount}/${capacity} booked · check-in ${progressPct}%`
+                          : `Check-in ${progressPct}%`
+                    }
+                  >
+                    <div
+                      style={{
+                        width: `${
+                          isOverbooked
+                            ? Math.max(occupancyPct, progressPct, 100)
+                            : Math.max(occupancyPct, progressPct)
+                        }%`,
+                      }}
+                    />
                   </div>
                 </div>
               </div>
             )}
-
-            <div className="checkin-controls">
-              <div className="checkin-search">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  aria-hidden
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-                <input
-                  type="search"
-                  placeholder="Search attendees…"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  autoComplete="off"
-                />
-              </div>
-              <button
-                type="button"
-                className="checkin-btn secondary"
-                onClick={() => markAll("present")}
-              >
-                All Present
-              </button>
-              <button
-                type="button"
-                className="checkin-btn secondary"
-                onClick={() => markAll("missing")}
-              >
-                All Missing
-              </button>
-              <button
-                type="button"
-                className="checkin-btn secondary"
-                onClick={() =>
-                  currentClass
-                    ? void loadAttendees(currentClass.id)
-                    : void loadClassList()
-                }
-              >
-                Refresh
-              </button>
-            </div>
 
             {loadingClass ? (
               <div className="checkin-list">
@@ -914,36 +1079,150 @@ export default function CheckinClient() {
                   </div>
                 ))}
               </div>
-            ) : filtered.length === 0 ? (
-              <div className="checkin-empty">
-                {search
-                  ? "No matching attendees"
-                  : "No attendees booked for this class"}
-              </div>
             ) : (
-              <div className="checkin-list">
-                {filtered.map((a) => {
-                  const status = attendance[a.userId] || "missing";
-                  return (
-                    <div className="checkin-item" key={a.userId}>
-                      <div className="checkin-avatar">
-                        {getInitials(a.name)}
+              <>
+                <div className="checkin-section-label">
+                  Attendees{" "}
+                  <strong>{attendees.length}</strong>
+                  {capacity != null ? ` / ${capacity}` : null}
+                </div>
+                {attendees.length === 0 ? (
+                  <div className="checkin-empty">
+                    No attendees booked for this class
+                  </div>
+                ) : (
+                  <div className="checkin-list">
+                    {attendees.map((a) => {
+                      const status = attendance[a.userId] || "missing";
+                      return (
+                        <div className="checkin-item" key={a.userId}>
+                          <div className="checkin-avatar">
+                            {getInitials(a.name)}
+                          </div>
+                          <div className="checkin-name">{a.name}</div>
+                          <button
+                            type="button"
+                            className={`checkin-status ${status}`}
+                            onClick={() => toggle(a.userId)}
+                            aria-label={`Mark ${a.name} ${
+                              status === "present" ? "missing" : "present"
+                            }`}
+                          >
+                            {status === "present" ? "Present" : "Missing"}
+                          </button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+
+                <div className="checkin-section-label">
+                  Waitlist <strong>{waitlist.length}</strong>
+                </div>
+                {waitlist.length === 0 ? (
+                  <div className="checkin-empty" style={{ padding: "28px 24px" }}>
+                    Nobody on the waitlist
+                  </div>
+                ) : (
+                  <div className="checkin-list">
+                    {waitlist.map((w) => (
+                      <div className="checkin-item" key={`wl-${w.userId}`}>
+                        <div className="checkin-avatar">
+                          {getInitials(w.name)}
+                        </div>
+                        <div className="checkin-name">{w.name}</div>
+                        <button
+                          type="button"
+                          className="checkin-btn primary"
+                          disabled={addingId === w.userId}
+                          onClick={() => void addToClass(w)}
+                          aria-label={`Add ${w.name} to class`}
+                        >
+                          {addingId === w.userId ? "Adding…" : "Add to class"}
+                        </button>
                       </div>
-                      <div className="checkin-name">{a.name}</div>
-                      <button
-                        type="button"
-                        className={`checkin-status ${status}`}
-                        onClick={() => toggle(a.userId)}
-                        aria-label={`Mark ${a.name} ${
-                          status === "present" ? "missing" : "present"
-                        }`}
-                      >
-                        {status === "present" ? "Present" : "Missing"}
-                      </button>
+                    ))}
+                  </div>
+                )}
+
+                <div className="checkin-add-member">
+                  <div className="checkin-section-label">
+                    Add member
+                  </div>
+                  <input
+                    type="search"
+                    className="checkin-add-input"
+                    placeholder="Search name or email"
+                    value={memberQuery}
+                    onChange={(e) => setMemberQuery(e.target.value)}
+                    autoComplete="off"
+                    enterKeyHint="search"
+                    aria-label="Search members to add"
+                  />
+                  {memberQuery.trim().length > 0 &&
+                    memberQuery.trim().length < 2 && (
+                      <p className="checkin-add-hint">Type at least 2 characters</p>
+                    )}
+                  {memberSearching && (
+                    <p className="checkin-add-hint">Searching…</p>
+                  )}
+                  {memberSearchError && (
+                    <p className="checkin-add-hint" style={{ color: "var(--missing)" }}>
+                      {memberSearchError}
+                    </p>
+                  )}
+                  {!memberSearching &&
+                    memberQuery.trim().length >= 2 &&
+                    !memberSearchError &&
+                    memberHits.length === 0 && (
+                      <p className="checkin-add-hint">No members found</p>
+                    )}
+                  {memberHits.length > 0 && (
+                    <div className="checkin-add-results">
+                      {memberHits.map((m) => {
+                        const alreadyIn = attendees.some(
+                          (a) => a.userId === m.userId
+                        );
+                        return (
+                          <div className="checkin-item" key={`add-${m.userId}`}>
+                            <div className="checkin-avatar">
+                              {getInitials(m.name)}
+                            </div>
+                            <div className="checkin-name">
+                              {m.name}
+                              {m.email ? <small>{m.email}</small> : null}
+                            </div>
+                            <button
+                              type="button"
+                              className="checkin-btn primary"
+                              disabled={
+                                alreadyIn || addingId === m.userId
+                              }
+                              onClick={() =>
+                                void addToClass({
+                                  userId: m.userId,
+                                  passId: m.passId,
+                                })
+                              }
+                              aria-label={
+                                alreadyIn
+                                  ? `${m.name} already in class`
+                                  : `Add ${m.name} to class`
+                              }
+                            >
+                              {alreadyIn
+                                ? "In class"
+                                : addingId === m.userId
+                                  ? "Adding…"
+                                  : "Add"}
+                            </button>
+                          </div>
+                        );
+                      })}
                     </div>
-                  );
-                })}
-              </div>
+                  )}
+                </div>
+              </>
             )}
           </>
         )}
