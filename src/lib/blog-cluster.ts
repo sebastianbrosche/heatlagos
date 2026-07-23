@@ -48,14 +48,23 @@ export type ClusterConfig = {
  * + near-me guides; class product pages sit one hop away.
  */
 export const BLOG_CLUSTER: Record<string, ClusterConfig> = {
+  "bikram-yoga-lagos-guide": {
+    landings: [LANDINGS.bikram, LANDINGS.yoga, LANDINGS.intro],
+    related: [
+      { href: "/blog/hot-yoga-lagos", label: "Hot yoga in Lagos" },
+      { href: "/blog/hot-yoga-vs-infrared", label: "Hot yoga vs infrared" },
+      { href: "/blog/first-hot-yoga-class-lagos", label: "First hot yoga class in Lagos" },
+      { href: "/blog/best-yoga-studios-lagos", label: "Best yoga studios in Lagos" },
+    ],
+  },
   "hot-yoga-lagos": {
     landings: [LANDINGS.yoga, LANDINGS.infrared, LANDINGS.intro],
     related: [
       { href: "/blog/first-hot-yoga-class-lagos", label: "First hot yoga class in Lagos" },
       { href: "/blog/hot-yoga-vs-infrared", label: "Hot yoga vs infrared" },
+      { href: "/blog/bikram-yoga-lagos-guide", label: "Bikram yoga in Lagos, explained" },
       { href: "/blog/yoga-near-me-lagos", label: "Yoga classes near me in Lagos" },
       { href: "/blog/best-yoga-studios-lagos", label: "Best yoga studios in Lagos" },
-      { href: "/blog/yoga-lagos-guide", label: "Yoga Lagos guide" },
     ],
   },
   "first-hot-yoga-class-lagos": {
@@ -63,7 +72,7 @@ export const BLOG_CLUSTER: Record<string, ClusterConfig> = {
     related: [
       { href: "/blog/hot-yoga-lagos", label: "Hot yoga in Lagos" },
       { href: "/blog/hot-yoga-vs-infrared", label: "Hot yoga vs infrared" },
-      { href: "/blog/yoga-near-me-lagos", label: "Yoga near me in Lagos" },
+      { href: "/blog/bikram-yoga-lagos-guide", label: "Bikram yoga in Lagos, explained" },
       { href: "/blog/pilates-for-beginners-lagos", label: "Pilates for beginners" },
     ],
   },

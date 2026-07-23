@@ -22,6 +22,13 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "bikram-yoga-lagos-guide",
+    title: "Bikram Yoga in Lagos: What It Is and How It Differs from Regular Yoga",
+    excerpt:
+      "The facts behind the 26&2 sequence, the fixed 40°C room, and how Bikram really differs from regular yoga. Plus where to practise it in Lagos with Nadine on Tuesday mornings.",
+    date: "July 23, 2026",
+  },
+  {
     slug: "infrared-pilates-vs-regular",
     title: "Infrared Pilates vs Regular Pilates: What Actually Changes",
     excerpt:

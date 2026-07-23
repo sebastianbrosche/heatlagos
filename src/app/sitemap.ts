@@ -50,6 +50,7 @@ const BLOG_POSTS = [
   // were live but missing from sitemap (Y4B-916)
   "infrared-pilates-vs-regular",
   "first-hot-yoga-class-lagos",
+  "bikram-yoga-lagos-guide",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
