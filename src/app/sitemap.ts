@@ -19,6 +19,8 @@ const LANDINGS: { path: string; priority: number; changeFrequency: MetadataRoute
   // Canonical offer pages only (A/B letter variants are noindex + kept out of sitemap)
   { path: "/hot-yoga-pilates-intro-offer", priority: 0.9, changeFrequency: "weekly" },
   { path: "/hot-yoga-pilates-vacation", priority: 0.9, changeFrequency: "weekly" },
+  // GBP / Maps booking target (domain shows as heatlagos.com; page owns the choice UI)
+  { path: "/book", priority: 0.95, changeFrequency: "weekly" },
   { path: "/blog", priority: 0.9, changeFrequency: "weekly" },
 ];
 

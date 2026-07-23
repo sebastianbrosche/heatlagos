@@ -40,7 +40,11 @@ Secondary (keep / add if missing):
 Set to: `https://www.heatlagos.com/`
 
 ### 3. Booking / appointment link
-Point to intro or schedule: `https://www.heatlagos.com/hot-yoga-pilates-intro-offer` or `https://www.heatlagos.com/#book`
+Google only shows the **domain** (no custom labels). Do **not** use `backoffice.bsport.io`.
+
+**Use:** `https://www.heatlagos.com/book`
+
+That page is built for Maps → GBP traffic: 2-week intro (locals), vacation week (visitors), then schedule widget for single classes.
 
 ### 4. Services (short, local keywords)
 | Service | Description seed |
