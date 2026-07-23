@@ -3,12 +3,13 @@ const ITEMS = [
     label: "Single Drop-in",
     price: "22€",
     desc: "One class, no commitment. Book your spot for any class on the schedule.",
-    href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
+    // Same product as Memberships Single Drop-in (was 751510; keep one source of truth)
+    href: "https://backoffice.bsport.io/customer/payment/pass/766017/?membership=5821&force=true",
     cta: "Buy drop-in",
   },
   {
     label: "Towel Rental",
-    price: "2€",
+    price: "3€",
     desc: "Fresh towel for your class. Add it at checkout or grab one at the studio.",
     href: "https://backoffice.bsport.io/customer/payment/shop-item/462540/?membership=5821",
     cta: "Rent a towel",

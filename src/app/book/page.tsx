@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
 import Memberships from "@/components/Memberships";
-import QuickBuy from "@/components/QuickBuy";
 import Schedule from "@/components/Schedule";
 
 const URL = "https://www.heatlagos.com/book";
@@ -11,7 +10,7 @@ const URL = "https://www.heatlagos.com/book";
 export const metadata: Metadata = {
   title: "Book a Class or Pass - Heat Lagos",
   description:
-    "Buy intro, memberships, vacation week, class packs, drop-ins and more. Or open the schedule and book a single class at Heat Lagos, Lagos Portugal.",
+    "Buy intro, memberships, vacation week, class packs and drop-ins. Or open the schedule and book a single class at Heat Lagos, Lagos Portugal.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -21,13 +20,13 @@ export const metadata: Metadata = {
     url: URL,
     title: "Book Heat Lagos | Prices, Passes and Schedule",
     description:
-      "Same prices as the homepage. Intro, memberships, vacation week, 10-pack, drop-in, towel, and class schedule.",
+      "Homepage membership prices for Maps and Google booking: intro, monthly, yearly, packs, vacation week, drop-in, plus class schedule.",
   },
 };
 
 /**
- * GBP / Maps booking target. Same payment options as the homepage
- * (Memberships + QuickBuy) plus the live schedule widget.
+ * GBP / Maps booking target.
+ * Passes = same Memberships grid as the homepage (no towel / QuickBuy).
  */
 export default function BookPage() {
   return (
@@ -44,15 +43,13 @@ export default function BookPage() {
               Prices and booking
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/80 sm:text-xl">
-              Same options as the Heat homepage. Tap a pass to check out, or
-              scroll to the schedule for a single class. English teachers.
-              Infrared studio in central Lagos.
+              Same membership prices as the Heat homepage. Tap a pass to check
+              out, or scroll to the schedule for a single class.
             </p>
           </div>
         </section>
 
         <Memberships />
-        <QuickBuy />
 
         <section className="px-5 pb-20 sm:px-6 sm:pb-24 lg:px-20 lg:pb-32">
           <div className="mx-auto max-w-[1400px] border-t border-white/10 pt-14 sm:pt-16">
