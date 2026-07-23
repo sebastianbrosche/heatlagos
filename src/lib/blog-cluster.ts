@@ -180,7 +180,7 @@ export const BLOG_CLUSTER: Record<string, ClusterConfig> = {
     related: [
       { href: "/blog/weighted-pilates-dumbbells", label: "Weighted Pilates with dumbbells" },
       { href: "/blog/what-is-sculpt-barre", label: "What is sculpt barre" },
-      { href: "/blog/pilates-hiit-explained", label: "Pilates HIIT explained" },
+      { href: "/blog/sculpt-hiit-class", label: "Sculpt HIIT explained" },
       { href: "/blog/sculpt-class-lagos", label: "Sculpt class in Lagos" },
     ],
   },
@@ -197,12 +197,12 @@ export const BLOG_CLUSTER: Record<string, ClusterConfig> = {
     landings: [LANDINGS.pilates, LANDINGS.infrared, LANDINGS.intro],
     related: [
       { href: "/blog/sculpt-class-lagos", label: "Sculpt class in Lagos" },
-      { href: "/blog/pilates-hiit-explained", label: "Pilates HIIT explained" },
+      { href: "/blog/sculpt-hiit-class", label: "Sculpt HIIT explained" },
       { href: "/blog/weighted-pilates-dumbbells", label: "Weighted Pilates with dumbbells" },
       { href: "/blog/boutique-fitness-lagos", label: "Boutique fitness in Lagos" },
     ],
   },
-  "pilates-hiit-explained": {
+  "sculpt-hiit-class": {
     landings: [LANDINGS.pilates, LANDINGS.infrared, LANDINGS.intro],
     related: [
       { href: "/blog/sculpt-class-lagos", label: "Sculpt class in Lagos" },

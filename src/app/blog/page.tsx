@@ -36,10 +36,10 @@ const posts = [
     date: "July 23, 2026",
   },
   {
-    slug: "pilates-hiit-explained",
-    title: "Pilates HIIT: What Cardio-Heavy Pilates Actually Is",
+    slug: "sculpt-hiit-class",
+    title: "Sculpt HIIT: A Faster, Interval-Based Take on Sculpt",
     excerpt:
-      "Pilates HIIT applies high-intensity interval structure to Pilates-based movement for a cardio and core workout. What it is, how the intervals work, and who it suits.",
+      "Sculpt HIIT runs faster than a normal sculpt class, on 40 seconds of work and 20 of rest, built around rep pyramids. What that changes and who it suits.",
     date: "July 23, 2026",
   },
   {

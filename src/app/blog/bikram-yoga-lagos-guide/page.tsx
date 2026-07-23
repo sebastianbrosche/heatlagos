@@ -128,14 +128,22 @@ export default function BikramYogaLagosGuide() {
       <section>
         <h2>Bikram in Lagos, with Nadine</h2>
         <p>
-          At Heat Lagos, traditional Bikram (the full 26&2 sequence) is taught by
-          Nadine every Tuesday morning. Nadine is a world-travelling teacher with
-          more than 19 years of experience who runs dedicated Bikram retreats, so
-          the Tuesday class is the real, traditional method rather than a loose
-          hot-yoga interpretation. Whether you are an experienced Bikram
-          practitioner keeping your streak going while in the Algarve, or trying
-          the 26&2 for the first time, it is the same sequence you would find in a
-          dedicated Bikram studio anywhere in the world.
+          At Heat Lagos, the full 26&2 sequence is taught by Nadine every Tuesday
+          morning. Nadine is a world-travelling teacher with more than 19 years of
+          experience who runs dedicated Bikram retreats, so the Tuesday class is
+          the real method rather than a loose hot-yoga interpretation. Whether you
+          are an experienced practitioner keeping your streak going while in the
+          Algarve or trying the 26&2 for the first time, it is the same sequence
+          you would find in a dedicated Bikram studio anywhere in the world.
+        </p>
+        <p>
+          One thing worth knowing before you come: we run the room at around 32°C
+          rather than the traditional 40°C, and the heat is infrared. So it is not
+          as hot as a classic Bikram studio. It is still warm, still opens the body
+          up, and for most people it is plenty; the infrared warmth reaches the
+          muscles directly and the lower temperature makes the 90 minutes far more
+          breathable, which is a fair trade if the traditional heat has ever put
+          you off.
         </p>
         <p>
           If you want to try it, the 2-week Intro Offer covers every class on the

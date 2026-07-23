@@ -56,7 +56,7 @@ const BLOG_POSTS = [
   "2027-boutique-fitness-trends-heavy-weights",
   "weighted-pilates-dumbbells",
   "what-is-sculpt-barre",
-  "pilates-hiit-explained",
+  "sculpt-hiit-class",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
