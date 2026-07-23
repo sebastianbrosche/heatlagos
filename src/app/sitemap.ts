@@ -52,6 +52,9 @@ const BLOG_POSTS = [
   "first-hot-yoga-class-lagos",
   "bikram-yoga-lagos-guide",
   "2027-boutique-fitness-trends-heavy-weights",
+  "weighted-pilates-dumbbells",
+  "what-is-sculpt-barre",
+  "pilates-hiit-explained",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

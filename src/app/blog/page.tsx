@@ -22,6 +22,27 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "weighted-pilates-dumbbells",
+    title: "Weighted Pilates: Can You Build Muscle With Pilates and Dumbbells?",
+    excerpt:
+      "Weighted Pilates adds dumbbells to the mat. The science on whether 5-10kg actually builds muscle, how it differs from classical Pilates, and who it is for.",
+    date: "July 23, 2026",
+  },
+  {
+    slug: "what-is-sculpt-barre",
+    title: "What Is Sculpt Barre? The Barre and Strength Hybrid, Explained",
+    excerpt:
+      "Ballet-barre technique plus light weights for a low-impact, high-rep strength class. What sculpt barre is, how it differs from Pilates and classical barre, and who it suits.",
+    date: "July 23, 2026",
+  },
+  {
+    slug: "pilates-hiit-explained",
+    title: "Pilates HIIT: What Cardio-Heavy Pilates Actually Is",
+    excerpt:
+      "Pilates HIIT applies high-intensity interval structure to Pilates-based movement for a cardio and core workout. What it is, how the intervals work, and who it suits.",
+    date: "July 23, 2026",
+  },
+  {
     slug: "2027-boutique-fitness-trends-heavy-weights",
     title: "2027 Boutique Fitness Trends: Pilates Is Merging With Heavy Weights",
     excerpt:
