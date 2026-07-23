@@ -6,26 +6,25 @@ function Paragraphs() {
   return (
     <>
       <p className="text-lg leading-relaxed lg:text-xl">
-        Heat Lagos was born out of years of teaching, training and a genuine
-        love for what movement can do to a person - not just physically, but in
-        the way they carry themselves, the way they feel in their own skin, the
-        way they come to know themselves a little better.
+        Heat Lagos grew out of years of teaching and training, and a real love
+        for what good movement does for people. It goes beyond the physical
+        side of it, since over time the way you move tends to change how you
+        carry yourself and how at home you feel in your own body.
       </p>
       <p className="leading-relaxed">
-        We opened this studio because we believe the right space and the right
-        guidance can genuinely shift something in a person.
+        We opened the studio because the right space and good guidance genuinely
+        help people move and feel better.
       </p>
       <p className="leading-relaxed">
-        Every class at Heat Lagos is held in our infrared-heated studio, taught
-        by experienced, passionate teachers who care about more than just
-        getting you through the hour. We are here to help you move better,
-        feel stronger and become more aware of your body and what it&apos;s
-        telling you. That kind of awareness has a way of reaching far beyond
-        the mat.
+        Every class is held in our infrared-heated room and taught by
+        experienced teachers who care about more than getting you through the
+        hour. The aim is fairly simple: help you move better, feel stronger, and
+        get a bit more tuned in to what your body is telling you. That kind of
+        awareness has a way of carrying over into the rest of life too.
       </p>
       <p className="leading-relaxed">
-        Come curious. Come tired. Come however you arrive. There is a place
-        for you here.
+        However you turn up, curious or tired or somewhere in between, there is
+        a place for you here.
       </p>
     </>
   );
