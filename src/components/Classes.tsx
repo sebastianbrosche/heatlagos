@@ -24,7 +24,7 @@ const CATEGORIES: Category[] = [
         name: "Heat Pilates",
         duration: "50 min",
         description:
-          "Slow, precise and quietly powerful. Heat Pilates builds deep strength through intentional mat work that leaves your whole body feeling more connected, more capable and genuinely good.",
+          "Slow, precise mat work in the infrared heat. Heat Pilates builds deep, controlled strength, and most people leave feeling more connected and capable in how they move.",
         image: "/pilates-ball-3.jpg",
       },
     ],
@@ -37,21 +37,21 @@ const CATEGORIES: Category[] = [
         name: "Heat Sculpt",
         duration: "50 min",
         description:
-          "Weights, resistance props and infrared heat. A full-body strength class that toness, energises and leaves you with that particular kind of satisfaction that only comes from working hard and doing it well.",
+          "A full-body strength class using weights and resistance props in the infrared heat. It tones and builds strength, and it is hard work in the way that feels good once you are done.",
         image: "/Sculpt.jpg",
       },
       {
         name: "Heat Power",
         duration: "60 min",
         description:
-          "Not a complicated class. But a challenging one. Physically demanding in the best way - and it meets you exactly where you are. Show up, move, breathe. Let the class take you somewhere in yourself you didn't know existed.",
+          "A simple class, but a challenging one. It is physically demanding in a good way, and it meets you where you are on the day. You show up, move and breathe, and most people leave having worked harder than they expected to.",
         image: "/Power.jpg",
       },
       {
         name: "Heat Flow",
         duration: "60 min",
         description:
-          "Creative, connected sequences led by the breath. Warm, fluid and grounding, with enough space inside each class to arrive, settle, and actually feel the practice.",
+          "Breath-led sequences that stay warm and fluid, with enough space in each class to settle in and actually feel the practice rather than rush through it.",
         image: "/heat%20flow.JPG",
       },
     ],
@@ -64,21 +64,21 @@ const CATEGORIES: Category[] = [
         name: "Heat Mobility",
         duration: "45 min",
         description:
-          "Thoughtful, targeted work for the joints and surrounding tissue. For anyone who wants to move with more ease, feel less held back, and build a sense of freedom in their body that carries into everything else they do.",
+          "Targeted work for the joints and the tissue around them. It suits anyone who wants to move with more ease and feel a bit less restricted, and that tends to carry over into everything else you do.",
         image: "/Mobility.jpg",
       },
       {
         name: "Heat Recovery",
         duration: "45 min",
         description:
-          "The full reset. Recovery moves gently through mobility work, breathwork, long yin holds and guided deep rest, layered together so your body and mind can truly let go. You will leave feeling softer, quieter and genuinely restored.",
+          "A gentle reset. Recovery works through soft mobility, breathwork, long yin holds and guided rest, so the body and mind can properly switch off. Most people leave feeling calmer and genuinely rested.",
         image: "/Recovery.jpg",
       },
       {
         name: "Heat Yin",
         duration: "60 min",
         description:
-          "Long, still holds that reach the deeper layers of the body. Meditative, unhurried and quietly profound. A genuinely good reason to slow down.",
+          "Long, still holds that reach the deeper layers of the body. It is slow and meditative, and a genuinely good reason to actually slow down for an hour.",
         image: "/yin-stine.jpg",
       },
     ],

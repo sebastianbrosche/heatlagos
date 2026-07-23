@@ -16,7 +16,7 @@ export default function Memberships() {
           </h2>
           <p className="mt-2 max-w-2xl text-foreground/70">
             Drop in once, stay for the season, or make Heat part of your week.
-            All memberships include access to every class - Pilates, Yoga,
+            All memberships include access to every class: Pilates, Yoga,
             Sculpt, Mobility, Recovery and Yin.
           </p>
         </div>
