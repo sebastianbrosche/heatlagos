@@ -22,7 +22,7 @@ const LANDINGS: { path: string; priority: number; changeFrequency: MetadataRoute
   { path: "/blog", priority: 0.9, changeFrequency: "weekly" },
 ];
 
-/** All blog posts under src/app/blog/*/page.tsx */
+// All blog posts under src/app/blog/<slug>/page.tsx
 const BLOG_POSTS = [
   "mobility-class-what-to-expect",
   "sculpt-class-lagos",
