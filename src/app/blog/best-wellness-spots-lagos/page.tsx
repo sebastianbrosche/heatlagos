@@ -4,10 +4,6 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/best-wellness-spots-lagos";
 
 export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
   title: "10 Best Wellness Spots in Lagos for Yoga, Pilates and Recovery",
   description:
     "The top wellness spots in Lagos, Portugal. Yoga, pilates, massage, sauna, and recovery - ranked by what each offers and who it suits.",

@@ -51,10 +51,15 @@ export default function PilatesNearMeLagos() {
       <section>
         <h2>Mat Pilates in Lagos — Heat Lagos</h2>
         <p>
-          Heat Lagos is a purpose-built mat Pilates and yoga studio in central
-          Lagos, heated with infrared panels. It runs a full weekly schedule of
-          Pilates, Sculpt, yoga, and mobility classes with qualified instructors
-          in small groups.
+          Heat Lagos is a purpose-built mat{" "}
+          <a href="/pilates-lagos-portugal">Pilates studio in Lagos</a>, heated
+          with infrared panels. It runs a full weekly schedule of Pilates,{" "}
+          <a href="/blog/sculpt-class-lagos">Sculpt</a>, yoga, and{" "}
+          <a href="/mobility-class-lagos">mobility</a> with qualified instructors
+          in small groups. New to the practice? Start with{" "}
+          <a href="/blog/pilates-for-beginners-lagos">Pilates for beginners</a>
+          {" "}or compare{" "}
+          <a href="/blog/infrared-pilates-vs-regular">infrared vs regular Pilates</a>.
         </p>
         <p>
           Classes are 50 to 60 minutes. The infrared heating system runs the

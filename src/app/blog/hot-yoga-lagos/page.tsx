@@ -93,9 +93,15 @@ export default function HotYogaLagos() {
         <h2>Heated yoga and Pilates classes in Lagos</h2>
         <p>
           Heat Lagos is the only infrared-heated studio in the Algarve. The
-          schedule includes hot yoga, Pilates, Sculpt, and mobility classes, all
-          in the same infrared environment. Classes run throughout the week with
-          morning and evening slots available.
+          schedule includes{" "}
+          <a href="/yoga-lagos-portugal">yoga classes in Lagos</a>,{" "}
+          <a href="/pilates-lagos-portugal">Pilates</a>, Sculpt, and{" "}
+          <a href="/mobility-class-lagos">mobility</a>, all in the same infrared
+          environment. See also our{" "}
+          <a href="/blog/first-hot-yoga-class-lagos">first hot yoga class guide</a>
+          {" "}and{" "}
+          <a href="/blog/hot-yoga-vs-infrared">hot yoga vs infrared comparison</a>.
+          Classes run throughout the week with morning and evening slots available.
         </p>
         <p>
           The studio is in central Lagos, easy to reach from anywhere in the

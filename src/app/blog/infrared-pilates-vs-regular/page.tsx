@@ -4,10 +4,6 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/infrared-pilates-vs-regular";
 
 export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
   title: "Infrared Pilates vs Regular Pilates: What Actually Changes",
   description:
     "Infrared Pilates warms muscles from the inside at about 30C. Regular Pilates runs cool. Here is what that means for strength, sweat, recovery, and which class to book in Lagos.",

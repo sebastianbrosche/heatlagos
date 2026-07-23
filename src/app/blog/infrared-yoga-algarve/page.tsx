@@ -4,10 +4,6 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/infrared-yoga-algarve";
 
 export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
   title: "Where to Find the Best Infrared Yoga and Pilates in the Algarve",
   description:
     "A guide to infrared-heated yoga and pilates across the Algarve. Where to find it, how it works, and what the alternatives are.",

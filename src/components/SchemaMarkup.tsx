@@ -41,6 +41,78 @@ const STUDIO = {
   sameAs: [
     "https://www.instagram.com/heat_lagos/",
     "https://www.facebook.com/profile.php?id=61588436283019",
+    "https://maps.google.com/?cid=12993217545226822724",
+  ],
+  hasMap: "https://maps.google.com/?cid=12993217545226822724",
+  // Matches live Google Business Profile (Places API 2026-07-23)
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "32",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Monday",
+      opens: "08:00",
+      closes: "10:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Monday",
+      opens: "17:30",
+      closes: "21:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Tuesday",
+      opens: "07:30",
+      closes: "11:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Tuesday",
+      opens: "16:30",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Wednesday",
+      opens: "09:30",
+      closes: "11:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Wednesday",
+      opens: "16:30",
+      closes: "18:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Thursday",
+      opens: "07:30",
+      closes: "11:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: "08:30",
+      closes: "11:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "08:00",
+      closes: "12:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "09:30",
+      closes: "11:30",
+    },
   ],
   knowsLanguage: ["en"],
   amenityFeature: [

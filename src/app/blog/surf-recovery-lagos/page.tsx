@@ -4,10 +4,6 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/surf-recovery-lagos";
 
 export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
   title: "10 Best Surf Recovery Classes in Lagos, Portugal (2026)",
   description:
     "The best yoga, pilates, massage, and recovery options in Lagos for surfers. Where to recover between sessions and prevent injury.",

@@ -4,10 +4,6 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/best-pilates-studios-lagos";
 
 export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
   title: "TOP 5 Pilates Studios in Lagos, Portugal (2026)",
   description:
     "A curated guide to the best pilates studios in Lagos, Portugal. No sponsorships - just what each studio does best and who it suits.",
@@ -104,7 +100,11 @@ export default function BestPilatesStudiosLagos() {
           €22. Vacation Week €59 for 7 days. Monthly memberships from €125.
         </p>
         <p>
-          <a href="https://heatlagos.com">Book a class at Heat Lagos</a>
+          <a href="/pilates-lagos-portugal">Pilates at Heat Lagos</a>
+          {" · "}
+          <a href="/blog/pilates-near-me-lagos">Pilates near me guide</a>
+          {" · "}
+          <a href="/#book">Book a class</a>
         </p>
 
         <h2>Spot Pilates - the only dedicated reformer studio in Lagos</h2>

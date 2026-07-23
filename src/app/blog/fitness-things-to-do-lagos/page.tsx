@@ -4,10 +4,6 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/fitness-things-to-do-lagos";
 
 export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
   title: "Top 10 Things to Do in Lagos for Fitness Lovers",
   description:
     "The best active experiences in Lagos, Portugal. Surf, run, paddle, train, and recover. For travellers who want to move.",

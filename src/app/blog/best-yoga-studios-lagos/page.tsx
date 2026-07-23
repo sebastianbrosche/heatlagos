@@ -4,10 +4,6 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/best-yoga-studios-lagos";
 
 export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
   title: "10 Best Yoga Studios in Lagos, Portugal (2026)",
   description:
     "A curated guide to the best yoga studios in Lagos, Portugal. No sponsorships - just what each studio does best and who it suits.",
@@ -113,7 +109,11 @@ export default function BestYogaStudiosLagos() {
           Drop-in €22. Vacation Week €59 for 7 days. Monthly memberships from €125.
         </p>
         <p>
-          <a href="https://heatlagos.com">Book a class at Heat Lagos</a>
+          <a href="/yoga-lagos-portugal">Yoga classes at Heat Lagos</a>
+          {" · "}
+          <a href="/hot-yoga-lagos">Hot yoga guide</a>
+          {" · "}
+          <a href="/#book">Book a class</a>
         </p>
 
         <h2>InLight Studio - the most established schedule in Lagos</h2>

@@ -1,0 +1,131 @@
+{
+  "business_status": "OPERATIONAL",
+  "formatted_address": "Edificio da Fabrica da Ribeira, Av. dos Descobrimentos Loja G, 8600-584 Lagos, Portugal",
+  "formatted_phone_number": "927 290 812",
+  "international_phone_number": "+351 927 290 812",
+  "name": "Heat Lagos - Hot Yoga, Pilates & Sculpt",
+  "opening_hours": {
+    "open_now": true,
+    "periods": [
+      {
+        "close": {
+          "day": 0,
+          "time": "1130"
+        },
+        "open": {
+          "day": 0,
+          "time": "0930"
+        }
+      },
+      {
+        "close": {
+          "day": 1,
+          "time": "1000"
+        },
+        "open": {
+          "day": 1,
+          "time": "0800"
+        }
+      },
+      {
+        "close": {
+          "day": 1,
+          "time": "2100"
+        },
+        "open": {
+          "day": 1,
+          "time": "1730"
+        }
+      },
+      {
+        "close": {
+          "day": 2,
+          "time": "1130"
+        },
+        "open": {
+          "day": 2,
+          "time": "0730"
+        }
+      },
+      {
+        "close": {
+          "day": 2,
+          "time": "1800"
+        },
+        "open": {
+          "day": 2,
+          "time": "1630"
+        }
+      },
+      {
+        "close": {
+          "day": 3,
+          "time": "1130"
+        },
+        "open": {
+          "day": 3,
+          "time": "0930"
+        }
+      },
+      {
+        "close": {
+          "day": 3,
+          "time": "1830"
+        },
+        "open": {
+          "day": 3,
+          "time": "1630"
+        }
+      },
+      {
+        "close": {
+          "day": 4,
+          "time": "1130"
+        },
+        "open": {
+          "day": 4,
+          "time": "0730"
+        }
+      },
+      {
+        "close": {
+          "day": 5,
+          "time": "1130"
+        },
+        "open": {
+          "day": 5,
+          "time": "0830"
+        }
+      },
+      {
+        "close": {
+          "day": 6,
+          "time": "1200"
+        },
+        "open": {
+          "day": 6,
+          "time": "0800"
+        }
+      }
+    ],
+    "weekday_text": [
+      "Monday: 8:00 – 10:00 AM, 5:30 – 9:00 PM",
+      "Tuesday: 7:30 – 11:30 AM, 4:30 – 6:00 PM",
+      "Wednesday: 9:30 – 11:30 AM, 4:30 – 6:30 PM",
+      "Thursday: 7:30 – 11:30 AM",
+      "Friday: 8:30 – 11:30 AM",
+      "Saturday: 8:00 AM – 12:00 PM",
+      "Sunday: 9:30 – 11:30 AM"
+    ]
+  },
+  "rating": 5,
+  "types": [
+    "establishment",
+    "gym",
+    "health",
+    "point_of_interest"
+  ],
+  "url": "https://maps.google.com/?cid=12993217545226822724",
+  "user_ratings_total": 32,
+  "website": "https://heatlagos.com/"
+}
