@@ -169,10 +169,19 @@ export const BLOG_CLUSTER: Record<string, ClusterConfig> = {
   "sculpt-class-lagos": {
     landings: [LANDINGS.infrared, LANDINGS.pilates, LANDINGS.intro],
     related: [
+      { href: "/blog/2027-boutique-fitness-trends-heavy-weights", label: "2027 trend: Pilates meets heavy weights" },
       { href: "/blog/pilates-for-beginners-lagos", label: "Pilates for beginners" },
       { href: "/blog/boutique-fitness-lagos", label: "Boutique fitness in Lagos" },
       { href: "/blog/gym-lagos-portugal", label: "Gym options in Lagos" },
-      { href: "/blog/mobility-class-what-to-expect", label: "Mobility class guide" },
+    ],
+  },
+  "2027-boutique-fitness-trends-heavy-weights": {
+    landings: [LANDINGS.pilates, LANDINGS.infrared, LANDINGS.intro],
+    related: [
+      { href: "/blog/sculpt-class-lagos", label: "Sculpt class in Lagos" },
+      { href: "/blog/best-pilates-studios-lagos", label: "Best Pilates studios in Lagos" },
+      { href: "/blog/gym-lagos-portugal", label: "Gym options in Lagos" },
+      { href: "/blog/boutique-fitness-lagos", label: "Boutique fitness in Lagos" },
     ],
   },
   "mobility-class-what-to-expect": {
@@ -205,16 +214,16 @@ export const BLOG_CLUSTER: Record<string, ClusterConfig> = {
   "gym-lagos-portugal": {
     landings: [LANDINGS.infrared, LANDINGS.pilates, LANDINGS.intro],
     related: [
+      { href: "/blog/2027-boutique-fitness-trends-heavy-weights", label: "2027 trend: Pilates meets heavy weights" },
       { href: "/blog/boutique-fitness-lagos", label: "Boutique fitness in Lagos" },
       { href: "/blog/sculpt-class-lagos", label: "Sculpt class" },
       { href: "/blog/best-pilates-studios-lagos", label: "Best Pilates studios" },
-      { href: "/blog/fitness-things-to-do-lagos", label: "Fitness things to do" },
     ],
   },
   "boutique-fitness-lagos": {
     landings: [LANDINGS.infrared, LANDINGS.intro],
     related: [
-      { href: "/blog/best-yoga-studios-lagos", label: "Best yoga studios" },
+      { href: "/blog/2027-boutique-fitness-trends-heavy-weights", label: "2027 trend: Pilates meets heavy weights" },
       { href: "/blog/best-pilates-studios-lagos", label: "Best Pilates studios" },
       { href: "/blog/sculpt-class-lagos", label: "Sculpt class" },
       { href: "/blog/gym-lagos-portugal", label: "Gym options in Lagos" },

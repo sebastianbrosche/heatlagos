@@ -22,6 +22,13 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "2027-boutique-fitness-trends-heavy-weights",
+    title: "2027 Boutique Fitness Trends: Pilates Is Merging With Heavy Weights",
+    excerpt:
+      "The clearest 2027 shift is Pilates converging with strength training. The research on why 5-10kg to near failure builds real muscle, why muscle mass is the new longevity metric, and where Pilates Strong fits.",
+    date: "July 23, 2026",
+  },
+  {
     slug: "bikram-yoga-lagos-guide",
     title: "Bikram Yoga in Lagos: What It Is and How It Differs from Regular Yoga",
     excerpt:

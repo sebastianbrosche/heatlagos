@@ -51,6 +51,7 @@ const BLOG_POSTS = [
   "infrared-pilates-vs-regular",
   "first-hot-yoga-class-lagos",
   "bikram-yoga-lagos-guide",
+  "2027-boutique-fitness-trends-heavy-weights",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
