@@ -107,16 +107,18 @@ Rotate A/B/C. Never auto-post without your OK.
 2. WhatsApp/SMS the same day  
 3. Email 24h later if no review  
 
-### Review link
-Paste once into Linear / `docs/GBP-REVIEW-LINK.txt` when you copy from GBP “Get more reviews”.  
-Until then use Maps profile: https://maps.google.com/?cid=12993217545226822724
+### Review link (owner 2026-07-23)
+**Live:** https://g.page/r/CUQknjCELlG0EBM/review  
+
+Also: `docs/GBP-REVIEW-LINK.txt` · Linear Y4B-915  
+Maps profile: https://maps.google.com/?cid=12993217545226822724
 
 ### Message template (WhatsApp)
 ```
 Hey [Name] — so glad you loved [Sculpt / Pilates / Power] today.
 If you have 30 seconds, a Google review helps other people in Lagos find us:
-[REVIEW_LINK]
-Mention the class + Lagos if you can. Thank you 🙏
+https://g.page/r/CUQknjCELlG0EBM/review
+Mention the class + Lagos if you can. Thank you
 — Heat
 ```
 
