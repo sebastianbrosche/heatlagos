@@ -4,273 +4,70 @@ export const dynamic = "force-static";
 
 const BASE = "https://www.heatlagos.com";
 
+/** Money / class landings */
+const LANDINGS: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] }[] = [
+  { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/infrared-classes-lagos", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/pilates-lagos-portugal", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/yoga-lagos-portugal", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/mobility-class-lagos", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/muscle-recovery-surfing-lagos", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/things-to-do-lagos-wellness", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/why-infrared", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/bikram-yoga-lagos", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/b2b-wellness-partnerships", priority: 0.8, changeFrequency: "monthly" },
+  // Canonical offer pages only (A/B letter variants are noindex + kept out of sitemap)
+  { path: "/hot-yoga-pilates-intro-offer", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/hot-yoga-pilates-vacation", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/blog", priority: 0.9, changeFrequency: "weekly" },
+];
+
+/** All blog posts under src/app/blog/*/page.tsx */
+const BLOG_POSTS = [
+  "mobility-class-what-to-expect",
+  "sculpt-class-lagos",
+  "pilates-for-beginners-lagos",
+  "parking-lagos-guide",
+  "yoga-lagos-guide",
+  "hot-yoga-vs-infrared",
+  "lagos-wellness-visitor-guide",
+  "best-yoga-studios-lagos",
+  "best-pilates-studios-lagos",
+  "best-wellness-spots-lagos",
+  "surf-recovery-lagos",
+  "fitness-things-to-do-lagos",
+  "digital-nomad-yoga-pilates-lagos",
+  "boutique-fitness-lagos",
+  "infrared-yoga-algarve",
+  "golf-lagos-algarve",
+  "healthy-cafes-lagos",
+  "yoga-for-surfers-recovery",
+  "reformer-pilates-lagos",
+  "hot-yoga-lagos",
+  "pilates-near-me-lagos",
+  "yoga-near-me-lagos",
+  "gym-lagos-portugal",
+  // were live but missing from sitemap (Y4B-916)
+  "infrared-pilates-vs-regular",
+  "first-hot-yoga-class-lagos",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return [
-    {
-      url: `${BASE}/`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${BASE}/infrared-classes-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/pilates-lagos-portugal`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/yoga-lagos-portugal`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/mobility-class-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/muscle-recovery-surfing-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/things-to-do-lagos-wellness`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE}/why-infrared`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/blog/mobility-class-what-to-expect`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/sculpt-class-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/pilates-for-beginners-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/parking-lagos-guide`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/yoga-lagos-guide`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/hot-yoga-vs-infrared`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/lagos-wellness-visitor-guide`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/best-yoga-studios-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/best-pilates-studios-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/best-wellness-spots-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/surf-recovery-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/fitness-things-to-do-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/digital-nomad-yoga-pilates-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/boutique-fitness-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/infrared-yoga-algarve`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/golf-lagos-algarve`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/healthy-cafes-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/yoga-for-surfers-recovery`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-intro-offer`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-intro-offer-b`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-intro-offer-c`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-intro-offer-d`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-intro-offer-e`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-vacation`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-vacation-b`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-vacation-c`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-vacation-d`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/hot-yoga-pilates-vacation-e`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/b2b-wellness-partnerships`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/bikram-yoga-lagos`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/blog/reformer-pilates-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/hot-yoga-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/pilates-near-me-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/yoga-near-me-lagos`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE}/blog/gym-lagos-portugal`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-  ];
+  const landings = LANDINGS.map((item) => ({
+    url: `${BASE}${item.path === "/" ? "/" : item.path}`,
+    lastModified,
+    changeFrequency: item.changeFrequency,
+    priority: item.priority,
+  }));
+
+  const posts = BLOG_POSTS.map((slug) => ({
+    url: `${BASE}/blog/${slug}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...landings, ...posts];
 }

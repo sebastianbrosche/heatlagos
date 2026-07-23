@@ -9,9 +9,10 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-c";
 export const metadata: Metadata = {
   title: "Pilates, Sculpt & Yoga Remixed - Intro Offer - Heat Lagos",
   description: "Get 14 days of unlimited heated yoga, pilates, and sculpt classes. Fast checkout. €79 two-week trial pass.",
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: URL,
-    languages: { "en-PT": URL, "x-default": URL },
+    canonical: "https://www.heatlagos.com/hot-yoga-pilates-intro-offer",
+    languages: { "en-PT": "https://www.heatlagos.com/hot-yoga-pilates-intro-offer", "x-default": "https://www.heatlagos.com/hot-yoga-pilates-intro-offer" },
   },
 };
 

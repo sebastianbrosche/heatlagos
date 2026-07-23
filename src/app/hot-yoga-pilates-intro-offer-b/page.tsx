@@ -9,9 +9,10 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-b";
 export const metadata: Metadata = {
   title: "Two Weeks Intro Offer - Gym Profile - Heat Lagos",
   description: "Read reviews from local expats and members. Try heated Pilates, Yoga, Sculpt, and Yin for two weeks for €79. Feel refreshed, alive, and find your glow.",
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: URL,
-    languages: { "en-PT": URL, "x-default": URL },
+    canonical: "https://www.heatlagos.com/hot-yoga-pilates-intro-offer",
+    languages: { "en-PT": "https://www.heatlagos.com/hot-yoga-pilates-intro-offer", "x-default": "https://www.heatlagos.com/hot-yoga-pilates-intro-offer" },
   },
 };
 

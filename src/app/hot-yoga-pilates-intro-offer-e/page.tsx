@@ -9,9 +9,10 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-e";
 export const metadata: Metadata = {
   title: "STRONG Heated Pilates & Sculpt - Intro Offer - Heat Lagos",
   description: "Experience the athletic simplicity of heated Pilates and Sculpt. 14 days of unlimited classes for €79. Near Batata Beach.",
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: URL,
-    languages: { "en-PT": URL, "x-default": URL },
+    canonical: "https://www.heatlagos.com/hot-yoga-pilates-intro-offer",
+    languages: { "en-PT": "https://www.heatlagos.com/hot-yoga-pilates-intro-offer", "x-default": "https://www.heatlagos.com/hot-yoga-pilates-intro-offer" },
   },
 };
 

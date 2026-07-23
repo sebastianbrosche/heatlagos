@@ -9,9 +9,10 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-vacation-e";
 export const metadata: Metadata = {
   title: "STRONG Heated Pilates & Sculpt - Vacation Week Pass - Heat Lagos",
   description: "Experience the athletic simplicity of heated Pilates and Sculpt during your vacation. 7 days of unlimited classes for €59. Near Batata Beach.",
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: URL,
-    languages: { "en-PT": URL, "x-default": URL },
+    canonical: "https://www.heatlagos.com/hot-yoga-pilates-vacation",
+    languages: { "en-PT": "https://www.heatlagos.com/hot-yoga-pilates-vacation", "x-default": "https://www.heatlagos.com/hot-yoga-pilates-vacation" },
   },
 };
 

@@ -9,9 +9,10 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-vacation-c";
 export const metadata: Metadata = {
   title: "Fast Vacation Pass Booking - FS8 Template - Heat Lagos",
   description: "Get 7 days of unlimited heated yoga, pilates, and sculpt classes during your holiday in Lagos. €59 vacation pass.",
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: URL,
-    languages: { "en-PT": URL, "x-default": URL },
+    canonical: "https://www.heatlagos.com/hot-yoga-pilates-vacation",
+    languages: { "en-PT": "https://www.heatlagos.com/hot-yoga-pilates-vacation", "x-default": "https://www.heatlagos.com/hot-yoga-pilates-vacation" },
   },
 };
 

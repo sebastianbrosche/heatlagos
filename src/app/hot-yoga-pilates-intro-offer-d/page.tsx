@@ -9,9 +9,10 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-d";
 export const metadata: Metadata = {
   title: "Chic Hot Pilates & Yoga Trial - NYP Template - Heat Lagos",
   description: "Experience luxury heated workouts at Heat Lagos. Get 2 weeks unlimited classes for €79. Enjoy high-performance infrared heat.",
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: URL,
-    languages: { "en-PT": URL, "x-default": URL },
+    canonical: "https://www.heatlagos.com/hot-yoga-pilates-intro-offer",
+    languages: { "en-PT": "https://www.heatlagos.com/hot-yoga-pilates-intro-offer", "x-default": "https://www.heatlagos.com/hot-yoga-pilates-intro-offer" },
   },
 };
 

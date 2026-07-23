@@ -1,0 +1,160 @@
+SITEMAP URL COUNT: 44
+URL: https://www.heatlagos.com/
+URL: https://www.heatlagos.com/infrared-classes-lagos
+URL: https://www.heatlagos.com/pilates-lagos-portugal
+URL: https://www.heatlagos.com/yoga-lagos-portugal
+URL: https://www.heatlagos.com/mobility-class-lagos
+URL: https://www.heatlagos.com/muscle-recovery-surfing-lagos
+URL: https://www.heatlagos.com/things-to-do-lagos-wellness
+URL: https://www.heatlagos.com/why-infrared
+URL: https://www.heatlagos.com/blog
+URL: https://www.heatlagos.com/blog/mobility-class-what-to-expect
+URL: https://www.heatlagos.com/blog/sculpt-class-lagos
+URL: https://www.heatlagos.com/blog/pilates-for-beginners-lagos
+URL: https://www.heatlagos.com/blog/parking-lagos-guide
+URL: https://www.heatlagos.com/blog/yoga-lagos-guide
+URL: https://www.heatlagos.com/blog/hot-yoga-vs-infrared
+URL: https://www.heatlagos.com/blog/lagos-wellness-visitor-guide
+URL: https://www.heatlagos.com/blog/best-yoga-studios-lagos
+URL: https://www.heatlagos.com/blog/best-pilates-studios-lagos
+URL: https://www.heatlagos.com/blog/best-wellness-spots-lagos
+URL: https://www.heatlagos.com/blog/surf-recovery-lagos
+URL: https://www.heatlagos.com/blog/fitness-things-to-do-lagos
+URL: https://www.heatlagos.com/blog/digital-nomad-yoga-pilates-lagos
+URL: https://www.heatlagos.com/blog/boutique-fitness-lagos
+URL: https://www.heatlagos.com/blog/infrared-yoga-algarve
+URL: https://www.heatlagos.com/blog/golf-lagos-algarve
+URL: https://www.heatlagos.com/blog/healthy-cafes-lagos
+URL: https://www.heatlagos.com/blog/yoga-for-surfers-recovery
+URL: https://www.heatlagos.com/hot-yoga-pilates-intro-offer
+URL: https://www.heatlagos.com/hot-yoga-pilates-intro-offer-b
+URL: https://www.heatlagos.com/hot-yoga-pilates-intro-offer-c
+URL: https://www.heatlagos.com/hot-yoga-pilates-intro-offer-d
+URL: https://www.heatlagos.com/hot-yoga-pilates-intro-offer-e
+URL: https://www.heatlagos.com/hot-yoga-pilates-vacation
+URL: https://www.heatlagos.com/hot-yoga-pilates-vacation-b
+URL: https://www.heatlagos.com/hot-yoga-pilates-vacation-c
+URL: https://www.heatlagos.com/hot-yoga-pilates-vacation-d
+URL: https://www.heatlagos.com/hot-yoga-pilates-vacation-e
+URL: https://www.heatlagos.com/b2b-wellness-partnerships
+URL: https://www.heatlagos.com/bikram-yoga-lagos
+URL: https://www.heatlagos.com/blog/reformer-pilates-lagos
+URL: https://www.heatlagos.com/blog/hot-yoga-lagos
+URL: https://www.heatlagos.com/blog/pilates-near-me-lagos
+URL: https://www.heatlagos.com/blog/yoga-near-me-lagos
+URL: https://www.heatlagos.com/blog/gym-lagos-portugal
+
+===== STATUS / SCHEMA / GA =====
+OK 200 ld=True ga=False gtm=True bookish=True | Heat Lagos · Infrared Pilates, Yoga &amp; Recovery in Lagos, Portugal
+  https://www.heatlagos.com/
+OK 200 ld=True ga=False gtm=True bookish=True | Infrared Classes in Lagos, Portugal | Heat Lagos
+  https://www.heatlagos.com/infrared-classes-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Pilates in Lagos, Portugal | Heat Lagos
+  https://www.heatlagos.com/pilates-lagos-portugal
+OK 200 ld=True ga=False gtm=True bookish=True | Yoga in Lagos, Portugal | Heat Lagos
+  https://www.heatlagos.com/yoga-lagos-portugal
+OK 200 ld=True ga=False gtm=True bookish=True | Mobility Class in Lagos | Heat Lagos
+  https://www.heatlagos.com/mobility-class-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Muscle Recovery for Surfers in Lagos | Heat Lagos
+  https://www.heatlagos.com/muscle-recovery-surfing-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Wellness Things to Do in Lagos, Portugal | Heat Lagos
+  https://www.heatlagos.com/things-to-do-lagos-wellness
+OK 200 ld=True ga=False gtm=True bookish=True | Why Infrared? | Heat Lagos
+  https://www.heatlagos.com/why-infrared
+OK 200 ld=True ga=False gtm=True bookish=True | Blog - Wellness, Yoga &amp; Pilates in Lagos | Heat Lagos
+  https://www.heatlagos.com/blog
+OK 200 ld=True ga=False gtm=True bookish=True | Mobility Class: What It Is, What to Expect, and Whether You Need It | Heat Lagos
+  https://www.heatlagos.com/blog/mobility-class-what-to-expect
+OK 200 ld=True ga=False gtm=True bookish=True | Sculpt Class in Lagos: What It Is and What to Expect | Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/blog/sculpt-class-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Pilates for Beginners in Lagos: What to Expect in Your First Class | Heat Lagos
+  https://www.heatlagos.com/blog/pilates-for-beginners-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Where to Park in Lagos, Portugal (2026): A Complete Guide | Heat Lagos
+  https://www.heatlagos.com/blog/parking-lagos-guide
+OK 200 ld=True ga=False gtm=True bookish=True | Top 5 Yoga Studios in Lagos, Portugal (2026 Honest Guide) | Heat Lagos
+  https://www.heatlagos.com/blog/yoga-lagos-guide
+OK 200 ld=True ga=False gtm=True bookish=True | Hot Yoga vs Infrared Yoga: What is Actually the Difference? | Heat Lagos
+  https://www.heatlagos.com/blog/hot-yoga-vs-infrared
+OK 200 ld=True ga=False gtm=True bookish=True | Where to Work Out in Lagos: A Guide for Visitors and New Residents | Heat Lagos
+  https://www.heatlagos.com/blog/lagos-wellness-visitor-guide
+OK 200 ld=True ga=False gtm=True bookish=True | 10 Best Yoga Studios in Lagos, Portugal (2026) | Heat Lagos
+  https://www.heatlagos.com/blog/best-yoga-studios-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | TOP 5 Pilates Studios in Lagos, Portugal (2026) | Heat Lagos
+  https://www.heatlagos.com/blog/best-pilates-studios-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | 10 Best Wellness Spots in Lagos for Yoga, Pilates and Recovery | Heat Lagos
+  https://www.heatlagos.com/blog/best-wellness-spots-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | 10 Best Surf Recovery Classes in Lagos, Portugal (2026) | Heat Lagos
+  https://www.heatlagos.com/blog/surf-recovery-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Top 10 Things to Do in Lagos for Fitness Lovers | Heat Lagos
+  https://www.heatlagos.com/blog/fitness-things-to-do-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Best Yoga and Pilates for Digital Nomads in Lagos, Portugal (2026) | Heat Lagos
+  https://www.heatlagos.com/blog/digital-nomad-yoga-pilates-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | 10 Best Boutique Fitness Studios in Lagos, Portugal (2026) | Heat Lagos
+  https://www.heatlagos.com/blog/boutique-fitness-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Where to Find the Best Infrared Yoga and Pilates in the Algarve | Heat Lagos
+  https://www.heatlagos.com/blog/infrared-yoga-algarve
+OK 200 ld=True ga=False gtm=True bookish=True | Golf in Lagos, Portugal: Best Courses and Where to Play | Heat Lagos
+  https://www.heatlagos.com/blog/golf-lagos-algarve
+OK 200 ld=True ga=False gtm=True bookish=True | 10 Best Healthy Cafes and Spots to Eat After Yoga in Lagos | Heat Lagos
+  https://www.heatlagos.com/blog/healthy-cafes-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Yoga for Surfers: The Recovery Guide for the Algarve | Heat Lagos
+  https://www.heatlagos.com/blog/yoga-for-surfers-recovery
+OK 200 ld=True ga=False gtm=True bookish=True | Two Weeks Unlimited Intro Offer - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-intro-offer
+OK 200 ld=True ga=False gtm=True bookish=True | Two Weeks Intro Offer - Gym Profile - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-intro-offer-b
+OK 200 ld=True ga=False gtm=True bookish=True | Pilates, Sculpt &amp; Yoga Remixed - Intro Offer - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-intro-offer-c
+OK 200 ld=True ga=False gtm=True bookish=True | Chic Hot Pilates &amp; Yoga Trial - NYP Template - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-intro-offer-d
+OK 200 ld=True ga=False gtm=True bookish=True | STRONG Heated Pilates &amp; Sculpt - Intro Offer - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-intro-offer-e
+OK 200 ld=True ga=False gtm=True bookish=True | Hot Yoga &amp; Pilates Vacation Week Pass - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-vacation
+OK 200 ld=True ga=False gtm=True bookish=True | Surf &amp; Cliff Recovery Vacation Pass - Gym Profile - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-vacation-b
+OK 200 ld=True ga=False gtm=True bookish=True | Fast Vacation Pass Booking - FS8 Template - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-vacation-c
+OK 200 ld=True ga=False gtm=True bookish=True | Chic Vacation Pass - NYP Template - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-vacation-d
+OK 200 ld=True ga=False gtm=True bookish=True | STRONG Heated Pilates &amp; Sculpt - Vacation Week Pass - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/hot-yoga-pilates-vacation-e
+OK 200 ld=True ga=False gtm=True bookish=True | Corporate Wellness &amp; B2B Partnerships - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/b2b-wellness-partnerships
+OK 200 ld=True ga=False gtm=True bookish=True | Traditional 26&amp;2 Bikram Yoga with Nadine - Heat Lagos | Heat Lagos
+  https://www.heatlagos.com/bikram-yoga-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Reformer Pilates in Lagos, Portugal: Studios, Prices &amp; What to Expect (2026) | Heat Lagos
+  https://www.heatlagos.com/blog/reformer-pilates-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Hot Yoga in Lagos, Portugal: What to Expect (And Why Our Studio Runs Infrared) | Heat Lagos
+  https://www.heatlagos.com/blog/hot-yoga-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Pilates Classes Near Me in Lagos, Portugal: A Practical Guide | Heat Lagos
+  https://www.heatlagos.com/blog/pilates-near-me-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Yoga Classes Near Me in Lagos, Portugal: Where to Find Them and What to Expect | Heat Lagos
+  https://www.heatlagos.com/blog/yoga-near-me-lagos
+OK 200 ld=True ga=False gtm=True bookish=True | Looking for a Gym in Lagos, Portugal? Here Is What You Will Actually Find | Heat Lagos
+  https://www.heatlagos.com/blog/gym-lagos-portugal
+
+===== HOMEPAGE JSON-LD =====
+JSON-LD blocks: 0
+G-L61V7HF6H2 present: False
+G- IDs: 
+GTM: 
+
+===== SAMPLE PAGES DETAIL =====
+--- https://www.heatlagos.com/blog/sculpt-class-lagos ---
+status=200 jsonld=1 ga=False
+{"@context":"https://schema.org","@graph":[{"@type":["HealthClub","LocalBusiness"],"@id":"https://www.heatlagos.com/#studio","name":"Heat Lagos","alternateName":"Heat Lagos · Infrared Heated Studio","url":"https://www.heatlagos.com","image":"https://www.heatlagos.com/opengraph-image","logo":"https://www.heatlagos.com/logo%20heat.png","description":"Infrared-heated Pilates, Yoga, Sculpt, Mobility, Recovery and Yin studio in Lagos, Portugal. English-speaking instructors, classes for active locals, expats and travellers.","telephone":"+351927290812","email":"hello@heatlagos.com","priceRange":"€€","currenciesAccepted":"EUR","paymentAccepted":"Credit Card, Debit Card, Apple Pay, Google Pay","address":{"@type":"PostalAddress","streetAddress":"Edificio da Fabrica da Ribeira, Av. dos Descobrimento
+relevant internal hrefs: /infrared-classes-lagos, /pilates-lagos-portugal, /yoga-lagos-portugal, /mobility-class-lagos, /why-infrared
+--- https://www.heatlagos.com/blog/yoga-lagos-guide ---
+status=200 jsonld=1 ga=False
+{"@context":"https://schema.org","@graph":[{"@type":["HealthClub","LocalBusiness"],"@id":"https://www.heatlagos.com/#studio","name":"Heat Lagos","alternateName":"Heat Lagos · Infrared Heated Studio","url":"https://www.heatlagos.com","image":"https://www.heatlagos.com/opengraph-image","logo":"https://www.heatlagos.com/logo%20heat.png","description":"Infrared-heated Pilates, Yoga, Sculpt, Mobility, Recovery and Yin studio in Lagos, Portugal. English-speaking instructors, classes for active locals, expats and travellers.","telephone":"+351927290812","email":"hello@heatlagos.com","priceRange":"€€","currenciesAccepted":"EUR","paymentAccepted":"Credit Card, Debit Card, Apple Pay, Google Pay","address":{"@type":"PostalAddress","streetAddress":"Edificio da Fabrica da Ribeira, Av. dos Descobrimento
+relevant internal hrefs: /infrared-classes-lagos, /pilates-lagos-portugal, /yoga-lagos-portugal, /mobility-class-lagos, /why-infrared
+--- https://www.heatlagos.com/pilates-lagos-portugal ---
+status=200 jsonld=2 ga=False
+{"@context":"https://schema.org","@graph":[{"@type":["HealthClub","LocalBusiness"],"@id":"https://www.heatlagos.com/#studio","name":"Heat Lagos","alternateName":"Heat Lagos · Infrared Heated Studio","url":"https://www.heatlagos.com","image":"https://www.heatlagos.com/opengraph-image","logo":"https://www.heatlagos.com/logo%20heat.png","description":"Infrared-heated Pilates, Yoga, Sculpt, Mobility, Recovery and Yin studio in Lagos, Portugal. English-speaking instructors, classes for active locals, expats and travellers.","telephone":"+351927290812","email":"hello@heatlagos.com","priceRange":"€€","currenciesAccepted":"EUR","paymentAccepted":"Credit Card, Debit Card, Apple Pay, Google Pay","address":{"@type":"PostalAddress","streetAddress":"Edificio da Fabrica da Ribeira, Av. dos Descobrimento
+{"@context":"https://schema.org","@type":"Service","name":"Heated Pilates in Lagos","serviceType":"Mat Pilates class in an infrared heated studio","description":"Slow, precise infrared-heated mat Pilates in Lagos, Portugal. Builds deep strength, core connection and mobility. English-speaking instruction.","url":"https://www.heatlagos.com/pilates-lagos-portugal","provider":{"@id":"https://www.heatlagos.com/#studio"},"areaServed":[{"@type":"City","name":"Lagos"},{"@type":"Place","name":"Praia da Luz"},{"@type":"Place","name":"Burgau"},{"@type":"City","name":"Portimão"}]}
+relevant internal hrefs: /pilates-ball-3.jpg, /Sculpt.jpg, /infrared-classes-lagos, /pilates-lagos-portugal, /yoga-lagos-portugal, /mobility-class-lagos, /why-infrared
+--- https://www.heatlagos.com/blog ---
+status=200 jsonld=1 ga=False
+{"@context":"https://schema.org","@graph":[{"@type":["HealthClub","LocalBusiness"],"@id":"https://www.heatlagos.com/#studio","name":"Heat Lagos","alternateName":"Heat Lagos · Infrared Heated Studio","url":"https://www.heatlagos.com","image":"https://www.heatlagos.com/opengraph-image","logo":"https://www.heatlagos.com/logo%20heat.png","description":"Infrared-heated Pilates, Yoga, Sculpt, Mobility, Recovery and Yin studio in Lagos, Portugal. English-speaking instructors, classes for active locals, expats and travellers.","telephone":"+351927290812","email":"hello@heatlagos.com","priceRange":"€€","currenciesAccepted":"EUR","paymentAccepted":"Credit Card, Debit Card, Apple Pay, Google Pay","address":{"@type":"PostalAddress","streetAddress":"Edificio da Fabrica da Ribeira, Av. dos Descobrimento
+relevant internal hrefs: /blog/infrared-pilates-vs-regular, /blog/first-hot-yoga-class-lagos, /blog/yoga-near-me-lagos, /blog/pilates-near-me-lagos, /blog/hot-yoga-lagos, /blog/reformer-pilates-lagos, /blog/mobility-class-what-to-expect, /blog/sculpt-class-lagos, /blog/pilates-for-beginners-lagos, /blog/best-yoga-studios-lagos, /blog/best-pilates-studios-lagos, /blog/yoga-for-surfers-recovery, /blog/digital-nomad-yoga-pilates-lagos, /blog/infrared-yoga-algarve, /blog/yoga-lagos-guide, /blog/hot-yoga-vs-infrared, /infrared-classes-lagos, /pilates-lagos-portugal, /yoga-lagos-portugal, /mobility-class-lagos, /why-infrared

@@ -9,9 +9,10 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-vacation-d";
 export const metadata: Metadata = {
   title: "Chic Vacation Pass - NYP Template - Heat Lagos",
   description: "Experience luxury heated holiday workouts at Heat Lagos. Get 7 days unlimited classes for €59. Near Praia da Batata.",
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: URL,
-    languages: { "en-PT": URL, "x-default": URL },
+    canonical: "https://www.heatlagos.com/hot-yoga-pilates-vacation",
+    languages: { "en-PT": "https://www.heatlagos.com/hot-yoga-pilates-vacation", "x-default": "https://www.heatlagos.com/hot-yoga-pilates-vacation" },
   },
 };
 

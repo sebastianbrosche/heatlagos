@@ -9,9 +9,10 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-vacation-b";
 export const metadata: Metadata = {
   title: "Surf & Cliff Recovery Vacation Pass - Gym Profile - Heat Lagos",
   description: "Perfect post-surf muscle recovery and active cliff walk stretch. 7 days of unlimited heated Pilates and Yoga in Lagos, Portugal for €59.",
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: URL,
-    languages: { "en-PT": URL, "x-default": URL },
+    canonical: "https://www.heatlagos.com/hot-yoga-pilates-vacation",
+    languages: { "en-PT": "https://www.heatlagos.com/hot-yoga-pilates-vacation", "x-default": "https://www.heatlagos.com/hot-yoga-pilates-vacation" },
   },
 };
 

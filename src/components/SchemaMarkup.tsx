@@ -14,7 +14,8 @@ const STUDIO = {
     "Infrared-heated Pilates, Yoga, Sculpt, Mobility, Recovery and Yin studio in Lagos, Portugal. English-speaking instructors, classes for active locals, expats and travellers.",
   telephone: "+351927290812",
   email: "hello@heatlagos.com",
-  priceRange: "€€",
+  // ASCII-only: euro glyphs have rendered as "??" in live JSON-LD exports
+  priceRange: "$$",
   currenciesAccepted: "EUR",
   paymentAccepted: "Credit Card, Debit Card, Apple Pay, Google Pay",
   address: {
