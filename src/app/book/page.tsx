@@ -53,7 +53,7 @@ const GROUPS: Group[] = [
   },
 ];
 
-function OfferRow({ plan }: { plan: Plan }) {
+function OfferCard({ plan }: { plan: Plan }) {
   const priceLabel = plan.unit ? `${plan.price}${plan.unit}` : plan.price;
 
   return (
@@ -61,45 +61,45 @@ function OfferRow({ plan }: { plan: Plan }) {
       href={plan.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col gap-1 border-b border-white/10 py-5 transition-colors last:border-b-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8 sm:py-6"
+      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-stone-dark/40 px-5 py-5 transition-colors hover:border-brand/40 sm:px-6 sm:py-6"
     >
-      <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-          <span className="font-serif text-xl text-foreground sm:text-2xl">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="font-serif text-xl leading-snug text-foreground sm:text-2xl">
             {plan.name}
-          </span>
+          </p>
           {plan.badge && (
-            <span className="text-[10px] uppercase tracking-[0.2em] text-brand">
+            <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brand">
               {plan.badge}
-            </span>
+            </p>
           )}
         </div>
-        <p className="mt-1 max-w-xl text-sm leading-relaxed text-foreground/60 sm:text-[15px]">
-          {plan.description}
-        </p>
-        {plan.note && (
-          <p className="mt-1 text-[11px] text-foreground/45">{plan.note}</p>
-        )}
+        <div className="shrink-0 text-right">
+          {plan.wasPrice && (
+            <p className="font-serif text-sm text-foreground/35 line-through">
+              {plan.wasPrice}
+            </p>
+          )}
+          <p className="font-serif text-2xl text-brand sm:text-[1.65rem]">
+            {priceLabel}
+          </p>
+        </div>
       </div>
-      <div className="mt-2 flex shrink-0 items-baseline gap-2 sm:mt-0 sm:flex-col sm:items-end sm:gap-0">
-        {plan.wasPrice && (
-          <span className="font-serif text-base text-foreground/35 line-through sm:text-lg">
-            {plan.wasPrice}
-          </span>
-        )}
-        <span className="font-serif text-2xl text-brand sm:text-3xl">
-          {priceLabel}
-        </span>
-        <span className="text-[11px] uppercase tracking-[0.18em] text-foreground/40 transition-colors group-hover:text-brand sm:mt-1">
-          Get →
-        </span>
-      </div>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-foreground/60">
+        {plan.description}
+      </p>
+      {plan.note && (
+        <p className="mt-2 text-[11px] text-foreground/40">{plan.note}</p>
+      )}
+      <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/45 transition-colors group-hover:text-brand">
+        Get →
+      </p>
     </a>
   );
 }
 
 /**
- * GBP / Maps booking target: scannable offer list, not the homepage price grid.
+ * GBP / Maps booking target: grouped offer cards, centered section titles.
  */
 export default function BookPage() {
   return (
@@ -108,32 +108,46 @@ export default function BookPage() {
       <Marquee />
       <main>
         <section className="px-5 pt-32 pb-10 sm:px-6 sm:pt-40 sm:pb-12 lg:px-20">
-          <div className="mx-auto max-w-3xl">
-            <h1 className="font-serif text-[2.4rem] leading-[1.05] text-foreground sm:text-5xl">
-              Book Heat Lagos
-            </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/65 sm:text-lg">
-              Pick an offer. Checkout opens in a new tab. Or skip to the schedule
-              below for one class.
-            </p>
+          <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-2xl text-center">
+              <h1 className="font-serif text-[2.4rem] leading-[1.05] text-foreground sm:text-5xl">
+                Book Heat Lagos
+              </h1>
+              <p className="mt-5 text-base leading-relaxed text-foreground/65 sm:text-lg">
+                Pick an offer. Checkout opens in a new tab. Or skip to the
+                schedule below for one class.
+              </p>
+            </div>
 
-            <div className="mt-14 flex flex-col gap-14 sm:mt-16 sm:gap-16">
+            <div className="mt-14 flex flex-col gap-16 sm:mt-16 sm:gap-20">
               {GROUPS.map((group) => {
                 const plans = group.ids
                   .map((id) => planById(id))
                   .filter((p): p is Plan => Boolean(p));
                 if (!plans.length) return null;
+
+                const multi = plans.length > 1;
+
                 return (
                   <div key={group.title}>
-                    <h2 className="font-serif text-xl text-foreground sm:text-2xl">
-                      {group.title}
-                    </h2>
-                    <p className="mt-1 text-sm text-foreground/50">
-                      {group.blurb}
-                    </p>
-                    <div className="mt-4 border-t border-white/15">
+                    <div className="mx-auto max-w-xl text-center">
+                      <h2 className="font-serif text-2xl text-foreground sm:text-3xl">
+                        {group.title}
+                      </h2>
+                      <p className="mt-2 text-sm text-foreground/50 sm:text-[15px]">
+                        {group.blurb}
+                      </p>
+                    </div>
+
+                    <div
+                      className={`mx-auto mt-8 grid gap-4 ${
+                        multi
+                          ? "max-w-5xl sm:grid-cols-2 lg:grid-cols-3"
+                          : "max-w-md sm:grid-cols-1"
+                      }`}
+                    >
                       {plans.map((plan) => (
-                        <OfferRow key={plan.id ?? plan.name} plan={plan} />
+                        <OfferCard key={plan.id ?? plan.name} plan={plan} />
                       ))}
                     </div>
                   </div>
@@ -144,13 +158,15 @@ export default function BookPage() {
         </section>
 
         <section className="px-5 pb-20 sm:px-6 sm:pb-24 lg:px-20 lg:pb-28">
-          <div className="mx-auto max-w-3xl border-t border-white/10 pt-14 sm:pt-16">
-            <h2 className="font-serif text-xl text-foreground sm:text-2xl">
-              Class schedule
-            </h2>
-            <p className="mt-1 mb-8 text-sm text-foreground/50">
-              Book a single class on the calendar.
-            </p>
+          <div className="mx-auto max-w-5xl border-t border-white/10 pt-14 sm:pt-16">
+            <div className="mx-auto mb-8 max-w-xl text-center">
+              <h2 className="font-serif text-2xl text-foreground sm:text-3xl">
+                Class schedule
+              </h2>
+              <p className="mt-2 text-sm text-foreground/50">
+                Book a single class on the calendar.
+              </p>
+            </div>
             <Schedule hideHeading />
           </div>
         </section>
