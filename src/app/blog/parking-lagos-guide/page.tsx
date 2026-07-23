@@ -23,7 +23,11 @@ export const metadata: Metadata = {
 
 export default function ParkingLagosGuide() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="parking-lagos-guide"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Lagos Practical"
       title="Where to Park in Lagos, Portugal (2026)"
       lede="Parking in Lagos does not need to be stressful. Here is where to park, what each lot costs, and how to avoid the high-season queues."

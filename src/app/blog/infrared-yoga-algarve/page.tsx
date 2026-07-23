@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function InfraredYogaAlgarve() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="infrared-yoga-algarve"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Infrared Fitness"
       title="Where to Find the Best Infrared Yoga and Pilates in the Algarve"
       lede="Infrared heat changes how yoga and pilates feel. Here is where to find it in the Algarve, how it works, and what to expect."

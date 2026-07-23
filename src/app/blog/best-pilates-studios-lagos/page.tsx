@@ -27,7 +27,11 @@ export const metadata: Metadata = {
 // DEPLOYED: TOP 5 pilates studios, no rankings, strengths highlighted
 export default function BestPilatesStudiosLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="best-pilates-studios-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Lagos Guide"
       title="TOP 5 Pilates Studios in Lagos, Portugal (2026)"
       lede="A curated guide to the best pilates studios in Lagos. No pay-to-play, no sponsorships - just what each studio does best and who it suits."

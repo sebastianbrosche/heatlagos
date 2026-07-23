@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function InfraredPilatesVsRegular() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="infrared-pilates-vs-regular"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Pilates Guide"
       title="Infrared Pilates vs Regular Pilates: What Actually Changes"
       lede="Same principles. Different environment. Infrared heat changes how fast you warm up, how deep you can move, and how hard the work feels. Here is the practical difference."

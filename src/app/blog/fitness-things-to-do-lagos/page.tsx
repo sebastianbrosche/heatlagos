@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function FitnessThingsToDoLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="fitness-things-to-do-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Active Lagos"
       title="Top 10 Things to Do in Lagos for Fitness Lovers"
       lede="Lagos is not a sit-by-the-pool town. These are the 10 best ways to stay active, from surf sessions at sunrise to electric dirt bike adventures in the hills."

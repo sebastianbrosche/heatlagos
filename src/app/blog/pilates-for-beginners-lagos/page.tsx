@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function PilatesForBeginnersLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="pilates-for-beginners-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Beginner Guide"
       title="Pilates for Beginners in Lagos: What to Expect in Your First Class"
       lede="New to Pilates? Here is exactly what happens in a beginner Pilates class in Lagos, what to bring, what to wear, and what the first few weeks actually feel like."

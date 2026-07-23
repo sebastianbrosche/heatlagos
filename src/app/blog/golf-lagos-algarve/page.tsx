@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function GolfLagosAlgarve() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="golf-lagos-algarve"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Golf in Lagos"
       title="Golf in Lagos, Portugal: Best Courses and Where to Play"
       lede="Lagos is the best base for golfers in the western Algarve. Three courses within 15 minutes of town, plus dozens more within an hour's drive. Here is the honest breakdown of where to play, what it costs, and how to recover after 18 holes."

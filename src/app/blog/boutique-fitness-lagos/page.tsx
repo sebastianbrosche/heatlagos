@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function BoutiqueFitnessLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="boutique-fitness-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Boutique Fitness"
       title="10 Best Boutique Fitness Studios in Lagos, Portugal (2026)"
       lede="Lagos has boutique fitness options that go beyond standard gym classes. Small studios, specialised equipment, and teachers who know your name."

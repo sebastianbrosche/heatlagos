@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/lagos-wellness-visitor-guide";
@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function LagosWellnessVisitorGuide() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="lagos-wellness-visitor-guide"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Visitor Guide"
       title="Where to Work Out in Lagos: A Guide for Visitors and New Residents"
       lede="Surf in the morning, recover in the evening. A practical wellness itinerary for anyone visiting Lagos for a week, a month, or a season."

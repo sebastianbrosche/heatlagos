@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function SurfRecoveryLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="surf-recovery-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Surf Recovery"
       title="10 Best Surf Recovery Classes in Lagos, Portugal (2026)"
       lede="Surfing breaks your body down. These are the best places in Lagos to build it back up. Yoga, pilates, massage, and contrast therapy."

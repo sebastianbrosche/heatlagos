@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/yoga-for-surfers-recovery";
@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function YogaForSurfers() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="yoga-for-surfers-recovery"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Surfer Guide"
       title="Yoga for Surfers: The Recovery Guide for the Algarve"
       lede="You surf in the morning. You hurt in the evening. Here is what to do about it - a practical recovery guide for surfers in Lagos and the western Algarve."

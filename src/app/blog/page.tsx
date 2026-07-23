@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -26,7 +26,7 @@ const posts = [
     title: "Infrared Pilates vs Regular Pilates: What Actually Changes",
     excerpt:
       "Infrared heat around 30C versus a cool room. How each format feels, who it suits, and which class to book in Lagos.",
-    date: "July 16, 2026",
+    date: "July 22, 2026",
     category: "Pilates Guide",
   },
   {
@@ -34,7 +34,7 @@ const posts = [
     title: "What to Expect at Your First Hot Yoga Class in Lagos",
     excerpt:
       "What to wear, how infrared heat feels, how hard a first class should be, and how to leave feeling better not wrecked.",
-    date: "July 16, 2026",
+    date: "July 22, 2026",
     category: "Beginner Guide",
   },
   {
@@ -42,7 +42,7 @@ const posts = [
     title: "Looking for a Gym in Lagos, Portugal? Here Is What You Will Actually Find",
     excerpt:
       "Traditional gyms, boutique studios, Sculpt classes, infrared heat. A practical breakdown of your fitness options in Lagos and why most people end up at a studio instead of a gym.",
-    date: "June 28, 2026",
+    date: "July 22, 2026",
     category: "Lagos Fitness",
   },
   {
@@ -50,7 +50,7 @@ const posts = [
     title: "Yoga Classes Near Me in Lagos, Portugal: Where to Find Them and What to Expect",
     excerpt:
       "A practical guide to yoga studios and classes in Lagos. What is available, how the styles differ, and what to look for whether you are visiting for a week or living here year-round.",
-    date: "June 28, 2026",
+    date: "July 22, 2026",
     category: "Yoga Guide",
   },
   {
@@ -58,7 +58,7 @@ const posts = [
     title: "Pilates Classes Near Me in Lagos, Portugal: A Practical Guide",
     excerpt:
       "Looking for Pilates near you in Lagos or the Algarve? What is available, how the options differ, and how to find the right class for your level and schedule.",
-    date: "June 28, 2026",
+    date: "July 22, 2026",
     category: "Local Guide",
   },
   {
@@ -66,7 +66,7 @@ const posts = [
     title: "Hot Yoga in Lagos, Portugal: What to Expect (And Why Our Studio Runs Infrared)",
     excerpt:
       "What traditional hot yoga is, how infrared heating works differently, and where to find heated yoga and Pilates classes in Lagos, Portugal.",
-    date: "June 28, 2026",
+    date: "July 22, 2026",
     category: "Yoga Guide",
   },
   {
@@ -74,7 +74,7 @@ const posts = [
     title: "Reformer vs Mat Pilates in Lagos, Portugal: What Is the Difference?",
     excerpt:
       "Looking for reformer Pilates in Lagos? Here is an honest breakdown of reformer vs mat Pilates, what each does, who each suits, and what Pilates options actually exist in Lagos right now.",
-    date: "June 28, 2026",
+    date: "July 22, 2026",
     category: "Pilates Guide",
   },
   {
@@ -82,7 +82,7 @@ const posts = [
     title: "Mobility Class: What It Is, What to Expect, and Whether You Need It",
     excerpt:
       "A mobility class is not yoga and not stretching. It is active range of motion training. Here is what happens in a mobility class in Lagos and who benefits most from it.",
-    date: "June 14, 2026",
+    date: "July 22, 2026",
     category: "Class Guide",
   },
   {
@@ -90,7 +90,7 @@ const posts = [
     title: "Sculpt Class in Lagos: What It Is and What to Expect",
     excerpt:
       "Sculpt is not Pilates. It is not yoga. It uses resistance bands, ankle weights, and light dumbbells to fatigue the muscles through high-repetition movement. Here is what a sculpt class in Lagos actually looks like.",
-    date: "June 14, 2026",
+    date: "July 22, 2026",
     category: "Class Guide",
   },
   {
@@ -98,7 +98,7 @@ const posts = [
     title: "Pilates for Beginners in Lagos: What to Expect in Your First Class",
     excerpt:
       "New to Pilates? Here is exactly what happens in a beginner Pilates class in Lagos, what to bring, what to wear, and what the first few weeks feel like. No experience needed.",
-    date: "June 14, 2026",
+    date: "July 22, 2026",
     category: "Beginner Guide",
   },
   {
@@ -106,7 +106,7 @@ const posts = [
     title: "Where to Park in Lagos, Portugal (2026): A Complete Guide",
     excerpt:
       "The honest guide to parking in Lagos, Portugal. Free lots, beach parking, street parking, and what to expect in high season. Written by locals.",
-    date: "May 28, 2026",
+    date: "July 22, 2026",
     category: "Lagos Practical",
   },
   {
@@ -114,7 +114,7 @@ const posts = [
     title: "10 Best Yoga Studios in Lagos, Portugal (2026)",
     excerpt:
       "The honest top 10 yoga studios in Lagos, ranked by class variety, teacher quality, and what makes each one worth visiting. No sponsorships, no pay-to-play.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Lagos Rankings",
   },
   {
@@ -122,7 +122,7 @@ const posts = [
     title: "TOP 5 Pilates Studios in Lagos, Portugal (2026)",
     excerpt:
       "A curated guide to the best pilates studios in Lagos. What each studio does best - reformer, mat, infrared heat, and more. No sponsorships, no pay-to-play.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Lagos Rankings",
   },
   {
@@ -130,7 +130,7 @@ const posts = [
     title: "10 Best Wellness Spots in Lagos for Yoga, Pilates and Recovery",
     excerpt:
       "The top wellness spots in Lagos - yoga, pilates, massage, sauna, and recovery. Ranked by what each offers and who it suits.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Lagos Wellness",
   },
   {
@@ -138,7 +138,7 @@ const posts = [
     title: "Yoga for Surfers: The Recovery Guide for the Algarve",
     excerpt:
       "You surf in the morning. You hurt in the evening. Here is what to do about it — a practical recovery guide for surfers in Lagos and the western Algarve.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Surf Recovery",
   },
   {
@@ -146,7 +146,7 @@ const posts = [
     title: "10 Best Surf Recovery Classes in Lagos, Portugal (2026)",
     excerpt:
       "The best yoga, pilates, massage, and recovery options in Lagos for surfers. Where to recover between sessions and prevent injury.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Surf Recovery",
   },
   {
@@ -154,7 +154,7 @@ const posts = [
     title: "Top 10 Things to Do in Lagos for Fitness Lovers",
     excerpt:
       "The best active experiences in Lagos, Portugal. Surf, hike, kayak, yoga, and more. For travellers who want to move.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Active Lagos",
   },
   {
@@ -162,7 +162,7 @@ const posts = [
     title: "Best Yoga and Pilates for Digital Nomads in Lagos, Portugal (2026)",
     excerpt:
       "A practical guide to yoga, pilates, and staying active in Lagos as a digital nomad. Drop-in friendly, no memberships, flexible schedules.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Digital Nomads",
   },
   {
@@ -170,7 +170,7 @@ const posts = [
     title: "Golf in Lagos, Portugal: Best Courses and Where to Play",
     excerpt:
       "Palmares, Espiche, Boavista - the honest breakdown of where to play, what it costs, and how to recover after 18 holes.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Golf",
   },
   {
@@ -178,7 +178,7 @@ const posts = [
     title: "10 Best Boutique Fitness Studios in Lagos, Portugal (2026)",
     excerpt:
       "The best boutique fitness studios in Lagos. Small classes, specialised training, and premium experiences. Ranked honestly.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Boutique Fitness",
   },
   {
@@ -186,7 +186,7 @@ const posts = [
     title: "Where to Find the Best Infrared Yoga and Pilates in the Algarve",
     excerpt:
       "A guide to infrared-heated yoga and pilates across the Algarve. Where to find it, how it works, and what the alternatives are.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Infrared Fitness",
   },
   {
@@ -194,7 +194,7 @@ const posts = [
     title: "10 Best Healthy Cafes and Spots to Eat After Yoga in Lagos",
     excerpt:
       "The best healthy cafes and restaurants in Lagos, Portugal. Vegetarian, vegan, and post-workout food worth eating.",
-    date: "May 26, 2026",
+    date: "July 22, 2026",
     category: "Healthy Food",
   },
   {
@@ -202,7 +202,7 @@ const posts = [
     title: "Top 5 Yoga Studios in Lagos, Portugal (2026 Honest Guide)",
     excerpt:
       "The real top 5 yoga studios in Lagos, ranked honestly by class quality, teacher consistency, and what each is actually good at. Heat, traditional, contrast therapy, nature-based, and events.",
-    date: "June 28, 2026",
+    date: "July 22, 2026",
     category: "Lagos Rankings",
   },
   {
@@ -210,7 +210,7 @@ const posts = [
     title: "Hot Yoga vs Infrared Yoga: What's Actually the Difference?",
     excerpt:
       "Traditional hot yoga blasts you at 40°C. Infrared yoga warms you from the inside at 30°C. Here's what that means for your body, your breath and your practice.",
-    date: "May 25, 2026",
+    date: "July 22, 2026",
     category: "Infrared Science",
   },
   {
@@ -218,7 +218,7 @@ const posts = [
     title: "Where to Work Out in Lagos: A Guide for Visitors and New Residents",
     excerpt:
       "Surf in the morning, recover in the evening. A practical wellness itinerary for anyone visiting Lagos for a week, a month, or a season.",
-    date: "May 25, 2026",
+    date: "July 22, 2026",
     category: "Visitor Guide",
   },
 ];

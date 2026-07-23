@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function BestWellnessSpotsLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="best-wellness-spots-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Lagos Wellness"
       title="10 Best Wellness Spots in Lagos for Yoga, Pilates and Recovery"
       lede="An honest guide to every wellness spot in Lagos that matters. Studios, spas, massage, and recovery. No pay-to-play, no sponsorships."

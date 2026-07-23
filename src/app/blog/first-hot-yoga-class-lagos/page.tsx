@@ -4,10 +4,6 @@ import SeoPageShell from "@/components/SeoPageShell";
 const URL = "https://www.heatlagos.com/blog/first-hot-yoga-class-lagos";
 
 export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
   title: "What to Expect at Your First Hot Yoga Class in Lagos",
   description:
     "First heated yoga class in Lagos? What to wear, how infrared heat feels, how hard it should be, and how to leave feeling better not wrecked.",
@@ -26,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function FirstHotYogaClassLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="first-hot-yoga-class-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Beginner Guide"
       title="What to Expect at Your First Hot Yoga Class in Lagos"
       lede="Heated yoga is intense for some people and surprisingly approachable for others. This is what actually happens in a first class at an infrared studio in Lagos."

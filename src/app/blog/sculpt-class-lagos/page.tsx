@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function SculptClassLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="sculpt-class-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Class Guide"
       title="Sculpt Class in Lagos: What It Is and What to Expect"
       lede="Sculpt is not Pilates. It is not yoga. It is its own thing. Here is what actually happens in a sculpt class in Lagos, who it suits, and what it does to your body."

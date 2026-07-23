@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function GymLagosPortugal() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="gym-lagos-portugal"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Lagos Fitness"
       title="Looking for a Gym in Lagos, Portugal? Here Is What You Will Actually Find"
       lede="If you are searching for a gym in Lagos, here is the honest picture of what exists, how the options compare, and why a growing number of people in Lagos are choosing boutique fitness studios over traditional gyms."

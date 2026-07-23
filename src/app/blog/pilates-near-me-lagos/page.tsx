@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function PilatesNearMeLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="pilates-near-me-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Local Guide"
       title="Pilates Classes Near Me in Lagos, Portugal: A Practical Guide"
       lede="If you are in Lagos or anywhere in the western Algarve and looking for Pilates classes nearby, here is what is actually available, how the options differ, and how to choose."

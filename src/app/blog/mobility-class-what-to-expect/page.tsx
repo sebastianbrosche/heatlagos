@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function MobilityClassWhatToExpect() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="mobility-class-what-to-expect"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Class Guide"
       title="Mobility Class: What It Is, What to Expect, and Whether You Need It"
       lede="A mobility class is not yoga. It is not stretching. It is active range of motion training, and for most people it is the missing piece in how they move."

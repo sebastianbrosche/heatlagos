@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function HealthyCafesLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="healthy-cafes-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Healthy Food"
       title="10 Best Healthy Cafes and Spots to Eat After Yoga in Lagos"
       lede="Where to eat in Lagos when you actually care about what goes into your body. Real food, not tourist traps."

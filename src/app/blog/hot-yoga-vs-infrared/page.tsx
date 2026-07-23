@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import SeoPageShell from "@/components/SeoPageShell";
 
 const URL = "https://www.heatlagos.com/blog/hot-yoga-vs-infrared";
@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function HotYogaVsInfrared() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="hot-yoga-vs-infrared"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Infrared Science"
       title="Hot Yoga vs Infrared Yoga: What is Actually the Difference?"
       lede="Traditional hot yoga blasts you at 40°C with forced air. Infrared yoga warms you from the inside at 30°C. Here is what that means for your body, your breath, and your practice."

@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function BestYogaStudiosLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="best-yoga-studios-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Lagos Guide"
       title="10 Best Yoga Studios in Lagos, Portugal (2026)"
       lede="A curated guide to every yoga studio in Lagos. No pay-to-play, no sponsorships - just what each studio does best and who it suits."

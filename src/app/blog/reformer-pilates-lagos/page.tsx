@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function ReformerPilatesLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="reformer-pilates-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Pilates Guide"
       title="Reformer Pilates in Lagos, Portugal: Studios, Prices & What to Expect (2026)"
       lede="Reformer Pilates is in demand in Lagos. A few studios have machines. Here is what reformer Pilates actually is, which studios in Lagos offer it, and when mat Pilates is the better choice."

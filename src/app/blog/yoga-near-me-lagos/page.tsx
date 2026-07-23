@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function YogaNearMeLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="yoga-near-me-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Yoga Guide"
       title="Yoga Classes Near Me in Lagos, Portugal: Where to Find Them and What to Expect"
       lede="Lagos has a growing number of yoga options for both visitors and locals. Here is what is actually available, how the studios differ, and what to look for before you book."

@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function DigitalNomadYogaPilatesLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="digital-nomad-yoga-pilates-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Digital Nomads"
       title="Best Yoga and Pilates for Digital Nomads in Lagos, Portugal (2026)"
       lede="Remote work meets active living. Where to practise yoga and pilates in Lagos without signing a contract, buying a membership, or committing to a schedule."

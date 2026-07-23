@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function YogaLagosGuide() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="yoga-lagos-guide"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Lagos Rankings"
       title="Top 5 Yoga Studios in Lagos, Portugal (2026 Honest Guide)"
       lede="Lagos has a real yoga scene. Small studios, experienced teachers, and a community that actually shows up year-round. Here are the five best yoga studios in Lagos, ranked honestly, with what makes each worth your time."

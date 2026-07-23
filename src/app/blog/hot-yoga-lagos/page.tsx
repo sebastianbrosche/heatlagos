@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function HotYogaLagos() {
   return (
-    <SeoPageShell
+        <SeoPageShell
+      clusterSlug="hot-yoga-lagos"
+      canonicalUrl={URL}
+      datePublished="2026-06-01"
+      dateModified="2026-07-23"
       eyebrow="Yoga Guide"
       title="Hot Yoga in Lagos, Portugal: What to Expect (And Why Our Studio Runs Infrared)"
       lede="If you are looking for hot yoga in Lagos, here is exactly what you will find, how the heat actually works, and why more people are choosing infrared over traditional hot yoga."
