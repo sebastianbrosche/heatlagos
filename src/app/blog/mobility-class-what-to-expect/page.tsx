@@ -67,30 +67,30 @@ export default function MobilityClassWhatToExpect() {
         </p>
         <ul>
           <li>
-            <strong>Joint warm-up</strong> — controlled circles, rotations, and
+            <strong>Joint warm-up</strong> - controlled circles, rotations, and
             low-load movements through each major joint to prepare the nervous
             system
           </li>
           <li>
-            <strong>Hip and pelvis work</strong> — 90/90 stretches, hip CAR
+            <strong>Hip and pelvis work</strong> - 90/90 stretches, hip CAR
             (controlled articular rotations), deep flexion loading, and lateral
             range development
           </li>
           <li>
-            <strong>Thoracic spine</strong> — rotation, extension, and side
+            <strong>Thoracic spine</strong> - rotation, extension, and side
             bending to restore upper back mobility that desk work and phone use
             reduces over time
           </li>
           <li>
-            <strong>Shoulder and overhead range</strong> — internal and external
+            <strong>Shoulder and overhead range</strong> - internal and external
             rotation, shoulder flexion, and scapular control
           </li>
           <li>
-            <strong>Ankle and foot work</strong> — often neglected and the
+            <strong>Ankle and foot work</strong> - often neglected and the
             foundation of every movement pattern
           </li>
           <li>
-            <strong>Integration</strong> — movement flows that combine the
+            <strong>Integration</strong> - movement flows that combine the
             individual joint work into full-body patterns
           </li>
         </ul>
@@ -111,27 +111,27 @@ export default function MobilityClassWhatToExpect() {
         </p>
         <ul>
           <li>
-            <strong>Surfers</strong> — pop-ups, duck dives, and paddling all
+            <strong>Surfers</strong> - pop-ups, duck dives, and paddling all
             require hip flexion, thoracic rotation, and shoulder overhead range.
             Most surf injuries happen at the limits of these ranges.
           </li>
           <li>
-            <strong>Gym regulars</strong> — heavy lifting shortens muscles and
+            <strong>Gym regulars</strong> - heavy lifting shortens muscles and
             reduces joint range over time. Mobility training offsets this and
             improves performance in squats, deadlifts, and overhead pressing.
           </li>
           <li>
-            <strong>Runners</strong> — limited hip mobility causes compensations
+            <strong>Runners</strong> - limited hip mobility causes compensations
             that accumulate into knee pain, IT band issues, and lower back
             tightness. Restoring hip range resolves most of these.
           </li>
           <li>
-            <strong>People who sit all day</strong> — desk posture chronically
+            <strong>People who sit all day</strong> - desk posture chronically
             shortens hip flexors, closes the chest, and reduces thoracic
             extension. Mobility training directly reverses this pattern.
           </li>
           <li>
-            <strong>Anyone returning from injury</strong> — rebuilding range of
+            <strong>Anyone returning from injury</strong> - rebuilding range of
             motion before returning to load-based training reduces re-injury risk
             significantly.
           </li>

@@ -37,7 +37,7 @@ export default function YogaNearMeLagos() {
           Lagos is one of the more active towns in the Algarve. The combination
           of surf culture, digital nomads, and a permanent local community has
           created consistent demand for quality yoga. In the last few years the
-          number of dedicated studios has grown — though the quality still varies
+          number of dedicated studios has grown - though the quality still varies
           a lot from place to place.
         </p>
         <p>
@@ -74,7 +74,7 @@ export default function YogaNearMeLagos() {
       <section>
         <h2>Yoga styles available in Lagos</h2>
         <p>
-          Most studios in Lagos teach Vinyasa or Flow yoga — movement linked to
+          Most studios in Lagos teach Vinyasa or Flow yoga - movement linked to
           breath in a flowing sequence. This is the most common format and a good
           starting point for most people. Heat Lagos offers this as the primary
           yoga format.
@@ -101,7 +101,7 @@ export default function YogaNearMeLagos() {
           People who search for mind-body practices in Lagos sometimes arrive
           looking for tai chi, qigong, or slow meditative movement. These
           disciplines share a lot of DNA with yin yoga and with the slower
-          Pilates formats — breath-led movement, body awareness, and parasympathetic
+          Pilates formats - breath-led movement, body awareness, and parasympathetic
           recovery. If that is what you are after, yin yoga and slow-flow yoga
           classes will give you a very similar experience and are much easier to
           find in Lagos than tai chi specifically.

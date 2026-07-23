@@ -58,23 +58,23 @@ export default function PilatesForBeginnersLagos() {
         </p>
         <ul>
           <li>
-            <strong>Warm-up</strong> — breath work, spine mobilisation, and
+            <strong>Warm-up</strong> - breath work, spine mobilisation, and
             light activation to bring the body into the session
           </li>
           <li>
-            <strong>Core and stabiliser work</strong> — slow, controlled
+            <strong>Core and stabiliser work</strong> - slow, controlled
             exercises that build deep abdominal and back strength without strain
           </li>
           <li>
-            <strong>Leg and glute series</strong> — standing and floor-based
+            <strong>Leg and glute series</strong> - standing and floor-based
             work for the lower body
           </li>
           <li>
-            <strong>Upper body</strong> — shoulder, arm, and back exercises
+            <strong>Upper body</strong> - shoulder, arm, and back exercises
             using bodyweight or light props
           </li>
           <li>
-            <strong>Cool-down</strong> — stretching and release
+            <strong>Cool-down</strong> - stretching and release
           </li>
         </ul>
         <p>
@@ -91,20 +91,20 @@ export default function PilatesForBeginnersLagos() {
         </p>
         <ul>
           <li>
-            <strong>Water bottle</strong> — the heat is gentle, but you will
+            <strong>Water bottle</strong> - the heat is gentle, but you will
             sweat more than in a regular gym class
           </li>
           <li>
-            <strong>Grip socks</strong> — strongly recommended for mat Pilates.
+            <strong>Grip socks</strong> - strongly recommended for mat Pilates.
             They prevent slipping and improve stability. You can buy them at the
             studio if you do not have a pair.
           </li>
           <li>
-            <strong>Comfortable workout clothes</strong> — fitted clothes work
+            <strong>Comfortable workout clothes</strong> - fitted clothes work
             better than loose ones so the teacher can see your alignment
           </li>
           <li>
-            <strong>A small face towel</strong> — we have small towels available
+            <strong>A small face towel</strong> - we have small towels available
             at the studio at no cost
           </li>
         </ul>
@@ -202,8 +202,8 @@ export default function PilatesForBeginnersLagos() {
         <h2>How to book your first class</h2>
         <p>
           The easiest way to start is our 2-week Intro Offer at €79. This gives
-          you unlimited access to every class — Pilates, Sculpt, Yoga, Mobility,
-          Recovery — for two weeks. It is designed specifically for new members
+          you unlimited access to every class - Pilates, Sculpt, Yoga, Mobility,
+          Recovery - for two weeks. It is designed specifically for new members
           who want to try the studio properly before committing.
         </p>
         <p>
@@ -239,7 +239,7 @@ export default function PilatesForBeginnersLagos() {
         <h3>Is there a beginner-specific class?</h3>
         <p>
           All Heat Pilates classes are mixed level. There is no beginner-only
-          class because the format does not require one — modifications are
+          class because the format does not require one - modifications are
           built into every exercise. If you are very new, coming fifteen minutes
           early and introducing yourself to the teacher is the best thing you
           can do.

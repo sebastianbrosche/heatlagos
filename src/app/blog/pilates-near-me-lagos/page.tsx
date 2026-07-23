@@ -49,7 +49,7 @@ export default function PilatesNearMeLagos() {
       </section>
 
       <section>
-        <h2>Mat Pilates in Lagos — Heat Lagos</h2>
+        <h2>Mat Pilates in Lagos - Heat Lagos</h2>
         <p>
           Heat Lagos is a purpose-built mat{" "}
           <a href="/pilates-lagos-portugal">Pilates studio in Lagos</a>, heated
@@ -64,8 +64,8 @@ export default function PilatesNearMeLagos() {
         <p>
           Classes are 50 to 60 minutes. The infrared heating system runs the
           studio at around 30 degrees Celsius, which helps joints open and muscles
-          respond faster. The heat is comfortable to work in — not the aggressive
-          40-degree heat of Bikram yoga — and most students adapt within the first
+          respond faster. The heat is comfortable to work in - not the aggressive
+          40-degree heat of Bikram yoga - and most students adapt within the first
           session or two.
         </p>
         <p>

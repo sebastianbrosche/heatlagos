@@ -172,7 +172,7 @@ const posts = [
     slug: "yoga-for-surfers-recovery",
     title: "Yoga for Surfers: The Recovery Guide for the Algarve",
     excerpt:
-      "You surf in the morning. You hurt in the evening. Here is what to do about it — a practical recovery guide for surfers in Lagos and the western Algarve.",
+      "You surf in the morning. You hurt in the evening. Here is what to do about it - a practical recovery guide for surfers in Lagos and the western Algarve.",
     date: "July 22, 2026",
     category: "Surf Recovery",
   },

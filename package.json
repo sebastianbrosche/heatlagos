@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "slop": "node scripts/slop-detect.mjs --path src --fix-hints",
+    "slop:strict": "node scripts/slop-detect.mjs --path src --strict --fix-hints"
   },
   "dependencies": {
     "next": "16.2.3",

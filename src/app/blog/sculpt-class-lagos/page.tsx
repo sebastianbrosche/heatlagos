@@ -65,24 +65,24 @@ export default function SculptClassLagos() {
         </p>
         <ul>
           <li>
-            <strong>Warm-up</strong> — dynamic movement to raise heart rate and
+            <strong>Warm-up</strong> - dynamic movement to raise heart rate and
             prepare the joints. Often dance-influenced, set to music.
           </li>
           <li>
-            <strong>Upper body series</strong> — light dumbbells (1-3kg) for
+            <strong>Upper body series</strong> - light dumbbells (1-3kg) for
             shoulder, arm, and back work. High repetition, slow tempo, no rest.
           </li>
           <li>
-            <strong>Lower body and glutes</strong> — ankle weights added for
+            <strong>Lower body and glutes</strong> - ankle weights added for
             leg lifts, donkey kicks, and hip extension work. This is often where
             the burn is most intense.
           </li>
           <li>
-            <strong>Core and resistance band work</strong> — bands for lateral
+            <strong>Core and resistance band work</strong> - bands for lateral
             movements, hip abduction, and deep core engagement.
           </li>
           <li>
-            <strong>Cool-down</strong> — stretching and recovery, often with a
+            <strong>Cool-down</strong> - stretching and recovery, often with a
             focus on the areas most loaded in that session.
           </li>
         </ul>

@@ -52,12 +52,12 @@ export default function YogaLagosGuide() {
       </section>
 
       <section>
-        <h2>#1 — Heat Lagos: infrared-heated yoga, Pilates & Sculpt</h2>
+        <h2>#1 - Heat Lagos: infrared-heated yoga, Pilates & Sculpt</h2>
         <p>
           Heat Lagos is the only infrared-heated studio in the Algarve. The
           yoga programme runs alongside mat Pilates, Sculpt, and mobility, all
           in the same purpose-built heated space. The infrared panels run the
-          studio at around 30 degrees Celsius — warm enough that muscles open
+          studio at around 30 degrees Celsius - warm enough that muscles open
           faster and you sweat properly, but not the suffocating 40-degree heat
           of traditional Bikram or hot yoga. You can breathe normally through
           every posture.
@@ -71,7 +71,7 @@ export default function YogaLagosGuide() {
         <p>
           <strong>Who it suits:</strong> Surfers, athletes, and active people
           who want their yoga to double as recovery and strength work. Beginners
-          are genuinely welcome — teachers cue clearly and offer modifications
+          are genuinely welcome - teachers cue clearly and offer modifications
           throughout. Students who have done yoga elsewhere consistently say the
           heat makes a physical difference they can feel.
         </p>
@@ -90,7 +90,7 @@ export default function YogaLagosGuide() {
       </section>
 
       <section>
-        <h2>#2 — InLight Studio: the most established yoga studio in Lagos</h2>
+        <h2>#2 - InLight Studio: the most established yoga studio in Lagos</h2>
         <p>
           InLight has been the anchor of the Lagos yoga scene for longer than
           any other studio. Bright, spacious, and in the old town, it runs a
@@ -99,7 +99,7 @@ export default function YogaLagosGuide() {
         </p>
         <p>
           <strong>Class formats:</strong> Vinyasa, Hatha, Yin, Rocket Yoga,
-          Ashtanga. The breadth is the point — if you want to try different
+          Ashtanga. The breadth is the point - if you want to try different
           traditions under one roof, InLight is the best place in Lagos to do it.
         </p>
         <p>
@@ -119,11 +119,11 @@ export default function YogaLagosGuide() {
       </section>
 
       <section>
-        <h2>#3 — Algarve Alchemy: yoga plus contrast therapy</h2>
+        <h2>#3 - Algarve Alchemy: yoga plus contrast therapy</h2>
         <p>
           Algarve Alchemy sits above the Black and White Cafe in the old town.
           The studio is sunlit and well-designed, and it is the only place in
-          Lagos that combines yoga and Pilates with contrast therapy — infrared
+          Lagos that combines yoga and Pilates with contrast therapy - infrared
           sauna and ice bath. The contrast journey (sauna into ice bath, repeat)
           is worth doing on its own, and it pairs particularly well with a yin or
           recovery yoga session.
@@ -149,7 +149,7 @@ export default function YogaLagosGuide() {
       </section>
 
       <section>
-        <h2>#4 — Espiche Yoga: nature-based practice outside the town</h2>
+        <h2>#4 - Espiche Yoga: nature-based practice outside the town</h2>
         <p>
           Espiche Yoga is based just outside Lagos in the village of Espiche,
           in a setting that feels nothing like a town studio. The space connects
@@ -173,7 +173,7 @@ export default function YogaLagosGuide() {
       </section>
 
       <section>
-        <h2>#5 — Soluna Space: rotating teachers and events</h2>
+        <h2>#5 - Soluna Space: rotating teachers and events</h2>
         <p>
           Soluna Space is a wellness and movement venue rather than a fixed
           studio with a permanent teacher roster. It hosts rotating instructors,
@@ -230,7 +230,7 @@ export default function YogaLagosGuide() {
         </p>
         <p>
           Most studios offer drop-in spots. Heat Lagos offers a Vacation Week
-          pass — €59 for seven days of unlimited classes — which is the best
+          pass - €59 for seven days of unlimited classes - which is the best
           value option for anyone spending a week in Lagos and wanting to
           practice daily. InLight, Algarve Alchemy, and Soluna Space all have
           single class options.

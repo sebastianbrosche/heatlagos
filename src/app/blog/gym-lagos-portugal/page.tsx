@@ -72,7 +72,7 @@ export default function GymLagosPortugal() {
       </section>
 
       <section>
-        <h2>Heat Lagos — fitness in an infrared studio</h2>
+        <h2>Heat Lagos - fitness in an infrared studio</h2>
         <p>
           Heat Lagos is a boutique infrared studio in central Lagos. The schedule
           includes mat Pilates, Sculpt, yoga, and mobility classes. Sculpt
