@@ -46,7 +46,7 @@ export default function About() {
             <em className="text-brand">in Portugal.</em>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-foreground/70">
-            Our 200-hour Yoga Alliance certified teacher training starts September 2026. Online + live hybrid format. Early bird ends July 1.
+            September 2026 is SOLD OUT. Next SCULPT Teacher Training: January 29-31, 2027. 200-hour Vinyasa is waitlist only for 2027.
           </p>
           <a
             href="https://yogateachertrainingportugal.eu"
