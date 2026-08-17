@@ -12,13 +12,13 @@ Position as the *mat Pilates + Sculpt* studio first (highest local search intent
 
 **Algarve Visitor (James, 38, UK/DE/NO)** — 1–2 week holiday, surfs in morning, wants recovery/yoga. Buys Vacation Week (€59) or drop-in (€22). Finds us on Google Maps. Responds to "hot yoga" + "infrared" language.
 
-**YTT Candidate (Anna, 29, Nordic/UK)** — wants to teach, looking for a training in Europe that isn't India. Budget €1,490–1,650. Finds us via Google + travel blogs. Converts on the program quality story.
+**SCULPT TT Candidate (Anna, 29, Nordic/UK)** — already teaches yoga or Pilates, wants a short certification in Europe. Budget around €490–550. Finds us via Google + the studio site. Converts on dates, instructor, and a clear 3-day format.
 
 ## Key Metrics
 - Weekly active members (target: 60+ by Sep 2026)
 - Monthly recurring revenue (memberships + packs)
 - GBP listing rank for "pilates lagos", "hot yoga lagos", "infrared yoga algarve"
-- YTT spots filled (200h: 15 max, Sculpt TT: 20 max)
+- Sculpt TT spots filled (20 max)
 - Review velocity (Google + Booking.com)
 
 ## Business Stack

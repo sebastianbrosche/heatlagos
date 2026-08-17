@@ -312,6 +312,22 @@ export default function SchemaMarkup() {
         },
       })),
     },
+    {
+      "@type": "Course",
+      "@id": `${BASE}/#sculpt-teacher-training`,
+      name: "SCULPT Teacher Training",
+      description:
+        "3-day SCULPT teacher training for yoga and Pilates instructors at Heat Lagos in Lagos, Portugal. Next dates January 29-31, 2027. September 2026 is sold out.",
+      url: "https://yogateachertrainingportugal.eu/sculpt",
+      provider: { "@id": STUDIO_ID },
+      hasCourseInstance: {
+        "@type": "CourseInstance",
+        courseMode: "https://schema.org/Onsite",
+        startDate: "2027-01-29",
+        endDate: "2027-01-31",
+        location: { "@id": STUDIO_ID },
+      },
+    },
   ];
 
   const jsonLd = {

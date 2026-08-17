@@ -46,7 +46,7 @@ export default function About() {
             <em className="text-brand">in Portugal.</em>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-foreground/70">
-            September 2026 is SOLD OUT. Next SCULPT Teacher Training: January 29-31, 2027. 200-hour Vinyasa is waitlist only for 2027.
+            September 2026 is SOLD OUT. Next SCULPT Teacher Training: January 29-31, 2027.
           </p>
           <a
             href="https://yogateachertrainingportugal.eu"
@@ -54,7 +54,7 @@ export default function About() {
             rel="noopener noreferrer"
             className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-brand/40 bg-brand/10 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand transition-colors hover:border-brand hover:bg-brand/20"
           >
-            View Teacher Training
+            View SCULPT Teacher Training
           </a>
         </div>
         <div className="flex flex-col gap-6 text-foreground/80 lg:col-span-7">
