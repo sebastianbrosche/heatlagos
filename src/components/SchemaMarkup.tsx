@@ -199,9 +199,9 @@ const OFFERS: {
     priceValidUntil: "2026-08-23",
   },
   {
-    name: "2 for 1 intro offer",
+    name: "2 for 1 Intro Offer",
     price: "22",
-    description: "Bring a friend. Two class credits for the price of one drop-in.",
+    description: "Two classes for 22€. Valid 14 days. New students.",
   },
   {
     name: "12 Month Membership",

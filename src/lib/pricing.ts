@@ -27,12 +27,11 @@ export const PLANS: Plan[] = [
     href: "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true",
   },
   {
-    id: "cta-2for1-intro",
-    name: "2 for 1 intro offer",
+    id: "cta-2for1",
+    name: "2 for 1 Intro Offer",
     price: "22€",
-    description: "Bring a friend. Two class credits for the price of one drop-in.",
-    badge: "2 for 1",
-    highlight: true,
+    description: "Two classes for 22€. Valid 14 days. New students.",
+    note: "2 classes / 14 days",
     href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
   },
   {
