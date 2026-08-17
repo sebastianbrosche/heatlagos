@@ -199,6 +199,11 @@ const OFFERS: {
     priceValidUntil: "2026-08-23",
   },
   {
+    name: "2 for 1 intro offer",
+    price: "22",
+    description: "Bring a friend. Two class credits for the price of one drop-in.",
+  },
+  {
     name: "12 Month Membership",
     price: "125",
     description: "Rolling monthly subscription, unlimited classes. Lowest monthly rate.",

@@ -34,7 +34,7 @@ const GROUPS: Group[] = [
   {
     title: "New here",
     blurb: "Best first step if you have not trained with us yet.",
-    ids: ["cta-intro-offer", "cta-1month"],
+    ids: ["cta-intro-offer", "cta-2for1-intro", "cta-1month"],
   },
   {
     title: "Visiting Lagos",

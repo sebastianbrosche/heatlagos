@@ -16,7 +16,7 @@ export type Plan = {
 export const PLANS: Plan[] = [
   {
     id: "cta-intro-offer",
-    name: "2 for 1 Intro Offer",
+    name: "2 weeks unlimited",
     price: "39€",
     wasPrice: "79€",
     description:
@@ -25,6 +25,15 @@ export const PLANS: Plan[] = [
     note: "Ends 23 August",
     highlight: true,
     href: "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true",
+  },
+  {
+    id: "cta-2for1-intro",
+    name: "2 for 1 intro offer",
+    price: "22€",
+    description: "Bring a friend. Two class credits for the price of one drop-in.",
+    badge: "2 for 1",
+    highlight: true,
+    href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
   },
   {
     id: "cta-12month",
