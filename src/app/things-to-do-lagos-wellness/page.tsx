@@ -143,7 +143,7 @@ export default function Page() {
             </li>
             <li>
               <strong>Convenient passes.</strong> Single drop-in, 7-day
-              Vacation Week, 10-class pack and the 2-week Intro Offer all
+              Vacation Week, 10-class pack and 2 weeks unlimited all
               fit different trip lengths.
             </li>
           </ul>
@@ -182,7 +182,7 @@ export default function Page() {
           <p>
             Take a single drop-in class to see if Heat fits how you like
             to train, or buy the Vacation Week if you are here for seven
-            days or less. Staying longer? The 2-week Intro Offer is the
+            days or less. Staying longer? 2 weeks unlimited is the
             best value introduction we offer, with unlimited access to
             every class on the schedule.
           </p>

@@ -175,7 +175,7 @@ export default function Page() {
         <section>
           <h2>How to start practising yoga with us</h2>
           <p>
-            The 2-week Intro Offer is the simplest way in. It includes
+            2 weeks unlimited is the simplest way in. It includes
             every class on the schedule, so you can try Flow, Power and
             Yin in the same fortnight and decide what works. If you are
             visiting, take a single drop-in or the 7-day Vacation Week

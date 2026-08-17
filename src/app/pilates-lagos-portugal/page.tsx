@@ -165,7 +165,7 @@ export default function Page() {
         <section>
           <h2>How to start with Pilates at Heat</h2>
           <p>
-            New to the studio? The 2-week Intro Offer is the easiest way in.
+            New to the studio? 2 weeks unlimited is the easiest way in.
             It covers every class on the schedule, so you can take three or
             four Pilates classes plus a recovery session in the same
             fortnight and decide what fits. Visiting Lagos? The Vacation

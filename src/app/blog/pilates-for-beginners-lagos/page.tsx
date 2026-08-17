@@ -201,7 +201,7 @@ export default function PilatesForBeginnersLagos() {
       <section>
         <h2>How to book your first class</h2>
         <p>
-          The easiest way to start is our 2-week Intro Offer at €79. This gives
+          The easiest way to start is our 2 weeks unlimited at €79. This gives
           you unlimited access to every class - Pilates, Sculpt, Yoga, Mobility,
           Recovery - for two weeks. It is designed specifically for new members
           who want to try the studio properly before committing.
