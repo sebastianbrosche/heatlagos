@@ -144,7 +144,7 @@ export default function Page() {
                 </span>
                 <div>
                   <span className="text-xs uppercase tracking-wider text-brand font-bold block mb-2">Intro Offer</span>
-                  <h3 className="font-serif text-2xl text-foreground">2 Weeks Trial</h3>
+                  <h3 className="font-serif text-2xl text-foreground">2 weeks unlimited</h3>
                   <div className="my-6">
                     <span className="font-serif text-4xl text-foreground font-light">€79</span>
                   </div>

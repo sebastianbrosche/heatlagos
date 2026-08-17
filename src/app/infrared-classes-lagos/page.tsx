@@ -209,7 +209,7 @@ export default function Page() {
           <h2>How to start</h2>
           <p>
             If you have never been to a heated class, the easiest place to
-            begin is the 2-week Intro Offer. It gives you unlimited access to
+            begin is 2 weeks unlimited. It gives you unlimited access to
             every class on the schedule, so you can find which formats fit
             your body and your week. From there, most people settle into a
             monthly or yearly membership and use Heat as their year-round

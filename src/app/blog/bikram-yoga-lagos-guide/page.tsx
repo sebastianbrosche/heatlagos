@@ -146,7 +146,7 @@ export default function BikramYogaLagosGuide() {
           you off.
         </p>
         <p>
-          If you want to try it, the 2-week Intro Offer covers every class on the
+          If you want to try it, 2 weeks unlimited covers every class on the
           schedule, so you can take Nadine&apos;s Tuesday Bikram class alongside
           the studio&apos;s Sculpt, Pilates and recovery classes and see how the
           traditional hot method compares. Full details and booking are on the{" "}

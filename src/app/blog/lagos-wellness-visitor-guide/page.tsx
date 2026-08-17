@@ -63,7 +63,7 @@ export default function LagosWellnessVisitorGuide() {
         </p>
         <p>
           <strong>Visitor-friendly:</strong> Single drop-in €22. 7-day
-          Vacation Week €59 unlimited. 2-week Intro Offer €79. All classes in
+          Vacation Week €59 unlimited. 2 weeks unlimited €79. All classes in
           English. Located on Avenida dos Descobrimentos, central Lagos.
         </p>
 
