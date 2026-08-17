@@ -17,11 +17,12 @@ export const PLANS: Plan[] = [
   {
     id: "cta-intro-offer",
     name: "2 for 1 Intro Offer",
-    price: "79€",
+    price: "39€",
+    wasPrice: "79€",
     description:
-      "Two weeks of unlimited access to every class. The best way to try the studio.",
-    badge: "Start here",
-    note: "New students",
+      "Two weeks of unlimited access to every class. 50% off until 23 August 2026.",
+    badge: "50% off",
+    note: "Ends 23 August",
     highlight: true,
     href: "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true",
   },
@@ -46,12 +47,8 @@ export const PLANS: Plan[] = [
   {
     id: "cta-1month",
     name: "1 Month Unlimited",
-    price: "99€",
-    wasPrice: "160€",
-    description:
-      "X-mas is July! 30 days unlimited, one-off, no subscription. Expires 31 July. Save 61€.",
-    badge: "Great value",
-    highlight: true,
+    price: "160€",
+    description: "One-off monthly unlimited, no subscription commitment.",
     href: "https://backoffice.bsport.io/customer/payment/pass/751517/?membership=5821&force=true",
   },
   {

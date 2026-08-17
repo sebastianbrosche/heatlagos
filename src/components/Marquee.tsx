@@ -1,5 +1,5 @@
 ﻿const MESSAGES = [
-  "Intro Offer - 2 weeks unlimited · 79 €",
+  "Intro Offer - 2 weeks unlimited · 39 € · 50% off until 23 August",
   "Infrared heated studio",
   "Pilates · Yoga · Sculpt",
   "Mobility · Recovery · Yin",

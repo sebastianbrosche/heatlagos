@@ -184,11 +184,19 @@ const SERVICES = [
   },
 ];
 
-const OFFERS = [
+const OFFERS: {
+  name: string;
+  price: string;
+  description: string;
+  unit?: string;
+  priceValidUntil?: string;
+}[] = [
   {
     name: "Intro Offer",
-    price: "79",
-    description: "2 weeks unlimited for new students.",
+    price: "39",
+    description:
+      "2 weeks unlimited for new students. 50% off until 23 August 2026.",
+    priceValidUntil: "2026-08-23",
   },
   {
     name: "12 Month Membership",
@@ -290,6 +298,9 @@ export default function SchemaMarkup() {
         availability: "https://schema.org/InStock",
         url: `${BASE}/#memberships`,
         seller: { "@id": STUDIO_ID },
+        ...(offer.priceValidUntil
+          ? { priceValidUntil: offer.priceValidUntil }
+          : {}),
       })),
     },
     ...SERVICES.map((service) => ({
