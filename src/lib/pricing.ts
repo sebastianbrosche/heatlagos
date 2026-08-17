@@ -16,7 +16,7 @@ export type Plan = {
 export const PLANS: Plan[] = [
   {
     id: "cta-intro-offer",
-    name: "2 for 1 Intro Offer",
+    name: "2-Week Intro Offer",
     price: "39€",
     wasPrice: "79€",
     description:
