@@ -180,7 +180,7 @@ export default function Page() {
         <section>
           <h2>How to start</h2>
           <p>
-            The 2-week Intro Offer covers every class, so you can stack
+            2 weeks unlimited covers every class, so you can stack
             two mobility sessions, a recovery class and a yin class inside
             the same fortnight and feel what changes. Visiting? The 7-day
             Vacation Week pass is built for that. Or take a single drop-in

@@ -41,7 +41,7 @@ const FAQS = [
   {
     question: "Can I join a class while on holiday in Lagos?",
     answer:
-      "Yes. We offer single drop-ins, a 7-day Vacation Week pass, and a 2-week Intro Offer. All make it easy to join while you are visiting Lagos, Luz, Burgau or Portimão.",
+      "Yes. We offer single drop-ins, a 7-day Vacation Week pass, and 2 weeks unlimited. All make it easy to join while you are visiting Lagos, Luz, Burgau or Portimão.",
   },
 ];
 

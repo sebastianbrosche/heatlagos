@@ -175,7 +175,7 @@ export default function Page() {
         <section>
           <h2>How to start</h2>
           <p>
-            The 2-week Intro Offer covers every class on the schedule, so
+            2 weeks unlimited covers every class on the schedule, so
             you can do two or three mobility sessions plus a Pilates and a
             recovery class in the same fortnight. Visiting Lagos? The
             7-day Vacation Week pass works for shorter trips. Or take a
