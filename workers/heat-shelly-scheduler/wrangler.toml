@@ -1,0 +1,19 @@
+name = "heat-shelly-scheduler"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+workers_dev = true
+
+# Do not set [triggers] so existing cron triggers stay as-is.
+
+[[kv_namespaces]]
+binding = "KV"
+id = "b3e861c795664ec782b3ce3f9786824d"
+
+[durable_objects]
+bindings = [
+  { name = "FLIP", class_name = "FlipClock" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["FlipClock"]

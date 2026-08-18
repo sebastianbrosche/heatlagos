@@ -1,0 +1,11 @@
+{
+  "name": "heat-shelly-scheduler",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "wrangler": "^3.114.17"
+  }
+}
