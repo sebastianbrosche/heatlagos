@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
-import TeachersStrip from "@/components/TeachersStrip";
 
 const URL = "https://www.heatlagos.com/privates";
 
@@ -167,6 +166,19 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="px-5 pb-12 sm:px-6 lg:px-20 lg:pb-16">
+          <div className="mx-auto max-w-[1400px] overflow-hidden rounded-3xl">
+            <div className="relative aspect-[3/2] w-full overflow-hidden sm:aspect-[16/9] lg:aspect-[21/9]">
+              <img
+                src="/Sarah%20wild-thing.jpg"
+                alt="Sarah practicing yoga on a deck over the ocean"
+                className="h-full w-full object-cover"
+                style={{ objectPosition: "center 60%" }}
+              />
+            </div>
+          </div>
+        </section>
+
         <section className="border-t border-white/5 bg-stone-dark/10 px-5 py-20 sm:px-6 lg:px-20 lg:py-28">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground">
@@ -256,20 +268,50 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="px-5 pb-6 sm:px-6 lg:px-20">
-          <div className="mx-auto max-w-[1400px] overflow-hidden rounded-3xl">
-            <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[3/2]">
-              <img
-                src="/Sarah%20halfbody.jpg"
-                alt="Sarah, HEAT Foundations teacher"
-                className="h-full w-full object-cover"
-                style={{ objectPosition: "center 18%" }}
-              />
+        <section className="px-5 py-20 sm:px-6 sm:py-24 lg:px-20 lg:py-28">
+          <div className="mx-auto max-w-[1400px]">
+            <div className="mb-10 flex flex-col items-start gap-3 sm:mb-14">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
+                Heat Teachers
+              </p>
+              <h2 className="font-serif text-[2rem] leading-[1.1] sm:text-4xl lg:text-5xl">
+                Your teacher.
+              </h2>
+            </div>
+            <div className="grid items-stretch gap-6 lg:grid-cols-2">
+              <div className="overflow-hidden rounded-3xl ring-1 ring-white/10">
+                <div className="relative aspect-[4/5] w-full overflow-hidden">
+                  <img
+                    src="/Sarah%20halfbody.jpg"
+                    alt="Sarah, HEAT Foundations teacher"
+                    className="h-full w-full object-cover"
+                    style={{ objectPosition: "center 18%" }}
+                  />
+                </div>
+              </div>
+              <a
+                href="/#teachers"
+                className="group relative aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-white/10 transition-transform hover:-translate-y-1 hover:ring-brand/40"
+              >
+                <img
+                  src="/Sarah%20profilbilde.jpg"
+                  alt="Sarah"
+                  style={{ objectPosition: "center 22%" }}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-dark/90 via-stone-dark/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                  <span className="font-serif text-2xl text-foreground drop-shadow-lg sm:text-3xl">
+                    Sarah
+                  </span>
+                  <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-foreground/75">
+                    Personal Training, Pilates, Sculpt, Mobility
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </section>
-
-        <TeachersStrip heading="Your teacher." teachers={["Sarah"]} />
       </main>
 
       <Footer />
