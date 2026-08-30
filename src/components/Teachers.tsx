@@ -229,6 +229,55 @@ const TEACHERS: Teacher[] = [
       },
     ],
   },
+  {
+    name: "Sarah",
+    role: "Personal Training, Pilates, Sculpt, Mobility",
+    image: "/Sarah%20profilbilde.jpg",
+    position: "center 22%",
+    zoom: 1.15,
+    tagline: "Meet Sarah",
+    bio: [
+      {
+        type: "quote",
+        text: "You can be strong without constantly pushing your body. Training should make you feel powerful, confident and at home in your body.",
+      },
+      {
+        type: "paragraph",
+        text: "Hi, I'm Sarah. Movement and wellbeing have been part of my life for many years, but my approach to fitness has changed a lot along the way. I used to believe that getting results meant always doing more, training harder, pushing further and never slowing down. Over time, I discovered that real strength comes from finding the balance between challenge and recovery, strength and mobility, effort and listening to your body.",
+      },
+      { type: "heading", text: "How I train" },
+      {
+        type: "paragraph",
+        text: "Today my training combines strength, Pilates-inspired movement and mobility. I love helping people become stronger and more confident while building a way of moving that actually feels good and can become part of their life. Fitness is not about extremes or perfection. It is about feeling capable in your body, understanding how you move and enjoying the process of becoming stronger.",
+      },
+      { type: "heading", text: "Training" },
+      {
+        type: "paragraph",
+        text: "Certified Personal Trainer, Group Fitness Instructor and Yoga Teacher, additional education in Ayurveda and holistic wellbeing. Yoga Teacher Training in India, continuing Pilates and Sculpt. Strong, intentional and challenging, while still respecting the individual body.",
+      },
+      { type: "heading", text: "In sessions" },
+      {
+        type: "paragraph",
+        text: "Feel comfortable asking questions, learn the foundations, and progress at your own pace. Leave stronger, more confident, more connected to your body.",
+      },
+      {
+        type: "quote",
+        text: "Strong, but soft. That's the balance.",
+      },
+      {
+        type: "certifications",
+        items: [
+          "Certified Personal Trainer",
+          "Group Fitness Instructor",
+          "Yoga Teacher",
+          "Ayurveda and holistic wellbeing",
+          "Yoga Teacher Training in India",
+          "Pilates",
+          "Sculpt",
+        ],
+      },
+    ],
+  },
 ];
 
 const BANNER_IMAGE = "/ring%20detail.jpeg?v=1";
