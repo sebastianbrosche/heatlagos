@@ -30,6 +30,12 @@ const ALL_TEACHERS: Record<string, Teacher> = {
     image: "/Agata%20profilbilde.jpg",
     position: "center 30%",
   },
+  Sarah: {
+    name: "Sarah",
+    role: "Personal Training, Pilates, Sculpt, Mobility",
+    image: "/Sarah%20profilbilde.jpg",
+    position: "center 30%",
+  },
 };
 
 type Props = {
@@ -63,7 +69,9 @@ export default function TeachersStrip({
 
         <div
           className={`grid gap-5 sm:gap-6 ${
-            items.length === 2
+            items.length === 1
+              ? "max-w-sm"
+              : items.length === 2
               ? "sm:grid-cols-2"
               : "sm:grid-cols-2 lg:grid-cols-3"
           }`}
