@@ -39,7 +39,9 @@ export const PLANS: Plan[] = [
     name: "12 Month Membership",
     price: "125€",
     unit: "/month",
-    description: "Our lowest monthly rate. Rolling subscription, unlimited classes.",
+    description:
+      "Unlimited classes. Billed monthly for 12 months. Month 13 is free.",
+    note: "Month 13 free",
     href: "https://backoffice.bsport.io/customer/payment/pass/751520/?membership=5821&force=true",
   },
   {
@@ -62,9 +64,10 @@ export const PLANS: Plan[] = [
   {
     id: "cta-yearly",
     name: "Yearly",
-    price: "1 200€",
-    description: "Pay up front and save 300€ compared to the 12-month plan.",
-    note: "Save 300€",
+    price: "990€",
+    description:
+      "Unlimited for 365 days, paid up front. Save 510€ versus 12 months at 125€.",
+    note: "365 days",
     href: "https://backoffice.bsport.io/customer/payment/pass/751518/?membership=5821&force=true",
   },
   {

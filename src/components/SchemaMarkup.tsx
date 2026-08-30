@@ -206,7 +206,8 @@ const OFFERS: {
   {
     name: "12 Month Membership",
     price: "125",
-    description: "Rolling monthly subscription, unlimited classes. Lowest monthly rate.",
+    description:
+      "Unlimited classes billed monthly for 12 months. Month 13 is free.",
     unit: "month",
   },
   {
@@ -216,8 +217,9 @@ const OFFERS: {
   },
   {
     name: "Yearly Membership",
-    price: "1200",
-    description: "Annual unlimited paid up front. Save €300 versus the 12-month plan.",
+    price: "990",
+    description:
+      "Unlimited access for 365 days, paid up front. Save €510 versus 12 months at €125.",
   },
   {
     name: "10 Class Package",
