@@ -233,8 +233,8 @@ const TEACHERS: Teacher[] = [
     name: "Sarah",
     role: "Personal Training, Pilates, Sculpt, Mobility",
     image: "/Sarah%20profilbilde.jpg",
-    position: "center 30%",
-    zoom: 1,
+    position: "center 22%",
+    zoom: 1.15,
     tagline: "Meet Sarah",
     bio: [
       {

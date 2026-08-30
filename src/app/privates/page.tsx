@@ -256,6 +256,19 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="px-5 pb-6 sm:px-6 lg:px-20">
+          <div className="mx-auto max-w-[1400px] overflow-hidden rounded-3xl">
+            <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[3/2]">
+              <img
+                src="/Sarah%20halfbody.jpg"
+                alt="Sarah, HEAT Foundations teacher"
+                className="h-full w-full object-cover"
+                style={{ objectPosition: "center 18%" }}
+              />
+            </div>
+          </div>
+        </section>
+
         <TeachersStrip heading="Your teacher." teachers={["Sarah"]} />
       </main>
 
