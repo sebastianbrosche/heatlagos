@@ -23,10 +23,12 @@ export const metadata: Metadata = {
   },
 };
 
-// Swap these for real BSport payment-page URLs when they land.
-const PLACEHOLDER_BSPORT_PRIVATE = "#bsport-private";
-const PLACEHOLDER_BSPORT_DUO = "#bsport-duo";
-const PLACEHOLDER_BSPORT_TRIO = "#bsport-trio";
+const BSPORT_PRIVATE =
+  "https://backoffice.bsport.io/customer/payment/shop-item/470885/?membership=5821";
+const BSPORT_DUO =
+  "https://backoffice.bsport.io/customer/payment/shop-item/470886/?membership=5821";
+const BSPORT_TRIO =
+  "https://backoffice.bsport.io/customer/payment/shop-item/470887/?membership=5821";
 
 function buyLinkProps(href: string) {
   const isHttp = href.startsWith("http://") || href.startsWith("https://");
@@ -43,7 +45,7 @@ const OPTIONS = [
     price: "€249",
     perPerson: null,
     detail: "3 private sessions. One person.",
-    href: PLACEHOLDER_BSPORT_PRIVATE,
+    href: BSPORT_PRIVATE,
   },
   {
     id: "bsport-duo",
@@ -51,7 +53,7 @@ const OPTIONS = [
     price: "€330",
     perPerson: "€165 per person",
     detail: "3 sessions for two people.",
-    href: PLACEHOLDER_BSPORT_DUO,
+    href: BSPORT_DUO,
   },
   {
     id: "bsport-trio",
@@ -59,7 +61,7 @@ const OPTIONS = [
     price: "€390",
     perPerson: "€130 per person",
     detail: "3 sessions for three people.",
-    href: PLACEHOLDER_BSPORT_TRIO,
+    href: BSPORT_TRIO,
   },
 ] as const;
 
