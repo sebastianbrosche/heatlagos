@@ -8,7 +8,7 @@ const URL = "https://www.heatlagos.com/privates";
 export const metadata: Metadata = {
   title: "HEAT Foundations - Private Intro Sessions | Heat Lagos",
   description:
-    "A 3-session introductory course in Lagos for beginners and anyone returning to exercise. Learn Pilates, Sculpt and Yoga foundations with Sarah. Book as a private, duo or trio.",
+    "A 3-session introductory course in Lagos for beginners and anyone returning to exercise. Learn Pilates, Sculpt and Yoga foundations with Sarah. Book as a private or duo.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: URL,
     title: "HEAT Foundations | Heat Lagos",
     description:
-      "Learn the basics. Build confidence. Feel ready for class. Three private intro sessions in Pilates, Sculpt and Yoga. Book as a private, duo or trio.",
+      "Learn the basics. Build confidence. Feel ready for class. Three private intro sessions in Pilates, Sculpt and Yoga. Book as a private or duo.",
   },
 };
 
@@ -26,8 +26,6 @@ const BSPORT_PRIVATE =
   "https://backoffice.bsport.io/customer/payment/shop-item/470885/?membership=5821";
 const BSPORT_DUO =
   "https://backoffice.bsport.io/customer/payment/shop-item/470886/?membership=5821";
-const BSPORT_TRIO =
-  "https://backoffice.bsport.io/customer/payment/shop-item/470887/?membership=5821";
 
 function buyLinkProps(href: string) {
   const isHttp = href.startsWith("http://") || href.startsWith("https://");
@@ -41,7 +39,7 @@ const OPTIONS = [
   {
     id: "bsport-private",
     name: "Private",
-    price: "€249",
+    price: "€165",
     perPerson: null,
     detail: "3 private sessions. One person.",
     href: BSPORT_PRIVATE,
@@ -49,18 +47,10 @@ const OPTIONS = [
   {
     id: "bsport-duo",
     name: "Duo",
-    price: "€330",
-    perPerson: "€165 per person",
+    price: "€270",
+    perPerson: "€135 per person",
     detail: "3 sessions for two people.",
     href: BSPORT_DUO,
-  },
-  {
-    id: "bsport-trio",
-    name: "Trio",
-    price: "€390",
-    perPerson: "€130 per person",
-    detail: "3 sessions for three people.",
-    href: BSPORT_TRIO,
   },
 ] as const;
 
@@ -127,12 +117,9 @@ export default function Page() {
             <h1 className="mt-4 font-serif text-[2.4rem] leading-[1.08] sm:text-5xl lg:text-[4.5rem]">
               Learn the basics. Build confidence. Feel ready for class.
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-sm uppercase tracking-[0.2em] text-foreground/60">
-              Proposed start 15 September 2026
-            </p>
           </div>
 
-          <div className="mx-auto mt-12 grid max-w-6xl gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:mt-16 sm:grid-cols-2">
             {OPTIONS.map((option) => (
               <div
                 key={option.id}
@@ -190,8 +177,8 @@ export default function Page() {
               people returning to exercise after a break, or anyone who wants
               more individual guidance before joining regular HEAT classes. Learn
               the foundations of Pilates, Sculpt and Yoga, build confidence, and
-              feel ready to join the HEAT community. Book privately, as a duo, or
-              as a trio.
+              feel ready to join the HEAT community. Book privately or as a
+              duo.
             </p>
           </div>
         </section>
@@ -230,8 +217,8 @@ export default function Page() {
             </div>
 
             <p className="mx-auto mt-14 max-w-3xl text-center text-base text-foreground/80 leading-relaxed sm:text-lg">
-              The goal is not to keep people in personal training. It is to help
-              them become confident members of the HEAT community.
+              The goal is not personal training. It is to help you understand
+              and get the most out of your classes at HEAT.
             </p>
           </div>
         </section>
@@ -261,9 +248,6 @@ export default function Page() {
           <div className="mx-auto max-w-3xl">
             <p className="font-serif text-3xl italic leading-snug text-foreground sm:text-4xl lg:text-5xl">
               From &quot;I&apos;m not ready&quot; to &quot;See you in class.&quot;
-            </p>
-            <p className="mt-8 text-sm uppercase tracking-[0.2em] text-foreground/60">
-              Proposed start 15 September 2026
             </p>
           </div>
         </section>
