@@ -52,6 +52,53 @@ Do NOT claim any key or access is missing. All secrets are stored as Cloudflare 
 ### Bunny.net
 - Not yet found in any worker or project code. Ask the user where the key is stored before claiming it doesn't exist.
 
+## Network egress is blocked for most external hosts — this is NOT a credentials problem
+
+This sandbox's outbound network policy (org-level, set when the Claude Code
+web environment was created) hard-blocks arbitrary external hosts with a 403
+at the proxy layer, before any request-level auth is even checked. Confirmed
+blocked: `*.pages.dev` (Cloudflare Pages previews), `api.production.bsport.io`
+(bSport API), `api.cloudflare.com` (Cloudflare API) — even with a valid
+Cloudflare API token in hand, `api.cloudflare.com` still 403s at the CONNECT
+level. **Having the right credential does not bypass this.** Diagnose with:
+`curl -sS -o /dev/null -w "%{http_code}\n" --max-time 10 https://<host>/`
+— a bare `403`/exit 56 "CONNECT tunnel failed" means it's this policy, not
+an auth failure, so don't waste cycles hunting for a token.
+
+The only real fix is the user (or whoever owns the environment) changing the
+network policy in the environment's settings at claude.ai/code — see
+https://code.claude.com/docs/en/claude-code-on-the-web. Point them there
+directly instead of retrying with different credentials.
+
+Separately: bSport itself has no known write API for creating
+passes/products — every script in `boutiqueos-platform` that touches bSport
+(`scripts/populate_remote_bsport.py`, `docs/migrations/bsport.md`) only reads
+passes, never creates them, and the migration docs explicitly say pass/product
+definitions are out of scope for automation. Creating a new bSport pass is a
+backoffice.bsport.io UI action, not an API gap — this holds independent of
+the network-policy issue above.
+
+## Visual-checking a page — do this yourself, never ask the user to look
+
+Live preview URLs (`*.pages.dev`) are blocked by the network policy above, but
+that doesn't mean a visual check is unavailable — build and render locally,
+which stays entirely on localhost and needs no external network:
+
+1. `npm run build` (this project uses `output: export`, so it emits static files to `out/`).
+2. Serve it locally: `npx --yes serve@latest out -p 3939` (background it).
+3. Screenshot with the pre-installed Chromium — do NOT run `playwright install`
+   or add `playwright`/`playwright-core` to the project; the global install
+   already has a browser wired up. Run the script with
+   `NODE_PATH=/opt/node22/lib/node_modules node script.js`, where `script.js`
+   does `require('playwright').chromium.launch({ executablePath: '/opt/pw-browsers/chromium' })`.
+4. Read the resulting PNG with the Read tool to actually look at it before
+   claiming success, then send it to the user with SendUserFile.
+5. Kill the local server when done.
+
+Reserve asking the user for genuine visual/design judgment calls only (e.g.
+"does this brand feel right"), not for confirming that text you already
+changed actually appears on the page.
+
 ## After a frustrating episode: fix the root cause first
 When a frustrating situation occurs (e.g. wrongly claiming a key doesn't exist, wasting time re-deriving architecture), the FIRST priority after resolving it is to prevent it from happening again:
 1. Identify the root cause of the confusion.
