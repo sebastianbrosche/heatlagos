@@ -77,9 +77,8 @@ export default function Hero() {
           </h1>
           <div className="mt-6 text-sm text-foreground/90">
             <p className="font-semibold">
-              If you are curious about our classes, start with our intro
-              offer. Two weeks unlimited access to every class on the
-              schedule.
+              If you are curious about our classes, start with our 2 for 1
+              intro offer. Two classes for 22€, valid 14 days.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -120,9 +119,8 @@ export default function Hero() {
           </h1>
           <div className="mt-6 max-w-xl text-base text-foreground/90 lg:text-lg">
             <p className="font-semibold">
-              If you are curious about our classes, start with our intro
-              offer. Two weeks unlimited access to every class on the
-              schedule.
+              If you are curious about our classes, start with our 2 for 1
+              intro offer. Two classes for 22€, valid 14 days.
             </p>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">

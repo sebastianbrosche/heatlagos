@@ -180,11 +180,11 @@ export default function Page() {
         <section>
           <h2>How to start</h2>
           <p>
-            2 weeks unlimited covers every class, so you can stack
-            two mobility sessions, a recovery class and a yin class inside
-            the same fortnight and feel what changes. Visiting? The 7-day
-            Vacation Week pass is built for that. Or take a single drop-in
-            after a long surf and see how the body feels afterwards.
+            The 2 for 1 intro offer is two classes for 22€, valid 14
+            days, so you can stack a mobility session with recovery or yin
+            and feel what changes. Visiting? The 7-day Vacation Week pass
+            is built for that. Or take a single drop-in after a long surf
+            and see how the body feels afterwards.
           </p>
         </section>
       </SeoPageShell>

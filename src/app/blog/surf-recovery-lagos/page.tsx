@@ -136,7 +136,7 @@ export default function SurfRecoveryLagos() {
           room.
         </p>
         <p>
-          <strong>Price:</strong> Intro Offer 79 EUR for 2 weeks unlimited. Drop-in
+          <strong>Price:</strong> 2 for 1 intro offer 22 EUR (two classes). Drop-in
           22 EUR. Vacation Week 59 EUR for 7 days.
         </p>
         <p>

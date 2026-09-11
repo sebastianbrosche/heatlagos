@@ -175,12 +175,12 @@ export default function Page() {
         <section>
           <h2>How to start practising yoga with us</h2>
           <p>
-            2 weeks unlimited is the simplest way in. It includes
-            every class on the schedule, so you can try Flow, Power and
-            Yin in the same fortnight and decide what works. If you are
-            visiting, take a single drop-in or the 7-day Vacation Week
-            pass. If yoga is already part of your life, the monthly or
-            yearly memberships make it the easiest part of your week.
+            The 2 for 1 intro offer is the simplest way in: two classes
+            for 22€, valid 14 days, so you can try Flow, Power or Yin
+            and decide what works. If you are visiting, take a single
+            drop-in or the 7-day Vacation Week pass. If yoga is already
+            part of your life, the monthly or yearly memberships make it
+            the easiest part of your week.
           </p>
         </section>
       </SeoPageShell>

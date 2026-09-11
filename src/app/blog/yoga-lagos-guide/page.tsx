@@ -76,9 +76,9 @@ export default function YogaLagosGuide() {
           heat makes a physical difference they can feel.
         </p>
         <p>
-          <strong>Pricing:</strong> Drop-in €22. Intro Offer €79 for 2 weeks
-          unlimited. Vacation Week €59 for 7 days unlimited. Monthly memberships
-          from €125.
+          <strong>Pricing:</strong> Drop-in €22. 2 for 1 intro offer €22 (two
+          classes, 14 days). Vacation Week €59 for 7 days unlimited. Monthly
+          memberships from €125.
         </p>
         <p>
           <strong>Location:</strong> Central Lagos, short walk from the old town.

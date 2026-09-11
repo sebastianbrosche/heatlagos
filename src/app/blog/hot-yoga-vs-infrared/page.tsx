@@ -151,8 +151,8 @@ export default function HotYogaVsInfrared() {
           practice. It does not replace it.
         </p>
         <p>
-          If you are curious, the Intro Offer is the simplest way to feel the
-          difference. Two weeks unlimited, every class, same room. You will know
+          If you are curious, the 2 for 1 intro offer is the simplest way to
+          feel the difference: two classes for 22€, same room. You will know
           within a few sessions whether infrared changes how you practice.
         </p>
       </section>

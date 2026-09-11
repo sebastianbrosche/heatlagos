@@ -175,11 +175,10 @@ export default function Page() {
         <section>
           <h2>How to start</h2>
           <p>
-            2 weeks unlimited covers every class on the schedule, so
-            you can do two or three mobility sessions plus a Pilates and a
-            recovery class in the same fortnight. Visiting Lagos? The
-            7-day Vacation Week pass works for shorter trips. Or take a
-            single drop-in.
+            The 2 for 1 intro offer is two classes for 22€, valid 14
+            days, so you can try mobility plus Pilates or recovery and see
+            what fits. Visiting Lagos? The 7-day Vacation Week pass works
+            for shorter trips. Or take a single drop-in.
           </p>
         </section>
       </SeoPageShell>

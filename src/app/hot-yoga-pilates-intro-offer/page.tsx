@@ -6,8 +6,8 @@ import Marquee from "@/components/Marquee";
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer";
 
 export const metadata: Metadata = {
-  title: "Two Weeks Unlimited Intro Offer - Heat Lagos",
-  description: "Try heated Pilates, Yoga, Sculpt, Mobility, and Yin for two weeks. 14 days of unlimited classes for €79. Experience the Algarve's first infrared studio.",
+  title: "2 for 1 Intro Offer - Heat Lagos",
+  description: "Try heated Pilates, Yoga, Sculpt, Mobility, and Yin. Two classes for €22, valid 14 days. Experience the Algarve's first infrared studio.",
   alternates: {
     canonical: URL,
     languages: { "en-PT": URL, "x-default": URL },
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: URL,
-    title: "14 Days Intro Offer | Heat Lagos",
-    description: "€79 for two weeks of unlimited access to all infrared hot yoga, pilates, sculpt, and mobility classes in Lagos.",
+    title: "2 for 1 Intro Offer | Heat Lagos",
+    description: "Two classes for €22, valid 14 days. Infrared hot yoga, pilates, sculpt, and mobility in Lagos.",
   },
 };
 
 export default function Page() {
-  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true";
+  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true";
 
   return (
     <>
@@ -54,12 +54,12 @@ export default function Page() {
               <span className="rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
                 New Member Offer
               </span>
-              <h2 className="mt-4 font-serif text-3xl text-foreground">Two Weeks Trial</h2>
-              <p className="mt-2 text-sm text-foreground/60">14 Days of Unlimited Classes</p>
+              <h2 className="mt-4 font-serif text-3xl text-foreground">2 for 1 Intro Offer</h2>
+              <p className="mt-2 text-sm text-foreground/60">Two classes, valid 14 days</p>
               
               <div className="my-6">
-                <span className="font-serif text-5xl font-light text-brand">€79</span>
-                <span className="text-sm text-foreground/50"> / one-time</span>
+                <span className="font-serif text-5xl font-light text-brand">€22</span>
+                <span className="text-sm text-foreground/50"> / two classes</span>
               </div>
 
               <ul className="mb-8 space-y-4 text-left text-sm text-foreground/80 leading-relaxed">
@@ -188,7 +188,7 @@ export default function Page() {
             <div className="mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row">
               <div className="flex items-center gap-3">
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-stone-dark text-sm font-bold">1</span>
-                <span className="text-sm text-foreground/80">Buy your 2-Week Pass</span>
+                <span className="text-sm text-foreground/80">Buy your 2 for 1 intro offer</span>
               </div>
               <div className="hidden h-[1px] w-12 bg-white/10 sm:block" />
               <div className="flex items-center gap-3">

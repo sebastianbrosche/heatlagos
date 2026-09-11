@@ -191,9 +191,9 @@ export default function SculptClassLagos() {
         <h2>How to book your first sculpt class in Lagos</h2>
         <p>
           Sculpt is available in the Heat Lagos timetable throughout the week.
-          The easiest way to try it is 2 weeks unlimited at 79 euros, which
-          gives you unlimited access to every class type including sculpt, Pilates,
-          yoga, and mobility for two weeks.
+          The easiest way to try it is the 2 for 1 intro offer at 22 euros:
+          two classes, valid 14 days, including sculpt, Pilates, yoga, or
+          mobility.
         </p>
         <p>
           If you are visiting Lagos, the 7-day Vacation Week pass at 59 euros

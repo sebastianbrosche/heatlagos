@@ -29,7 +29,7 @@ export const LANDINGS = {
   },
   intro: {
     href: "/hot-yoga-pilates-intro-offer",
-    label: "2 weeks unlimited",
+    label: "2 for 1 intro offer",
   },
   blog: {
     href: "/blog",

@@ -198,9 +198,9 @@ export default function Page() {
               than traditional hot yoga.
             </li>
             <li>
-              <strong>Booking:</strong> drop in once, use the 2-week intro,
-              buy a 10-class pack, take a Vacation Week pass, or join one of
-              our monthly or yearly memberships.
+              <strong>Booking:</strong> drop in once, start with the 2 for 1
+              intro offer, buy a 10-class pack, take a Vacation Week pass,
+              or join one of our monthly or yearly memberships.
             </li>
           </ul>
         </section>
@@ -209,11 +209,10 @@ export default function Page() {
           <h2>How to start</h2>
           <p>
             If you have never been to a heated class, the easiest place to
-            begin is 2 weeks unlimited. It gives you unlimited access to
-            every class on the schedule, so you can find which formats fit
-            your body and your week. From there, most people settle into a
-            monthly or yearly membership and use Heat as their year-round
-            routine.
+            begin is the 2 for 1 intro offer: two classes for 22€, valid
+            14 days, so you can find which formats fit your body. From
+            there, most people settle into a monthly or yearly membership
+            and use Heat as their year-round routine.
           </p>
         </section>
       </SeoPageShell>

@@ -105,7 +105,7 @@ export default function BestYogaStudiosLagos() {
           pliable and the teachers offer options for every level.
         </p>
         <p>
-          <strong>Price:</strong> Intro Offer €79 for 2 weeks unlimited.
+          <strong>Price:</strong> 2 for 1 intro offer €22 (two classes, 14 days).
           Drop-in €22. Vacation Week €59 for 7 days. Monthly memberships from €125.
         </p>
         <p>

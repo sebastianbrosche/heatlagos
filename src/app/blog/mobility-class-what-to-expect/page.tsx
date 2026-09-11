@@ -204,8 +204,8 @@ export default function MobilityClassWhatToExpect() {
         <p>
           Mobility classes are on the Heat Lagos timetable alongside Pilates,
           Sculpt, Yoga, and Recovery. The simplest way to try a mobility class
-          for the first time is our 2 weeks unlimited at 79 euros, which gives
-          you unlimited access to every class type for two weeks.
+          for the first time is our 2 for 1 intro offer at 22 euros: two
+          classes, valid 14 days.
         </p>
         <p>
           Visiting Lagos for a shorter stay? The 7-day Vacation Week pass at 59

@@ -132,7 +132,7 @@ export default function DigitalNomadYogaPilatesLagos() {
         </p>
         <p>
           <strong>Price:</strong> Drop-in 22 EUR. Vacation Week 59 EUR
-          (7 days unlimited). Intro Offer 79 EUR (2 weeks unlimited).
+          (7 days unlimited). 2 for 1 intro offer 22 EUR (two classes).
           No membership required.
         </p>
         <p>
@@ -365,8 +365,9 @@ export default function DigitalNomadYogaPilatesLagos() {
         <p>
           <strong>Fitness budget:</strong> If you attend four classes per
           week at 22 EUR each, that is 88 EUR per week, or 352 EUR per month.
-          The Heat Lagos Vacation Week pass (59 EUR) or Intro Offer (79 EUR
-          for 2 weeks) reduces this significantly for short stays.
+          The Heat Lagos Vacation Week pass (59 EUR) or 2 for 1 intro
+          offer (22 EUR for two classes) reduces this significantly for
+          short stays.
         </p>
         <p>
           <strong>Internet:</strong> High-speed fibre is available from

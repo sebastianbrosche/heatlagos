@@ -8,7 +8,7 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-d";
 
 export const metadata: Metadata = {
   title: "Chic Hot Pilates & Yoga Trial - NYP Template - Heat Lagos",
-  description: "Experience luxury heated workouts at Heat Lagos. Get 2 weeks unlimited classes for €79. Enjoy high-performance infrared heat.",
+  description: "Experience luxury heated workouts at Heat Lagos. Two classes for €22, valid 14 days. Enjoy high-performance infrared heat.",
   robots: { index: false, follow: false },
   alternates: {
     canonical: "https://www.heatlagos.com/hot-yoga-pilates-intro-offer",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true";
+  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true";
 
   return (
     <>
@@ -55,11 +55,11 @@ export default function Page() {
           <section className="mx-auto max-w-md">
             <div className="border-t-2 border-white/20 pt-8">
               <div className="flex justify-between items-baseline mb-4">
-                <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-foreground">14 Days Unlimited</h3>
-                <span className="font-sans text-3xl font-light text-brand">€79</span>
+                <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-foreground">2 for 1 Intro Offer</h3>
+                <span className="font-sans text-3xl font-light text-brand">€22</span>
               </div>
               <p className="text-sm text-foreground/60 leading-relaxed mb-6 font-light">
-                Unlock full access to Heated Pilates, Sculpt, Yoga, and Mobility. Valid for two weeks from your first booked class. Express checkout.
+                Two classes for 22€. Valid 14 days from your first booked class. Heated Pilates, Sculpt, Yoga, and Mobility. Express checkout.
               </p>
               <a
                 href={checkoutUrl}
