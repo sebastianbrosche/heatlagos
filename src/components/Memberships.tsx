@@ -47,6 +47,15 @@ export default function Memberships() {
               <div className="flex items-baseline justify-between">
                 <h3 className="font-serif text-xl sm:text-2xl">{plan.name}</h3>
               </div>
+              {plan.originalRate && (
+                <p
+                  className={`text-sm ${
+                    plan.highlight ? "text-stone-dark/70" : "text-foreground/70"
+                  }`}
+                >
+                  Original rate {plan.originalRate}
+                </p>
+              )}
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 {plan.wasPrice && (
                   <span

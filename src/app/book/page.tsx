@@ -34,7 +34,7 @@ const GROUPS: Group[] = [
   {
     title: "New here",
     blurb: "Best first step if you have not trained with us yet.",
-    ids: ["cta-intro-offer", "cta-2for1", "cta-1month"],
+    ids: ["cta-2for1", "cta-1month"],
   },
   {
     title: "Visiting Lagos",
@@ -68,6 +68,11 @@ function OfferCard({ plan }: { plan: Plan }) {
           <p className="font-serif text-xl leading-snug text-foreground sm:text-2xl">
             {plan.name}
           </p>
+          {plan.originalRate && (
+            <p className="mt-1 text-sm text-foreground/55">
+              Original rate {plan.originalRate}
+            </p>
+          )}
           {plan.badge && (
             <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brand">
               {plan.badge}

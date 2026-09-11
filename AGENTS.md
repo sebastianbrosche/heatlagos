@@ -44,7 +44,7 @@ Google (Search Console, GA4, Gmail/Calendar/Drive), Meta (Instagram/Facebook), C
 | Class list + descriptions | `src/components/Classes.tsx` (`CATEGORIES` array) |
 | Teacher bios | `src/components/Teachers.tsx` (`TEACHERS` array) |
 | Schedule heading | `src/components/Schedule.tsx` |
-| Memberships | `src/components/Memberships.tsx` |
+| Memberships | `src/components/Memberships.tsx` (cards) + `src/lib/pricing.ts` (plan data). Do not restore 2 weeks unlimited without an explicit Sebastian ask. |
 | "Before you come" | `src/components/BeforeYouCome.tsx` |
 | Workshops | `src/components/Workshops.tsx` |
 | FAQ Q&A | `src/components/FAQ.tsx` |

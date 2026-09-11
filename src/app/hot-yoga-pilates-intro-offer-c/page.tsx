@@ -8,7 +8,7 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-c";
 
 export const metadata: Metadata = {
   title: "Pilates, Sculpt & Yoga Remixed - Intro Offer - Heat Lagos",
-  description: "Get 14 days of unlimited heated yoga, pilates, and sculpt classes. Fast checkout. €79 two-week trial pass.",
+  description: "Try heated yoga, pilates, and sculpt. Fast checkout. Two classes for €22, valid 14 days.",
   robots: { index: false, follow: false },
   alternates: {
     canonical: "https://www.heatlagos.com/hot-yoga-pilates-intro-offer",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true";
+  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true";
 
   return (
     <>
@@ -65,10 +65,10 @@ export default function Page() {
                   
                   <div className="rounded-2xl bg-stone-dark/50 border border-white/5 p-4 mb-6 flex justify-between items-center">
                     <div>
-                      <p className="text-xs text-brand font-bold uppercase tracking-wider">Two Weeks Trial Pass</p>
-                      <p className="text-lg text-foreground font-serif mt-1">14 Days Unlimited Access</p>
+                      <p className="text-xs text-brand font-bold uppercase tracking-wider">2 for 1 Intro Offer</p>
+                      <p className="text-lg text-foreground font-serif mt-1">Two classes, valid 14 days</p>
                     </div>
-                    <span className="font-serif text-3xl text-foreground font-light">€79</span>
+                    <span className="font-serif text-3xl text-foreground font-light">€22</span>
                   </div>
 
                   <a

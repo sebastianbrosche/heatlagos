@@ -2,7 +2,7 @@ import { planById } from "@/lib/pricing";
 
 const ITEMS = [
   {
-    text: "Yearly · 990€ · 365 days unlimited",
+    text: "Yearly · 125€/mo → 990€ · 34% off",
     href:
       planById("cta-yearly")?.href ??
       "https://backoffice.bsport.io/customer/payment/pass/751518/?membership=5821&force=true",

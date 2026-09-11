@@ -94,7 +94,7 @@ export default function Header() {
 
           <div className="mt-8 border-t border-white/10 pt-6 sm:mt-10 sm:pt-8">
             <a
-              href="https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true"
+              href="https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}

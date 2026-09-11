@@ -79,8 +79,9 @@ export default function FirstHotYogaClassLagos() {
           slower next time.
         </p>
         <p>
-          Ready when you are: book a single class or start with the intro offer
-          so you can try a few formats in your first two weeks.
+          Ready when you are: book a single class or start with the 2 for 1
+          intro offer (two classes for 22€, valid 14 days) so you can try a
+          couple of formats.
         </p>
       </section>
     </SeoPageShell>

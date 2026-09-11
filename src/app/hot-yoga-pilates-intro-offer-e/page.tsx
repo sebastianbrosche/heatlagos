@@ -8,7 +8,7 @@ const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-e";
 
 export const metadata: Metadata = {
   title: "STRONG Heated Pilates & Sculpt - Intro Offer - Heat Lagos",
-  description: "Experience the athletic simplicity of heated Pilates and Sculpt. 14 days of unlimited classes for €79. Near Batata Beach.",
+  description: "Experience the athletic simplicity of heated Pilates and Sculpt. Two classes for €22, valid 14 days. Near Batata Beach.",
   robots: { index: false, follow: false },
   alternates: {
     canonical: "https://www.heatlagos.com/hot-yoga-pilates-intro-offer",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true";
+  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true";
 
   return (
     <>
@@ -36,7 +36,7 @@ export default function Page() {
             </div>
             <div className="md:text-right space-y-2">
               <p className="text-sm uppercase tracking-widest text-foreground/60">Batata Beach, Lagos</p>
-              <p className="text-lg font-bold text-brand">14 Days Unlimited • €79</p>
+              <p className="text-lg font-bold text-brand">2 for 1 Intro · €22</p>
             </div>
           </div>
         </section>
@@ -105,15 +105,15 @@ export default function Page() {
           <div className="lg:col-span-5">
             <div className="border border-white/10 bg-stone-dark p-8 rounded-none sticky top-32">
               <h3 className="font-sans font-extrabold text-xl uppercase tracking-wider mb-2">Buy Trial Package</h3>
-              <p className="text-sm text-foreground/60 font-light mb-6">14 days of unlimited access. No contract. Start anytime.</p>
+              <p className="text-sm text-foreground/60 font-light mb-6">Two classes for 22€, valid 14 days. No contract. Start anytime.</p>
               
               <div className="mb-6 border-t border-b border-white/10 py-4 flex justify-between items-baseline">
                 <span className="text-xs uppercase tracking-wider text-foreground/50">Total Price</span>
-                <span className="font-sans text-4xl font-extrabold text-brand">€79</span>
+                <span className="font-sans text-4xl font-extrabold text-brand">€22</span>
               </div>
 
               <ul className="mb-8 space-y-3 text-sm text-foreground/80 font-light">
-                <li>- Unlimited heated Sculpt &amp; Pilates classes</li>
+                <li>- Two heated Sculpt or Pilates classes</li>
                 <li>- Fresh far-infrared heating panels</li>
                 <li>- Premium studio mats &amp; props provided</li>
                 <li>- Decades of instructor teaching experience</li>

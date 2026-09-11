@@ -4,6 +4,8 @@ export type Plan = {
   price: string;
   wasPrice?: string;
   unit?: string;
+  /** Shown above the headline price, e.g. "125€/month". */
+  originalRate?: string;
   description: string;
   badge?: string;
   highlight?: boolean;
@@ -12,26 +14,21 @@ export type Plan = {
   href?: string;
 };
 
-/** Homepage + /book — single source of truth for pass checkout links. */
+/**
+ * Homepage + /book: single source of truth for pass checkout links.
+ *
+ * Do not restore 2 weeks unlimited without an explicit Sebastian ask.
+ * That pass (Bsport 751566, 79€ → 39€ promo) was removed from this list
+ * on purpose. The remaining intro path is 2 for 1 Intro Offer at 22€.
+ */
 export const PLANS: Plan[] = [
-  {
-    id: "cta-intro-offer",
-    name: "2 weeks unlimited",
-    price: "39€",
-    wasPrice: "79€",
-    description:
-      "Two weeks of unlimited access to every class. 50% off until 23 August 2026.",
-    badge: "50% off",
-    note: "Ends 23 August",
-    highlight: true,
-    href: "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true",
-  },
   {
     id: "cta-2for1",
     name: "2 for 1 Intro Offer",
     price: "22€",
     description: "Two classes for 22€. Valid 14 days. New students.",
     note: "2 classes / 14 days",
+    highlight: true,
     href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
   },
   {
@@ -65,9 +62,13 @@ export const PLANS: Plan[] = [
     id: "cta-yearly",
     name: "Yearly",
     price: "990€",
+    wasPrice: "1500€",
+    originalRate: "125€/month",
+    badge: "34% off",
+    glow: true,
     description:
-      "Unlimited for 365 days, paid up front. Save 510€ versus 12 months at 125€.",
-    note: "365 days",
+      "Original monthly rate 125€/month. Twelve months at that rate is 1500€. Pay 990€ up front for 365 days unlimited and save 510€ (34% off).",
+    note: "125€/mo original · 990€ paid up front",
     href: "https://backoffice.bsport.io/customer/payment/pass/751518/?membership=5821&force=true",
   },
   {

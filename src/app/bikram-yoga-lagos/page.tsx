@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const dropInUrl = "https://backoffice.bsport.io/customer/payment/pass/766017/?membership=5821&force=true";
-  const trialUrl = "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true";
+  const trialUrl = "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true";
 
   return (
     <>
@@ -144,12 +144,12 @@ export default function Page() {
                 </span>
                 <div>
                   <span className="text-xs uppercase tracking-wider text-brand font-bold block mb-2">Intro Offer</span>
-                  <h3 className="font-serif text-2xl text-foreground">2 weeks unlimited</h3>
+                  <h3 className="font-serif text-2xl text-foreground">2 for 1 Intro Offer</h3>
                   <div className="my-6">
-                    <span className="font-serif text-4xl text-foreground font-light">€79</span>
+                    <span className="font-serif text-4xl text-foreground font-light">€22</span>
                   </div>
                   <p className="text-xs text-foreground/60 leading-relaxed font-light">
-                    14 days of unlimited hot classes. Explore Bikram, Sculpt, Pilates, and Yin to find your routine.
+                    Two classes for 22€, valid 14 days. Explore Bikram, Sculpt, Pilates, and Yin to find your routine.
                   </p>
                 </div>
                 <a

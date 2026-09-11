@@ -7,8 +7,8 @@ import ImagePlaceholderCarousel from "@/components/ImagePlaceholderCarousel";
 const URL = "https://www.heatlagos.com/hot-yoga-pilates-intro-offer-b";
 
 export const metadata: Metadata = {
-  title: "Two Weeks Intro Offer - Gym Profile - Heat Lagos",
-  description: "Read reviews from local expats and members. Try heated Pilates, Yoga, Sculpt, and Yin for two weeks for €79. Feel refreshed, alive, and find your glow.",
+  title: "2 for 1 Intro Offer - Gym Profile - Heat Lagos",
+  description: "Read reviews from local expats and members. Try heated Pilates, Yoga, Sculpt, and Yin. Two classes for €22, valid 14 days. Feel refreshed, alive, and find your glow.",
   robots: { index: false, follow: false },
   alternates: {
     canonical: "https://www.heatlagos.com/hot-yoga-pilates-intro-offer",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true";
+  const checkoutUrl = "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true";
 
   return (
     <>
@@ -36,8 +36,8 @@ export default function Page() {
               </div>
               <div className="bg-stone-dark border border-white/10 rounded-2xl p-4 text-center min-w-[150px]">
                 <span className="text-xs text-foreground/50 block">From Only</span>
-                <span className="font-serif text-4xl text-brand font-bold">€79</span>
-                <span className="text-xs text-foreground/50 block mt-1">No contract trial</span>
+                <span className="font-serif text-4xl text-brand font-bold">€22</span>
+                <span className="text-xs text-foreground/50 block mt-1">2 classes / 14 days</span>
               </div>
             </div>
           </div>
@@ -60,15 +60,15 @@ export default function Page() {
           <div className="lg:col-span-2 space-y-8">
             {/* Offer Block */}
             <section className="bg-stone-dark/20 border border-white/5 rounded-3xl p-6 sm:p-8">
-              <h2 className="font-serif text-2xl text-foreground mb-4">Two Weeks Unlimited Trial Offer</h2>
+              <h2 className="font-serif text-2xl text-foreground mb-4">2 for 1 Intro Offer</h2>
               <p className="text-base text-foreground/80 leading-relaxed mb-6">
-                Ready to experience the heat? If you&apos;ve been curious about our infrared hot workouts, this is the perfect introduction. No rules, no hidden fees—just unlimited access to our entire schedule for 14 consecutive days.
+                Ready to experience the heat? If you&apos;ve been curious about our infrared hot workouts, this is the perfect introduction. Two classes for 22€, valid 14 days. No hidden fees.
               </p>
               <a
                 href={checkoutUrl}
                 className="inline-block bg-brand hover:bg-brand-soft text-stone-dark font-bold text-sm uppercase tracking-wider py-4 px-8 rounded-full transition-all"
               >
-                Join Now for €79
+                Join Now for €22
               </a>
             </section>
 
@@ -123,11 +123,11 @@ export default function Page() {
               <ul className="space-y-3 text-sm text-foreground/80">
                 <li className="flex justify-between border-b border-white/5 pb-2">
                   <span>Price</span>
-                  <span className="font-bold text-brand">€79</span>
+                  <span className="font-bold text-brand">€22</span>
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
-                  <span>Duration</span>
-                  <span className="font-bold">14 Days</span>
+                  <span>What you get</span>
+                  <span className="font-bold">2 classes / 14 days</span>
                 </li>
                 <li className="flex justify-between border-b border-white/5 pb-2">
                   <span>Contract</span>

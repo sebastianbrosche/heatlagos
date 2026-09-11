@@ -192,13 +192,6 @@ const OFFERS: {
   priceValidUntil?: string;
 }[] = [
   {
-    name: "2 weeks unlimited",
-    price: "39",
-    description:
-      "2 weeks unlimited for new students. 50% off until 23 August 2026.",
-    priceValidUntil: "2026-08-23",
-  },
-  {
     name: "2 for 1 Intro Offer",
     price: "22",
     description: "Two classes for 22€. Valid 14 days. New students.",
@@ -219,7 +212,7 @@ const OFFERS: {
     name: "Yearly Membership",
     price: "990",
     description:
-      "Unlimited access for 365 days, paid up front. Save €510 versus 12 months at €125.",
+      "Original monthly rate 125 EUR. Twelve months at that rate is 1500 EUR. Yearly total 990 EUR paid up front (34% off).",
   },
   {
     name: "10 Class Package",
@@ -277,7 +270,7 @@ const FAQS = [
   {
     question: "Can I join a class while on holiday in Lagos?",
     answer:
-      "Yes. We offer single drop-ins, a 7-day Vacation Week pass, and 2 weeks unlimited. All make it easy to join while you are visiting Lagos, Luz, Burgau or Portimão.",
+      "Yes. We offer single drop-ins, a 7-day Vacation Week pass, and a 2 for 1 intro offer. All make it easy to join while you are visiting Lagos, Luz, Burgau or Portimão.",
   },
 ];
 

@@ -165,12 +165,11 @@ export default function Page() {
         <section>
           <h2>How to start with Pilates at Heat</h2>
           <p>
-            New to the studio? 2 weeks unlimited is the easiest way in.
-            It covers every class on the schedule, so you can take three or
-            four Pilates classes plus a recovery session in the same
-            fortnight and decide what fits. Visiting Lagos? The Vacation
-            Week pass gives you 7 days unlimited. Or take a single drop-in
-            and decide afterwards.
+            New to the studio? The 2 for 1 intro offer is the easiest way
+            in: two classes for 22€, valid 14 days. Take Pilates plus a
+            recovery session and decide what fits. Visiting Lagos? The
+            Vacation Week pass gives you 7 days unlimited. Or take a
+            single drop-in and decide afterwards.
           </p>
         </section>
       </SeoPageShell>
