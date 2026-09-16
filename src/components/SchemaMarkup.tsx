@@ -197,22 +197,16 @@ const OFFERS: {
     description: "Two classes for 22€. Valid 14 days. New students.",
   },
   {
-    name: "12 Month Membership",
-    price: "125",
+    name: "Essential Membership",
+    price: "95",
     description:
-      "Unlimited classes billed monthly for 12 months. Month 13 is free.",
+      "8 classes a month on a rolling subscription. Ideal if you train twice a week.",
     unit: "month",
   },
   {
     name: "1 Month Unlimited",
     price: "160",
     description: "One-off monthly unlimited, no subscription commitment.",
-  },
-  {
-    name: "Yearly Membership",
-    price: "990",
-    description:
-      "Original monthly rate 125 EUR. Twelve months at that rate is 1500 EUR. Yearly total 990 EUR paid up front (34% off).",
   },
   {
     name: "10 Class Package",

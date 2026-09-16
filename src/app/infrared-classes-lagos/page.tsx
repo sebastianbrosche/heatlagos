@@ -200,7 +200,7 @@ export default function Page() {
             <li>
               <strong>Booking:</strong> drop in once, start with the 2 for 1
               intro offer, buy a 10-class pack, take a Vacation Week pass,
-              or join one of our monthly or yearly memberships.
+              or join a monthly membership.
             </li>
           </ul>
         </section>
@@ -211,7 +211,7 @@ export default function Page() {
             If you have never been to a heated class, the easiest place to
             begin is the 2 for 1 intro offer: two classes for 22€, valid
             14 days, so you can find which formats fit your body. From
-            there, most people settle into a monthly or yearly membership
+            there, most people settle into a monthly membership
             and use Heat as their year-round routine.
           </p>
         </section>

@@ -153,8 +153,8 @@ export default function LagosWellnessVisitorGuide() {
           core, yoga or yin for mobility and recovery), and one full rest day.
         </p>
         <p>
-          Most members at Heat Lagos are residents, not tourists. The monthly
-          and yearly memberships are built for that life - two or three classes
+          Most members at Heat Lagos are residents, not tourists. Monthly
+          memberships are built for that life: two or three classes
           a week that keep everything else sustainable.
         </p>
       </section>
