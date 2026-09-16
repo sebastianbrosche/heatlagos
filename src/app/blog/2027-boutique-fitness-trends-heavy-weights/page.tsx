@@ -123,9 +123,9 @@ export default function BoutiqueFitnessTrends2027() {
       <section>
         <h2>Trying it at Heat</h2>
         <p>
-          The 2-week intro covers every class on the schedule. Take Pilates Strong
-          next to Sculpt, standard Pilates and a recovery class. Decide after you
-          have felt it, not after a pitch.
+          The 2 for 1 intro offer covers every class on the schedule. Take Pilates
+          Strong next to Sculpt, standard Pilates and a recovery class. Decide after
+          you have felt it, not after a pitch.
         </p>
       </section>
     </SeoPageShell>
