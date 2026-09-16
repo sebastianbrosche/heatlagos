@@ -97,7 +97,7 @@ export default function BestPilatesStudiosLagos() {
         </p>
         <p>
           <strong>Price:</strong> 2 for 1 intro offer €22 (two classes, 14 days). Drop-in
-          €22. Vacation Week €59 for 7 days. Monthly memberships from €125.
+          €22. Vacation Week €59 for 7 days. Monthly memberships from €95.
         </p>
         <p>
           <a href="/pilates-lagos-portugal">Pilates at Heat Lagos</a>

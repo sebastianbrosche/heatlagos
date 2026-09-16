@@ -2,16 +2,16 @@ import { planById } from "@/lib/pricing";
 
 const ITEMS = [
   {
-    text: "Yearly · 125€/mo → 990€ · 34% off",
+    text: "2 for 1 Intro Offer · 22€",
     href:
-      planById("cta-yearly")?.href ??
-      "https://backoffice.bsport.io/customer/payment/pass/751518/?membership=5821&force=true",
+      planById("cta-2for1")?.href ??
+      "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
   },
   {
-    text: "12 Month · 125€/month · Month 13 free",
+    text: "Vacation Week · 59€",
     href:
-      planById("cta-12month")?.href ??
-      "https://backoffice.bsport.io/customer/payment/pass/751520/?membership=5821&force=true",
+      planById("cta-vacation-week")?.href ??
+      "https://backoffice.bsport.io/customer/payment/pass/751519/?membership=5821&force=true",
   },
 ];
 

@@ -78,7 +78,7 @@ export default function YogaLagosGuide() {
         <p>
           <strong>Pricing:</strong> Drop-in €22. 2 for 1 intro offer €22 (two
           classes, 14 days). Vacation Week €59 for 7 days unlimited. Monthly
-          memberships from €125.
+          memberships from €95.
         </p>
         <p>
           <strong>Location:</strong> Central Lagos, short walk from the old town.
@@ -254,9 +254,8 @@ export default function YogaLagosGuide() {
           options.
         </p>
         <p>
-          Monthly memberships at Heat Lagos start from €125 and include either
-          three or five sessions per week. That works out to between €6 and €10
-          per class for unlimited use across yoga, Pilates, Sculpt, and mobility.
+          The Essential Membership at Heat Lagos is 95€ a month for 8 classes.
+          A one-off month of unlimited classes is 160€ with no subscription.
         </p>
       </section>
     </SeoPageShell>

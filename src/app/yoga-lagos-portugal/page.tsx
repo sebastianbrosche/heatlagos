@@ -179,7 +179,7 @@ export default function Page() {
             for 22€, valid 14 days, so you can try Flow, Power or Yin
             and decide what works. If you are visiting, take a single
             drop-in or the 7-day Vacation Week pass. If yoga is already
-            part of your life, the monthly or yearly memberships make it
+            part of your life, a monthly membership makes it
             the easiest part of your week.
           </p>
         </section>

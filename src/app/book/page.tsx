@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: URL,
     title: "Book Heat Lagos",
     description:
-      "Simple offer list for Maps and Google booking: intro, monthly, yearly, packs, vacation week, drop-in.",
+      "Simple offer list for Maps and Google booking: intro, monthly, packs, vacation week, drop-in.",
   },
 };
 
@@ -44,7 +44,7 @@ const GROUPS: Group[] = [
   {
     title: "Live here",
     blurb: "Ongoing memberships for locals and long-stay expats.",
-    ids: ["cta-essential", "cta-12month", "cta-yearly"],
+    ids: ["cta-essential"],
   },
   {
     title: "Flexible",

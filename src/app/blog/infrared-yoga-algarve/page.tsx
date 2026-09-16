@@ -139,7 +139,7 @@ export default function InfraredYogaAlgarve() {
         <p>
           <strong>Price:</strong> 2 for 1 intro offer 22 EUR (two classes, 14 days).
           Drop-in 22 EUR. Vacation Week 59 EUR for 7 days. Monthly
-          memberships from 125 EUR.
+          memberships from 95 EUR.
         </p>
         <p>
           <a href="https://heatlagos.com">Book a class at Heat Lagos</a>
