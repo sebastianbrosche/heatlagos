@@ -21,9 +21,8 @@ export type Plan = {
  * That pass (Bsport 751566, 79€ → 39€ promo) was removed from this list
  * on purpose. The remaining intro path is 2 for 1 Intro Offer at 22€.
  *
- * Do not restore the prepaid annual pass (Bsport 751518) or the
- * twelve-month billed membership (Bsport 751520) without an
- * explicit Sebastian ask. Both were taken off this list on purpose.
+ * Free month-13 / 12+1 wording stays banned. Plain 12-Month Commitment
+ * (€125, Bsport 751520) and Yearly (€990, Bsport 751518) are restored.
  */
 export const PLANS: Plan[] = [
   {
@@ -34,6 +33,16 @@ export const PLANS: Plan[] = [
     note: "2 classes / 14 days",
     highlight: true,
     href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
+  },
+  {
+    id: "cta-12month",
+    name: "12 Month Membership",
+    price: "125€",
+    unit: "/month",
+    description:
+      "Unlimited classes. Billed monthly for 12 months. 12-Month Commitment.",
+    note: "12-Month Commitment",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751520/?membership=5821&force=true",
   },
   {
     id: "cta-essential",
@@ -51,6 +60,19 @@ export const PLANS: Plan[] = [
     price: "160€",
     description: "One-off monthly unlimited, no subscription commitment.",
     href: "https://backoffice.bsport.io/customer/payment/pass/751517/?membership=5821&force=true",
+  },
+  {
+    id: "cta-yearly",
+    name: "Yearly",
+    price: "990€",
+    wasPrice: "1500€",
+    originalRate: "125€/month",
+    badge: "34% off",
+    glow: true,
+    description:
+      "Original monthly rate 125€/month. Twelve months at that rate is 1500€. Pay 990€ up front for 365 days unlimited and save 510€ (34% off).",
+    note: "125€/mo original · 990€ paid up front",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751518/?membership=5821&force=true",
   },
   {
     id: "cta-10class",
