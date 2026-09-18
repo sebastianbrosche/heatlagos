@@ -1,0 +1,24 @@
+name = "heat-friend-coupon"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+workers_dev = true
+
+# Same-origin API under heatlagos.com
+routes = [
+  { pattern = "www.heatlagos.com/api/friend-coupon/*", zone_name = "heatlagos.com" },
+  { pattern = "heatlagos.com/api/friend-coupon/*", zone_name = "heatlagos.com" }
+]
+
+[[kv_namespaces]]
+binding = "COUPONS"
+id = "55d4e4be5fc34aebb79dda5794e88beb"
+
+# Secrets (set via wrangler secret put):
+#   BSPORT_API_TOKEN / BSPORT_SESSION_TOKEN
+#   BSPORT_JWT_TOKEN
+#   RESEND_API_KEY
+#   CRON_SECRET
+#   (optional) TEST_EMAIL override; default sebastian.brosche@gmail.com
+#
+# NO cron triggers here. Automator owns schedule: 0 9 1 * * Europe/Lisbon
+# and POSTs /run with x-cron-secret.

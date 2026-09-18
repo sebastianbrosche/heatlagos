@@ -4,22 +4,27 @@
 ## 1. Cloudflare Workers & Their Secrets
 
 ### `bsport-sync` worker
-- **`BSPORT_API_TOKEN`** — bSport API bearer token. Stored as a Worker secret (not in KV). Used as `Authorization: Token <value>` against `https://api.production.bsport.io/api/v1`.
-- **`RESEND_API_KEY`** — Resend email API key. Worker secret.
-- **`GOOGLE_CLIENT_SECRET`** — Google OAuth client secret. Worker secret.
-- KV binding: `BSPORT_KV` → namespace `bsport-sync` (id: `5c14556c2ebb4eab9e11229a6cbb83cb`) — stores webhook events (`webhook:<uuid>`) and daily stats (`stats:<date>`).
+- **`BSPORT_API_TOKEN`** - bSport API bearer token. Stored as a Worker secret (not in KV). Used as `Authorization: Token <value>` against `https://api.production.bsport.io/api/v1`.
+- **`RESEND_API_KEY`** - Resend email API key. Worker secret.
+- **`GOOGLE_CLIENT_SECRET`** - Google OAuth client secret. Worker secret.
+- KV binding: `BSPORT_KV` → namespace `bsport-sync` (id: `5c14556c2ebb4eab9e11229a6cbb83cb`) - stores webhook events (`webhook:<uuid>`) and daily stats (`stats:<date>`).
 - Hardcoded in code: Google Client ID `155462436083-...`, Refresh Token, Sheet ID `1SH1SZ0BIa9yyBgo2WgWtUg5AINnplgMkSott6NsIAT0`.
 
+### `heat-friend-coupon` worker
+- **`BSPORT_API_TOKEN`** / **`BSPORT_JWT_TOKEN`** / **`RESEND_API_KEY`** / **`CRON_SECRET`** - Worker secrets.
+- KV binding: `COUPONS` → namespace `heat-friend-coupons` (id: `55d4e4be5fc34aebb79dda5794e88beb`).
+- Issues monthly single-use BSport coupons (Drop-in 766017) to premium members. Automator owns cron (`0 9 1 * *` Lisbon). See `docs/premium-friend-coupon.md`.
+
 ### `heat-dm-bot` worker
-- **`ANTHROPIC_API_KEY`** — Anthropic API key. Worker secret.
-- **`META_VERIFY_TOKEN`** — Meta webhook verify token. Worker secret.
-- **`META_APP_SECRET`** — Meta app secret. Worker secret.
-- **`META_PAGE_TOKEN`** — Meta/Facebook page token. Worker secret.
-- **`IG_ACCESS_TOKEN`** — Instagram access token. Worker secret (also cached in TOKENS KV).
-- **`WHATSAPP_TOKEN`** — WhatsApp bearer token. Worker secret.
-- **`WHATSAPP_PHONE_ID`** — WhatsApp phone number ID. Worker secret.
-- KV binding: `TOKENS` → namespace `TOKENS` (id: `9e1bd5c27a8c4cea8363fc13351bc5a6`) — stores `IG_ACCESS_TOKEN`, `BOT_ENABLED`, `LEARN_KEY`.
-- D1 binding: `DB` — stores learned Q&A pairs from DM conversations.
+- **`ANTHROPIC_API_KEY`** - Anthropic API key. Worker secret.
+- **`META_VERIFY_TOKEN`** - Meta webhook verify token. Worker secret.
+- **`META_APP_SECRET`** - Meta app secret. Worker secret.
+- **`META_PAGE_TOKEN`** - Meta/Facebook page token. Worker secret.
+- **`IG_ACCESS_TOKEN`** - Instagram access token. Worker secret (also cached in TOKENS KV).
+- **`WHATSAPP_TOKEN`** - WhatsApp bearer token. Worker secret.
+- **`WHATSAPP_PHONE_ID`** - WhatsApp phone number ID. Worker secret.
+- KV binding: `TOKENS` → namespace `TOKENS` (id: `9e1bd5c27a8c4cea8363fc13351bc5a6`) - stores `IG_ACCESS_TOKEN`, `BOT_ENABLED`, `LEARN_KEY`.
+- D1 binding: `DB` - stores learned Q&A pairs from DM conversations.
 - Model: `claude-haiku-4-5`
 
 ---
@@ -29,6 +34,7 @@
 | Title | ID | Used by |
 | :--- | :--- | :--- |
 | `bsport-sync` | `5c14556c2ebb4eab9e11229a6cbb83cb` | bsport-sync worker |
+| `heat-friend-coupons` | `55d4e4be5fc34aebb79dda5794e88beb` | heat-friend-coupon worker |
 | `TOKENS` | `9e1bd5c27a8c4cea8363fc13351bc5a6` | heat-dm-bot worker |
 | `ytt-leads` | `afd3c6d107cb4527acaa1371ded86790` | ytt-leads worker |
 | `IOM_LOGS` | `b3e5c14bebda4fae9446e468e8968025` | iom-relay worker |
@@ -39,6 +45,7 @@
 
 | Worker | Purpose |
 | :--- | :--- |
+| `heat-friend-coupon` | Monthly premium-member friend-class coupons (BSport + Resend) |
 | `heat-dm-bot` | AI DM responder for Instagram, Facebook, WhatsApp |
 | `bsport-sync` | bSport webhook receiver → Google Sheets + daily email |
 | `yfbjj-mcp-hub` | MCP hub |
@@ -66,7 +73,7 @@ npx wrangler secret list --name=bsport-sync
 npx wrangler secret list --name=heat-dm-bot
 ```
 
-Worker secrets are write-only via wrangler — values cannot be read back. Access them only at runtime via `env.<SECRET_NAME>` inside the Worker.
+Worker secrets are write-only via wrangler - values cannot be read back. Access them only at runtime via `env.<SECRET_NAME>` inside the Worker.
 
 ---
 
@@ -81,7 +88,7 @@ Worker secrets are write-only via wrangler — values cannot be read back. Acces
 
 ## 6. GitHub & MCP Access
 
-- Repo: `sebastianbrosche/heatlagos` — full read/write via MCP github tools.
+- Repo: `sebastianbrosche/heatlagos` - full read/write via MCP github tools.
 - MCP servers available: GitHub, Cloudflare, Canva, Gmail, Google Calendar, Google Drive, Linear.
 
 ---
