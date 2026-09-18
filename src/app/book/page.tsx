@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Marquee from "@/components/Marquee";
 import Schedule from "@/components/Schedule";
 import { planById, type Plan } from "@/lib/pricing";
 
@@ -44,7 +43,7 @@ const GROUPS: Group[] = [
   {
     title: "Live here",
     blurb: "Ongoing memberships for locals and long-stay expats.",
-    ids: ["cta-essential"],
+    ids: ["cta-12month", "cta-essential"],
   },
   {
     title: "Flexible",
@@ -110,7 +109,6 @@ export default function BookPage() {
   return (
     <>
       <Header />
-      <Marquee />
       <main>
         <section className="px-5 pt-32 pb-10 sm:px-6 sm:pt-40 sm:pb-12 lg:px-20">
           <div className="mx-auto max-w-5xl">

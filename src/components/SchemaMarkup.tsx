@@ -211,12 +211,6 @@ const OFFERS: {
     unit: "month",
   },
   {
-    name: "Yearly Membership",
-    price: "990",
-    description:
-      "Original monthly rate 125 EUR. Twelve months at that rate is 1500 EUR. Yearly total 990 EUR paid up front (34% off).",
-  },
-  {
     name: "1 Month Unlimited",
     price: "160",
     description: "One-off monthly unlimited, no subscription commitment.",

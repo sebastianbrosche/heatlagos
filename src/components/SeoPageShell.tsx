@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Marquee from "@/components/Marquee";
 import { getCluster } from "@/lib/blog-cluster";
 
 type Props = {
@@ -66,7 +65,6 @@ export default function SeoPageShell({
   return (
     <>
       <Header />
-      <Marquee />
       <main>
         {articleLd && (
           <script

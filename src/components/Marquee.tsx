@@ -1,38 +1,7 @@
-import { planById } from "@/lib/pricing";
-
-const ITEMS = [
-  {
-    text: "Yearly · 125€/mo → 990€ · 34% off",
-    href:
-      planById("cta-yearly")?.href ??
-      "https://backoffice.bsport.io/customer/payment/pass/751518/?membership=5821&force=true",
-  },
-  {
-    text: "12 Month · 125€/month · 12-Month Commitment",
-    href:
-      planById("cta-12month")?.href ??
-      "https://backoffice.bsport.io/customer/payment/pass/751520/?membership=5821&force=true",
-  },
-];
-
+/**
+ * Sliding offer banner retired (18 Sep 2026). Yearly €990 deal period is over;
+ * do not restore a public promo ticker without an explicit Sebastian ask.
+ */
 export default function Marquee() {
-  const loop = [...ITEMS, ...ITEMS, ...ITEMS, ...ITEMS];
-
-  return (
-    <div className="group fixed top-14 sm:top-16 lg:top-20 left-0 right-0 z-40 overflow-hidden bg-brand text-stone-dark">
-      <div className="flex animate-marquee whitespace-nowrap py-2 sm:py-2.5">
-        {loop.map((item, i) => (
-          <a
-            key={i}
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-6 text-[10px] font-semibold uppercase tracking-[0.2em] sm:mx-8 sm:text-[11px] sm:tracking-[0.25em]"
-          >
-            {item.text} <span className="mx-6 opacity-60">✦</span>
-          </a>
-        ))}
-      </div>
-    </div>
-  );
+  return null;
 }

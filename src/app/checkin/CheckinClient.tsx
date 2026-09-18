@@ -99,7 +99,7 @@ function formatClassTime(iso: string, durationMin: number) {
     minute: "2-digit",
     timeZone: "Europe/Lisbon",
   });
-  return `${day} · ${t0} – ${t1}`;
+  return `${day} · ${t0} to ${t1}`;
 }
 
 function isInPrimaryWindow(c: ClassSummary, now: number) {
@@ -499,7 +499,7 @@ export default function CheckinClient() {
   const progressPct =
     present + missing > 0 ? Math.round((present / (present + missing)) * 100) : 0;
 
-  // Occupancy fill for the "download bar" feel — can exceed 100% when overbooked
+  // Occupancy fill for the "download bar" feel. Can exceed 100% when overbooked
   const occupancyPct =
     capacity && capacity > 0
       ? Math.min(100, Math.round((bookedCount / capacity) * 100))
