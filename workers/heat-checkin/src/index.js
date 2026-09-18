@@ -342,6 +342,8 @@ function mapBookingRow(b, nameByMember) {
     name,
     passId: b.consumer_payment_pack || null,
     attendanceBsport: b.attendance === true || b.roll_call_attendance === true,
+    // first_in_company on classic /booking/ matches management is_client_first_booking
+    firstClass: b.first_in_company === true,
   };
 }
 

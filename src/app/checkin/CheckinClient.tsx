@@ -31,6 +31,7 @@ type Attendee = {
   name: string;
   passId?: number | null;
   attendanceBsport?: boolean;
+  firstClass?: boolean;
 };
 
 type MemberHit = {
@@ -782,11 +783,23 @@ export default function CheckinClient() {
         .checkin-name {
           flex: 1;
           min-width: 0;
+          display: flex;
+          align-items: baseline;
           font-size: 15px;
           font-weight: 500;
-          white-space: nowrap;
+        }
+        .checkin-name-text {
+          min-width: 0;
           overflow: hidden;
           text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .checkin-first-class {
+          flex-shrink: 0;
+          margin-left: 0.45em;
+          font-size: 11px;
+          font-weight: 400;
+          color: var(--text-secondary);
         }
         .checkin-status {
           padding: 8px 18px;
@@ -874,6 +887,12 @@ export default function CheckinClient() {
         }
         .checkin-add-results .checkin-item {
           background: transparent;
+        }
+        .checkin-add-results .checkin-name {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .checkin-add-results .checkin-name small {
           display: block;
@@ -1099,7 +1118,14 @@ export default function CheckinClient() {
                           <div className="checkin-avatar">
                             {getInitials(a.name)}
                           </div>
-                          <div className="checkin-name">{a.name}</div>
+                          <div className="checkin-name">
+                            <span className="checkin-name-text">{a.name}</span>
+                            {a.firstClass ? (
+                              <span className="checkin-first-class">
+                                first class
+                              </span>
+                            ) : null}
+                          </div>
                           <button
                             type="button"
                             className={`checkin-status ${status}`}
@@ -1130,7 +1156,14 @@ export default function CheckinClient() {
                         <div className="checkin-avatar">
                           {getInitials(w.name)}
                         </div>
-                        <div className="checkin-name">{w.name}</div>
+                        <div className="checkin-name">
+                          <span className="checkin-name-text">{w.name}</span>
+                          {w.firstClass ? (
+                            <span className="checkin-first-class">
+                              first class
+                            </span>
+                          ) : null}
+                        </div>
                         <button
                           type="button"
                           className="checkin-btn primary"
