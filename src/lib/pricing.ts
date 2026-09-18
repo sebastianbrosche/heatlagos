@@ -17,13 +17,14 @@ export type Plan = {
 /**
  * Homepage + /book: single source of truth for pass checkout links.
  *
- * Do not restore 2 weeks unlimited without an explicit Sebastian ask.
- * That pass (Bsport 751566, 79€ → 39€ promo) was removed from this list
- * on purpose. The remaining intro path is 2 for 1 Intro Offer at 22€.
+ * Do not restore the short intro unlimited pass without an explicit
+ * Sebastian ask. The remaining intro path is 2 for 1 Intro Offer at 22€.
  *
  * Free month-13 / 12+1 wording stays banned.
- * Do not advertise Yearly (€990, Bsport 751518) publicly; deal period over
- * as of 18 Sep 2026. Plain 12-Month Commitment (€125, Bsport 751520) stays.
+ * Do not put a prepaid annual new-sale CTA back on this public list
+ * without an explicit Sebastian ask. Existing BSport buyers are
+ * unchanged. This file is marketing CTAs only.
+ * Plain 12-Month Commitment (125€ billed monthly) stays.
  */
 export const PLANS: Plan[] = [
   {
