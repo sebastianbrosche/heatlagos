@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Location from "@/components/Location";
+import Marquee from "@/components/Marquee";
 import Memberships from "@/components/Memberships";
 import QuickBuy from "@/components/QuickBuy";
 import Schedule from "@/components/Schedule";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Marquee />
       <main>
         <Hero />
         <Schedule />
