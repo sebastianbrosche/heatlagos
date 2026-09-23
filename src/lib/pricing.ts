@@ -17,9 +17,13 @@ export type Plan = {
 /**
  * Homepage + /book: single source of truth for pass checkout links.
  *
- * Do not restore 2 weeks unlimited without an explicit Sebastian ask.
- * That pass (Bsport 751566, 79€ → 39€ promo) was removed from this list
- * on purpose. The remaining intro path is 2 for 1 Intro Offer at 22€.
+ * 23 Sep 2026 Sebastian: restore plain €79 two-week unlimited as a PAYMENT
+ * option. Removing a temporary promo/banner is NOT permission to remove the
+ * payment option. Never remove payment options without his explicit remove
+ * plus a second confirm.
+ *
+ * Banned: €39 / 79→39 / 50%-off promo copy. Allowed: plain €79 (BSport
+ * 751566 active; 751496 Intro Offer re-enable in BSport UI if needed).
  *
  * Free month-13 / 12+1 wording stays banned.
  * Do not advertise Yearly (€990, Bsport 751518) publicly; deal period over
@@ -34,6 +38,15 @@ export const PLANS: Plan[] = [
     note: "2 classes / 14 days",
     highlight: true,
     href: "https://backoffice.bsport.io/customer/payment/pass/751510/?membership=5821&force=true",
+  },
+  {
+    id: "cta-2week",
+    name: "2 Weeks Unlimited",
+    price: "79€",
+    description:
+      "Two weeks of unlimited access to every class on the schedule.",
+    note: "14 days unlimited",
+    href: "https://backoffice.bsport.io/customer/payment/pass/751566/?membership=5821&force=true",
   },
   {
     id: "cta-12month",
