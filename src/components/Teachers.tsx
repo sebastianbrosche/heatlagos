@@ -280,7 +280,7 @@ const TEACHERS: Teacher[] = [
   },
   {
     name: "Jane",
-    role: "Flow",
+    role: "Yoga Flow",
     image: "/Jane%20profilbilde.jpg",
     position: "center 18%",
     zoom: 1.35,
@@ -288,7 +288,7 @@ const TEACHERS: Teacher[] = [
     bio: [
       {
         type: "paragraph",
-        text: "Jane teaches Flow at Heat Lagos.",
+        text: "Jane teaches yoga flow classes at Heat Lagos.",
       },
     ],
   },

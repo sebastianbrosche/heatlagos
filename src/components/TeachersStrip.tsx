@@ -38,7 +38,7 @@ const ALL_TEACHERS: Record<string, Teacher> = {
   },
   Jane: {
     name: "Jane",
-    role: "Flow",
+    role: "Yoga Flow",
     image: "/Jane%20profilbilde.jpg",
     position: "center 18%",
   },
