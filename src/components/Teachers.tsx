@@ -288,7 +288,7 @@ const TEACHERS: Teacher[] = [
     bio: [
       {
         type: "paragraph",
-        text: "Jane teaches Heat Flow at Heat Lagos (Wednesday Heat Flow from 30 Sep).",
+        text: "Jane teaches Flow at Heat Lagos.",
       },
     ],
   },
