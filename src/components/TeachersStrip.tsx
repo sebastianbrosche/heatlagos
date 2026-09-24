@@ -36,6 +36,12 @@ const ALL_TEACHERS: Record<string, Teacher> = {
     image: "/Sarah%20profilbilde.jpg",
     position: "center 22%",
   },
+  Jane: {
+    name: "Jane",
+    role: "Flow",
+    image: "/Jane%20profilbilde.jpg",
+    position: "center 18%",
+  },
 };
 
 type Props = {

@@ -278,6 +278,20 @@ const TEACHERS: Teacher[] = [
       },
     ],
   },
+  {
+    name: "Jane",
+    role: "Flow",
+    image: "/Jane%20profilbilde.jpg",
+    position: "center 18%",
+    zoom: 1.35,
+    tagline: "Meet Jane",
+    bio: [
+      {
+        type: "paragraph",
+        text: "Jane teaches Heat Flow at Heat Lagos (Wednesday Heat Flow from 30 Sep).",
+      },
+    ],
+  },
 ];
 
 const BANNER_IMAGE = "/ring%20detail.jpeg?v=1";
