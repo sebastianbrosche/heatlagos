@@ -288,7 +288,17 @@ const TEACHERS: Teacher[] = [
     bio: [
       {
         type: "paragraph",
-        text: "Jane teaches yoga flow classes at Heat Lagos.",
+        text: "My name is Jane, originally from Germany. My teaching is rooted in dynamic and mindful Vinyasa Yoga, offering strong, creative, and breath-led classes that build strength, mobility, balance, and body awareness.",
+      },
+      { type: "heading", text: "How I teach" },
+      {
+        type: "paragraph",
+        text: "Through conscious movement and presence, I want to create a space where students can challenge themselves while staying connected to their breath and inner experience.",
+      },
+      { type: "heading", text: "Training" },
+      {
+        type: "paragraph",
+        text: "Having completed extensive trainings in Mexico and India, alongside several additional studies, my teaching is inspired by Vinyasa Yoga, Yin Yoga, and nervous system regulation. I am integrating movement, breathwork, and mindfulness to support a deeper connection to both body and mind.",
       },
     ],
   },
