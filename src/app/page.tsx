@@ -10,6 +10,7 @@ import Memberships from "@/components/Memberships";
 import QuickBuy from "@/components/QuickBuy";
 import Schedule from "@/components/Schedule";
 import Teachers from "@/components/Teachers";
+import UpcomingWorkshop from "@/components/UpcomingWorkshop";
 export default function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Hero />
         <Schedule />
+        <UpcomingWorkshop />
         <Memberships />
         <About />
         <Classes />
