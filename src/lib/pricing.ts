@@ -73,7 +73,7 @@ export const PLANS: Plan[] = [
     name: "1 Month Unlimited",
     price: "160€",
     description: "One-off monthly unlimited, no subscription commitment.",
-    href: "https://backoffice.bsport.io/customer/payment/pass/751517/?membership=5821&force=true",
+    href: "https://backoffice.bsport.io/customer/payment/pass/782779/?membership=5821&force=true",
   },
   {
     id: "cta-10class",
