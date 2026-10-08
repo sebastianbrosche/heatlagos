@@ -43,7 +43,7 @@ const GROUPS: Group[] = [
   {
     title: "Live here",
     blurb: "Ongoing memberships for locals and long-stay expats.",
-    ids: ["cta-12month", "cta-essential"],
+    ids: ["cta-12month", "cta-yearly", "cta-essential"],
   },
   {
     title: "Flexible",

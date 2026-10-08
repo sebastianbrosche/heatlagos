@@ -27,7 +27,13 @@ export type Plan = {
  *
  * Free month-13 / 12+1 wording stays banned.
  * Do not advertise Yearly (€990, Bsport 751518) publicly; deal period over
- * as of 18 Sep 2026. Plain 12-Month Commitment (€125, Bsport 751520) stays.
+ * as of 18 Sep 2026. 8 Oct 2026: 751518 + 796836 disabled for new sales in
+ * BSport (existing buyers keep their passes). Plain 12-Month Commitment
+ * (€125, Bsport 751520) stays.
+ *
+ * 8 Oct 2026 Sebastian (Stine confirmed): Yearly Unlimited 1200€ (Bsport
+ * 805440) is a public payment option. Not banned. Every active BSport payment
+ * option must be on the site.
  */
 export const PLANS: Plan[] = [
   {
@@ -57,6 +63,15 @@ export const PLANS: Plan[] = [
       "Unlimited classes. Billed monthly for 12 months. 12-Month Commitment.",
     note: "12-Month Commitment",
     href: "https://backoffice.bsport.io/customer/payment/pass/751520/?membership=5821&force=true",
+  },
+  {
+    id: "cta-yearly",
+    name: "Yearly Unlimited",
+    price: "1200€",
+    description:
+      "Unlimited classes for a full year. One payment, no monthly billing.",
+    note: "365 days unlimited",
+    href: "https://backoffice.bsport.io/customer/payment/pass/805440/?membership=5821&force=true",
   },
   {
     id: "cta-essential",
