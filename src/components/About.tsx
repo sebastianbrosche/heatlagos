@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -56,6 +56,32 @@ export default function About() {
           >
             View SCULPT Teacher Training
           </a>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <a
+              href="https://backoffice.bsport.io/customer/payment/shop-item/460282/?membership=5821"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col gap-2 rounded-2xl bg-stone-dark/60 p-5 ring-1 ring-white/5 transition-colors hover:ring-brand/40"
+            >
+              <span className="font-serif text-lg text-foreground">Sculpt Weekend Course</span>
+              <span className="font-serif text-2xl text-brand">550€</span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
+                Book your spot →
+              </span>
+            </a>
+            <a
+              href="https://backoffice.bsport.io/customer/payment/shop-item/472674/?membership=5821"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col gap-2 rounded-2xl bg-stone-dark/60 p-5 ring-1 ring-white/5 transition-colors hover:ring-brand/40"
+            >
+              <span className="font-serif text-lg text-foreground">Sculpt TT instalment</span>
+              <span className="font-serif text-2xl text-brand">160€</span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
+                Pay instalment →
+              </span>
+            </a>
+          </div>
         </div>
         <div className="flex flex-col gap-6 text-foreground/80 lg:col-span-7">
           <div className="overflow-hidden rounded-3xl">

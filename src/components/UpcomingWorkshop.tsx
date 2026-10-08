@@ -1,7 +1,16 @@
 // Upcoming workshop block. Times are Heat Lagos local time (Europe/Lisbon).
 // Poster copy is the source of truth. Booking link is the BSport session checkout.
+import EarlyBirdGate from "./EarlyBirdGate";
+
 const BOOK_URL =
   "https://backoffice.bsport.io/customer/payment/offer/43689762?membership=5821";
+// Workshop passes (BSport). Early bird pass 802966 expires 16 Oct 2026.
+const EARLY_BIRD_URL =
+  "https://backoffice.bsport.io/customer/payment/pass/802966/?membership=5821";
+const DROP_IN_URL =
+  "https://backoffice.bsport.io/customer/payment/pass/802969/?membership=5821";
+// End of 16 Oct 2026, Lisbon time.
+const EARLY_BIRD_UNTIL = "2026-10-17T00:00:00+01:00";
 
 const DETAILS = [
   { label: "When", value: "Saturday 17th October, 3:00 PM to 6:00 PM" },
@@ -62,20 +71,32 @@ export default function UpcomingWorkshop() {
               ))}
             </dl>
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl bg-black/20 p-5 ring-1 ring-white/5">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/60">
-                  Early bird
-                </p>
-                <p className="font-serif text-3xl text-brand">35€</p>
-                <p className="text-sm text-foreground/70">If paid before the 10th</p>
-              </div>
-              <div className="rounded-2xl bg-black/20 p-5 ring-1 ring-white/5">
+              <EarlyBirdGate until={EARLY_BIRD_UNTIL}>
+                <a
+                  href={EARLY_BIRD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-2xl bg-black/20 p-5 ring-1 ring-white/5 transition-colors hover:ring-brand/40"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/60">
+                    Early bird until 16 Oct
+                  </p>
+                  <p className="font-serif text-3xl text-brand">35€</p>
+                  <p className="text-sm text-foreground/70">Buy early bird ticket →</p>
+                </a>
+              </EarlyBirdGate>
+              <a
+                href={DROP_IN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-2xl bg-black/20 p-5 ring-1 ring-white/5 transition-colors hover:ring-brand/40"
+              >
                 <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/60">
                   Drop-in
                 </p>
                 <p className="font-serif text-3xl text-brand">45€</p>
-                <p className="text-sm text-foreground/70">On the 17th</p>
-              </div>
+                <p className="text-sm text-foreground/70">Buy drop-in ticket →</p>
+              </a>
             </div>
             <p className="font-serif text-lg text-foreground/90">
               EXPERIENCE TRANSFORMATIVE BREATHWORK &amp; DEEP CONNECTION

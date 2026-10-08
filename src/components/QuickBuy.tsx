@@ -14,6 +14,13 @@ const ITEMS = [
     href: "https://backoffice.bsport.io/customer/payment/shop-item/462540/?membership=5821",
     cta: "Rent a towel",
   },
+  {
+    label: "Towel Purchase",
+    price: "30€",
+    desc: "Your own Heat towel to keep. Buy it online and pick it up at the studio.",
+    href: "https://backoffice.bsport.io/customer/payment/shop-item/466196/?membership=5821",
+    cta: "Buy a towel",
+  },
 ];
 
 export default function QuickBuy() {
@@ -23,7 +30,7 @@ export default function QuickBuy() {
         <p className="mb-6 text-[10px] uppercase tracking-[0.3em] text-brand sm:text-[11px]">
           Quick grab
         </p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:max-w-2xl">
+        <div className="grid gap-4 sm:grid-cols-3 lg:max-w-4xl">
           {ITEMS.map((item) => (
             <a
               key={item.label}
