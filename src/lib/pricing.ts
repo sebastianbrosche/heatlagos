@@ -91,6 +91,14 @@ export const PLANS: Plan[] = [
     href: "https://backoffice.bsport.io/customer/payment/pass/782779/?membership=5821&force=true",
   },
   {
+    id: "cta-5class",
+    name: "5 Class Package",
+    price: "95€",
+    description: "Five classes to use whenever it suits you.",
+    note: "Valid for 3 months",
+    href: "https://backoffice.bsport.io/customer/payment/pass/792504/?membership=5821&force=true",
+  },
+  {
     id: "cta-10class",
     name: "10 Class Package",
     price: "180€",

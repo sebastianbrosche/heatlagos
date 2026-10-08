@@ -48,7 +48,7 @@ const GROUPS: Group[] = [
   {
     title: "Flexible",
     blurb: "No subscription. Pack or single class.",
-    ids: ["cta-10class", "cta-drop-in"],
+    ids: ["cta-5class", "cta-10class", "cta-drop-in"],
   },
 ];
 
