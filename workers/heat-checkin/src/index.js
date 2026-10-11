@@ -163,6 +163,8 @@ const COACH_DISPLAY = {
   137175: "Agata",
   139837: "Nadine",
   143247: "Alizee",
+  // BSport account name is Jennifer; she teaches as Jane (teacher 254779).
+  150550: "Jane",
   98364: "Liana",
 };
 

@@ -177,6 +177,12 @@ export default function CheckinClient() {
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
   const currentClass = classes[index] ?? null;
+  // Id of the present class we last centred on. The view only re-centres when
+  // this changes, so a manual swipe stays put until a new class takes over.
+  const primaryIdRef = useRef<number | null>(null);
+  const currentIdRef = useRef<number | null>(null);
+  currentIdRef.current = currentClass?.id ?? null;
+  const lastListFetchRef = useRef(0);
 
   useEffect(() => {
     const t = setInterval(() => setNow(Date.now()), 30_000);
@@ -201,6 +207,7 @@ export default function CheckinClient() {
     async (preferId?: number) => {
       setLoadingList(true);
       setError(null);
+      lastListFetchRef.current = Date.now();
       try {
         const res = await fetch(`${API_BASE}/classes`, { cache: "no-store" });
         if (!res.ok) throw new Error(`Classes ${res.status}`);
@@ -212,11 +219,20 @@ export default function CheckinClient() {
         setAllClasses(list);
 
         const nowMs = Date.now();
+        const primary = pickPrimaryIndex(list, nowMs);
         let center =
-          data.defaultIndex >= 0 ? data.defaultIndex : pickPrimaryIndex(list, nowMs);
+          data.defaultIndex >= 0 ? data.defaultIndex : primary;
+        if (preferId == null || primaryIdRef.current == null) {
+          primaryIdRef.current = list[primary]?.id ?? null;
+        }
         if (preferId != null) {
+          // Keep the selected class: stay on the present-class window if it
+          // holds it, otherwise centre on the selected class.
           const found = list.findIndex((c) => c.id === preferId);
-          if (found >= 0) center = found;
+          if (found >= 0) {
+            const { items } = windowAround(list, center);
+            if (!items.some((c) => c.id === preferId)) center = found;
+          }
         }
         applyWindow(list, center, preferId);
         setLastRefresh(new Date());
@@ -356,7 +372,8 @@ export default function CheckinClient() {
     return () => clearInterval(id);
   }, [currentClass, loadAttendees]);
 
-  // When primary window moves on, re-center on the new present class
+  // Re-centre only when the present class changes (a new class enters its
+  // window). Never override a manual swipe until that happens.
   useEffect(() => {
     if (!allClasses.length) return;
     const t = setInterval(() => {
@@ -365,12 +382,31 @@ export default function CheckinClient() {
       const primary = pickPrimaryIndex(allClasses, n);
       const primaryId = allClasses[primary]?.id;
       if (!primaryId) return;
-      if (currentClass && isInPrimaryWindow(currentClass, n)) return;
-      // Rebuild last / present / next 6 around the new primary
+      if (primaryId === primaryIdRef.current) return;
+      primaryIdRef.current = primaryId;
+      // Rebuild last / present / next 6 around the new present class
       applyWindow(allClasses, primary);
     }, 60_000);
     return () => clearInterval(t);
-  }, [allClasses, currentClass, applyWindow]);
+  }, [allClasses, applyWindow]);
+
+  // Refetch the class list hourly and when the page becomes visible again,
+  // keeping the selected class if it still exists.
+  useEffect(() => {
+    const refresh = () => {
+      if (Date.now() - lastListFetchRef.current < 60_000) return;
+      void loadClassList(currentIdRef.current ?? undefined);
+    };
+    const hourly = setInterval(refresh, 60 * 60 * 1000);
+    const onVisible = () => {
+      if (document.visibilityState === "visible") refresh();
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      clearInterval(hourly);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [loadClassList]);
 
   const go = useCallback(
     (delta: number) => {
