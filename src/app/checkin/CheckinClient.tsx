@@ -121,17 +121,22 @@ function classStatusLabel(c: ClassSummary, now: number) {
   return "Past";
 }
 
-/** Only last class, present class, next class. */
+/** How many classes to show from the present class onward (present + next 6). */
+const UPCOMING_WINDOW = 7;
+
+/**
+ * Last class (staff still need it just after class), present class, and the
+ * following classes, so UPCOMING_WINDOW classes from the present one onward.
+ */
 function windowAround(
   all: ClassSummary[],
   centerIdx: number
 ): { items: ClassSummary[]; localIndex: number } {
   if (!all.length) return { items: [], localIndex: 0 };
   const safe = Math.max(0, Math.min(centerIdx, all.length - 1));
-  const items: ClassSummary[] = [];
-  if (safe > 0) items.push(all[safe - 1]);
-  items.push(all[safe]);
-  if (safe < all.length - 1) items.push(all[safe + 1]);
+  const start = Math.max(0, safe - 1);
+  const end = Math.min(all.length, safe + UPCOMING_WINDOW);
+  const items: ClassSummary[] = all.slice(start, end);
   const localIndex = items.findIndex((c) => c.id === all[safe].id);
   return { items, localIndex: Math.max(0, localIndex) };
 }
@@ -361,7 +366,7 @@ export default function CheckinClient() {
       const primaryId = allClasses[primary]?.id;
       if (!primaryId) return;
       if (currentClass && isInPrimaryWindow(currentClass, n)) return;
-      // Rebuild last / present / next around the new primary
+      // Rebuild last / present / next 6 around the new primary
       applyWindow(allClasses, primary);
     }, 60_000);
     return () => clearInterval(t);

@@ -235,7 +235,8 @@ async function listClasses(env, params) {
   const now = Date.now();
   const today = lisbonDate(new Date(now));
   const minDate = params.get("min") || addDays(today, -1);
-  const maxDate = params.get("max") || addDays(today, 2);
+  // Wide enough that /checkin can always show the next 7 classes.
+  const maxDate = params.get("max") || addDays(today, 7);
 
   const data = await bsport(env, "/offer/", {
     min_date: minDate,
