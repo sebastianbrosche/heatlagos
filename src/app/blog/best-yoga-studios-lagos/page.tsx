@@ -111,7 +111,7 @@ export default function BestYogaStudiosLagos() {
         <p>
           <a href="/yoga-lagos-portugal">Yoga classes at Heat Lagos</a>
           {" · "}
-          <a href="/hot-yoga-lagos">Hot yoga guide</a>
+          <a href="/blog/hot-yoga-lagos">Hot yoga guide</a>
           {" · "}
           <a href="/#book">Book a class</a>
         </p>
