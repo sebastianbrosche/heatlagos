@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Schedule from "@/components/Schedule";
+import EarlyBirdGate from "@/components/EarlyBirdGate";
 import { planById, type Plan } from "@/lib/pricing";
 
 const URL = "https://www.heatlagos.com/book";
@@ -94,6 +95,11 @@ function OfferCard({ plan }: { plan: Plan }) {
       </p>
       {plan.note && (
         <p className="mt-2 text-[11px] text-foreground/40">{plan.note}</p>
+      )}
+      {plan.promo && (
+        <EarlyBirdGate from={plan.promo.from} until={plan.promo.until}>
+          <p className="mt-1 text-xs font-semibold text-brand">{plan.promo.text}</p>
+        </EarlyBirdGate>
       )}
       <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/45 transition-colors group-hover:text-brand">
         Get →
