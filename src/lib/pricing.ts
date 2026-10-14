@@ -11,6 +11,8 @@ export type Plan = {
   highlight?: boolean;
   glow?: boolean;
   note?: string;
+  /** Time-boxed promo line (Lisbon ISO with offset). Must match a live BSport coupon. */
+  promo?: { text: string; from: string; until: string };
   href?: string;
 };
 
@@ -104,6 +106,12 @@ export const PLANS: Plan[] = [
     price: "180€",
     description: "Flexible 10-pack for regulars who want variety.",
     note: "Valid for 3 months",
+    // BSport coupon HEAT6 (id 144469): 15% off pass 751509, 15 Oct to 1 Nov 2026 Lisbon.
+    promo: {
+      text: "15% off with code HEAT6 until 1 Nov. 153€ instead of 180€.",
+      from: "2026-10-15T00:00:00+01:00",
+      until: "2026-11-02T00:00:00+00:00",
+    },
     href: "https://backoffice.bsport.io/customer/payment/pass/751509/?membership=5821&force=true",
   },
   {

@@ -1,4 +1,5 @@
 import { PLANS } from "@/lib/pricing";
+import EarlyBirdGate from "./EarlyBirdGate";
 
 export default function Memberships() {
   return (
@@ -84,6 +85,15 @@ export default function Memberships() {
                 >
                   {plan.note}
                 </p>
+              )}
+              {plan.promo && (
+                <EarlyBirdGate from={plan.promo.from} until={plan.promo.until}>
+                  <p
+                    className={`text-sm font-semibold ${plan.highlight ? "text-stone-dark" : "text-brand"}`}
+                  >
+                    {plan.promo.text}
+                  </p>
+                </EarlyBirdGate>
               )}
               <a
                 id={plan.id}
