@@ -112,6 +112,12 @@ export const PLANS: Plan[] = [
     price: "180€",
     description: "Flexible 10-pack for regulars who want variety.",
     note: "Valid for 3 months",
+    // BSport coupon BLACK26 (id 150774): 25% off pass 751509, 20 to 27 Nov 2026 Lisbon.
+    promo: {
+      text: "Black Week: 25% off with code BLACK26 until Fri 27 Nov. 135€ instead of 180€.",
+      from: "2026-11-20T00:00:00+00:00",
+      until: "2026-11-28T00:00:00+00:00",
+    },
     href: "https://backoffice.bsport.io/customer/payment/pass/751509/?membership=5821&force=true",
   },
   {
