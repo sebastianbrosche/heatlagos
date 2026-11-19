@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import BeforeYouCome from "@/components/BeforeYouCome";
+import BlackWeekBanner from "@/components/BlackWeekBanner";
 import Classes from "@/components/Classes";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <BlackWeekBanner />
         <Schedule />
         <Memberships />
         <About />
