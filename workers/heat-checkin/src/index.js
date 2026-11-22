@@ -60,7 +60,8 @@ export default {
       return json({ error: "Not found" }, 404);
     } catch (err) {
       console.error(err);
-      return json({ error: err.message || "Server error" }, 500);
+      const status = Number(err && err.status) || 500;
+      return json({ error: err.message || "Server error" }, status);
     }
   },
 };
@@ -146,6 +147,47 @@ function lisbonDate(d = new Date()) {
     month: "2-digit",
     day: "2-digit",
   }).format(d);
+}
+
+function httpError(message, status) {
+  const err = new Error(message);
+  err.status = status;
+  return err;
+}
+
+/** Calendar YYYY-MM-DD in Lisbon. ending_date "2026-07-31" is valid through that day. */
+function ymd(value) {
+  if (!value) return null;
+  const s = String(value);
+  if (/^\d{4}-\d{2}-\d{2}/.test(s)) return s.slice(0, 10);
+  const ms = Date.parse(s);
+  if (Number.isNaN(ms)) return null;
+  return lisbonDate(new Date(ms));
+}
+
+function formatDay(isoDate) {
+  const s = String(isoDate || "");
+  const m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return s || "";
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return `${Number(m[3])} ${months[Number(m[2]) - 1]} ${m[1]}`;
+}
+
+function isUsableClientPass(p, today) {
+  if (!p || typeof p !== "object") return false;
+  if (p.is_active === false || p.disabled === true || p.is_disabled === true) return false;
+  if (p.date_disabled) return false;
+  const start = ymd(p.starting_date || p.overridden_starting_date || p.date_start);
+  const end = ymd(p.ending_date || p.expiration_date || p.date_end || p.valid_until);
+  if (start && start > today) return false;
+  if (end && end < today) return false;
+  const credits =
+    p.credits_left ??
+    p.available_credits_amount ??
+    p.credits_remaining ??
+    p.current_credits;
+  if (credits != null && Number(credits) <= 0) return false;
+  return true;
 }
 
 function addDays(isoDate, days) {
@@ -474,6 +516,36 @@ async function getClassWithAttendees(env, offerId) {
 /**
  * Search members by name or email for walk-in / add-to-class.
  */
+async function classicPost(env, path, body, params = {}) {
+  const token = classicToken(env);
+  if (!token) throw new Error("BSPORT_API_TOKEN not configured");
+  const u = new URL(`${BSPORT_BASE}${path}`);
+  u.searchParams.set("company", COMPANY_ID);
+  for (const [k, v] of Object.entries(params)) {
+    if (v != null && v !== "") u.searchParams.set(k, String(v));
+  }
+  const res = await fetch(u.toString(), {
+    method: "POST",
+    headers: {
+      Authorization: `Token ${token}`,
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+  const text = await res.text().catch(() => "");
+  let data = null;
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    data = { raw: text.slice(0, 300) };
+  }
+  if (!res.ok) {
+    throw new Error(`bSport ${res.status} on ${path}: ${text.slice(0, 200)}`);
+  }
+  return data;
+}
+
 async function searchMembers(env, query) {
   const q = String(query || "").trim();
   if (q.length < 2) return { members: [] };
@@ -486,6 +558,7 @@ async function searchMembers(env, query) {
     if (!id || seen.has(id)) return;
     const name =
       m.name ||
+      m.fullname ||
       `${m.first_name || m.firstname || ""} ${m.last_name || m.lastname || ""}`.trim() ||
       m.email ||
       `Member ${id}`;
@@ -499,62 +572,39 @@ async function searchMembers(env, query) {
     });
   };
 
-  // Classic API search (most reliable for Heat token)
-  const tryClassic = async (params) => {
+  // Official classic search. GET /member/?search= is ignored and returns
+  // the newest members, so do not use it as a search.
+  try {
+    const data = await classicPost(env, "/member/search/", { text: q });
+    const rows = Array.isArray(data) ? data : data?.results || data?.members || [];
+    for (const m of rows) push(m);
+  } catch (e) {
+    console.warn("member/search failed:", e.message || e);
+  }
+
+  if (q.includes("@")) {
     try {
-      const data = await bsport(env, "/member/", {
-        page_size: 20,
-        ...params,
-      });
-      for (const m of data.results || data || []) push(m);
+      const data = await bsport(env, "/member/", { email: q, page_size: 20 });
+      for (const m of data.results || []) push(m);
     } catch {
-      /* try next */
+      /* ignore */
     }
-  };
-
-  await tryClassic({ search: q });
-  if (seen.size < 5) await tryClassic({ name: q });
-  if (seen.size < 5 && q.includes("@")) await tryClassic({ email: q });
-
-  // Management clients fallback
-  if (seen.size === 0) {
     try {
       const data = await bsportMgmt(env, "/management/clients/", {
-        params: { search: q, page_size: 20, q },
+        params: { email: q, page_size: 20 },
       });
-      const rows = data.results || data.clients || data || [];
+      const rows = data.results || data.clients || [];
       for (const m of Array.isArray(rows) ? rows : []) push(m);
     } catch {
       /* ignore */
     }
   }
 
-  // Always refine: bSport "search" can return loose hits
-  const needle = q.toLowerCase();
-  const tokens = needle.split(/\s+/).filter(Boolean);
+  const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
   let members = [...seen.values()].filter((m) => {
     const hay = `${m.name || ""} ${m.email || ""}`.toLowerCase();
     return tokens.every((t) => hay.includes(t));
   });
-
-  if (members.length === 0) {
-    try {
-      const data = await bsport(env, "/member/", {
-        page_size: 100,
-        ordering: "-date_joined",
-      });
-      for (const m of data.results || []) {
-        const hay = `${m.name || ""} ${m.first_name || ""} ${m.last_name || ""} ${m.email || ""}`.toLowerCase();
-        if (tokens.every((t) => hay.includes(t))) push(m);
-      }
-      members = [...seen.values()].filter((m) => {
-        const hay = `${m.name || ""} ${m.email || ""}`.toLowerCase();
-        return tokens.every((t) => hay.includes(t));
-      });
-    } catch {
-      /* ignore */
-    }
-  }
 
   members.sort((a, b) => a.name.localeCompare(b.name));
   return { members: members.slice(0, 20) };
@@ -572,7 +622,7 @@ async function addToClass(env, body) {
     body.waitlistBookingId != null ? Number(body.waitlistBookingId) : null;
 
   if (!offerId || !memberId) {
-    throw new Error("offerId and memberId are required");
+    throw httpError("offerId and memberId are required", 400);
   }
 
   // Resolve pass from waitlist booking if needed
@@ -585,27 +635,48 @@ async function addToClass(env, body) {
     }
   }
 
-  // Resolve an active pass via management client-passes
+  // Resolve a still-valid pass (not expired, with credits if the pack uses them)
+  let passInfo = { reason: null, expiredOn: null };
   if (!passId) {
-    passId = await findActivePassId(env, memberId);
+    passInfo = await findActivePassId(env, memberId);
+    passId = passInfo.id;
   }
   if (!passId) {
-    throw new Error("No active pass found for this member — cannot add to class");
+    const when = passInfo.expiredOn
+      ? ` Their last pass expired on ${formatDay(passInfo.expiredOn)}.`
+      : "";
+    throw httpError(
+      `This member has no valid pass, so they cannot be added.${when} Give them a valid pass in the bSport back office first.`,
+      400
+    );
   }
 
   // Create booking via management API (supports overbook when staff is allowed)
-  const created = await bsportMgmt(env, "/management/bookings/", {
-    method: "POST",
-    body: {
-      client_id: memberId,
-      client_pass_id: passId,
-      class_ids: [offerId],
-      session_ids: [offerId],
-      should_auto_assign_spot: false,
-      should_keep_credits: true,
-      should_notify_client: true,
-    },
-  });
+  let created;
+  try {
+    created = await bsportMgmt(env, "/management/bookings/", {
+      method: "POST",
+      body: {
+        client_id: memberId,
+        client_pass_id: passId,
+        class_ids: [offerId],
+        session_ids: [offerId],
+        should_auto_assign_spot: false,
+        should_keep_credits: true,
+        should_notify_client: true,
+      },
+    });
+  } catch (e) {
+    const msg = e.message || "";
+    if (/bSport mgmt 500/.test(msg) || /unexpected error/i.test(msg)) {
+      throw httpError(
+        "bSport could not complete the booking. This often means the member's pass is expired or is not valid for this class. Give them a valid pass, or add them in the bSport back office.",
+        502
+      );
+    }
+    const status = /bSport mgmt 4\d\d/.test(msg) ? 400 : e.status || 500;
+    throw httpError(msg, status);
+  }
 
   // Refresh class payload
   const refreshed = await getClassWithAttendees(env, offerId);
@@ -620,6 +691,8 @@ async function addToClass(env, body) {
 }
 
 async function findActivePassId(env, clientId) {
+  const empty = { id: null, reason: "none", expiredOn: null };
+  const today = lisbonDate();
   try {
     const data = await bsportMgmt(env, "/management/client-passes/", {
       params: {
@@ -629,32 +702,23 @@ async function findActivePassId(env, clientId) {
     });
     const rows = data.results || data || [];
     const list = Array.isArray(rows) ? rows : [];
-    // Prefer enabled / active unlimited-ish packs
-    const active = list.filter(
-      (p) =>
-        p.is_active !== false &&
-        p.disabled !== true &&
-        p.is_disabled !== true &&
-        !p.date_disabled
-    );
-    const pick =
-      active.find((p) => (p.credits_left == null || p.credits_left > 0)) ||
-      active[0] ||
-      list[0];
-    return pick?.id || null;
-  } catch {
-    // Fallback classic payment packs for member
-    try {
-      const data = await bsport(env, "/consumer_payment_pack/", {
-        member: clientId,
-        page_size: 20,
-      });
-      const rows = data.results || [];
-      const pick = rows.find((p) => !p.disabled && !p.date_disabled) || rows[0];
-      return pick?.id || null;
-    } catch {
-      return null;
+    const usable = list.filter((p) => isUsableClientPass(p, today));
+    if (usable.length) {
+      return { id: usable[0].id, reason: null, expiredOn: null };
     }
+    const expired = list
+      .map((p) => ymd(p.ending_date || p.expiration_date || p.date_end))
+      .filter((d) => d && d < today)
+      .sort()
+      .reverse();
+    return {
+      id: null,
+      reason: list.length ? "expired" : "none",
+      expiredOn: expired[0] || null,
+    };
+  } catch (e) {
+    console.warn("client-passes lookup failed:", e.message || e);
+    return empty;
   }
 }
 
