@@ -166,6 +166,7 @@ export default function CheckinClient() {
   const [loadingClass, setLoadingClass] = useState(false);
   const [addingId, setAddingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [errorKind, setErrorKind] = useState<"load" | "add">("load");
   const [memberQuery, setMemberQuery] = useState("");
   const [memberHits, setMemberHits] = useState<MemberHit[]>([]);
   const [memberSearching, setMemberSearching] = useState(false);
@@ -207,6 +208,7 @@ export default function CheckinClient() {
     async (preferId?: number) => {
       setLoadingList(true);
       setError(null);
+      setErrorKind("load");
       lastListFetchRef.current = Date.now();
       try {
         const res = await fetch(`${API_BASE}/classes`, { cache: "no-store" });
@@ -474,6 +476,7 @@ export default function CheckinClient() {
     if (!currentClass) return;
     setAddingId(person.userId);
     setError(null);
+    setErrorKind("add");
     try {
       const res = await fetch(`${API_BASE}/add-to-class`, {
         method: "POST",
@@ -1001,7 +1004,9 @@ export default function CheckinClient() {
         {error && (
           <div className="checkin-error" style={{ marginBottom: 14 }}>
             <p style={{ margin: "0 0 8px", fontWeight: 600 }}>
-              Couldn’t load data
+              {errorKind === "add"
+                ? "Couldn't add this member"
+                : "Couldn't load data"}
             </p>
             <p style={{ margin: "0 0 12px", fontSize: 12, opacity: 0.85 }}>
               {error}
@@ -1009,9 +1014,15 @@ export default function CheckinClient() {
             <button
               type="button"
               className="checkin-btn primary"
-              onClick={() => void loadClassList(currentClass?.id)}
+              onClick={() => {
+                if (errorKind === "add") {
+                  setError(null);
+                  return;
+                }
+                void loadClassList(currentClass?.id);
+              }}
             >
-              Try again
+              {errorKind === "add" ? "OK" : "Try again"}
             </button>
           </div>
         )}
