@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Schedule from "@/components/Schedule";
 import BlackWeekBanner from "@/components/BlackWeekBanner";
+import GiftCardBanner from "@/components/GiftCardBanner";
 import EarlyBirdGate from "@/components/EarlyBirdGate";
 import { planById, type Plan } from "@/lib/pricing";
 
@@ -130,6 +131,7 @@ export default function BookPage() {
             </div>
 
             <BlackWeekBanner compact />
+            <GiftCardBanner compact />
 
             <div className="mt-14 flex flex-col gap-16 sm:mt-16 sm:gap-20">
               {GROUPS.map((group) => {

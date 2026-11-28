@@ -4,6 +4,7 @@ import BlackWeekBanner from "@/components/BlackWeekBanner";
 import Classes from "@/components/Classes";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import GiftCardBanner from "@/components/GiftCardBanner";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Location from "@/components/Location";
@@ -18,6 +19,7 @@ export default function Home() {
       <main>
         <Hero />
         <BlackWeekBanner />
+        <GiftCardBanner />
         <Schedule />
         <Memberships />
         <About />
